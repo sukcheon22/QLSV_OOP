@@ -30,7 +30,7 @@ namespace QLSV_OOP.DAO
         
         public bool Login(string username, string password, string roleid)
         {
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM tai_khoan WHERE Username ='" + username + "' AND Password='" + password + "' AND MaQuyen= '"+ roleid +"'", con);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM Tai_khoan WHERE Username ='" + username + "' AND Password='" + password + "' AND MaQuyen= '"+ roleid +"'", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             if (dt.Rows[0][0].ToString() == "1")
