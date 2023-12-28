@@ -42,12 +42,13 @@
             // 
             // btnChangePassword
             // 
-            this.btnChangePassword.BackColor = System.Drawing.Color.PeachPuff;
+            this.btnChangePassword.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnChangePassword.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChangePassword.ForeColor = System.Drawing.Color.IndianRed;
-            this.btnChangePassword.Location = new System.Drawing.Point(214, 250);
+            this.btnChangePassword.ForeColor = System.Drawing.Color.Lavender;
+            this.btnChangePassword.Location = new System.Drawing.Point(285, 308);
+            this.btnChangePassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnChangePassword.Name = "btnChangePassword";
-            this.btnChangePassword.Size = new System.Drawing.Size(132, 46);
+            this.btnChangePassword.Size = new System.Drawing.Size(176, 57);
             this.btnChangePassword.TabIndex = 4;
             this.btnChangePassword.Text = "Xác nhận";
             this.btnChangePassword.UseVisualStyleBackColor = false;
@@ -56,9 +57,10 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::QLSV_OOP.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(137, 28);
+            this.pictureBox1.Location = new System.Drawing.Point(183, 34);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 85);
+            this.pictureBox1.Size = new System.Drawing.Size(85, 105);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
@@ -66,28 +68,31 @@
             // txtMatKhauCu
             // 
             this.txtMatKhauCu.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.txtMatKhauCu.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMatKhauCu.Location = new System.Drawing.Point(214, 93);
+            this.txtMatKhauCu.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhauCu.Location = new System.Drawing.Point(285, 114);
+            this.txtMatKhauCu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMatKhauCu.Name = "txtMatKhauCu";
-            this.txtMatKhauCu.Size = new System.Drawing.Size(345, 32);
+            this.txtMatKhauCu.Size = new System.Drawing.Size(459, 38);
             this.txtMatKhauCu.TabIndex = 2;
             // 
             // txtMatKhauMoi
             // 
             this.txtMatKhauMoi.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.txtMatKhauMoi.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMatKhauMoi.Location = new System.Drawing.Point(214, 146);
+            this.txtMatKhauMoi.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMatKhauMoi.Location = new System.Drawing.Point(285, 180);
+            this.txtMatKhauMoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtMatKhauMoi.Name = "txtMatKhauMoi";
-            this.txtMatKhauMoi.Size = new System.Drawing.Size(345, 33);
+            this.txtMatKhauMoi.Size = new System.Drawing.Size(459, 40);
             this.txtMatKhauMoi.TabIndex = 1;
             // 
             // txtNhapLai
             // 
             this.txtNhapLai.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.txtNhapLai.Font = new System.Drawing.Font("Century Gothic", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNhapLai.Location = new System.Drawing.Point(214, 200);
+            this.txtNhapLai.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNhapLai.Location = new System.Drawing.Point(285, 246);
+            this.txtNhapLai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNhapLai.Name = "txtNhapLai";
-            this.txtNhapLai.Size = new System.Drawing.Size(345, 32);
+            this.txtNhapLai.Size = new System.Drawing.Size(459, 38);
             this.txtNhapLai.TabIndex = 3;
             // 
             // panel1
@@ -100,19 +105,21 @@
             this.panel1.Controls.Add(this.txtMatKhauCu);
             this.panel1.Controls.Add(this.txtMatKhauMoi);
             this.panel1.Controls.Add(this.txtNhapLai);
-            this.panel1.Location = new System.Drawing.Point(29, 28);
+            this.panel1.Location = new System.Drawing.Point(39, 34);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(638, 310);
+            this.panel1.Size = new System.Drawing.Size(851, 382);
             this.panel1.TabIndex = 8;
             // 
             // btnBack
             // 
-            this.btnBack.BackColor = System.Drawing.Color.PeachPuff;
+            this.btnBack.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnBack.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.ForeColor = System.Drawing.Color.IndianRed;
-            this.btnBack.Location = new System.Drawing.Point(427, 250);
+            this.btnBack.ForeColor = System.Drawing.Color.Lavender;
+            this.btnBack.Location = new System.Drawing.Point(569, 308);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(132, 46);
+            this.btnBack.Size = new System.Drawing.Size(176, 57);
             this.btnBack.TabIndex = 8;
             this.btnBack.Text = "Quay lại";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -121,21 +128,22 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(207, 28);
+            this.label1.Font = new System.Drawing.Font("Calibri", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(276, 34);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(317, 39);
+            this.label1.Size = new System.Drawing.Size(372, 49);
             this.label1.TabIndex = 6;
             this.label1.Text = "THAY ĐỔI MẬT KHẨU";
             // 
             // frmChangePassword
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::QLSV_OOP.Properties.Resources.images;
-            this.ClientSize = new System.Drawing.Size(730, 366);
+            this.ClientSize = new System.Drawing.Size(973, 450);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmChangePassword";
             this.Text = "frmChangePassword";
             this.Load += new System.EventHandler(this.frmChangePassword_Load);
