@@ -1,4 +1,5 @@
-﻿using QLSV_OOP.DTO;
+﻿using QLSV_OOP.DAO;
+using QLSV_OOP.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,11 @@ namespace QLSV_OOP
 {
     public partial class frmAdmin : Form
     {
+        Account account;
         public frmAdmin(Account acc)
         {
             InitializeComponent();
+            account = acc;
         }
 
         private void toolStripMenuItemSignOut_Click(object sender, EventArgs e)
@@ -34,6 +37,11 @@ namespace QLSV_OOP
         private void frmAdmin_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void thayĐổiThôngTinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FunctionMenuStrip.Instance.ChangePassword(this, account);
         }
     }
 }

@@ -71,13 +71,14 @@
             // thayĐổiThôngTinTàiKhoảnToolStripMenuItem
             // 
             this.thayĐổiThôngTinTàiKhoảnToolStripMenuItem.Name = "thayĐổiThôngTinTàiKhoảnToolStripMenuItem";
-            this.thayĐổiThôngTinTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.thayĐổiThôngTinTàiKhoảnToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.thayĐổiThôngTinTàiKhoảnToolStripMenuItem.Text = "Đổi mật khẩu";
+            this.thayĐổiThôngTinTàiKhoảnToolStripMenuItem.Click += new System.EventHandler(this.thayĐổiThôngTinTàiKhoảnToolStripMenuItem_Click);
             // 
             // toolStripMenuItemSignOut
             // 
             this.toolStripMenuItemSignOut.Name = "toolStripMenuItemSignOut";
-            this.toolStripMenuItemSignOut.Size = new System.Drawing.Size(181, 26);
+            this.toolStripMenuItemSignOut.Size = new System.Drawing.Size(224, 26);
             this.toolStripMenuItemSignOut.Text = "Đăng xuất";
             this.toolStripMenuItemSignOut.Click += new System.EventHandler(this.toolStripMenuItemSignOut_Click);
             // 
