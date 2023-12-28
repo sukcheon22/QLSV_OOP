@@ -52,6 +52,7 @@
             this.btnChangePassword.TabIndex = 4;
             this.btnChangePassword.Text = "Xác nhận";
             this.btnChangePassword.UseVisualStyleBackColor = false;
+            this.btnChangePassword.Click += new System.EventHandler(this.btnChangePassword_Click);
             // 
             // pictureBox1
             // 

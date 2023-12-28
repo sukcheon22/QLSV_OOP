@@ -14,7 +14,7 @@ namespace QLSV_OOP
 {
     public partial class frmAdmin : Form
     {
-        Account account;
+        private Account account;
         public frmAdmin(Account acc)
         {
             InitializeComponent();
@@ -38,12 +38,9 @@ namespace QLSV_OOP
         {
 
         }
+        
 
-        private void thayĐổiThôngTinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FunctionMenuStrip.Instance.ChangePassword(this, account);
-        }
-        private void ChangePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        private void changePasswordToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             FunctionMenuStrip.Instance.ChangePassword(this, account);
         }
