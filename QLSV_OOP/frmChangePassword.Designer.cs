@@ -75,6 +75,7 @@
             this.txtMatKhauCu.Size = new System.Drawing.Size(459, 38);
             this.txtMatKhauCu.TabIndex = 2;
             this.txtMatKhauCu.Enter += new System.EventHandler(this.txtMatKhauCu_Enter);
+            this.txtMatKhauCu.Leave += new System.EventHandler(this.txtMatKhauCu_Leave);
             // 
             // txtMatKhauMoi
             // 
@@ -85,6 +86,8 @@
             this.txtMatKhauMoi.Name = "txtMatKhauMoi";
             this.txtMatKhauMoi.Size = new System.Drawing.Size(459, 40);
             this.txtMatKhauMoi.TabIndex = 1;
+            this.txtMatKhauMoi.Enter += new System.EventHandler(this.txtMatKhauMoi_Enter);
+            this.txtMatKhauMoi.Leave += new System.EventHandler(this.txtMatKhauMoi_Leave);
             // 
             // txtNhapLai
             // 
@@ -95,7 +98,8 @@
             this.txtNhapLai.Name = "txtNhapLai";
             this.txtNhapLai.Size = new System.Drawing.Size(459, 38);
             this.txtNhapLai.TabIndex = 3;
-            this.txtNhapLai.Enter += new System.EventHandler(this.txtMatKhauCu_Enter);
+            this.txtNhapLai.Enter += new System.EventHandler(this.txtNhapLai_Enter);
+            this.txtNhapLai.Leave += new System.EventHandler(this.txtNhapLai_Leave);
             // 
             // panel1
             // 

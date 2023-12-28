@@ -67,7 +67,7 @@ namespace QLSV_OOP.DAO
                 command.Parameters.AddWithValue("@NewPassword", newPassword); // Mật khẩu mới
 
                 int rowsAffected = command.ExecuteNonQuery();
-
+                
                 return rowsAffected > 0;
             }
         }
