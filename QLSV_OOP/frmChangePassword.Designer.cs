@@ -46,7 +46,7 @@
             this.btnChangePassword.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnChangePassword.ForeColor = System.Drawing.Color.Lavender;
             this.btnChangePassword.Location = new System.Drawing.Point(285, 308);
-            this.btnChangePassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnChangePassword.Margin = new System.Windows.Forms.Padding(4);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.Size = new System.Drawing.Size(176, 57);
             this.btnChangePassword.TabIndex = 4;
@@ -56,8 +56,8 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::QLSV_OOP.Properties.Resources.logo;
-            this.pictureBox1.Location = new System.Drawing.Point(183, 34);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(183, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(85, 105);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -68,18 +68,19 @@
             // 
             this.txtMatKhauCu.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.txtMatKhauCu.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMatKhauCu.Location = new System.Drawing.Point(285, 114);
-            this.txtMatKhauCu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMatKhauCu.Location = new System.Drawing.Point(285, 125);
+            this.txtMatKhauCu.Margin = new System.Windows.Forms.Padding(4);
             this.txtMatKhauCu.Name = "txtMatKhauCu";
             this.txtMatKhauCu.Size = new System.Drawing.Size(459, 38);
             this.txtMatKhauCu.TabIndex = 2;
+            this.txtMatKhauCu.Enter += new System.EventHandler(this.txtMatKhauCu_Enter);
             // 
             // txtMatKhauMoi
             // 
             this.txtMatKhauMoi.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.txtMatKhauMoi.Font = new System.Drawing.Font("Calibri", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMatKhauMoi.Location = new System.Drawing.Point(285, 180);
-            this.txtMatKhauMoi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMatKhauMoi.Location = new System.Drawing.Point(285, 182);
+            this.txtMatKhauMoi.Margin = new System.Windows.Forms.Padding(4);
             this.txtMatKhauMoi.Name = "txtMatKhauMoi";
             this.txtMatKhauMoi.Size = new System.Drawing.Size(459, 40);
             this.txtMatKhauMoi.TabIndex = 1;
@@ -89,10 +90,11 @@
             this.txtNhapLai.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.txtNhapLai.Font = new System.Drawing.Font("Calibri", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNhapLai.Location = new System.Drawing.Point(285, 246);
-            this.txtNhapLai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNhapLai.Margin = new System.Windows.Forms.Padding(4);
             this.txtNhapLai.Name = "txtNhapLai";
             this.txtNhapLai.Size = new System.Drawing.Size(459, 38);
             this.txtNhapLai.TabIndex = 3;
+            this.txtNhapLai.Enter += new System.EventHandler(this.txtMatKhauCu_Enter);
             // 
             // panel1
             // 
@@ -105,7 +107,7 @@
             this.panel1.Controls.Add(this.txtMatKhauMoi);
             this.panel1.Controls.Add(this.txtNhapLai);
             this.panel1.Location = new System.Drawing.Point(39, 34);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(851, 382);
             this.panel1.TabIndex = 8;
@@ -116,7 +118,7 @@
             this.btnBack.Font = new System.Drawing.Font("Bahnschrift", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.Lavender;
             this.btnBack.Location = new System.Drawing.Point(569, 308);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(4);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(176, 57);
             this.btnBack.TabIndex = 8;

@@ -35,6 +35,7 @@ namespace QLSV_OOP.DAO
             form.Hide();
             frmChangePassword f = new frmChangePassword(account);
             f.ShowDialog();
+            form.Show();
         }
         
     }

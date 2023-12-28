@@ -8,6 +8,6 @@ namespace QLSV_OOP
 {
     public class ConnectionString
     {
-        public static string connectionString = @"Data Source=LAPTOP-6UR7K6S0\SQLEXPRESS;Initial Catalog=QLBH;Integrated Security=True";
+        public static string connectionString = @"Data Source=DESKTOP-S0EALFB\SQLEXPRESS;Initial Catalog=QLSV;Integrated Security=True";
     }
 }
