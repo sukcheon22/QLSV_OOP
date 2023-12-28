@@ -54,5 +54,22 @@ namespace QLSV_OOP.DAO
 
             return null;
         }
+        public bool UpdatePassword(string username, string oldPassword, string newPassword)
+        {
+            using (SqlConnection connection = new SqlConnection(ConnectionString.connectionString))
+            {
+                connection.Open();
+
+                string query = "UPDATE tai_khoan SET Password = @NewPassword WHERE Username = @UserName AND Password = @OldPassword";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@UserName", username);
+                command.Parameters.AddWithValue("@OldPassword", oldPassword); // Mật khẩu cũ
+                command.Parameters.AddWithValue("@NewPassword", newPassword); // Mật khẩu mới
+
+                int rowsAffected = command.ExecuteNonQuery();
+
+                return rowsAffected > 0;
+            }
+        }
     }
 }

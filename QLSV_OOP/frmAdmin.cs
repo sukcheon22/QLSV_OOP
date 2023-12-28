@@ -43,5 +43,10 @@ namespace QLSV_OOP
         {
             FunctionMenuStrip.Instance.ChangePassword(this, account);
         }
+        private void ChangePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FunctionMenuStrip.Instance.ChangePassword(this, account);
+        }
     }
+
 }
