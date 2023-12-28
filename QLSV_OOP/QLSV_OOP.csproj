@@ -68,9 +68,15 @@
     <Compile Include="DAO\AccountDAO.cs" />
     <Compile Include="DAO\Sinh_VienDAO.cs" />
     <Compile Include="DTO\Account.cs" />
+    <Compile Include="DTO\Admin.cs" />
+    <Compile Include="DTO\HB.cs" />
     <Compile Include="DTO\Hoc_phan.cs" />
+    <Compile Include="DTO\Hoc_phi.cs" />
+    <Compile Include="DTO\KQHT.cs" />
     <Compile Include="DTO\Lop_hoc.cs" />
+    <Compile Include="DTO\Nhan_vien.cs" />
     <Compile Include="DTO\Sinh_Vien.cs" />
+    <Compile Include="DTO\Tinh_trangHB.cs" />
     <Compile Include="frmAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
