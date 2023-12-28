@@ -13,7 +13,7 @@ namespace QLSV_OOP
 {
     public partial class frmChangePassword : Form
     {
-        public frmChangePassword(string UserID)
+        public frmChangePassword(Account account)
         {
             InitializeComponent();
         }

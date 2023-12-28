@@ -17,10 +17,11 @@ namespace QLSV_OOP
     {
         //private Account loginAccount;
 
-        string userid;
+        Account account;
         public frmSinhVien(Account acc)
         {
             InitializeComponent();
+            account = acc;  
             ToolStripMenuItem daotao = RoleDAO.CreateDaoTao();
             ToolStripMenuItem hocbong = RoleDAO.CreateHB();
             ToolStripMenuItem taivu = RoleDAO.CreateTaiVu();
@@ -30,7 +31,7 @@ namespace QLSV_OOP
             List<string> itemsSelected = CustomizeMenuStrip.Instance.RetrieveRole(roleid);
             //List<string> itemsSelected = new List<string>{ "Đào Tạo","Đăng ký lớp", "Đào Tạo", "Cập nhật điểm"};
             CustomizeMenuStrip.Instance.Customize(menuStrip1, itemsSelected);
-            userid = acc.UserID;
+            string userid = acc.UserID;
             Sinh_Vien sinhVien = Sinh_VienDAO.Instance.GetSinhVienbyUserID(userid);
             CustomizeMenuStrip.Instance.CustomizeAccount(menuStrip2, sinhVien.FullName);
             //CustomizeMenuStrip.Instance.SignOut.Click += new System.EventHandler(this.SignOut);
@@ -70,7 +71,7 @@ namespace QLSV_OOP
 
         private void ChangePassword(object sender, EventArgs e)
         {
-            FunctionMenuStrip.Instance.ChangePassword(this, userid);
+            FunctionMenuStrip.Instance.ChangePassword(this, account);
         }
     }
 }

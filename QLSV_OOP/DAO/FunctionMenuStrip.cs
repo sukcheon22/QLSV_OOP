@@ -30,10 +30,10 @@ namespace QLSV_OOP.DAO
             form.Close();
         }
         
-        public void ChangePassword(Form form, string UserID) 
+        public void ChangePassword(Form form, Account account) 
         {
             form.Hide();
-            frmChangePassword f = new frmChangePassword(UserID);
+            frmChangePassword f = new frmChangePassword(account);
             f.ShowDialog();
             
         }
