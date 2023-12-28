@@ -70,7 +70,7 @@ namespace QLSV_OOP
 
         private void ChangePassword(object sender, EventArgs e)
         {
-            FunctionMenuStrip.Instance.ChangePassword(this, userid);
+            
         }
     }
 }
