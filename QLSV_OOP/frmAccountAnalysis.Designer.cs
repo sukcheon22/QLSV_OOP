@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.xuấtFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quayLạiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.accDataGridView = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
@@ -53,29 +53,31 @@
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.Lavender;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.xuấtFileToolStripMenuItem,
-            this.quayLạiToolStripMenuItem});
+            this.exportFileToolStripMenuItem,
+            this.backToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // xuấtFileToolStripMenuItem
+            // exportFileToolStripMenuItem
             // 
-            this.xuấtFileToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xuấtFileToolStripMenuItem.ForeColor = System.Drawing.Color.Maroon;
-            this.xuấtFileToolStripMenuItem.Name = "xuấtFileToolStripMenuItem";
-            this.xuấtFileToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
-            this.xuấtFileToolStripMenuItem.Text = "Xuất file";
+            this.exportFileToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exportFileToolStripMenuItem.ForeColor = System.Drawing.Color.Maroon;
+            this.exportFileToolStripMenuItem.Name = "exportFileToolStripMenuItem";
+            this.exportFileToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
+            this.exportFileToolStripMenuItem.Text = "Xuất file";
+            this.exportFileToolStripMenuItem.Click += new System.EventHandler(this.exportFileToolStripMenuItem_Click);
             // 
-            // quayLạiToolStripMenuItem
+            // backToolStripMenuItem
             // 
-            this.quayLạiToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quayLạiToolStripMenuItem.ForeColor = System.Drawing.Color.Maroon;
-            this.quayLạiToolStripMenuItem.Name = "quayLạiToolStripMenuItem";
-            this.quayLạiToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
-            this.quayLạiToolStripMenuItem.Text = "Quay lại";
+            this.backToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backToolStripMenuItem.ForeColor = System.Drawing.Color.Maroon;
+            this.backToolStripMenuItem.Name = "backToolStripMenuItem";
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.backToolStripMenuItem.Text = "Quay lại";
+            this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -229,8 +231,8 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem xuấtFileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem quayLạiToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exportFileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView accDataGridView;
         private System.Windows.Forms.Label label2;
