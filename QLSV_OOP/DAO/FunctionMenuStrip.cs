@@ -37,5 +37,11 @@ namespace QLSV_OOP.DAO
             f.ShowDialog();
         }
         
+        public void AccountAnalysis(Form form)
+        {
+            form.Hide();
+            frmAccountAnalysis f = new frmAccountAnalysis();
+            f.ShowDialog();
+        }
     }
 }

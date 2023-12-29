@@ -97,25 +97,25 @@
             // accountToolStripMenuItem
             // 
             this.accountToolStripMenuItem.Name = "accountToolStripMenuItem";
-            this.accountToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.accountToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.accountToolStripMenuItem.Text = "Tài khoản";
             // 
             // employeeToolStripMenuItem
             // 
             this.employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
-            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.employeeToolStripMenuItem.Text = "Nhân viên";
             // 
             // studentToolStripMenuItem
             // 
             this.studentToolStripMenuItem.Name = "studentToolStripMenuItem";
-            this.studentToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.studentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.studentToolStripMenuItem.Text = "Sinh viên";
             // 
             // authorizeToolStripMenuItem
             // 
             this.authorizeToolStripMenuItem.Name = "authorizeToolStripMenuItem";
-            this.authorizeToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.authorizeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.authorizeToolStripMenuItem.Text = "Phân quyền";
             // 
             // analyzeToolStripMenuItem
@@ -131,19 +131,20 @@
             // accountToolStripMenuItem1
             // 
             this.accountToolStripMenuItem1.Name = "accountToolStripMenuItem1";
-            this.accountToolStripMenuItem1.Size = new System.Drawing.Size(128, 22);
+            this.accountToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.accountToolStripMenuItem1.Text = "Tài khoản";
+            this.accountToolStripMenuItem1.Click += new System.EventHandler(this.accountToolStripMenuItem1_Click);
             // 
             // employeeToolStripMenuItem1
             // 
             this.employeeToolStripMenuItem1.Name = "employeeToolStripMenuItem1";
-            this.employeeToolStripMenuItem1.Size = new System.Drawing.Size(128, 22);
+            this.employeeToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.employeeToolStripMenuItem1.Text = "Nhân viên";
             // 
             // studentToolStripMenuItem1
             // 
             this.studentToolStripMenuItem1.Name = "studentToolStripMenuItem1";
-            this.studentToolStripMenuItem1.Size = new System.Drawing.Size(128, 22);
+            this.studentToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.studentToolStripMenuItem1.Text = "Sinh viên";
             // 
             // helpToolStripMenuItem
@@ -159,7 +160,7 @@
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmAdmin";
             this.Text = "frmAdmin";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAdmin_FormClosing);

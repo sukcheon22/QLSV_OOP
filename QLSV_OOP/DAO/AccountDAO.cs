@@ -8,11 +8,14 @@ using System.Data.SqlClient;
 using QLSV_OOP.DTO;
 using QLSV_OOP;
 using System.Drawing;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Drawing.Text;
 
 namespace QLSV_OOP.DAO
 {
     public class AccountDAO
     {
+        
         private static AccountDAO instance;
 
         public static AccountDAO Instance
@@ -71,5 +74,50 @@ namespace QLSV_OOP.DAO
                 return rowsAffected > 0;
             }
         }
+
+        public int NumAdmin()
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM Tai_khoan WHERE MaQuyen = 'QAD'", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return Convert.ToInt32(dt.Rows[0][0]);
+        }
+        public int NumStudent()
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM Tai_khoan WHERE MaQuyen = 'QSV'", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return Convert.ToInt32(dt.Rows[0][0]);
+        }
+        public int NumEduEmployee()
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) from tai_khoan where MaQuyen = 'QDT'", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return Convert.ToInt32(dt.Rows[0][0]);
+        }
+        public int NumFinancialEmployee()
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) from tai_khoan where MaQuyen = 'QTV'", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return Convert.ToInt32(dt.Rows[0][0]);
+        }
+        public int NumAccount()
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) from tai_khoan ", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return Convert.ToInt32(dt.Rows[0][0]);
+        }
+
+        public DataTable accGridView()
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * from tai_khoan", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return dt;
+        }
     }
+
 }
