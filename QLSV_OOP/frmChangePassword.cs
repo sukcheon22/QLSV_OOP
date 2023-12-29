@@ -29,6 +29,7 @@ namespace QLSV_OOP
             txtMatKhauMoi.ForeColor = Color.Silver;
             txtNhapLai.Text = "Nhập lại mật khẩu mới";
             txtNhapLai.ForeColor = Color.Silver;
+           
         }
         private void txtMatKhauCu_Enter(object sender, EventArgs e)
         {
@@ -46,6 +47,14 @@ namespace QLSV_OOP
                 txtMatKhauCu.Text = "Nhập mật khẩu cũ";
                 txtMatKhauCu.ForeColor = Color.Silver;
             }
+            if (txtMatKhauCu.Text != account.Password)
+            {
+                MessageBox.Show("Sai mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtMatKhauCu.Text = "Nhập mật khẩu cũ";
+                txtMatKhauCu.ForeColor = Color.Silver;
+                
+            }
+            
         }
         private void txtMatKhauMoi_Enter(object sender, EventArgs e)
         {
@@ -55,6 +64,7 @@ namespace QLSV_OOP
                 txtMatKhauMoi.ForeColor = Color.Black;
 
             }
+            
         }
 
         private void txtMatKhauMoi_Leave(object sender, EventArgs e)
@@ -64,6 +74,7 @@ namespace QLSV_OOP
                 txtMatKhauMoi.Text = "Nhập mật khẩu mới";
                 txtMatKhauMoi.ForeColor = Color.Silver;
             }
+               
         }
 
         private void txtNhapLai_Enter(object sender, EventArgs e)
@@ -83,31 +94,34 @@ namespace QLSV_OOP
                 txtNhapLai.Text = "Nhập lại mật khẩu mới";
                 txtNhapLai.ForeColor = Color.Silver;
             }
+            if (txtNhapLai.Text != txtMatKhauMoi.Text)
+            {
+                MessageBox.Show("Gõ lại mật khẩu không trùng khớp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtNhapLai.Text = "Nhập lại mật khẩu mới";
+                txtNhapLai.ForeColor = Color.Silver;
+            }
+      
         }
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
-            if (txtMatKhauMoi.Text != txtNhapLai.Text)
-            {
-                MessageBox.Show("Gõ lại mật khẩu không trùng khớp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            if (account.Password == txtMatKhauCu.Text)
-            {
-                if (AccountDAO.Instance.UpdatePassword(account.UserName, account.Password, txtMatKhauMoi.Text))
+            
+                if (txtMatKhauCu.Text == account.Password && AccountDAO.Instance.UpdatePassword(account.UserName, account.Password, txtMatKhauMoi.Text))
                 {
                     MessageBox.Show("Cập nhật mật khẩu thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    account.Password = txtMatKhauMoi.Text;
                     this.Close();
                 }
                 else
                 {
                     MessageBox.Show("Cập nhật mật khẩu thất bại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        
     }
 }
