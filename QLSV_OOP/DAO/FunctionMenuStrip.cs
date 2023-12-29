@@ -44,5 +44,13 @@ namespace QLSV_OOP.DAO
             frmAccountAnalysis f = new frmAccountAnalysis();
             f.ShowDialog();
         }
+
+        public void StudentAnalysis(Form form)
+        {
+            form.Hide();
+            frmStudentAnalysis f = new frmStudentAnalysis();
+            f.ShowDialog();
+        }
+
     }
 }

@@ -41,5 +41,47 @@ namespace QLSV_OOP.DAO
             return null;
         }
 
+        public int NumK65()
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM Sinh__vien WHERE Khoa = '65'", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return Convert.ToInt32(dt.Rows[0][0]);
+        }
+        public int NumK66()
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM Sinh__vien WHERE Khoa = '66'", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return Convert.ToInt32(dt.Rows[0][0]);
+        }
+        public int NumK67()
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM Sinh__vien WHERE Khoa = '67'", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return Convert.ToInt32(dt.Rows[0][0]);
+        }
+        public int NumK68()
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM Sinh__vien WHERE Khoa = '68'", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return Convert.ToInt32(dt.Rows[0][0]);
+        }
+        public int NumStudent()
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM Sinh__vien ", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return Convert.ToInt32(dt.Rows[0][0]);
+        }
+        public DataTable accGridView()
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * from Sinh__vien", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return dt;
+        }
     }
 }
