@@ -36,6 +36,8 @@
             this.button2 = new System.Windows.Forms.Button();
             this.txb = new System.Windows.Forms.Button();
             this.grbTTinAcc = new System.Windows.Forms.GroupBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
@@ -48,8 +50,6 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -91,7 +91,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(543, 21);
+            this.button1.Location = new System.Drawing.Point(698, 21);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(87, 32);
             this.button1.TabIndex = 3;
@@ -100,7 +100,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(379, 21);
+            this.button3.Location = new System.Drawing.Point(534, 21);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(87, 32);
             this.button3.TabIndex = 2;
@@ -109,7 +109,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(202, 21);
+            this.button2.Location = new System.Drawing.Point(357, 21);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(87, 32);
             this.button2.TabIndex = 1;
@@ -118,7 +118,7 @@
             // 
             // txb
             // 
-            this.txb.Location = new System.Drawing.Point(35, 21);
+            this.txb.Location = new System.Drawing.Point(190, 21);
             this.txb.Name = "txb";
             this.txb.Size = new System.Drawing.Size(87, 32);
             this.txb.TabIndex = 0;
@@ -147,6 +147,23 @@
             this.grbTTinAcc.TabIndex = 0;
             this.grbTTinAcc.TabStop = false;
             this.grbTTinAcc.Text = "Thông tin sinh viên";
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(877, 37);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(138, 22);
+            this.textBox4.TabIndex = 13;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(778, 40);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(94, 18);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "Số điện thoại";
             // 
             // comboBox2
             // 
@@ -324,23 +341,6 @@
             this.label1.Size = new System.Drawing.Size(96, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã định danh";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(778, 40);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(94, 18);
-            this.label7.TabIndex = 12;
-            this.label7.Text = "Số điện thoại";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(877, 37);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(138, 22);
-            this.textBox4.TabIndex = 13;
             // 
             // StudentManagement
             // 
