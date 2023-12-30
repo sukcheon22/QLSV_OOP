@@ -54,5 +54,14 @@ namespace QLSV_OOP.DAO
             form.Show();
         }
 
+        public void EmployeeAnalysis(Form form)
+        {
+            form.Hide();
+            frmEmployeeAnalysis f = new frmEmployeeAnalysis();
+            f.ShowDialog();
+            form.Show();
+        }
+
+
     }
 }

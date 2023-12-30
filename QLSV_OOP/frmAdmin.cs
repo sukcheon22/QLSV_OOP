@@ -54,6 +54,11 @@ namespace QLSV_OOP
         {
             FunctionMenuStrip.Instance.StudentAnalysis(this);
         }
+
+        private void employeeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FunctionMenuStrip.Instance.EmployeeAnalysis(this);
+        }
     }
 
 }

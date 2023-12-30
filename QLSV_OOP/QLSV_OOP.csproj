@@ -110,6 +110,12 @@
     <Compile Include="frmEmployee.Designer.cs">
       <DependentUpon>frmEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEmployeeAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployeeAnalysis.Designer.cs">
+      <DependentUpon>frmEmployeeAnalysis.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmStudentAnalysis.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDaoTao.resx">
       <DependentUpon>frmDaoTao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployeeAnalysis.resx">
+      <DependentUpon>frmEmployeeAnalysis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPhanQuyen.resx">
       <DependentUpon>frmPhanQuyen.cs</DependentUpon>
