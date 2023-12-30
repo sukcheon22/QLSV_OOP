@@ -77,6 +77,12 @@
     <Compile Include="DTO\Nhan_vien.cs" />
     <Compile Include="DTO\Sinh_Vien.cs" />
     <Compile Include="DTO\Tinh_trangHB.cs" />
+    <Compile Include="frmEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEmployee.Designer.cs">
+      <DependentUpon>frmEmployee.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmStudentAnalysis.cs">
       <SubType>Form</SubType>
     </Compile>
