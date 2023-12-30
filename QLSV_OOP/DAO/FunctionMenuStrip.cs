@@ -43,6 +43,7 @@ namespace QLSV_OOP.DAO
             form.Hide();
             frmAccountAnalysis f = new frmAccountAnalysis();
             f.ShowDialog();
+            form.Show();
         }
 
         public void StudentAnalysis(Form form)
@@ -50,6 +51,7 @@ namespace QLSV_OOP.DAO
             form.Hide();
             frmStudentAnalysis f = new frmStudentAnalysis();
             f.ShowDialog();
+            form.Show();
         }
 
     }

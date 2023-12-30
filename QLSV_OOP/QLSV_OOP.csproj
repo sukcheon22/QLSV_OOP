@@ -61,14 +61,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\Dang_kyDAO.cs" />
     <Compile Include="DAO\FunctionMenuStrip.cs" />
+    <Compile Include="DAO\HBDAO.cs" />
+    <Compile Include="DAO\Hoc_phanDAO.cs" />
+    <Compile Include="DAO\Hoc_phiDAO.cs" />
+    <Compile Include="DAO\KQHTDAO.cs" />
+    <Compile Include="DAO\Lop_hocDAO.cs" />
+    <Compile Include="DAO\Nhan_vienDAO.cs" />
     <Compile Include="DAO\RoleDAO.cs" />
     <Compile Include="DAO\ConnectionString.cs" />
     <Compile Include="DAO\CustomizeMenuStrip.cs" />
     <Compile Include="DAO\AccountDAO.cs" />
     <Compile Include="DAO\Sinh_VienDAO.cs" />
+    <Compile Include="DAO\Tinh_trangHBDAO.cs" />
     <Compile Include="DTO\Account.cs" />
     <Compile Include="DTO\Admin.cs" />
+    <Compile Include="DTO\Dang_ky.cs" />
     <Compile Include="DTO\HB.cs" />
     <Compile Include="DTO\Hoc_phan.cs" />
     <Compile Include="DTO\Hoc_phi.cs" />

@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using QLSV_OOP.DAO;
 using QLSV_OOP.DTO;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -99,8 +96,13 @@ namespace QLSV_OOP
                 excelApp.Quit();
 
                 MessageBox.Show("Xuất file Excel thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                
             }
+        }
+
+        private void backToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
