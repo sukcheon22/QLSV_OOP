@@ -19,7 +19,10 @@ namespace QLSV_OOP
         {
             InitializeComponent();
             account = acc;
+            accountManagement1.Visible = false;
+            studentManagement1.Visible = false;
         }
+
 
         private void toolStripMenuItemSignOut_Click(object sender, EventArgs e)
         {
@@ -53,6 +56,18 @@ namespace QLSV_OOP
         private void studentToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             FunctionMenuStrip.Instance.StudentAnalysis(this);
+        }
+
+        private void accountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            accountManagement1.Visible = true;
+            studentManagement1.Visible = false;
+        }
+
+        private void studentToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            studentManagement1.Visible = true;
+            accountManagement1.Visible = false;
         }
     }
 

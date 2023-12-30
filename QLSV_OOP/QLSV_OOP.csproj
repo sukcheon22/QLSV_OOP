@@ -61,6 +61,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AccountManagement.Designer.cs">
+      <DependentUpon>AccountManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAO\Dang_kyDAO.cs" />
     <Compile Include="DAO\FunctionMenuStrip.cs" />
     <Compile Include="DAO\HBDAO.cs" />
@@ -140,8 +146,23 @@
     <Compile Include="frmTaiVu.Designer.cs">
       <DependentUpon>frmTaiVu.cs</DependentUpon>
     </Compile>
+    <Compile Include="ManagementPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ManagementPanel.Designer.cs">
+      <DependentUpon>ManagementPanel.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StudentManagement.Designer.cs">
+      <DependentUpon>StudentManagement.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AccountManagement.resx">
+      <DependentUpon>AccountManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAccountAnalysis.resx">
       <DependentUpon>frmAccountAnalysis.cs</DependentUpon>
     </EmbeddedResource>
@@ -169,6 +190,9 @@
     <EmbeddedResource Include="frmTaiVu.resx">
       <DependentUpon>frmTaiVu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ManagementPanel.resx">
+      <DependentUpon>ManagementPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -179,6 +203,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="StudentManagement.resx">
+      <DependentUpon>StudentManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
