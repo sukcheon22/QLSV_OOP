@@ -86,6 +86,24 @@
     <Compile Include="DTO\Nhan_vien.cs" />
     <Compile Include="DTO\Sinh_Vien.cs" />
     <Compile Include="DTO\Tinh_trangHB.cs" />
+    <Compile Include="frmTuitionOweAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTuitionOweAnalysis.Designer.cs">
+      <DependentUpon>frmTuitionOweAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTuitionAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTuitionAnalysis.Designer.cs">
+      <DependentUpon>frmTuitionAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmScholarshipAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScholarshipAnalysis.Designer.cs">
+      <DependentUpon>frmScholarshipAnalysis.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEmployee.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +184,9 @@
     <EmbeddedResource Include="frmPhanQuyen.resx">
       <DependentUpon>frmPhanQuyen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmScholarshipAnalysis.resx">
+      <DependentUpon>frmScholarshipAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSinhVien.resx">
       <DependentUpon>frmSinhVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +195,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTaiVu.resx">
       <DependentUpon>frmTaiVu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTuitionAnalysis.resx">
+      <DependentUpon>frmTuitionAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTuitionOweAnalysis.resx">
+      <DependentUpon>frmTuitionOweAnalysis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
