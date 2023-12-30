@@ -69,6 +69,11 @@ namespace QLSV_OOP
             studentManagement1.Visible = true;
             accountManagement1.Visible = false;
         }
+
+        private void employeeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FunctionMenuStrip.Instance.EmployeeAnalysis(this);
+        }
     }
 
 }

@@ -146,6 +146,7 @@
             this.employeeToolStripMenuItem1.Name = "employeeToolStripMenuItem1";
             this.employeeToolStripMenuItem1.Size = new System.Drawing.Size(158, 26);
             this.employeeToolStripMenuItem1.Text = "Nhân viên";
+            this.employeeToolStripMenuItem1.Click += new System.EventHandler(this.employeeToolStripMenuItem1_Click);
             // 
             // studentToolStripMenuItem1
             // 
