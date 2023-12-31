@@ -27,5 +27,13 @@ namespace QLSV_OOP.DAO
         private HBDAO() { }
 
         SqlConnection con = new SqlConnection(ConnectionString.connectionString);
+
+        public int NumCompany()
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM HB WHERE Loai = 'Doanh nghiep'", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return Convert.ToInt32(dt.Rows[0][0]);
+        }
     }
 }

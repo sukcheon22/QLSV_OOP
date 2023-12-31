@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLSV_OOP.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,10 @@ namespace QLSV_OOP
         public frmScholarshipAnalysis()
         {
             InitializeComponent();
+        }
+        private void frmScholarshipAnalysis_Load(object sender, EventArgs e)
+        {
+            txtNumCompany.Text = HBDAO.Instance.NumCompany().ToString(); 
         }
     }
 }

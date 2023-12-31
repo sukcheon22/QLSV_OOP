@@ -15,6 +15,6 @@ namespace QLSV_OOP
         public frmTuitionAnalysis()
         {
             InitializeComponent();
-        }
+        }     
     }
 }
