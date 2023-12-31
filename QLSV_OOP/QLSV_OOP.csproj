@@ -92,6 +92,12 @@
     <Compile Include="DTO\Nhan_vien.cs" />
     <Compile Include="DTO\Sinh_Vien.cs" />
     <Compile Include="DTO\Tinh_trangHB.cs" />
+    <Compile Include="EmployeeManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EmployeeManagement.Designer.cs">
+      <DependentUpon>EmployeeManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTuitionOweAnalysis.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +198,9 @@
     </Compile>
     <EmbeddedResource Include="AccountManagement.resx">
       <DependentUpon>AccountManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeManagement.resx">
+      <DependentUpon>EmployeeManagement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAccountAnalysis.resx">
       <DependentUpon>frmAccountAnalysis.cs</DependentUpon>

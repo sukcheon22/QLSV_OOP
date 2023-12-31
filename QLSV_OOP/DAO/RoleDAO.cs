@@ -11,6 +11,8 @@ namespace QLSV_OOP
 {
     public class RoleDAO
     {
+        public static event EventHandler TkeDiemClicked;
+
         public static ToolStripMenuItem CreateDaoTao()
         {
             ToolStripMenuItem daotao = new ToolStripMenuItem("Đào Tạo");
@@ -60,13 +62,19 @@ namespace QLSV_OOP
             tke.DropDownItems.Add(TkeNoHPhi);
             tke.DropDownItems.Add(TkeDiem);
             tke.DropDownItems.Add(TkeHB);
+            TkeDiem.Click += TkeDiem_Clicked;
             return tke;
         }
-       
-        
-        
-        
-        
+
+        private static void TkeDiem_Clicked(object sender, EventArgs e)
+        {
+            TkeDiemClicked?.Invoke(sender, e);
+        }
+
+
+
+
+
 
     }
 }

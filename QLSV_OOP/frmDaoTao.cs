@@ -26,8 +26,13 @@ namespace QLSV_OOP
             string roleid = acc.RoleID;
             List<string> itemsSelected = CustomizeMenuStrip.Instance.RetrieveRole(roleid);
             CustomizeMenuStrip.Instance.Customize(menuStrip1, itemsSelected);
+            RoleDAO.TkeDiemClicked += TkeDiem_Clicked;
         }
 
+        private void TkeDiem_Clicked(object sender, EventArgs e)
+        {
+            
+        }
         private void frmDaoTao_Load(object sender, EventArgs e)
         {
 
@@ -42,5 +47,7 @@ namespace QLSV_OOP
         {
 
         }
+
+
     }
 }
