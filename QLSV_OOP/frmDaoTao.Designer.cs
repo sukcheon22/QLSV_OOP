@@ -35,9 +35,9 @@
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thốngKêToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gradeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.scholarshipToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.trợGiúpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -103,24 +103,23 @@
             this.thốngKêToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.thốngKêToolStripMenuItem.Text = "Thống kê";
             // 
-            // trợGiúpToolStripMenuItem
-            // 
-            this.trợGiúpToolStripMenuItem.Name = "trợGiúpToolStripMenuItem";
-            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
-            this.trợGiúpToolStripMenuItem.Text = "Trợ giúp";
-            // 
             // gradeToolStripMenuItem
             // 
             this.gradeToolStripMenuItem.Name = "gradeToolStripMenuItem";
             this.gradeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.gradeToolStripMenuItem.Text = "Điểm";
-            this.gradeToolStripMenuItem.Click += new System.EventHandler(this.gradeToolStripMenuItem_Click);
             // 
             // scholarshipToolStripMenuItem
             // 
             this.scholarshipToolStripMenuItem.Name = "scholarshipToolStripMenuItem";
             this.scholarshipToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.scholarshipToolStripMenuItem.Text = "Học bổng";
+            // 
+            // trợGiúpToolStripMenuItem
+            // 
+            this.trợGiúpToolStripMenuItem.Name = "trợGiúpToolStripMenuItem";
+            this.trợGiúpToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.trợGiúpToolStripMenuItem.Text = "Trợ giúp";
             // 
             // frmDaoTao
             // 

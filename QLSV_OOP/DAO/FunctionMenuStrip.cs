@@ -62,13 +62,13 @@ namespace QLSV_OOP.DAO
             form.Show();
         }
 
-        public void GradeAnalysis(Form form)
-        {
-            form.Hide();
-            frmGradeAnalysis f = new frmGradeAnalysis();
-            f.ShowDialog();
-            form.Show();
-        }
+        //public void GradeAnalysis(Form form)
+        //{
+        //    form.Hide();
+        //    frmGradeAnalysis f = new frmGradeAnalysis();
+        //    f.ShowDialog();
+        //    form.Show();
+        //}
 
 
     }

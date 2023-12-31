@@ -43,9 +43,9 @@
             this.studentToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.employeeManagement1 = new QLSV_OOP.EmployeeManagement();
             this.accountManagement1 = new QLSV_OOP.AccountManagement();
             this.studentManagement1 = new QLSV_OOP.StudentManagement();
-            this.employeeManagement1 = new QLSV_OOP.EmployeeManagement();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -60,8 +60,8 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1071, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(803, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -71,20 +71,20 @@
             this.changePasswordToolStripMenuItem,
             this.toolStripMenuItemSignOut});
             this.hệThốngToolStripMenuItem.Name = "hệThốngToolStripMenuItem";
-            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(76, 26);
+            this.hệThốngToolStripMenuItem.Size = new System.Drawing.Size(63, 20);
             this.hệThốngToolStripMenuItem.Text = "Cá nhân";
             // 
             // changePasswordToolStripMenuItem
             // 
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
-            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(181, 26);
+            this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
             this.changePasswordToolStripMenuItem.Text = "Đổi mật khẩu";
             this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click_1);
             // 
             // toolStripMenuItemSignOut
             // 
             this.toolStripMenuItemSignOut.Name = "toolStripMenuItemSignOut";
-            this.toolStripMenuItemSignOut.Size = new System.Drawing.Size(181, 26);
+            this.toolStripMenuItemSignOut.Size = new System.Drawing.Size(145, 22);
             this.toolStripMenuItemSignOut.Text = "Đăng xuất";
             this.toolStripMenuItemSignOut.Click += new System.EventHandler(this.toolStripMenuItemSignOut_Click);
             // 
@@ -96,34 +96,33 @@
             this.studentToolStripMenuItem,
             this.authorizeToolStripMenuItem});
             this.manageToolStripMenuItem.Name = "manageToolStripMenuItem";
-            this.manageToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
+            this.manageToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.manageToolStripMenuItem.Text = "Quản lý";
             // 
             // accountToolStripMenuItem
             // 
             this.accountToolStripMenuItem.Name = "accountToolStripMenuItem";
-            this.accountToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.accountToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.accountToolStripMenuItem.Text = "Tài khoản";
             this.accountToolStripMenuItem.Click += new System.EventHandler(this.accountToolStripMenuItem_Click);
             // 
             // employeeToolStripMenuItem
             // 
             this.employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
-            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.employeeToolStripMenuItem.Text = "Nhân viên";
-            this.employeeToolStripMenuItem.Click += new System.EventHandler(this.employeeToolStripMenuItem_Click);
             // 
             // studentToolStripMenuItem
             // 
             this.studentToolStripMenuItem.Name = "studentToolStripMenuItem";
-            this.studentToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.studentToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.studentToolStripMenuItem.Text = "Sinh viên";
             this.studentToolStripMenuItem.Click += new System.EventHandler(this.studentToolStripMenuItem_Click);
             // 
             // authorizeToolStripMenuItem
             // 
             this.authorizeToolStripMenuItem.Name = "authorizeToolStripMenuItem";
-            this.authorizeToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.authorizeToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.authorizeToolStripMenuItem.Text = "Phân quyền";
             // 
             // analyzeToolStripMenuItem
@@ -133,34 +132,34 @@
             this.employeeToolStripMenuItem1,
             this.studentToolStripMenuItem1});
             this.analyzeToolStripMenuItem.Name = "analyzeToolStripMenuItem";
-            this.analyzeToolStripMenuItem.Size = new System.Drawing.Size(84, 26);
+            this.analyzeToolStripMenuItem.Size = new System.Drawing.Size(68, 20);
             this.analyzeToolStripMenuItem.Text = "Thống kê";
             // 
             // accountToolStripMenuItem1
             // 
             this.accountToolStripMenuItem1.Name = "accountToolStripMenuItem1";
-            this.accountToolStripMenuItem1.Size = new System.Drawing.Size(158, 26);
+            this.accountToolStripMenuItem1.Size = new System.Drawing.Size(128, 22);
             this.accountToolStripMenuItem1.Text = "Tài khoản";
             this.accountToolStripMenuItem1.Click += new System.EventHandler(this.accountToolStripMenuItem1_Click);
             // 
             // employeeToolStripMenuItem1
             // 
             this.employeeToolStripMenuItem1.Name = "employeeToolStripMenuItem1";
-            this.employeeToolStripMenuItem1.Size = new System.Drawing.Size(158, 26);
+            this.employeeToolStripMenuItem1.Size = new System.Drawing.Size(128, 22);
             this.employeeToolStripMenuItem1.Text = "Nhân viên";
             this.employeeToolStripMenuItem1.Click += new System.EventHandler(this.employeeToolStripMenuItem1_Click);
             // 
             // studentToolStripMenuItem1
             // 
             this.studentToolStripMenuItem1.Name = "studentToolStripMenuItem1";
-            this.studentToolStripMenuItem1.Size = new System.Drawing.Size(158, 26);
+            this.studentToolStripMenuItem1.Size = new System.Drawing.Size(128, 22);
             this.studentToolStripMenuItem1.Text = "Sinh viên";
             this.studentToolStripMenuItem1.Click += new System.EventHandler(this.studentToolStripMenuItem1_Click);
             // 
             // helpToolStripMenuItem
             // 
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(78, 26);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.helpToolStripMenuItem.Text = "Trợ giúp";
             // 
             // panel1
@@ -168,41 +167,45 @@
             this.panel1.Controls.Add(this.employeeManagement1);
             this.panel1.Controls.Add(this.accountManagement1);
             this.panel1.Controls.Add(this.studentManagement1);
-            this.panel1.Location = new System.Drawing.Point(0, 33);
+            this.panel1.Location = new System.Drawing.Point(0, 27);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1059, 530);
+            this.panel1.Size = new System.Drawing.Size(794, 431);
             this.panel1.TabIndex = 1;
+            // 
+            // employeeManagement1
+            // 
+            this.employeeManagement1.Location = new System.Drawing.Point(-1, 0);
+            this.employeeManagement1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.employeeManagement1.Name = "employeeManagement1";
+            this.employeeManagement1.Size = new System.Drawing.Size(793, 431);
+            this.employeeManagement1.TabIndex = 2;
             // 
             // accountManagement1
             // 
             this.accountManagement1.Location = new System.Drawing.Point(0, 0);
+            this.accountManagement1.Margin = new System.Windows.Forms.Padding(2);
             this.accountManagement1.Name = "accountManagement1";
-            this.accountManagement1.Size = new System.Drawing.Size(712, 538);
+            this.accountManagement1.Size = new System.Drawing.Size(534, 437);
             this.accountManagement1.TabIndex = 1;
             // 
             // studentManagement1
             // 
             this.studentManagement1.Location = new System.Drawing.Point(0, 0);
+            this.studentManagement1.Margin = new System.Windows.Forms.Padding(2);
             this.studentManagement1.Name = "studentManagement1";
-            this.studentManagement1.Size = new System.Drawing.Size(1056, 538);
+            this.studentManagement1.Size = new System.Drawing.Size(792, 437);
             this.studentManagement1.TabIndex = 0;
-            // 
-            // employeeManagement1
-            // 
-            this.employeeManagement1.Location = new System.Drawing.Point(-1, 0);
-            this.employeeManagement1.Name = "employeeManagement1";
-            this.employeeManagement1.Size = new System.Drawing.Size(1057, 544);
-            this.employeeManagement1.TabIndex = 2;
             // 
             // frmAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1071, 569);
+            this.ClientSize = new System.Drawing.Size(803, 491);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmAdmin";
             this.Text = "frmAdmin";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAdmin_FormClosing);

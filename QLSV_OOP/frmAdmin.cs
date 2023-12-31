@@ -21,6 +21,7 @@ namespace QLSV_OOP
             account = acc;
             accountManagement1.Visible = false;
             studentManagement1.Visible = false;
+            employeeManagement1.Visible = false;
         }
 
 
