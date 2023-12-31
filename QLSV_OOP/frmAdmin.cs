@@ -21,6 +21,7 @@ namespace QLSV_OOP
             account = acc;
             accountManagement1.Visible = false;
             studentManagement1.Visible = false;
+            employeeManagement1.Visible = false;
         }
 
 
@@ -62,17 +63,26 @@ namespace QLSV_OOP
         {
             accountManagement1.Visible = true;
             studentManagement1.Visible = false;
+            employeeManagement1.Visible = false;
         }
 
         private void studentToolStripMenuItem_Click(object sender, EventArgs e)
         {
             studentManagement1.Visible = true;
             accountManagement1.Visible = false;
+            employeeManagement1.Visible = false;
         }
 
         private void employeeToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             FunctionMenuStrip.Instance.EmployeeAnalysis(this);
+        }
+
+        private void employeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            studentManagement1.Visible = false;
+            accountManagement1.Visible = false;
+            employeeManagement1.Visible = true;
         }
     }
 

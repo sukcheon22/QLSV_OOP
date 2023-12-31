@@ -9,15 +9,17 @@ namespace QLSV_OOP.DTO
 {
     internal class HB
     {
-        public HB(string hbID, string hbName)
+        public HB(string hbID, string hbName, string loaiHB)
         {
             this.HBID = hbID;
             this.HBName = hbName;
+            this.LoaiHB = loaiHB;
         }
         public HB(DataRow row)
         {
             this.HBID = row["MaHB"].ToString();
             this.HBName = row["TenHB"].ToString();
+            this.LoaiHB = row["Loai"].ToString();
         }
 
         private string hbID;
@@ -34,6 +36,13 @@ namespace QLSV_OOP.DTO
         {
             get { return hbName; }
             set { hbName = value; }
+        }
+        private string loaiHB;
+
+        public string LoaiHB
+        {
+            get { return loaiHB; }
+            set { loaiHB = value; }
         }
     }
 }
