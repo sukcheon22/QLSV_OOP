@@ -26,12 +26,14 @@ namespace QLSV_OOP
             string roleid = acc.RoleID;
             List<string> itemsSelected = CustomizeMenuStrip.Instance.RetrieveRole(roleid);
             CustomizeMenuStrip.Instance.Customize(menuStrip1, itemsSelected);
+            //daotao.DropDownItems["CapNhatDiem"].Click += CapNhatDiem_Click; 
         }
 
         private void frmDaoTao_Load(object sender, EventArgs e)
         {
 
         }
+
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
@@ -41,6 +43,18 @@ namespace QLSV_OOP
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void gradeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void CapNhatDiem_Click(object sender, EventArgs e)
+        {
+            
+            //frmCapNhatDiem formCapNhatDiem = new frmCapNhatDiem();
+            //formCapNhatDiem.ShowDialog();
+            
         }
     }
 }

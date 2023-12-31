@@ -16,5 +16,17 @@ namespace QLSV_OOP
         {
             InitializeComponent();
         }
+        public void ResetState()
+        {
+            txtID.Text = "";
+            txtTen.Text = "";
+            txtIDStu.Text = "";
+            txtSDT.Text = "";
+            cmbKhoa.Text = "";
+            cmbQue.Text = "";
+            infoStuDataGridView.DataSource = null;
+
+
+        }
     }
 }

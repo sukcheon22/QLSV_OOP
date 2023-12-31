@@ -27,5 +27,26 @@ namespace QLSV_OOP.DAO
         private KQHTDAO() { }
 
         SqlConnection con = new SqlConnection(ConnectionString.connectionString);
+        public int NumFailed()
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(DISTINCT MaSV) AS SoLuongSinhVienTruot FROM KQHT WHERE Diem < 1", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return Convert.ToInt32(dt.Rows[0][0]);
+        }
+        public int NumPassed()
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(DISTINCT MaSV) AS SoLuongSinhVienQua FROM KQHT WHERE Diem >= 1;", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return Convert.ToInt32(dt.Rows[0][0]);
+        }
+        public DataTable gradeGridView()
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * from KQHT", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return dt;
+        }
     }
 }
