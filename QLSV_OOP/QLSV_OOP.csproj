@@ -92,17 +92,11 @@
     <Compile Include="DTO\Nhan_vien.cs" />
     <Compile Include="DTO\Sinh_Vien.cs" />
     <Compile Include="DTO\Tinh_trangHB.cs" />
-    <Compile Include="frmCapNhatDiem.cs">
-      <SubType>Form</SubType>
+    <Compile Include="EmployeeManagement.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="frmCapNhatDiem.Designer.cs">
-      <DependentUpon>frmCapNhatDiem.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frmGradeAnalysis.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmGradeAnalysis.Designer.cs">
-      <DependentUpon>frmGradeAnalysis.cs</DependentUpon>
+    <Compile Include="EmployeeManagement.Designer.cs">
+      <DependentUpon>EmployeeManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTuitionOweAnalysis.cs">
       <SubType>Form</SubType>
@@ -205,6 +199,9 @@
     <EmbeddedResource Include="AccountManagement.resx">
       <DependentUpon>AccountManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="EmployeeManagement.resx">
+      <DependentUpon>EmployeeManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAccountAnalysis.resx">
       <DependentUpon>frmAccountAnalysis.cs</DependentUpon>
     </EmbeddedResource>
@@ -222,9 +219,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmployeeAnalysis.resx">
       <DependentUpon>frmEmployeeAnalysis.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmGradeAnalysis.resx">
-      <DependentUpon>frmGradeAnalysis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPhanQuyen.resx">
       <DependentUpon>frmPhanQuyen.cs</DependentUpon>

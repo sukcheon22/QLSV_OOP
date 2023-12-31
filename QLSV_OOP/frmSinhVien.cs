@@ -40,6 +40,7 @@ namespace QLSV_OOP
             
         }
 
+        
         private void frmSinhVien_Load(object sender, EventArgs e)
         {
 
