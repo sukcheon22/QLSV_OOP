@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace QLSV_OOP
 {
-    public partial class frmGradeAnalysis : Form
+    public partial class CapNhatCongNo : UserControl
     {
-        public frmGradeAnalysis()
+        public CapNhatCongNo()
         {
             InitializeComponent();
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

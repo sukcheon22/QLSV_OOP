@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QLSV_OOP
 {
-    public partial class frmGradeAnalysis : Form
+    public partial class QlyHPhan : UserControl
     {
-        public frmGradeAnalysis()
+        public QlyHPhan()
         {
             InitializeComponent();
         }
