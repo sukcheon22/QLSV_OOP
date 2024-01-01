@@ -67,6 +67,30 @@
     <Compile Include="AccountManagement.Designer.cs">
       <DependentUpon>AccountManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="CapNhatCongNo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CapNhatCongNo.Designer.cs">
+      <DependentUpon>CapNhatCongNo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapNhatDiem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CapNhatDiem.Designer.cs">
+      <DependentUpon>CapNhatDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapNhatHTTT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CapNhatHTTT.Designer.cs">
+      <DependentUpon>CapNhatHTTT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CNTThocbong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CNTThocbong.Designer.cs">
+      <DependentUpon>CNTThocbong.cs</DependentUpon>
+    </Compile>
     <Compile Include="DAO\Dang_kyDAO.cs" />
     <Compile Include="DAO\FunctionMenuStrip.cs" />
     <Compile Include="DAO\HBDAO.cs" />
@@ -97,6 +121,36 @@
     </Compile>
     <Compile Include="EmployeeManagement.Designer.cs">
       <DependentUpon>EmployeeManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClassAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClassAnalysis.Designer.cs">
+      <DependentUpon>frmClassAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmClassRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClassRegistration.Designer.cs">
+      <DependentUpon>frmClassRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGradeAnalysis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGradeAnalysis.Designer.cs">
+      <DependentUpon>frmGradeAnalysis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHTTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHTTT.Designer.cs">
+      <DependentUpon>frmHTTT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmScholarshipRegistration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmScholarshipRegistration.Designer.cs">
+      <DependentUpon>frmScholarshipRegistration.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTuitionOweAnalysis.cs">
       <SubType>Form</SubType>
@@ -188,16 +242,64 @@
     <Compile Include="ManagementPanel.Designer.cs">
       <DependentUpon>ManagementPanel.cs</DependentUpon>
     </Compile>
+    <Compile Include="PheDuyetHB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PheDuyetHB.Designer.cs">
+      <DependentUpon>PheDuyetHB.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLLop.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QLLop.Designer.cs">
+      <DependentUpon>QLLop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="QlyHPhan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QlyHPhan.Designer.cs">
+      <DependentUpon>QlyHPhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="StudentManagement.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="StudentManagement.Designer.cs">
       <DependentUpon>StudentManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="TraCuuKQHT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TraCuuKQHT.Designer.cs">
+      <DependentUpon>TraCuuKQHT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TraCuuTKB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TraCuuTKB.Designer.cs">
+      <DependentUpon>TraCuuTKB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TTinDuNo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TTinDuNo.Designer.cs">
+      <DependentUpon>TTinDuNo.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AccountManagement.resx">
       <DependentUpon>AccountManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapNhatCongNo.resx">
+      <DependentUpon>CapNhatCongNo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapNhatDiem.resx">
+      <DependentUpon>CapNhatDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapNhatHTTT.resx">
+      <DependentUpon>CapNhatHTTT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CNTThocbong.resx">
+      <DependentUpon>CNTThocbong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeManagement.resx">
       <DependentUpon>EmployeeManagement.cs</DependentUpon>
@@ -211,6 +313,12 @@
     <EmbeddedResource Include="frmChangePassword.resx">
       <DependentUpon>frmChangePassword.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmClassAnalysis.resx">
+      <DependentUpon>frmClassAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClassRegistration.resx">
+      <DependentUpon>frmClassRegistration.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
@@ -220,11 +328,20 @@
     <EmbeddedResource Include="frmEmployeeAnalysis.resx">
       <DependentUpon>frmEmployeeAnalysis.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmGradeAnalysis.resx">
+      <DependentUpon>frmGradeAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHTTT.resx">
+      <DependentUpon>frmHTTT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPhanQuyen.resx">
       <DependentUpon>frmPhanQuyen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmScholarshipAnalysis.resx">
       <DependentUpon>frmScholarshipAnalysis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmScholarshipRegistration.resx">
+      <DependentUpon>frmScholarshipRegistration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSinhVien.resx">
       <DependentUpon>frmSinhVien.cs</DependentUpon>
@@ -244,6 +361,9 @@
     <EmbeddedResource Include="ManagementPanel.resx">
       <DependentUpon>ManagementPanel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PheDuyetHB.resx">
+      <DependentUpon>PheDuyetHB.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -254,8 +374,23 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="QLLop.resx">
+      <DependentUpon>QLLop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QlyHPhan.resx">
+      <DependentUpon>QlyHPhan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StudentManagement.resx">
       <DependentUpon>StudentManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TraCuuKQHT.resx">
+      <DependentUpon>TraCuuKQHT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TraCuuTKB.resx">
+      <DependentUpon>TraCuuTKB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TTinDuNo.resx">
+      <DependentUpon>TTinDuNo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

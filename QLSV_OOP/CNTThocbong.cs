@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace QLSV_OOP
 {
-    public partial class frmTuitionAnalysis : Form
+    public partial class CNTThocbong : UserControl
     {
-        public frmTuitionAnalysis()
+        public CNTThocbong()
         {
             InitializeComponent();
-        }     
+        }
     }
 }

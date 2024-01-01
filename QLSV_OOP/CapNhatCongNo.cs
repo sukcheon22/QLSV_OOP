@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace QLSV_OOP
 {
-    public partial class frmTuitionAnalysis : Form
+    public partial class CapNhatCongNo : UserControl
     {
-        public frmTuitionAnalysis()
+        public CapNhatCongNo()
         {
             InitializeComponent();
-        }     
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

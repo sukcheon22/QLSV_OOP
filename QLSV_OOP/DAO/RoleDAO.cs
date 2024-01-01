@@ -12,10 +12,6 @@ namespace QLSV_OOP
     public class RoleDAO
     {
         public static event EventHandler TkeDiemClicked;
-        public static event EventHandler TkeHocPhiClicked;
-        public static event EventHandler TkeNoHPhiClicked;
-        public static event EventHandler TkeHBClicked;
-        public static event EventHandler TkeLopHocClicked;
 
         public static ToolStripMenuItem CreateDaoTao()
         {
@@ -46,7 +42,7 @@ namespace QLSV_OOP
         public static ToolStripMenuItem CreateTaiVu()
         {
             ToolStripMenuItem taivu = new ToolStripMenuItem("Tài Vụ");
-            ToolStripMenuItem CapNhatTTTT = new ToolStripMenuItem("Thông tin HTTT");
+            ToolStripMenuItem CapNhatTTTT = new ToolStripMenuItem("Cập nhật HTTT");
             ToolStripMenuItem CapNhatCongNo = new ToolStripMenuItem("Cập nhật công nợ");
             ToolStripMenuItem KtraDuNo = new ToolStripMenuItem("Kiểm tra dư nợ");
             taivu.DropDownItems.Add(CapNhatTTTT);
@@ -63,16 +59,14 @@ namespace QLSV_OOP
             ToolStripMenuItem TkeDiem = new ToolStripMenuItem("Điểm");
             ToolStripMenuItem TkeHB = new ToolStripMenuItem("Học bổng");
             ToolStripMenuItem TkeLopHoc = new ToolStripMenuItem("Lớp học");
+            ToolStripMenuItem TkeHTTT = new ToolStripMenuItem("Hình thức thanh toán");
             tke.DropDownItems.Add(TkeHocPhi);
             tke.DropDownItems.Add(TkeNoHPhi);
             tke.DropDownItems.Add(TkeDiem);
             tke.DropDownItems.Add(TkeHB);
             tke.DropDownItems.Add(TkeLopHoc);
-            TkeHocPhi.Click += TkeHocPhi_Clicked;
-            TkeNoHPhi.Click += TkeNoHPhi_Clicked;
+            tke.DropDownItems.Add(TkeHTTT);
             TkeDiem.Click += TkeDiem_Clicked;
-            TkeHB.Click += TkeHB_Clicked;
-            TkeLopHoc.Click += TkeLopHoc_Clicked;
             return tke;
         }
 
@@ -80,26 +74,6 @@ namespace QLSV_OOP
         {
             TkeDiemClicked?.Invoke(sender, e);
         }
-        private static void TkeHocPhi_Clicked(object sender, EventArgs e)
-        {
-            TkeHocPhiClicked?.Invoke(sender, e);
-        }
-
-        private static void TkeNoHPhi_Clicked(object sender, EventArgs e)
-        {
-            TkeNoHPhiClicked?.Invoke(sender, e);
-        }
-
-        private static void TkeHB_Clicked(object sender, EventArgs e)
-        {
-            TkeHBClicked?.Invoke(sender, e);
-        }
-
-        private static void TkeLopHoc_Clicked(object sender, EventArgs e)
-        {
-            TkeLopHocClicked?.Invoke(sender, e);
-        }
-
 
 
 
