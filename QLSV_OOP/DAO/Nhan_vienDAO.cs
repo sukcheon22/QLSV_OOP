@@ -29,6 +29,18 @@ namespace QLSV_OOP.DAO
 
         SqlConnection con = new SqlConnection(ConnectionString.connectionString);
 
+        public Nhan_vien GetNhanVienbyUserID(string userid)
+        {
+            SqlDataAdapter sa = new SqlDataAdapter("SELECT * FROM Nhan_vien WHERE MaDD = '" + userid + "'", con);
+            DataTable dt = new DataTable();
+            sa.Fill(dt);
+            foreach (DataRow item in dt.Rows)
+            {
+                return new Nhan_vien(item);
+            }
+
+            return null;
+        }
         public int NumDaoTao()
         {
             SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM Nhan_vien WHERE ViTri = 'Dao Tao'", con);

@@ -58,10 +58,12 @@ namespace QLSV_OOP
             ToolStripMenuItem TkeNoHPhi = new ToolStripMenuItem("Nợ đọng học phí");
             ToolStripMenuItem TkeDiem = new ToolStripMenuItem("Điểm");
             ToolStripMenuItem TkeHB = new ToolStripMenuItem("Học bổng");
+            ToolStripMenuItem TkeLopHoc = new ToolStripMenuItem("Lớp học");
             tke.DropDownItems.Add(TkeHocPhi);
             tke.DropDownItems.Add(TkeNoHPhi);
             tke.DropDownItems.Add(TkeDiem);
             tke.DropDownItems.Add(TkeHB);
+            tke.DropDownItems.Add(TkeLopHoc);
             TkeDiem.Click += TkeDiem_Clicked;
             return tke;
         }
