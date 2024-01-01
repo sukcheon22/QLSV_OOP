@@ -293,7 +293,7 @@ namespace QLSV_OOP
             using (SqlCommand cmdNhanVien = new SqlCommand(
                   "INSERT INTO Sinh__vien (MaSV, MaDD, TenSV, Khoa, Que, SDT, NgaySinh) VALUES " +
                   "(" +
-                  "0, " +
+                  "@Madd, " +
                   "@Madd, " +
                   "0, " +
                   "0, " +
