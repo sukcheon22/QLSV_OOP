@@ -293,12 +293,12 @@ namespace QLSV_OOP
             using (SqlCommand cmdNhanVien = new SqlCommand(
                   "INSERT INTO Sinh__vien (MaSV, MaDD, TenSV, Khoa, Que, SDT, NgaySinh) VALUES " +
                   "(" +
-                  "CAST(RAND() * 1000000 AS INT), " +
+                  "0, " +
                   "@Madd, " +
-                  "CAST(RAND() * 1000000 AS NVARCHAR(255)), " +
-                  "CAST(CEILING(RAND() * 5 + 63) AS INT), " +
-                  "CAST(RAND() * 1000000 AS NVARCHAR(255)), " +
-                  "CAST(RAND() * 1000000 AS NVARCHAR(255)), " +
+                  "0, " +
+                  "0, " +
+                  "0, " +
+                  "0, " +
                   "DATEADD(DAY, -CAST(RAND() * 3652 AS INT), GETDATE())" +
                   ")", con))
             {
@@ -308,6 +308,8 @@ namespace QLSV_OOP
                 cmdNhanVien.ExecuteNonQuery();
                 con.Close();
             }
+            //CAST(RAND() * 1000000 AS INT) ""CAST(RAND() * 1000000 AS NVARCHAR(255)) ""CAST(CEILING(RAND() * 5 + 63) AS INT)
+            //CAST(RAND() * 1000000 AS NVARCHAR(255)) "" CAST(RAND() * 1000000 AS NVARCHAR(255))
         }
     }
 }
