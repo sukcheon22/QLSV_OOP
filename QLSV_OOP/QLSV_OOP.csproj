@@ -208,6 +208,24 @@
     <Compile Include="StudentManagement.Designer.cs">
       <DependentUpon>StudentManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="TraCuuKQHT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TraCuuKQHT.Designer.cs">
+      <DependentUpon>TraCuuKQHT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TraCuuTKB.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TraCuuTKB.Designer.cs">
+      <DependentUpon>TraCuuTKB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TTinDuNo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TTinDuNo.Designer.cs">
+      <DependentUpon>TTinDuNo.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AccountManagement.resx">
       <DependentUpon>AccountManagement.cs</DependentUpon>
     </EmbeddedResource>
@@ -274,6 +292,15 @@
     </Compile>
     <EmbeddedResource Include="StudentManagement.resx">
       <DependentUpon>StudentManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TraCuuKQHT.resx">
+      <DependentUpon>TraCuuKQHT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TraCuuTKB.resx">
+      <DependentUpon>TraCuuTKB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TTinDuNo.resx">
+      <DependentUpon>TTinDuNo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
