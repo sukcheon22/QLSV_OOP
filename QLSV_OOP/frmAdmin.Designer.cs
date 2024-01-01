@@ -102,7 +102,7 @@
             // accountToolStripMenuItem
             // 
             this.accountToolStripMenuItem.Name = "accountToolStripMenuItem";
-            this.accountToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.accountToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.accountToolStripMenuItem.Text = "Tài khoản";
             this.accountToolStripMenuItem.Click += new System.EventHandler(this.accountToolStripMenuItem_Click);
             // 
@@ -111,18 +111,19 @@
             this.employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
             this.employeeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.employeeToolStripMenuItem.Text = "Nhân viên";
+            this.employeeToolStripMenuItem.Click += new System.EventHandler(this.employeeToolStripMenuItem_Click);
             // 
             // studentToolStripMenuItem
             // 
             this.studentToolStripMenuItem.Name = "studentToolStripMenuItem";
-            this.studentToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.studentToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.studentToolStripMenuItem.Text = "Sinh viên";
             this.studentToolStripMenuItem.Click += new System.EventHandler(this.studentToolStripMenuItem_Click);
             // 
             // authorizeToolStripMenuItem
             // 
             this.authorizeToolStripMenuItem.Name = "authorizeToolStripMenuItem";
-            this.authorizeToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.authorizeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.authorizeToolStripMenuItem.Text = "Phân quyền";
             // 
             // analyzeToolStripMenuItem
@@ -168,7 +169,7 @@
             this.panel1.Controls.Add(this.accountManagement1);
             this.panel1.Controls.Add(this.studentManagement1);
             this.panel1.Location = new System.Drawing.Point(0, 27);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(794, 431);
             this.panel1.TabIndex = 1;
@@ -176,7 +177,7 @@
             // employeeManagement1
             // 
             this.employeeManagement1.Location = new System.Drawing.Point(-1, 0);
-            this.employeeManagement1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.employeeManagement1.Margin = new System.Windows.Forms.Padding(2);
             this.employeeManagement1.Name = "employeeManagement1";
             this.employeeManagement1.Size = new System.Drawing.Size(793, 431);
             this.employeeManagement1.TabIndex = 2;
@@ -205,7 +206,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmAdmin";
             this.Text = "frmAdmin";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmAdmin_FormClosing);
