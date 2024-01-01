@@ -55,7 +55,8 @@ namespace QLSV_OOP
                     {"TkeHocPhi", "Học phí"},
                     {"TkeNoHPhi", "Nợ đọng học phí"},
                     {"TkeDiem", "Điểm"},
-                    {"TkeHB", "Học bổng"}
+                    {"TkeHB", "Học bổng"},
+                    {"TkeLopHoc", "Lớp học"}
                 };
 
                     foreach (var columnName in columnNamesMap.Keys)
