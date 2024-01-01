@@ -36,12 +36,14 @@ namespace QLSV_OOP
             CustomizeMenuStrip.Instance.ChangePassword.Click += ChangePassword;
             
             RoleDAO.TkeDiemClicked += TkeDiem_Clicked;
+
         }
 
         private void TkeDiem_Clicked(object sender, EventArgs e)
         {
-            
+        //    đưa từ functionmenustrip vào
         }
+        
         private void frmDaoTao_Load(object sender, EventArgs e)
         {
 

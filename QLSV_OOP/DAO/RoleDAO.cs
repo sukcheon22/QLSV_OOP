@@ -12,6 +12,10 @@ namespace QLSV_OOP
     public class RoleDAO
     {
         public static event EventHandler TkeDiemClicked;
+        public static event EventHandler TkeHocPhiClicked;
+        public static event EventHandler TkeNoHPhiClicked;
+        public static event EventHandler TkeHBClicked;
+        public static event EventHandler TkeLopHocClicked;
 
         public static ToolStripMenuItem CreateDaoTao()
         {
@@ -64,7 +68,11 @@ namespace QLSV_OOP
             tke.DropDownItems.Add(TkeDiem);
             tke.DropDownItems.Add(TkeHB);
             tke.DropDownItems.Add(TkeLopHoc);
+            TkeHocPhi.Click += TkeHocPhi_Clicked;
+            TkeNoHPhi.Click += TkeNoHPhi_Clicked;
             TkeDiem.Click += TkeDiem_Clicked;
+            TkeHB.Click += TkeHB_Clicked;
+            TkeLopHoc.Click += TkeLopHoc_Clicked;
             return tke;
         }
 
@@ -72,6 +80,26 @@ namespace QLSV_OOP
         {
             TkeDiemClicked?.Invoke(sender, e);
         }
+        private static void TkeHocPhi_Clicked(object sender, EventArgs e)
+        {
+            TkeHocPhiClicked?.Invoke(sender, e);
+        }
+
+        private static void TkeNoHPhi_Clicked(object sender, EventArgs e)
+        {
+            TkeNoHPhiClicked?.Invoke(sender, e);
+        }
+
+        private static void TkeHB_Clicked(object sender, EventArgs e)
+        {
+            TkeHBClicked?.Invoke(sender, e);
+        }
+
+        private static void TkeLopHoc_Clicked(object sender, EventArgs e)
+        {
+            TkeLopHocClicked?.Invoke(sender, e);
+        }
+
 
 
 

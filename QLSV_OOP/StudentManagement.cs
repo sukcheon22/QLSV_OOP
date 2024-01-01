@@ -51,8 +51,7 @@ namespace QLSV_OOP
         {
             // Kiểm tra xem có hàng được chọn hay không
             if (infoStuDataGridView.SelectedRows.Count > 0)
-            {
-                // Lấy dữ liệu từ hàng được chọn
+            {  
                 DataGridViewRow selectedRow = infoStuDataGridView.SelectedRows[0];
                 string maSV = selectedRow.Cells["MaSV"].Value.ToString();
                 string maDD = selectedRow.Cells["MaDD"].Value.ToString();
@@ -61,15 +60,12 @@ namespace QLSV_OOP
                 string que = selectedRow.Cells["Que"].Value.ToString();
                 string sdt = selectedRow.Cells["SDT"].Value.ToString();
                 DateTime ngaySinh = Convert.ToDateTime(selectedRow.Cells["NgaySinh"].Value);
-
-                // Hiển thị thông tin trong GroupBox
                 DisplayStudentInfo(maSV, maDD, tenSV, khoa, que, sdt, ngaySinh);
             }
         }
 
         private void DisplayStudentInfo(string maSV, string maDD, string tenSV, string khoa, string que, string sdt, DateTime ngaySinh)
-        {
-            // Hiển thị thông tin sinh viên trong GroupBox
+        { 
             txtIDStu.Text = maSV;
             txtID.Text = maDD;
             txtTen.Text = tenSV;
@@ -77,7 +73,6 @@ namespace QLSV_OOP
             cmbQue.Text = que;
             txtSDT.Text = sdt;
             birthDateTimePicker.Value = ngaySinh;
-            // ...Thêm các thuộc tính khác tương ứng
         }
         private void StudentManagement_Load(object sender, EventArgs e)
         {
