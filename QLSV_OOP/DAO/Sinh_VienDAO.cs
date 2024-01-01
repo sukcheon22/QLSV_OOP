@@ -76,7 +76,7 @@ namespace QLSV_OOP.DAO
             sda.Fill(dt);
             return Convert.ToInt32(dt.Rows[0][0]);
         }
-        public DataTable accGridView()
+        public DataTable svGridView()
         {
             SqlDataAdapter sda = new SqlDataAdapter("SELECT * from Sinh__vien", con);
             DataTable dt = new DataTable();

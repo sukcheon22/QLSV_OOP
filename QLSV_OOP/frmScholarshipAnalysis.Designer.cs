@@ -34,7 +34,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.txtStudentCompany = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtStudentuni = new System.Windows.Forms.TextBox();
+            this.txtStudentUni = new System.Windows.Forms.TextBox();
             this.txtNumTuition = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -58,7 +58,7 @@
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.txtStudentCompany);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.txtStudentuni);
+            this.panel1.Controls.Add(this.txtStudentUni);
             this.panel1.Controls.Add(this.txtNumTuition);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label2);
@@ -87,9 +87,9 @@
             this.label4.Location = new System.Drawing.Point(608, 131);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(202, 29);
+            this.label4.Size = new System.Drawing.Size(194, 29);
             this.label4.TabIndex = 17;
-            this.label4.Text = "Tổng số HB đã trao:";
+            this.label4.Text = "Tổng số HB đã đạt:";
             // 
             // label5
             // 
@@ -98,9 +98,9 @@
             this.label5.Location = new System.Drawing.Point(608, 23);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(257, 29);
+            this.label5.Size = new System.Drawing.Size(322, 29);
             this.label5.TabIndex = 13;
-            this.label5.Text = "SV đạt HB doanh nghiệp:";
+            this.label5.Text = "Học bổng doanh nghiệp đã đạt:";
             // 
             // txtStudentCompany
             // 
@@ -118,18 +118,18 @@
             this.label7.Location = new System.Drawing.Point(608, 75);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(198, 29);
+            this.label7.Size = new System.Drawing.Size(263, 29);
             this.label7.TabIndex = 15;
-            this.label7.Text = "SV đạt HB trao đổi:";
+            this.label7.Text = "Học bổng trao đổi đã đạt:";
             // 
-            // txtStudentuni
+            // txtStudentUni
             // 
-            this.txtStudentuni.Location = new System.Drawing.Point(956, 77);
-            this.txtStudentuni.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtStudentuni.Name = "txtStudentuni";
-            this.txtStudentuni.Size = new System.Drawing.Size(67, 26);
-            this.txtStudentuni.TabIndex = 16;
-            this.txtStudentuni.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtStudentUni.Location = new System.Drawing.Point(956, 77);
+            this.txtStudentUni.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtStudentUni.Name = "txtStudentUni";
+            this.txtStudentUni.Size = new System.Drawing.Size(67, 26);
+            this.txtStudentUni.TabIndex = 16;
+            this.txtStudentUni.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtNumTuition
             // 
@@ -256,6 +256,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmScholarshipAnalysis";
             this.Text = "Thống kê học bổng";
+            this.Load += new System.EventHandler(this.frmScholarshipAnalysis_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.scholarshipDataGridView)).EndInit();
@@ -285,6 +286,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtStudentCompany;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtStudentuni;
+        private System.Windows.Forms.TextBox txtStudentUni;
     }
 }

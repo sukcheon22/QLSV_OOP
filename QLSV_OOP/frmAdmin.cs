@@ -61,6 +61,7 @@ namespace QLSV_OOP
 
         private void accountToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            accountManagement1.ResetState();
             accountManagement1.Visible = true;
             studentManagement1.Visible = false;
             studentManagement1.ResetState();
@@ -68,6 +69,7 @@ namespace QLSV_OOP
 
         private void studentToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            studentManagement1.ResetState();
             studentManagement1.Visible = true;
             accountManagement1.Visible = false;
             accountManagement1.ResetState();

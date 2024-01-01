@@ -49,13 +49,15 @@ namespace QLSV_OOP
                     {"CapNhatHB", "Cập nhật thông tin học bổng"},
                     {"PheDuyetHB", "Phê duyệt yêu cầu học bổng"},
                     {"DangKyHB", "Đăng ký học bổng"},
-                    {"CapNhatTTTT", "Thông tin HTTT"},
+                    {"CapNhatTTTT", "Cập nhật HTTT"},
                     {"CapNhatCongNo", "Cập nhật công nợ"},
                     {"KtraDuNo", "Kiểm tra dư nợ"},
                     {"TkeHocPhi", "Học phí"},
                     {"TkeNoHPhi", "Nợ đọng học phí"},
                     {"TkeDiem", "Điểm"},
-                    {"TkeHB", "Học bổng"}
+                    {"TkeHB", "Học bổng"},
+                    {"TkeLopHoc", "Lớp học"},
+                    {"TkeHTTT", "Hình thức thanh toán"}
                 };
 
                     foreach (var columnName in columnNamesMap.Keys)
@@ -77,7 +79,7 @@ namespace QLSV_OOP
                                     itemsToDisplay.Add("Học Bổng");
                                     itemsToDisplay.Add(columnNamesMap[columnName]);
                                 }    
-                                else if(columnNamesMap[columnName] == "Thông tin HTTT" || columnNamesMap[columnName] == "Cập nhật công nợ" || 
+                                else if(columnNamesMap[columnName] == "Cập nhật HTTT" || columnNamesMap[columnName] == "Cập nhật công nợ" || 
                                     columnNamesMap[columnName] == "Kiểm tra dư nợ")
                                 {
                                     itemsToDisplay.Add("Tài Vụ");

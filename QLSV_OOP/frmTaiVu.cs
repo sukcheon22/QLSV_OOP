@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,6 +16,7 @@ namespace QLSV_OOP
 {
     public partial class frmTaiVu : Form
     {
+        Account account;
         public frmTaiVu(Account acc)
         {
             InitializeComponent();
@@ -26,6 +28,12 @@ namespace QLSV_OOP
             string roleid = acc.RoleID;
             List<string> itemsSelected = CustomizeMenuStrip.Instance.RetrieveRole(roleid);
             CustomizeMenuStrip.Instance.Customize(menuStrip1, itemsSelected);
+            string userid = acc.UserID;
+            Nhan_vien nhanVien = Nhan_vienDAO.Instance.GetNhanVienbyUserID(userid);
+            CustomizeMenuStrip.Instance.CustomizeAccount(menuStrip2, nhanVien.StaffName);
+            //CustomizeMenuStrip.Instance.SignOut.Click += new System.EventHandler(this.SignOut);
+            CustomizeMenuStrip.Instance.SignOut.Click += SignOut;
+            CustomizeMenuStrip.Instance.ChangePassword.Click += ChangePassword;
         }
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
@@ -42,10 +50,27 @@ namespace QLSV_OOP
         {
 
         }
+        private void SignOut(object sender, EventArgs e)
+        {
+            //this.Close();
+            FunctionMenuStrip.Instance.SignOut(this);
+        }
 
+        private void ChangePassword(object sender, EventArgs e)
+        {
+            FunctionMenuStrip.Instance.ChangePassword(this, account);
+        }
         private void menuStrip2_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void frmTaiVu_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Xác nhận đăng xuất?", "Thông báo", MessageBoxButtons.OKCancel) != System.Windows.Forms.DialogResult.OK)
+            {
+                e.Cancel = true;
+            }
         }
     }
 }
