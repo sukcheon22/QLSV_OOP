@@ -28,6 +28,11 @@ namespace QLSV_OOP
             string roleid = acc.RoleID;
             List<string> itemsSelected = CustomizeMenuStrip.Instance.RetrieveRole(roleid);
             CustomizeMenuStrip.Instance.Customize(menuStrip1, itemsSelected);
+            ToolStripMenuItem qly = new ToolStripMenuItem("Quản lý");
+            ToolStripMenuItem qlyLop = new ToolStripMenuItem("Quản lý lớp");
+            ToolStripMenuItem qlyHP = new ToolStripMenuItem("Quản lý học phần");
+            qly.DropDownItems.AddRange(new ToolStripItem[] { qlyLop, qlyHP });
+            menuStrip1.Items.Add(qly);
             string userid = acc.UserID;
             Nhan_vien nhanVien = Nhan_vienDAO.Instance.GetNhanVienbyUserID(userid);
             CustomizeMenuStrip.Instance.CustomizeAccount(menuStrip2, nhanVien.StaffName);
