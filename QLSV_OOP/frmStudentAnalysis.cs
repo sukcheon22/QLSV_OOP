@@ -37,7 +37,7 @@ namespace QLSV_OOP
             txtNumCountK67.Text = Sinh_VienDAO.Instance.NumK67().ToString();
             txtNumCountK68.Text = Sinh_VienDAO.Instance.NumK68().ToString();
             txtNumCountStudent.Text = Sinh_VienDAO.Instance.NumStudent().ToString();
-            studentDataGridView.DataSource = Sinh_VienDAO.Instance.accGridView();
+            studentDataGridView.DataSource = Sinh_VienDAO.Instance.svGridView();
         }
 
         private void exportFileToolStripMenuItem_Click(object sender, EventArgs e)

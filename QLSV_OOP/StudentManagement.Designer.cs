@@ -31,15 +31,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.infoStuDataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnTimKiem = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cmbQue = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.birthDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtIDStu = new System.Windows.Forms.TextBox();
@@ -62,7 +61,7 @@
             this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Location = new System.Drawing.Point(5, 6);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(779, 427);
             this.panel1.TabIndex = 1;
@@ -71,7 +70,7 @@
             // 
             this.infoStuDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.infoStuDataGridView.Location = new System.Drawing.Point(11, 196);
-            this.infoStuDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.infoStuDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.infoStuDataGridView.Name = "infoStuDataGridView";
             this.infoStuDataGridView.RowHeadersWidth = 51;
             this.infoStuDataGridView.RowTemplate.Height = 24;
@@ -80,65 +79,57 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button4);
-            this.groupBox3.Controls.Add(this.button5);
-            this.groupBox3.Controls.Add(this.button6);
-            this.groupBox3.Controls.Add(this.button7);
+            this.groupBox3.Controls.Add(this.btnXoa);
+            this.groupBox3.Controls.Add(this.btnTimKiem);
+            this.groupBox3.Controls.Add(this.btnSua);
             this.groupBox3.Location = new System.Drawing.Point(11, 123);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(766, 58);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chức năng";
             // 
-            // button4
+            // btnXoa
             // 
-            this.button4.Location = new System.Drawing.Point(524, 17);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(65, 26);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Xóa";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnXoa.Location = new System.Drawing.Point(421, 17);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(65, 26);
+            this.btnXoa.TabIndex = 3;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // button5
+            // btnTimKiem
             // 
-            this.button5.Location = new System.Drawing.Point(400, 17);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(65, 26);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "Tìm kiếm";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Location = new System.Drawing.Point(260, 17);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(65, 26);
+            this.btnTimKiem.TabIndex = 2;
+            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
-            // button6
+            // btnSua
             // 
-            this.button6.Location = new System.Drawing.Point(268, 17);
-            this.button6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(65, 26);
-            this.button6.TabIndex = 1;
-            this.button6.Text = "Sửa";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(142, 17);
-            this.button7.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(65, 26);
-            this.button7.TabIndex = 0;
-            this.button7.Text = "Thêm";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnSua.Location = new System.Drawing.Point(109, 17);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(65, 26);
+            this.btnSua.TabIndex = 1;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.txtSDT);
             this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.cmbQue);
-            this.groupBox2.Controls.Add(this.dateTimePicker2);
+            this.groupBox2.Controls.Add(this.birthDateTimePicker);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.label10);
             this.groupBox2.Controls.Add(this.txtIDStu);
@@ -150,9 +141,9 @@
             this.groupBox2.Controls.Add(this.label13);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Location = new System.Drawing.Point(11, 2);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(766, 115);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
@@ -161,7 +152,7 @@
             // txtSDT
             // 
             this.txtSDT.Location = new System.Drawing.Point(658, 30);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(2);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(104, 20);
             this.txtSDT.TabIndex = 13;
@@ -245,21 +236,21 @@
             "Vinh Phuc",
             "Yen Bai"});
             this.cmbQue.Location = new System.Drawing.Point(458, 68);
-            this.cmbQue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbQue.Margin = new System.Windows.Forms.Padding(2);
             this.cmbQue.Name = "cmbQue";
             this.cmbQue.Size = new System.Drawing.Size(104, 21);
             this.cmbQue.TabIndex = 11;
             // 
-            // dateTimePicker2
+            // birthDateTimePicker
             // 
-            this.dateTimePicker2.CustomFormat = "yyyy-mm-dd";
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(458, 30);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(104, 20);
-            this.dateTimePicker2.TabIndex = 10;
-            this.dateTimePicker2.Value = new System.DateTime(2023, 12, 12, 0, 0, 0, 0);
+            this.birthDateTimePicker.CustomFormat = "yyyy-mm-dd";
+            this.birthDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.birthDateTimePicker.Location = new System.Drawing.Point(458, 30);
+            this.birthDateTimePicker.Margin = new System.Windows.Forms.Padding(2);
+            this.birthDateTimePicker.Name = "birthDateTimePicker";
+            this.birthDateTimePicker.Size = new System.Drawing.Size(104, 20);
+            this.birthDateTimePicker.TabIndex = 10;
+            this.birthDateTimePicker.Value = new System.DateTime(2023, 12, 12, 0, 0, 0, 0);
             // 
             // label9
             // 
@@ -286,7 +277,7 @@
             // txtIDStu
             // 
             this.txtIDStu.Location = new System.Drawing.Point(100, 68);
-            this.txtIDStu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIDStu.Margin = new System.Windows.Forms.Padding(2);
             this.txtIDStu.Name = "txtIDStu";
             this.txtIDStu.Size = new System.Drawing.Size(104, 20);
             this.txtIDStu.TabIndex = 7;
@@ -294,7 +285,7 @@
             // txtID
             // 
             this.txtID.Location = new System.Drawing.Point(100, 30);
-            this.txtID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtID.Margin = new System.Windows.Forms.Padding(2);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(104, 20);
             this.txtID.TabIndex = 6;
@@ -302,7 +293,7 @@
             // txtTen
             // 
             this.txtTen.Location = new System.Drawing.Point(277, 30);
-            this.txtTen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTen.Margin = new System.Windows.Forms.Padding(2);
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(104, 20);
             this.txtTen.TabIndex = 5;
@@ -317,7 +308,7 @@
             "67",
             "68"});
             this.cmbKhoa.Location = new System.Drawing.Point(277, 68);
-            this.cmbKhoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbKhoa.Margin = new System.Windows.Forms.Padding(2);
             this.cmbKhoa.Name = "cmbKhoa";
             this.cmbKhoa.Size = new System.Drawing.Size(104, 21);
             this.cmbKhoa.TabIndex = 4;
@@ -371,9 +362,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "StudentManagement";
             this.Size = new System.Drawing.Size(796, 437);
+            this.Load += new System.EventHandler(this.StudentManagement_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.infoStuDataGridView)).EndInit();
             this.groupBox3.ResumeLayout(false);
@@ -390,7 +382,7 @@
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cmbQue;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker birthDateTimePicker;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtIDStu;
@@ -403,9 +395,8 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.DataGridView infoStuDataGridView;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnTimKiem;
+        private System.Windows.Forms.Button btnSua;
     }
 }

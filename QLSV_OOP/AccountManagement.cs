@@ -8,8 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
-using System.Data.SqlClient;
 using QLSV_OOP.DAO;
 using QLSV_OOP.DTO;
 
@@ -55,7 +53,7 @@ namespace QLSV_OOP
 
             if (!string.IsNullOrEmpty(madd))
             {
-                query += $"Madd LIKE '%{madd}%'";
+                query += $"MaDD LIKE '%{madd}%'";
                 isFirstCondition = false;
             }
 
@@ -146,23 +144,38 @@ namespace QLSV_OOP
             // Cập nhật lại DataGridView sau khi cập nhật CSDL
             InitializeDataGridView();
 
-            MessageBox.Show("Đã cập nhật thông tin sinh viên thành công!");
+            
         }
         
 
         private void UpdateInfoAccInfo(string userid, string newusername, string newpassword)
         {
-            // Cập nhật thông tin sinh viên vào cơ sở dữ liệu
-            // Sử dụng SqlCommand để thực hiện câu truy vấn UPDATE
-            using (SqlCommand cmd = new SqlCommand("UPDATE Tai_khoan SET Username = @Name , Password = @Password WHERE MaDD = @Madd", con)) 
+            try
             {
-                cmd.Parameters.AddWithValue("@Name", newusername);
-                cmd.Parameters.AddWithValue("@Password", newpassword);
-                cmd.Parameters.AddWithValue("@Madd", userid);
+                using (SqlCommand cmd = new SqlCommand("UPDATE Tai_khoan SET Username = @Name , Password = @Password WHERE MaDD = @Madd", con))
+                {
+                    cmd.Parameters.AddWithValue("@Name", newusername);
+                    cmd.Parameters.AddWithValue("@Password", newpassword);
+                    cmd.Parameters.AddWithValue("@Madd", userid);
 
-                con.Open();
-                cmd.ExecuteNonQuery();
-                con.Close();
+                    con.Open();
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    con.Close();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Đã cập nhật thông tin sinh viên thành công!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không có sinh viên nào được cập nhật. Có thể không tồn tại Mã SV tương ứng hoặc Mã DD không khớp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                }
+            }
+            catch (SqlException ex)
+            {
+                // Xử lý lỗi SQL
+                MessageBox.Show($"Lỗi SQL: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -215,7 +228,7 @@ namespace QLSV_OOP
             // Làm mới DataGridView
             InitializeDataGridView();
 
-            MessageBox.Show("Đã thêm tài khoản mới thành công!");
+            
                 
             
         }
@@ -224,17 +237,55 @@ namespace QLSV_OOP
         {
             // Thêm một tài khoản mới vào cơ sở dữ liệu
             // Sử dụng SqlCommand để thực hiện câu truy vấn INSERT
-            using (SqlCommand cmd = new SqlCommand("INSERT INTO Tai_khoan (Madd, Username, Password, MaQuyen) VALUES (@Madd, @Username, @Password, @MaQuyen)", con))
+            try
             {
-                cmd.Parameters.AddWithValue("@Madd", userId);
-                cmd.Parameters.AddWithValue("@Username", username);
-                cmd.Parameters.AddWithValue("@Password", password);
-                cmd.Parameters.AddWithValue("@MaQuyen", role);
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO Tai_khoan (Madd, Username, Password, MaQuyen) VALUES (@Madd, @Username, @Password, @MaQuyen)", con))
+                {
+                    cmd.Parameters.AddWithValue("@Madd", userId);
+                    cmd.Parameters.AddWithValue("@Username", username);
+                    cmd.Parameters.AddWithValue("@Password", password);
+                    cmd.Parameters.AddWithValue("@MaQuyen", role);
 
-                con.Open();
-                cmd.ExecuteNonQuery();
-                con.Close();
-                ThemSinhVienMoi(userId);
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+
+                    
+                }
+                if (role == "QSV")
+                {
+                    ThemSinhVienMoi(userId);
+                }
+                else if (role == "QNV")
+                {
+                    //ThemNhanVienMoi(userId);
+                }
+                MessageBox.Show("Đã thêm tài khoản mới thành công!");
+            }
+            catch (SqlException ex)
+            {
+                // Xử lý lỗi SQL
+                if (ex.Number == 2627)  // 2627 là mã lỗi cho việc vi phạm ràng buộc duy nhất (unique constraint)
+                {
+                    MessageBox.Show($"Mã sinh viên '{userId}' đã tồn tại trong cơ sở dữ liệu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show($"Lỗi SQL: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Xử lý lỗi khác (nếu có)
+                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Đảm bảo rằng kết nối sẽ được đóng dù có lỗi hay không
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
             }
         }
         private void ThemSinhVienMoi(string madd)
