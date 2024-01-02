@@ -24,7 +24,7 @@ namespace QLSV_OOP
         public static event EventHandler HocPhiClicked;
         public static event EventHandler NoDongHocPhiClicked;
         public static event EventHandler TkeDiemClicked;
-        public static event EventHandler HocBongClicked;
+        public static event EventHandler TkeHocBongClicked;
         public static event EventHandler LopHocClicked;
         public static event EventHandler HTThanhToanClicked;
 
@@ -110,7 +110,7 @@ namespace QLSV_OOP
             TkeDiem.Click += TkeDiem_Clicked;
 
             ToolStripMenuItem TkeHB = new ToolStripMenuItem("Học bổng");
-            TkeHB.Click += HocBong_Clicked;
+            TkeHB.Click += TkeHocBong_Clicked;
 
             ToolStripMenuItem TkeLopHoc = new ToolStripMenuItem("Lớp học");
             TkeLopHoc.Click += LopHoc_Clicked;
@@ -125,8 +125,9 @@ namespace QLSV_OOP
             tke.DropDownItems.Add(TkeLopHoc);
             tke.DropDownItems.Add(TkeHTTT);
             TkeDiem.Click += TkeDiem_Clicked;
+            TkeHB.Click += TkeHocBong_Clicked;
             return tke;
-            
+          
         }
         private static void CapNhatDiem_Clicked(object sender, EventArgs e)
         {
@@ -190,9 +191,9 @@ namespace QLSV_OOP
             TkeDiemClicked?.Invoke(sender, e);
         }
 
-        private static void HocBong_Clicked(object sender, EventArgs e)
+        private static void TkeHocBong_Clicked(object sender, EventArgs e)
         {
-            HocBongClicked?.Invoke(sender, e);
+            TkeHocBongClicked?.Invoke(sender, e);
         }
 
         private static void LopHoc_Clicked(object sender, EventArgs e)
@@ -213,7 +214,7 @@ namespace QLSV_OOP
         }
 
 
-
+        
 
 
     }

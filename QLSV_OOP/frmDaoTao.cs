@@ -49,16 +49,20 @@ namespace QLSV_OOP
             RoleDAO.DKHocBongClicked += DKHocBongB_Clicked;
             RoleDAO.CapNhatHTTTClicked += CapNhatHTTT_Clicked;
             RoleDAO.CapNhatCongNoClicked += CapNhatCongNo_Clicked;
-            RoleDAO.KTraDuNoClicked += KTraDuNo_Clicked;
+            RoleDAO.TTinDuNoClicked += TTinDuNo_Clicked;
             RoleDAO.HocPhiClicked += HocPhi_Clicked;
             RoleDAO.NoDongHocPhiClicked += NoDongHocPhi_Clicked;
             RoleDAO.TkeDiemClicked += TkeDiem_Clicked;
-            RoleDAO.HocBongClicked += HocBong_Clicked;
+            RoleDAO.TkeHocBongClicked += TkeHocBong_Clicked;
             RoleDAO.LopHocClicked += LopHoc_Clicked;
             RoleDAO.HTThanhToanClicked += HTThanhToan_Clicked;
 
         }
 
+        private void TTinDuNo_Clicked(object sender, EventArgs e)
+        {
+            
+        }
         private void CapNhatDiem_Clicked(object sender, EventArgs e)
         {
             // Xử lý logic khi sự kiện CapNhatDiemClicked xảy ra
@@ -114,12 +118,13 @@ namespace QLSV_OOP
             // Xử lý logic khi sự kiện HocPhiClicked xảy ra
         }
 
-            RoleDAO.TkeHocBongClicked += TkeHocBong_Clicked;
-        }
+            
+        
         
         private void TkeHocBong_Clicked(object sender, EventArgs e)
         {
             FunctionMenuStrip.Instance.ScholarshipAnalysis(this);
+        }
         private void NoDongHocPhi_Clicked(object sender, EventArgs e)
         {
             // Xử lý logic khi sự kiện NoDongHocPhiClicked xảy ra
@@ -129,10 +134,7 @@ namespace QLSV_OOP
             // Xử lý logic khi sự kiện TkeDiemClicked xảy ra
         }
 
-        private void HocBong_Clicked(object sender, EventArgs e)
-        {
-            // Xử lý logic khi sự kiện HocBongClicked xảy ra
-        }
+        
 
         private void LopHoc_Clicked(object sender, EventArgs e)
         {
