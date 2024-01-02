@@ -28,5 +28,12 @@ namespace QLSV_OOP.DAO
         private Hoc_phanDAO() { }
 
         SqlConnection con = new SqlConnection(ConnectionString.connectionString);
+        public DataTable hpGridView()
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * from Hoc_phan", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return dt;
+        }
     }
 }
