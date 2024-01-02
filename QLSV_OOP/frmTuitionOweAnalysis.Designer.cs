@@ -33,13 +33,13 @@
             this.txtNumStudentOwe = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.studentDataGridView = new System.Windows.Forms.DataGridView();
+            this.tuitionOweDataGridView = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.menuStripOweTuition = new System.Windows.Forms.MenuStrip();
             this.exportFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.studentDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tuitionOweDataGridView)).BeginInit();
             this.menuStripOweTuition.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,9 +52,8 @@
             this.panel1.Location = new System.Drawing.Point(177, 116);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(748, 181);
+            this.panel1.Size = new System.Drawing.Size(748, 87);
             this.panel1.TabIndex = 18;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // label7
             // 
@@ -96,16 +95,16 @@
             this.label4.Size = new System.Drawing.Size(0, 29);
             this.label4.TabIndex = 7;
             // 
-            // studentDataGridView
+            // tuitionOweDataGridView
             // 
-            this.studentDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.studentDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.studentDataGridView.Location = new System.Drawing.Point(72, 320);
-            this.studentDataGridView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.studentDataGridView.Name = "studentDataGridView";
-            this.studentDataGridView.RowHeadersWidth = 62;
-            this.studentDataGridView.Size = new System.Drawing.Size(975, 352);
-            this.studentDataGridView.TabIndex = 17;
+            this.tuitionOweDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.tuitionOweDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tuitionOweDataGridView.Location = new System.Drawing.Point(72, 239);
+            this.tuitionOweDataGridView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.tuitionOweDataGridView.Name = "tuitionOweDataGridView";
+            this.tuitionOweDataGridView.RowHeadersWidth = 62;
+            this.tuitionOweDataGridView.Size = new System.Drawing.Size(975, 433);
+            this.tuitionOweDataGridView.TabIndex = 17;
             // 
             // label1
             // 
@@ -141,6 +140,7 @@
             this.exportFileToolStripMenuItem.Name = "exportFileToolStripMenuItem";
             this.exportFileToolStripMenuItem.Size = new System.Drawing.Size(100, 29);
             this.exportFileToolStripMenuItem.Text = "Xuất file";
+            this.exportFileToolStripMenuItem.Click += new System.EventHandler(this.exportFileToolStripMenuItem_Click);
             // 
             // backToolStripMenuItem
             // 
@@ -158,7 +158,7 @@
             this.ClientSize = new System.Drawing.Size(1130, 722);
             this.Controls.Add(this.menuStripOweTuition);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.studentDataGridView);
+            this.Controls.Add(this.tuitionOweDataGridView);
             this.Controls.Add(this.label1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmTuitionOweAnalysis";
@@ -166,7 +166,7 @@
             this.Load += new System.EventHandler(this.frmTuitionOweAnalysis_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.studentDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tuitionOweDataGridView)).EndInit();
             this.menuStripOweTuition.ResumeLayout(false);
             this.menuStripOweTuition.PerformLayout();
             this.ResumeLayout(false);
@@ -181,7 +181,7 @@
         private System.Windows.Forms.TextBox txtNumStudentOwe;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView studentDataGridView;
+        private System.Windows.Forms.DataGridView tuitionOweDataGridView;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.MenuStrip menuStripOweTuition;
         private System.Windows.Forms.ToolStripMenuItem exportFileToolStripMenuItem;

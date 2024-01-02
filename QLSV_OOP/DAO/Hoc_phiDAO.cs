@@ -49,46 +49,6 @@ namespace QLSV_OOP.DAO
             sda.Fill(dt);
             return dt;
         }
-        public int NumStudentOwe()
-        {
-            // Bước 1: Lấy tổng học phí từ bảng Hoc_phan
-            int totalFee = 0;
-            using (SqlConnection con = new SqlConnection("Your_Connection_String"))
-            {
-                con.Open();
-                SqlCommand cmd = new SqlCommand("SELECT SUM(KhoiLuong) FROM Hoc_phan", con);
-                totalFee = Convert.ToInt32(cmd.ExecuteScalar()) * 500000;
-            }
-
-            // Bước 2: Lấy tổng số tiền đã đóng của mỗi sinh viên từ stored procedure TotalPaid
-            int totalPaidAmount = 0;
-            using (SqlConnection con = new SqlConnection("Your_Connection_String"))
-            {
-                con.Open();
-                SqlCommand cmd = new SqlCommand("TotalPaid", con);
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                using (SqlDataReader reader = cmd.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        totalPaidAmount += Convert.ToInt32(reader["TotalPaid"]);
-                    }
-                }
-            }
-
-            // Bước 3: So sánh và thống kê số sinh viên còn nợ học phí
-            int numOweStudents = 0;
-
-            if (totalPaidAmount < totalFee)
-            {
-                // Sinh viên còn nợ học phí
-                numOweStudents++;
-            }
-
-            return numOweStudents;
-        }
-
 
         public int DuNoHPhi(string maSV)
         {
@@ -96,7 +56,7 @@ namespace QLSV_OOP.DAO
                 "inner join Lop_hoc on Hoc_phan.MaHP = Lop_hoc.MaHP " +
                 "inner join Dang_ky on Lop_hoc.MaLH = Dang_ky.MaLH " +
                 "group by (MaSV) " +
-                "having MaSV =" + maSV+ ") * 500000 - sum(TienTT) from Hoc_phi " +
+                "having MaSV =" + maSV + ") * 500000 - sum(TienTT) from Hoc_phi " +
                 "inner join Sinh__vien on Hoc_phi.MaSV = Sinh__vien.MaSV " +
                 "group by Sinh__vien.MaSV " +
                 "having Sinh__vien.MaSV = " + maSV + ";";
@@ -106,5 +66,35 @@ namespace QLSV_OOP.DAO
             sda.Fill(dt);
             return Convert.ToInt32(dt.Rows[0][0]);
         }
+
+
+        public string NumStudentOwe()
+        {
+            string query = "select count(distinct Sinh__vien.MaSV) as NumStudentsOwe " +
+                           "from Hoc_phi " +
+                           "inner join Sinh__vien on Hoc_phi.MaSV = Sinh__vien.MaSV " +
+                           "group by Sinh__vien.MaSV " +
+                           "having (select sum(KhoiLuong) * 500000 from Hoc_phan " +
+                           "inner join Lop_hoc on Hoc_phan.MaHP = Lop_hoc.MaHP " +
+                           "inner join Dang_ky on Lop_hoc.MaLH = Dang_ky.MaLH " +
+                           "where Dang_ky.MaSV = Sinh__vien.MaSV) - sum(TienTT) > 0;";
+
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return Convert.ToString(dt.Rows.Count);
+        }
+
+        public DataTable tuitionoweGridView()
+        {
+            string query = "select Hoc_phi.MaSV, (select sum(KhoiLuong) * 500000 from Hoc_phan inner join Lop_hoc on Hoc_phan.MaHP = Lop_hoc.MaHP inner join Dang_ky on Lop_hoc.MaLH = Dang_ky.MaLH where Dang_ky.MaSV = Hoc_phi.MaSV) - sum(TienTT) as SoTienConNo from Hoc_phi inner join Sinh__vien on Hoc_phi.MaSV = Sinh__vien.MaSV group by Hoc_phi.MaSV having (select sum(KhoiLuong) * 500000 from Hoc_phan inner join Lop_hoc on Hoc_phan.MaHP = Lop_hoc.MaHP inner join Dang_ky on Lop_hoc.MaLH = Dang_ky.MaLH where Dang_ky.MaSV = Hoc_phi.MaSV) - sum(TienTT) > 0;";
+
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return dt;
+        }
+
+
     }
 }
