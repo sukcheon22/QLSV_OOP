@@ -27,5 +27,27 @@ namespace QLSV_OOP.DAO
         private Hoc_phiDAO() { }
 
         SqlConnection con = new SqlConnection(ConnectionString.connectionString);
+
+        public int SumMoney()
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT SUM(TienTT) FROM Hoc_phi", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return Convert.ToInt32(dt.Rows[0][0]);
+        }
+        public string MostBank()
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT TOP 1 TenNH FROM Hoc_phi GROUP BY TenNH ORDER BY COUNT(TenNH) DESC;", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return Convert.ToString(dt.Rows[0][0]);
+        }
+        public DataTable tuitionGridView()
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * from Hoc_phi", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return dt;
+        }
     }
 }
