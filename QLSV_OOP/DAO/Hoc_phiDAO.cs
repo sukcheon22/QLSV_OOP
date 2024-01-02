@@ -28,21 +28,26 @@ namespace QLSV_OOP.DAO
 
         SqlConnection con = new SqlConnection(ConnectionString.connectionString);
 
-        public int DuNoHphi(string masv)
+        public int SumMoney()
         {
-            string query = "select ( select sum(KhoiLuong) from Dang_ky " +
-                "inner join Lop_hoc on Dang_ky.MaLH = Lop_hoc.MaLH " +
-                "inner join Hoc_phan on Hoc_phan.MaHP = Lop_hoc.MaHP " +
-                "group by (MaSV) " +
-                "having MaSV = " + masv +
-                ") * 500000 - sum(TienTT) from Hoc_phi " +
-                "inner join Sinh__vien on Sinh__vien.MaSV = Hoc_phi.MaSV " +
-                "group by (Hoc_phi.MaSV) " +
-                "having Hoc_phi.MaSV = "+ masv +";";
-            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT SUM(TienTT) FROM Hoc_phi", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             return Convert.ToInt32(dt.Rows[0][0]);
+        }
+        public string MostBank()
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT TOP 1 TenNH FROM Hoc_phi GROUP BY TenNH ORDER BY COUNT(TenNH) DESC;", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return Convert.ToString(dt.Rows[0][0]);
+        }
+        public DataTable tuitionGridView()
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * from Hoc_phi", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return dt;
         }
     }
 }
