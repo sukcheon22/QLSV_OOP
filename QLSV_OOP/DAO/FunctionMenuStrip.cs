@@ -92,5 +92,13 @@ namespace QLSV_OOP.DAO
             f.ShowDialog();
             form.Show();
         }
+
+        public void RoleChanging(Form form)
+        {
+            form.Hide();
+            frmPhanQuyen f = new frmPhanQuyen();
+            f.ShowDialog();
+            form.Show();
+        }
     }
 }
