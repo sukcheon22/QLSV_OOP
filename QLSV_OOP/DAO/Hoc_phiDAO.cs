@@ -49,5 +49,22 @@ namespace QLSV_OOP.DAO
             sda.Fill(dt);
             return dt;
         }
+
+        public int DuNoHPhi(string maSV)
+        {
+            string query = "select (select sum(KhoiLuong) from Hoc_phan " +
+                "inner join Lop_hoc on Hoc_phan.MaHP = Lop_hoc.MaHP " +
+                "inner join Dang_ky on Lop_hoc.MaLH = Dang_ky.MaLH " +
+                "group by (MaSV) " +
+                "having MaSV =" + maSV+ ") * 500000 - sum(TienTT) from Hoc_phi " +
+                "inner join Sinh__vien on Hoc_phi.MaSV = Sinh__vien.MaSV " +
+                "group by Sinh__vien.MaSV " +
+                "having Sinh__vien.MaSV = " + maSV + ";";
+
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return Convert.ToInt32(dt.Rows[0][0]);
+        }
     }
 }
