@@ -17,6 +17,7 @@ namespace QLSV_OOP
     public partial class frmDaoTao : Form
     {
         Account account;
+        QLLop qllop;
         public frmDaoTao(Account acc)
         {
             InitializeComponent();
@@ -56,7 +57,7 @@ namespace QLSV_OOP
             RoleDAO.TkeHocBongClicked += TkeHocBong_Clicked;
             RoleDAO.LopHocClicked += LopHoc_Clicked;
             RoleDAO.HTThanhToanClicked += HTThanhToan_Clicked;
-
+            
         }
 
         private void TTinDuNo_Clicked(object sender, EventArgs e)
@@ -132,6 +133,7 @@ namespace QLSV_OOP
         private void TkeDiem_Clicked(object sender, EventArgs e)
         {
             // Xử lý logic khi sự kiện TkeDiemClicked xảy ra
+            FunctionMenuStrip.Instance.GradeAnalysis(this);
         }
 
         
@@ -139,6 +141,7 @@ namespace QLSV_OOP
         private void LopHoc_Clicked(object sender, EventArgs e)
         {
             // Xử lý logic khi sự kiện LopHocClicked xảy ra
+            FunctionMenuStrip.Instance.ClassAnalysis(this);
         }
 
         private void HTThanhToan_Clicked(object sender, EventArgs e)
