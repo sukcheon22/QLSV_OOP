@@ -39,20 +39,111 @@ namespace QLSV_OOP
             //CustomizeMenuStrip.Instance.SignOut.Click += new System.EventHandler(this.SignOut);
             CustomizeMenuStrip.Instance.SignOut.Click += SignOut;
             CustomizeMenuStrip.Instance.ChangePassword.Click += ChangePassword;
-            
+
+            RoleDAO.CapNhatDiemClicked += CapNhatDiem_Clicked;
+            RoleDAO.DkyLopClicked += DkyLop_Clicked;
+            RoleDAO.TCuuTKBClicked += TCuuTK_Clicked;
+            RoleDAO.TCuuKQHTClicked += TCuuKQHT_Clicked;
+            RoleDAO.CapNhatTTHBClicked += CapNhatTTHB_Clicked;
+            RoleDAO.PheDuyetYCHBClicked += PheDuyetYCHB_Clicked;
+            RoleDAO.DKHocBongClicked += DKHocBongB_Clicked;
+            RoleDAO.CapNhatHTTTClicked += CapNhatHTTT_Clicked;
+            RoleDAO.CapNhatCongNoClicked += CapNhatCongNo_Clicked;
+            RoleDAO.KTraDuNoClicked += KTraDuNo_Clicked;
+            RoleDAO.HocPhiClicked += HocPhi_Clicked;
+            RoleDAO.NoDongHocPhiClicked += NoDongHocPhi_Clicked;
             RoleDAO.TkeDiemClicked += TkeDiem_Clicked;
+            RoleDAO.HocBongClicked += HocBong_Clicked;
+            RoleDAO.LopHocClicked += LopHoc_Clicked;
+            RoleDAO.HTThanhToanClicked += HTThanhToan_Clicked;
+
+        }
+
+        private void CapNhatDiem_Clicked(object sender, EventArgs e)
+        {
+            // Xử lý logic khi sự kiện CapNhatDiemClicked xảy ra
+        }
+
+        private void DkyLop_Clicked(object sender, EventArgs e)
+        {
+            // Xử lý logic khi sự kiện DkyLopClicked xảy ra
+        }
+
+        private void TCuuTK_Clicked(object sender, EventArgs e)
+        {
+            // Xử lý logic khi sự kiện TCuuTKBClicked xảy ra
+        }
+
+        private void TCuuKQHT_Clicked(object sender, EventArgs e)
+        {
+            // Xử lý logic khi sự kiện TCuuKQHTClicked xảy ra
+        }
+
+        private void CapNhatTTHB_Clicked(object sender, EventArgs e)
+        {
+            // Xử lý logic khi sự kiện CapNhatTTHBClicked xảy ra
+        }
+
+        private void PheDuyetYCHB_Clicked(object sender, EventArgs e)
+        {
+            // Xử lý logic khi sự kiện PheDuyetYCHBClicked xảy ra
+        }
+
+        private void DKHocBongB_Clicked(object sender, EventArgs e)
+        {
+            // Xử lý logic khi sự kiện DKHocBongBClicked xảy ra
+        }
+
+        private void CapNhatHTTT_Clicked(object sender, EventArgs e)
+        {
+            // Xử lý logic khi sự kiện CapNhatHTTTClicked xảy ra
+        }
+
+        private void CapNhatCongNo_Clicked(object sender, EventArgs e)
+        {
+            // Xử lý logic khi sự kiện CapNhatCongNoClicked xảy ra
+        }
+
+        private void KTraDuNo_Clicked(object sender, EventArgs e)
+        {
+            // Xử lý logic khi sự kiện KTraDuNoClicked xảy ra
+        }
+
+        private void HocPhi_Clicked(object sender, EventArgs e)
+        {
+            // Xử lý logic khi sự kiện HocPhiClicked xảy ra
+        }
+
             RoleDAO.TkeHocBongClicked += TkeHocBong_Clicked;
         }
         
         private void TkeHocBong_Clicked(object sender, EventArgs e)
         {
             FunctionMenuStrip.Instance.ScholarshipAnalysis(this);
+        private void NoDongHocPhi_Clicked(object sender, EventArgs e)
+        {
+            // Xử lý logic khi sự kiện NoDongHocPhiClicked xảy ra
         }
         private void TkeDiem_Clicked(object sender, EventArgs e)
         {
-        //    đưa từ functionmenustrip vào
+            // Xử lý logic khi sự kiện TkeDiemClicked xảy ra
         }
-        
+
+        private void HocBong_Clicked(object sender, EventArgs e)
+        {
+            // Xử lý logic khi sự kiện HocBongClicked xảy ra
+        }
+
+        private void LopHoc_Clicked(object sender, EventArgs e)
+        {
+            // Xử lý logic khi sự kiện LopHocClicked xảy ra
+        }
+
+        private void HTThanhToan_Clicked(object sender, EventArgs e)
+        {
+            // Xử lý logic khi sự kiện HTThanhToanClicked xảy ra
+        }
+
         private void frmDaoTao_Load(object sender, EventArgs e)
         {
 
