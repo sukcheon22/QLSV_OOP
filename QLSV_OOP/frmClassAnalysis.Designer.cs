@@ -86,11 +86,12 @@
             this.classDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.classDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.classDataGridView.Location = new System.Drawing.Point(36, 109);
-            this.classDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.classDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.classDataGridView.Name = "classDataGridView";
             this.classDataGridView.RowHeadersWidth = 51;
             this.classDataGridView.Size = new System.Drawing.Size(1024, 425);
             this.classDataGridView.TabIndex = 14;
+            this.classDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.classDataGridView_CellContentClick);
             // 
             // frmClassAnalysis
             // 
