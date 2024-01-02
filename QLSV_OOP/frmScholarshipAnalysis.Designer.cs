@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtNumTuitionOK = new System.Windows.Forms.TextBox();
+            this.txtNumScholarshipOK = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtStudentCompany = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtStudentUni = new System.Windows.Forms.TextBox();
-            this.txtNumTuition = new System.Windows.Forms.TextBox();
+            this.txtNumScholarship = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNumCompany = new System.Windows.Forms.TextBox();
@@ -53,13 +53,13 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.txtNumTuitionOK);
+            this.panel1.Controls.Add(this.txtNumScholarshipOK);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.txtStudentCompany);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.txtStudentUni);
-            this.panel1.Controls.Add(this.txtNumTuition);
+            this.panel1.Controls.Add(this.txtNumScholarship);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtNumCompany);
@@ -71,20 +71,20 @@
             this.panel1.Size = new System.Drawing.Size(1065, 182);
             this.panel1.TabIndex = 12;
             // 
-            // txtNumTuitionOK
+            // txtNumScholarshipOK
             // 
-            this.txtNumTuitionOK.Location = new System.Drawing.Point(956, 131);
-            this.txtNumTuitionOK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtNumTuitionOK.Name = "txtNumTuitionOK";
-            this.txtNumTuitionOK.Size = new System.Drawing.Size(67, 26);
-            this.txtNumTuitionOK.TabIndex = 18;
-            this.txtNumTuitionOK.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNumScholarshipOK.Location = new System.Drawing.Point(929, 133);
+            this.txtNumScholarshipOK.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNumScholarshipOK.Name = "txtNumScholarshipOK";
+            this.txtNumScholarshipOK.Size = new System.Drawing.Size(67, 26);
+            this.txtNumScholarshipOK.TabIndex = 18;
+            this.txtNumScholarshipOK.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(608, 131);
+            this.label4.Location = new System.Drawing.Point(581, 133);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(194, 29);
@@ -95,7 +95,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(608, 23);
+            this.label5.Location = new System.Drawing.Point(581, 25);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(322, 29);
@@ -104,7 +104,7 @@
             // 
             // txtStudentCompany
             // 
-            this.txtStudentCompany.Location = new System.Drawing.Point(956, 26);
+            this.txtStudentCompany.Location = new System.Drawing.Point(929, 28);
             this.txtStudentCompany.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtStudentCompany.Name = "txtStudentCompany";
             this.txtStudentCompany.Size = new System.Drawing.Size(67, 26);
@@ -115,7 +115,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(608, 75);
+            this.label7.Location = new System.Drawing.Point(581, 77);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(263, 29);
@@ -124,21 +124,21 @@
             // 
             // txtStudentUni
             // 
-            this.txtStudentUni.Location = new System.Drawing.Point(956, 77);
+            this.txtStudentUni.Location = new System.Drawing.Point(929, 79);
             this.txtStudentUni.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtStudentUni.Name = "txtStudentUni";
             this.txtStudentUni.Size = new System.Drawing.Size(67, 26);
             this.txtStudentUni.TabIndex = 16;
             this.txtStudentUni.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txtNumTuition
+            // txtNumScholarship
             // 
-            this.txtNumTuition.Location = new System.Drawing.Point(398, 131);
-            this.txtNumTuition.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtNumTuition.Name = "txtNumTuition";
-            this.txtNumTuition.Size = new System.Drawing.Size(67, 26);
-            this.txtNumTuition.TabIndex = 12;
-            this.txtNumTuition.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNumScholarship.Location = new System.Drawing.Point(398, 131);
+            this.txtNumScholarship.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtNumScholarship.Name = "txtNumScholarship";
+            this.txtNumScholarship.Size = new System.Drawing.Size(67, 26);
+            this.txtNumScholarship.TabIndex = 12;
+            this.txtNumScholarship.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label6
             // 
@@ -236,6 +236,7 @@
             this.exportFileToolStripMenuItem.Name = "exportFileToolStripMenuItem";
             this.exportFileToolStripMenuItem.Size = new System.Drawing.Size(100, 29);
             this.exportFileToolStripMenuItem.Text = "Xuất file";
+            this.exportFileToolStripMenuItem.Click += new System.EventHandler(this.exportFileToolStripMenuItem_Click);
             // 
             // backToolStripMenuItem
             // 
@@ -270,7 +271,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtNumTuition;
+        private System.Windows.Forms.TextBox txtNumScholarship;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNumCompany;
@@ -281,7 +282,7 @@
         private System.Windows.Forms.MenuStrip menuStripHB;
         private System.Windows.Forms.ToolStripMenuItem exportFileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem backToolStripMenuItem;
-        private System.Windows.Forms.TextBox txtNumTuitionOK;
+        private System.Windows.Forms.TextBox txtNumScholarshipOK;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtStudentCompany;

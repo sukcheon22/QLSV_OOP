@@ -44,7 +44,7 @@ namespace QLSV_OOP.DAO
             sda.Fill(dt);
             return Convert.ToInt32(dt.Rows[0][0]);
         }
-        public int NumTuition()
+        public int NumScholarship()
         {
             SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) from HB ", con);
             DataTable dt = new DataTable();
@@ -72,5 +72,18 @@ namespace QLSV_OOP.DAO
             sda.Fill(dt);
             return Convert.ToInt32(dt.Rows[0][0]);
         }
+        public int NumScholarshipOK()
+        {
+            // Gọi hai hàm để lấy số lượng từ hai loại học bổng
+            int studentCompany = StudentCompany();
+            int studentUni = StudentUni();
+
+            // Tính tổng của hai giá trị
+            int totalScholarshipOK = studentCompany + studentUni;
+
+            // Trả về tổng
+            return totalScholarshipOK;
+        }
+
     }
 }

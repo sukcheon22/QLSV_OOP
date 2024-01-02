@@ -23,18 +23,10 @@ namespace QLSV_OOP
         {
             txtNumCompany.Text = HBDAO.Instance.NumCompany().ToString();
             txtNumUni.Text = HBDAO.Instance.NumUni().ToString();
-            txtNumTuition.Text = HBDAO.Instance.NumTuition().ToString();
+            txtNumScholarship.Text = HBDAO.Instance.NumScholarship().ToString();
             txtStudentCompany.Text = HBDAO.Instance.StudentCompany().ToString();
-            txtStudentUni.Text = HBDAO.Instance.StudentUni().ToString();
-            // Lấy giá trị từ txtStudentCompany và txtStudentUni, sau đó chuyển đổi sang kiểu số nguyên
-            int studentCompany = int.Parse(txtStudentCompany.Text);
-            int studentUni = int.Parse(txtStudentUni.Text);
-
-            // Tính tổng của hai giá trị
-            int totalTuitionOK = studentCompany + studentUni;
-
-            // Gán giá trị tổng vào txtNumTuitionOK
-            txtNumTuitionOK.Text = totalTuitionOK.ToString();
+            txtStudentUni.Text = HBDAO.Instance.StudentUni().ToString();           
+            txtNumScholarshipOK.Text = HBDAO.Instance.NumScholarshipOK().ToString();
 
             scholarshipDataGridView.DataSource = HBDAO.Instance.scholarshipGridView();
         }
@@ -54,11 +46,64 @@ namespace QLSV_OOP
             {
                 for (int j = 0; j < scholarshipDataGridView.Columns.Count; j++)
                 {
+                    // Kiểm tra nếu cột là MaSV (giả sử là cột đầu tiên, điều chỉnh nếu cần)
+                    if (scholarshipDataGridView.Columns[j].Name == "MaSV")
+                    {
+                        // Thiết lập định dạng ô là Văn bản cho cột MaSV
+                        worksheet.Cells[i + 2, j + 1].NumberFormat = "@";
+
+                        // In giá trị của cột MaSV để kiểm tra
+                        Console.WriteLine(scholarshipDataGridView[j, i].Value);
+                    }
+
+                    // Ghi giá trị của ô vào bảng tính Excel
                     worksheet.Cells[i + 2, j + 1] = scholarshipDataGridView[j, i].Value;
                 }
             }
 
+            // Thêm thông tin thống kê
+            int rowIndex = scholarshipDataGridView.Rows.Count + 4;
+            worksheet.Cells[rowIndex, 1] = "Thống kê học bổng:";
 
+            rowIndex++;
+            worksheet.Cells[rowIndex, 1] = "Số doanh nghiệp cấp học bổng:";
+            worksheet.Cells[rowIndex, 2] = HBDAO.Instance.NumCompany().ToString();
+
+            rowIndex++;
+            worksheet.Cells[rowIndex, 1] = "Số trường đại học cấp học bổng trao đổi:";
+            worksheet.Cells[rowIndex, 2] = HBDAO.Instance.NumUni().ToString();
+
+            rowIndex++;
+            worksheet.Cells[rowIndex, 1] = "Tổng số học bổng: ";
+            worksheet.Cells[rowIndex, 2] = HBDAO.Instance.NumScholarship().ToString();
+
+            rowIndex++;
+            worksheet.Cells[rowIndex, 1] = "Số học bổng doanh nghiệp đã đạt:";
+            worksheet.Cells[rowIndex, 2] = HBDAO.Instance.StudentCompany().ToString();
+
+            rowIndex++;
+            worksheet.Cells[rowIndex, 1] = "Số học bổng trao đổi đã đạt:";
+            worksheet.Cells[rowIndex, 2] = HBDAO.Instance.StudentUni().ToString();
+
+            rowIndex++;
+            worksheet.Cells[rowIndex, 1] = "Tổng số học bổng đã đạt:";
+            worksheet.Cells[rowIndex, 2] = HBDAO.Instance.NumScholarshipOK().ToString();
+
+
+            // Lưu file Excel
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Excel Files|*.xlsx|All Files|*.*";
+            saveFileDialog.FileName = "HocBong_ThongKe.xlsx";
+
+            if (saveFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                workbook.SaveAs(saveFileDialog.FileName);
+                workbook.Close();
+                excelApp.Quit();
+
+                MessageBox.Show("Xuất file Excel thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
         }
     }
 }
