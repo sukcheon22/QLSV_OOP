@@ -17,6 +17,7 @@ namespace QLSV_OOP
     public partial class frmDaoTao : Form
     {
         Account account;
+        QLLop qllop;
         public frmDaoTao(Account acc)
         {
             InitializeComponent();
@@ -49,16 +50,20 @@ namespace QLSV_OOP
             RoleDAO.DKHocBongClicked += DKHocBongB_Clicked;
             RoleDAO.CapNhatHTTTClicked += CapNhatHTTT_Clicked;
             RoleDAO.CapNhatCongNoClicked += CapNhatCongNo_Clicked;
-            RoleDAO.KTraDuNoClicked += KTraDuNo_Clicked;
+            RoleDAO.TTinDuNoClicked += TTinDuNo_Clicked;
             RoleDAO.HocPhiClicked += HocPhi_Clicked;
             RoleDAO.NoDongHocPhiClicked += NoDongHocPhi_Clicked;
             RoleDAO.TkeDiemClicked += TkeDiem_Clicked;
-            RoleDAO.HocBongClicked += HocBong_Clicked;
+            RoleDAO.TkeHocBongClicked += TkeHocBong_Clicked;
             RoleDAO.LopHocClicked += LopHoc_Clicked;
             RoleDAO.HTThanhToanClicked += HTThanhToan_Clicked;
-
+            
         }
 
+        private void TTinDuNo_Clicked(object sender, EventArgs e)
+        {
+            
+        }
         private void CapNhatDiem_Clicked(object sender, EventArgs e)
         {
             // Xử lý logic khi sự kiện CapNhatDiemClicked xảy ra
@@ -114,6 +119,13 @@ namespace QLSV_OOP
             // Xử lý logic khi sự kiện HocPhiClicked xảy ra
         }
 
+            
+        
+        
+        private void TkeHocBong_Clicked(object sender, EventArgs e)
+        {
+            FunctionMenuStrip.Instance.ScholarshipAnalysis(this);
+        }
             RoleDAO.TkeHocBongClicked += TkeHocBong_Clicked;
         }
 
@@ -128,16 +140,15 @@ namespace QLSV_OOP
         private void TkeDiem_Clicked(object sender, EventArgs e)
         {
             // Xử lý logic khi sự kiện TkeDiemClicked xảy ra
+            FunctionMenuStrip.Instance.GradeAnalysis(this);
         }
 
-        private void HocBong_Clicked(object sender, EventArgs e)
-        {
-            // Xử lý logic khi sự kiện HocBongClicked xảy ra
-        }
+        
 
         private void LopHoc_Clicked(object sender, EventArgs e)
         {
             // Xử lý logic khi sự kiện LopHocClicked xảy ra
+            FunctionMenuStrip.Instance.ClassAnalysis(this);
         }
 
         private void HTThanhToan_Clicked(object sender, EventArgs e)

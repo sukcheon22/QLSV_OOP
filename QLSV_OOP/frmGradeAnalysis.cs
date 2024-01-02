@@ -18,6 +18,7 @@ namespace QLSV_OOP
         public frmGradeAnalysis()
         {
             InitializeComponent();
+            
         }
 
         private void frmGradeAnalysis_Load(object sender, EventArgs e)
