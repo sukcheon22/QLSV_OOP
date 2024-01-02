@@ -49,5 +49,45 @@ namespace QLSV_OOP.DAO
             sda.Fill(dt);
             return dt;
         }
+        public int NumStudentOwe()
+        {
+            // Bước 1: Lấy tổng học phí từ bảng Hoc_phan
+            int totalFee = 0;
+            using (SqlConnection con = new SqlConnection("Your_Connection_String"))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("SELECT SUM(KhoiLuong) FROM Hoc_phan", con);
+                totalFee = Convert.ToInt32(cmd.ExecuteScalar()) * 500000;
+            }
+
+            // Bước 2: Lấy tổng số tiền đã đóng của mỗi sinh viên từ stored procedure TotalPaid
+            int totalPaidAmount = 0;
+            using (SqlConnection con = new SqlConnection("Your_Connection_String"))
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand("TotalPaid", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        totalPaidAmount += Convert.ToInt32(reader["TotalPaid"]);
+                    }
+                }
+            }
+
+            // Bước 3: So sánh và thống kê số sinh viên còn nợ học phí
+            int numOweStudents = 0;
+
+            if (totalPaidAmount < totalFee)
+            {
+                // Sinh viên còn nợ học phí
+                numOweStudents++;
+            }
+
+            return numOweStudents;
+        }
+
     }
 }

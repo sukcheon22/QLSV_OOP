@@ -116,10 +116,11 @@ namespace QLSV_OOP
 
             RoleDAO.TkeHocBongClicked += TkeHocBong_Clicked;
         }
-        
-        private void TkeHocBong_Clicked(object sender, EventArgs e)
-        {
-            FunctionMenuStrip.Instance.ScholarshipAnalysis(this);
+
+    private void TkeHocBong_Clicked(object sender, EventArgs e)
+    {
+        FunctionMenuStrip.Instance.ScholarshipAnalysis(this);
+    }
         private void NoDongHocPhi_Clicked(object sender, EventArgs e)
         {
             // Xử lý logic khi sự kiện NoDongHocPhiClicked xảy ra
