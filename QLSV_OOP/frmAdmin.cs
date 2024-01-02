@@ -92,6 +92,11 @@ namespace QLSV_OOP
         {
             FunctionMenuStrip.Instance.EmployeeAnalysis(this);
         }
+
+        private void authorizeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FunctionMenuStrip.Instance.RoleChanging(this);
+        }
     }
 
 }

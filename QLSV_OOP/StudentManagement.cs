@@ -257,5 +257,10 @@ namespace QLSV_OOP
             birthDateTimePicker.Value = DateTime.Today;
             txtSDT.Text = "";
         }
+
+        private void infoStuDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
