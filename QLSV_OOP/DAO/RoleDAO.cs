@@ -20,7 +20,7 @@ namespace QLSV_OOP
         public static event EventHandler DKHocBongClicked;
         public static event EventHandler CapNhatHTTTClicked;
         public static event EventHandler CapNhatCongNoClicked;
-        public static event EventHandler KTraDuNoClicked;
+        //public static event EventHandler KTraDuNoClicked;
         public static event EventHandler HocPhiClicked;
         public static event EventHandler NoDongHocPhiClicked;
         public static event EventHandler TkeDiemClicked;
@@ -29,6 +29,8 @@ namespace QLSV_OOP
         public static event EventHandler HTThanhToanClicked;
 
 
+        //public static event EventHandler TkeHocBongClicked;
+        public static event EventHandler TTinDuNoClicked;
         public static ToolStripMenuItem CreateDaoTao()
         {
             ToolStripMenuItem daotao = new ToolStripMenuItem("Đào Tạo");
@@ -84,14 +86,15 @@ namespace QLSV_OOP
             CapNhatCongNo.Click += CapNhatCongNo_Clicked;
 
             ToolStripMenuItem KtraDuNo = new ToolStripMenuItem("Kiểm tra dư nợ");
-            KtraDuNo.Click += KTraDuNo_Clicked;
+            
 
             taivu.DropDownItems.Add(CapNhatTTTT);
             taivu.DropDownItems.Add(CapNhatCongNo);
             taivu.DropDownItems.Add(KtraDuNo);
-
+            KtraDuNo.Click += TTinDuNo_Clicked;
             return taivu;
         }
+
 
         public static ToolStripMenuItem CreateThongKe()
         {
@@ -121,8 +124,9 @@ namespace QLSV_OOP
             tke.DropDownItems.Add(TkeHB);
             tke.DropDownItems.Add(TkeLopHoc);
             tke.DropDownItems.Add(TkeHTTT);
-
+            TkeDiem.Click += TkeDiem_Clicked;
             return tke;
+            
         }
         private static void CapNhatDiem_Clicked(object sender, EventArgs e)
         {
@@ -169,10 +173,7 @@ namespace QLSV_OOP
             CapNhatCongNoClicked?.Invoke(sender, e);
         }
 
-        private static void KTraDuNo_Clicked(object sender, EventArgs e)
-        {
-            KTraDuNoClicked?.Invoke(sender, e);
-        }
+        
 
         private static void HocPhi_Clicked(object sender, EventArgs e)
         {
@@ -204,8 +205,12 @@ namespace QLSV_OOP
             HTThanhToanClicked?.Invoke(sender, e);
         }
 
+        
 
-
+        private static void TTinDuNo_Clicked(object sender, EventArgs e)
+        {
+           TTinDuNoClicked?.Invoke(sender, e);
+        }
 
 
 

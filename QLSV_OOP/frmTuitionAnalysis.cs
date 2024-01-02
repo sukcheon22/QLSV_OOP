@@ -15,6 +15,11 @@ namespace QLSV_OOP
         public frmTuitionAnalysis()
         {
             InitializeComponent();
-        }     
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
