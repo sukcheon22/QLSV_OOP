@@ -17,7 +17,7 @@ namespace QLSV_OOP
         public TTinDuNo(string maSV)
         {
             InitializeComponent();
-            txbTTinDuNo.Text = Hoc_phiDAO.Instance.DuNoHphi(maSV).ToString();
+           // txbTTinDuNo.Text = Hoc_phiDAO.Instance.DuNoHphi(maSV).ToString();
 
         }
         private void txbTTinDuNo_TextChanged(object sender, EventArgs e)

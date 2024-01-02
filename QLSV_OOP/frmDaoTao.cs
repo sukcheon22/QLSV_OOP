@@ -17,6 +17,7 @@ namespace QLSV_OOP
     public partial class frmDaoTao : Form
     {
         Account account;
+        QLLop qllop = new QLLop();
         public frmDaoTao(Account acc)
         {
             InitializeComponent();
@@ -39,7 +40,7 @@ namespace QLSV_OOP
             //CustomizeMenuStrip.Instance.SignOut.Click += new System.EventHandler(this.SignOut);
             CustomizeMenuStrip.Instance.SignOut.Click += SignOut;
             CustomizeMenuStrip.Instance.ChangePassword.Click += ChangePassword;
-
+            qlyLop.Click += QuanLyLop_Clicked;
             RoleDAO.CapNhatDiemClicked += CapNhatDiem_Clicked;
             RoleDAO.DkyLopClicked += DkyLop_Clicked;
             RoleDAO.TCuuTKBClicked += TCuuTK_Clicked;
@@ -56,9 +57,24 @@ namespace QLSV_OOP
             RoleDAO.TkeHocBongClicked += TkeHocBong_Clicked;
             RoleDAO.LopHocClicked += LopHoc_Clicked;
             RoleDAO.HTThanhToanClicked += HTThanhToan_Clicked;
-
+            panel1.Controls.Add(qllop);
+            
+            qllop.Location = new System.Drawing.Point(0, 0);
+            foreach (Control control in panel1.Controls)
+            {
+                control.Visible = false;
+            }
+            
         }
 
+        private void QuanLyLop_Clicked(object sender, EventArgs e)
+        {
+            foreach (Control control in panel1.Controls)
+            {
+                control.Visible = false;
+            }
+            qllop.Visible = true; 
+        }
         private void TTinDuNo_Clicked(object sender, EventArgs e)
         {
             
