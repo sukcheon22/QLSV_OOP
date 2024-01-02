@@ -41,9 +41,13 @@ namespace QLSV_OOP
             CustomizeMenuStrip.Instance.ChangePassword.Click += ChangePassword;
             
             RoleDAO.TkeDiemClicked += TkeDiem_Clicked;
-
+            RoleDAO.TkeHocBongClicked += TkeHocBong_Clicked;
         }
-
+        
+        private void TkeHocBong_Clicked(object sender, EventArgs e)
+        {
+            FunctionMenuStrip.Instance.ScholarshipAnalysis(this);
+        }
         private void TkeDiem_Clicked(object sender, EventArgs e)
         {
         //    đưa từ functionmenustrip vào

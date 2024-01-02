@@ -105,5 +105,10 @@ namespace QLSV_OOP
 
             }
         }
+
+        private void backToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
