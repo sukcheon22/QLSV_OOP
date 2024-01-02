@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txbTTinDuNo = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label2
@@ -43,18 +43,19 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "Số tiền học phí chưa thanh toán";
             // 
-            // textBox1
+            // txbTTinDuNo
             // 
-            this.textBox1.Location = new System.Drawing.Point(319, 39);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(221, 22);
-            this.textBox1.TabIndex = 15;
+            this.txbTTinDuNo.Location = new System.Drawing.Point(319, 39);
+            this.txbTTinDuNo.Name = "txbTTinDuNo";
+            this.txbTTinDuNo.Size = new System.Drawing.Size(221, 22);
+            this.txbTTinDuNo.TabIndex = 15;
+            this.txbTTinDuNo.TextChanged += new System.EventHandler(this.txbTTinDuNo_TextChanged);
             // 
             // TTinDuNo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txbTTinDuNo);
             this.Controls.Add(this.label2);
             this.Name = "TTinDuNo";
             this.Size = new System.Drawing.Size(661, 106);
@@ -66,6 +67,6 @@
         #endregion
 
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txbTTinDuNo;
     }
 }

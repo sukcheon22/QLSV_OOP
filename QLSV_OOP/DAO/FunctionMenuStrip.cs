@@ -62,6 +62,13 @@ namespace QLSV_OOP.DAO
             form.Show();
         }
 
+        public void ScholarshipAnalysis(Form form)
+        {
+            form.Hide();
+            frmScholarshipAnalysis f = new frmScholarshipAnalysis();
+            f.ShowDialog();
+            form.Show();
+        }
         //public void GradeAnalysis(Form form)
         //{
         //    form.Hide();
@@ -69,6 +76,8 @@ namespace QLSV_OOP.DAO
         //    f.ShowDialog();
         //    form.Show();
         //}
+
+
 
 
     }

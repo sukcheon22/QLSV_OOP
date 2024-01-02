@@ -18,9 +18,11 @@ namespace QLSV_OOP
         //private Account loginAccount;
 
         Account account;
+        TTinDuNo ttinDuNo;
         public frmSinhVien(Account acc)
         {
             InitializeComponent();
+            
             account = acc;  
             ToolStripMenuItem daotao = RoleDAO.CreateDaoTao();
             ToolStripMenuItem hocbong = RoleDAO.CreateHB();
@@ -37,10 +39,30 @@ namespace QLSV_OOP
             //CustomizeMenuStrip.Instance.SignOut.Click += new System.EventHandler(this.SignOut);
             CustomizeMenuStrip.Instance.SignOut.Click += SignOut;
             CustomizeMenuStrip.Instance.ChangePassword.Click += ChangePassword;
-            
+            RoleDAO.TkeHocBongClicked += TkeHocBong_Clicked;
+            ttinDuNo = new TTinDuNo(sinhVien.StudentID);
+            this.panel1.Controls.Add(ttinDuNo);
+            ttinDuNo.Location = new System.Drawing.Point(0, 0);
+            foreach (Control control in panel1.Controls)
+            {
+                control.Visible = false;
+            }    
+            RoleDAO.TTinDuNoClicked += TTinDuNo_Clicked;
         }
 
         
+        public void TTinDuNo_Clicked(object sender, EventArgs e)
+        {
+            foreach (Control control in panel1.Controls)
+            {
+                control.Visible = false;
+            }
+            ttinDuNo.Visible = true;
+        }
+        private void TkeHocBong_Clicked(object sender, EventArgs e)
+        {
+            FunctionMenuStrip.Instance.ScholarshipAnalysis(this);
+        }
         private void frmSinhVien_Load(object sender, EventArgs e)
         {
 
@@ -73,6 +95,11 @@ namespace QLSV_OOP
         private void ChangePassword(object sender, EventArgs e)
         {
             FunctionMenuStrip.Instance.ChangePassword(this, account);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

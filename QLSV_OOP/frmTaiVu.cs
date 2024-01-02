@@ -34,8 +34,13 @@ namespace QLSV_OOP
             //CustomizeMenuStrip.Instance.SignOut.Click += new System.EventHandler(this.SignOut);
             CustomizeMenuStrip.Instance.SignOut.Click += SignOut;
             CustomizeMenuStrip.Instance.ChangePassword.Click += ChangePassword;
+            RoleDAO.TkeHocBongClicked += TkeHocBong_Clicked;
         }
 
+        private void TkeHocBong_Clicked(object sender, EventArgs e)
+        {
+            FunctionMenuStrip.Instance.ScholarshipAnalysis(this);
+        }
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
 
