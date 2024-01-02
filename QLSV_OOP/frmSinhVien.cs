@@ -20,6 +20,7 @@ namespace QLSV_OOP
         Account account;
         TTinDuNo ttinDuNo;
         TraCuuTKB traCuuTKB;
+        TraCuuKQHT traCuuKQHT;
         public frmSinhVien(Account acc)
         {
             InitializeComponent();
@@ -43,10 +44,13 @@ namespace QLSV_OOP
             RoleDAO.TkeHocBongClicked += TkeHocBong_Clicked;
             ttinDuNo = new TTinDuNo(sinhVien.StudentID);
             traCuuTKB = new TraCuuTKB(sinhVien.StudentID);
+            traCuuKQHT = new TraCuuKQHT(sinhVien.StudentID);
             this.panel1.Controls.Add(ttinDuNo);
             ttinDuNo.Location = new System.Drawing.Point(0, 0);
             this.panel1.Controls.Add(traCuuTKB);
             traCuuTKB.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Controls.Add(traCuuKQHT);
+            traCuuKQHT.Location = new System.Drawing.Point(0,0);
             foreach (Control control in panel1.Controls)
             {
                 control.Visible = false;
@@ -106,6 +110,9 @@ namespace QLSV_OOP
         private void TCuuKQHT_Clicked(object sender, EventArgs e)
         {
             // Xử lý logic khi sự kiện TCuuKQHTClicked xảy ra
+            foreach(Control control in panel1.Controls)
+            { control.Visible = false; }
+            traCuuKQHT.Visible = true;
         }
 
         private void CapNhatTTHB_Clicked(object sender, EventArgs e)

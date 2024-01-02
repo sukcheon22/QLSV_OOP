@@ -31,6 +31,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.infoStuDataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.quaylai = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -49,7 +50,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.quaylai = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.infoStuDataGridView)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -77,6 +77,7 @@
             this.infoStuDataGridView.RowTemplate.Height = 24;
             this.infoStuDataGridView.Size = new System.Drawing.Size(1021, 266);
             this.infoStuDataGridView.TabIndex = 4;
+            this.infoStuDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.infoStuDataGridView_CellContentClick);
             // 
             // groupBox3
             // 
@@ -92,6 +93,17 @@
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Chức năng";
+            // 
+            // quaylai
+            // 
+            this.quaylai.Location = new System.Drawing.Point(782, 21);
+            this.quaylai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.quaylai.Name = "quaylai";
+            this.quaylai.Size = new System.Drawing.Size(87, 32);
+            this.quaylai.TabIndex = 4;
+            this.quaylai.Text = "Quay lại";
+            this.quaylai.UseVisualStyleBackColor = true;
+            this.quaylai.Click += new System.EventHandler(this.quaylai_Click);
             // 
             // btnXoa
             // 
@@ -351,17 +363,6 @@
             this.label14.Size = new System.Drawing.Size(96, 18);
             this.label14.TabIndex = 0;
             this.label14.Text = "Mã định danh";
-            // 
-            // quaylai
-            // 
-            this.quaylai.Location = new System.Drawing.Point(782, 21);
-            this.quaylai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.quaylai.Name = "quaylai";
-            this.quaylai.Size = new System.Drawing.Size(87, 32);
-            this.quaylai.TabIndex = 4;
-            this.quaylai.Text = "Quay lại";
-            this.quaylai.UseVisualStyleBackColor = true;
-            this.quaylai.Click += new System.EventHandler(this.quaylai_Click);
             // 
             // StudentManagement
             // 
