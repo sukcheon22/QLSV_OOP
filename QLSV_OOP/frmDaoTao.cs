@@ -117,6 +117,7 @@ namespace QLSV_OOP
         private void HocPhi_Clicked(object sender, EventArgs e)
         {
             // Xử lý logic khi sự kiện HocPhiClicked xảy ra
+            FunctionMenuStrip.Instance.TuitionAnalysis(this);
         }
 
             

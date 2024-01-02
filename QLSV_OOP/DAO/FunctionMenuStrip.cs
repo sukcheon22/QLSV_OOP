@@ -85,6 +85,12 @@ namespace QLSV_OOP.DAO
             form.Show();
         }
 
-       
+       public void TuitionAnalysis(Form form)
+        {
+            form.Hide();
+            frmTuitionAnalysis f = new frmTuitionAnalysis();
+            f.ShowDialog();
+            form.Show();
+        }
     }
 }
