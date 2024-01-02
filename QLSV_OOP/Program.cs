@@ -16,7 +16,7 @@ namespace QLSV_OOP
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmGradeAnalysis());
+            Application.Run(new frmClassAnalysis());
             //Application.Run(new frmAccountAnalysis());
         }
     }

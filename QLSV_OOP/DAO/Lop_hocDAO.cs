@@ -27,5 +27,13 @@ namespace QLSV_OOP.DAO
         private Lop_hocDAO() { }
 
         SqlConnection con = new SqlConnection(ConnectionString.connectionString);
+
+        public DataTable classGridView()
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * from Lop_hoc", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return dt;
+        }
     }
 }
