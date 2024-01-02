@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLSV_OOP.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,15 @@ namespace QLSV_OOP
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void frmTuitionOweAnalysis_Load(object sender, EventArgs e)
+        {
+            txtNumStudentOwe.Text = Hoc_phiDAO.Instance.NumStudentOwe().ToString();
+        }
+        private void backToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
