@@ -251,5 +251,10 @@ namespace QLSV_OOP
         {
             ResetState();
         }
+
+        private void infoStuDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

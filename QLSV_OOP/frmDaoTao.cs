@@ -132,6 +132,7 @@ namespace QLSV_OOP
         private void HocPhi_Clicked(object sender, EventArgs e)
         {
             // Xử lý logic khi sự kiện HocPhiClicked xảy ra
+            FunctionMenuStrip.Instance.TuitionAnalysis(this);
         }
 
             
@@ -141,6 +142,7 @@ namespace QLSV_OOP
         {
             FunctionMenuStrip.Instance.ScholarshipAnalysis(this);
         }
+            
         private void NoDongHocPhi_Clicked(object sender, EventArgs e)
         {
             // Xử lý logic khi sự kiện NoDongHocPhiClicked xảy ra
@@ -148,6 +150,7 @@ namespace QLSV_OOP
         private void TkeDiem_Clicked(object sender, EventArgs e)
         {
             // Xử lý logic khi sự kiện TkeDiemClicked xảy ra
+            FunctionMenuStrip.Instance.GradeAnalysis(this);
         }
 
         
@@ -155,6 +158,7 @@ namespace QLSV_OOP
         private void LopHoc_Clicked(object sender, EventArgs e)
         {
             // Xử lý logic khi sự kiện LopHocClicked xảy ra
+            FunctionMenuStrip.Instance.ClassAnalysis(this);
         }
 
         private void HTThanhToan_Clicked(object sender, EventArgs e)

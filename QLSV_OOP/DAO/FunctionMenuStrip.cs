@@ -69,16 +69,36 @@ namespace QLSV_OOP.DAO
             f.ShowDialog();
             form.Show();
         }
-        //public void GradeAnalysis(Form form)
-        //{
-        //    form.Hide();
-        //    frmGradeAnalysis f = new frmGradeAnalysis();
-        //    f.ShowDialog();
-        //    form.Show();
-        //}
+        public void GradeAnalysis(Form form)
+        {
+            form.Hide();
+            frmGradeAnalysis f = new frmGradeAnalysis();
+            f.ShowDialog();
+            form.Show();
+        }
 
+        public void ClassAnalysis(Form form)
+        {
+            form.Hide();
+            frmClassAnalysis f = new frmClassAnalysis();
+            f.ShowDialog();
+            form.Show();
+        }
 
+       public void TuitionAnalysis(Form form)
+        {
+            form.Hide();
+            frmTuitionAnalysis f = new frmTuitionAnalysis();
+            f.ShowDialog();
+            form.Show();
+        }
 
-
+        public void RoleChanging(Form form)
+        {
+            form.Hide();
+            frmPhanQuyen f = new frmPhanQuyen();
+            f.ShowDialog();
+            form.Show();
+        }
     }
 }

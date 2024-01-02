@@ -107,10 +107,10 @@ namespace QLSV_OOP
             TkeNoHPhi.Click += NoDongHocPhi_Clicked;
 
             ToolStripMenuItem TkeDiem = new ToolStripMenuItem("Điểm");
-            TkeDiem.Click += TkeDiem_Clicked;
+            
 
             ToolStripMenuItem TkeHB = new ToolStripMenuItem("Học bổng");
-            TkeHB.Click += TkeHocBong_Clicked;
+            
 
             ToolStripMenuItem TkeLopHoc = new ToolStripMenuItem("Lớp học");
             TkeLopHoc.Click += LopHoc_Clicked;
