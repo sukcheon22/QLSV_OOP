@@ -183,8 +183,10 @@
             // 
             // cmbQue
             // 
+            this.cmbQue.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbQue.FormattingEnabled = true;
             this.cmbQue.Items.AddRange(new object[] {
+            "",
             "An Giang",
             "Ba Ria-Vung Tau",
             "Bac Giang",
@@ -311,8 +313,10 @@
             // 
             // cmbKhoa
             // 
+            this.cmbKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbKhoa.FormattingEnabled = true;
             this.cmbKhoa.Items.AddRange(new object[] {
+            "",
             "64",
             "65",
             "66",

@@ -87,7 +87,7 @@ namespace QLSV_OOP
         public DataTable GetHocPhanDataForComboBox()
         {
             DataTable dt = new DataTable();
-
+            dt.Columns.Add("A", typeof(string));
             try
             {
                 using (SqlConnection con = new SqlConnection(ConnectionString.connectionString))
@@ -103,6 +103,9 @@ namespace QLSV_OOP
                         adapter.Fill(dt);
                     }
                 }
+                DataRow rowBlank = dt.NewRow();
+                rowBlank["A"] = "";
+                dt.Rows.InsertAt(rowBlank, 0);
             }
             catch (Exception ex)
             {
@@ -346,6 +349,11 @@ namespace QLSV_OOP
         private void btnQuayLai_Click(object sender, EventArgs e)
         {
             ResetState();
+        }
+
+        private void cmbMaHP_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
