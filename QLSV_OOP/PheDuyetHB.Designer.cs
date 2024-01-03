@@ -28,28 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnConfirm = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbCheck = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtStudentId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtHBId = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // btnConfirm
             // 
-            this.button1.Location = new System.Drawing.Point(15, 236);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 49);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Xác nhận";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnConfirm.Location = new System.Drawing.Point(47, 149);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(124, 49);
+            this.btnConfirm.TabIndex = 23;
+            this.btnConfirm.Text = "Xác nhận";
+            this.btnConfirm.UseVisualStyleBackColor = true;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // dataGridView1
             // 
@@ -60,14 +60,16 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(790, 406);
             this.dataGridView1.TabIndex = 22;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGridView1_SelectionChanged);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.cmbCheck);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtStudentId);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBox7);
+            this.groupBox1.Controls.Add(this.txtHBId);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Location = new System.Drawing.Point(6, 13);
             this.groupBox1.Name = "groupBox1";
@@ -76,17 +78,17 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin phê duyệt";
             // 
-            // comboBox1
+            // cmbCheck
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "",
+            this.cmbCheck.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbCheck.FormattingEnabled = true;
+            this.cmbCheck.Items.AddRange(new object[] {
             "True",
             "False"});
-            this.comboBox1.Location = new System.Drawing.Point(803, 27);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(136, 24);
-            this.comboBox1.TabIndex = 10;
+            this.cmbCheck.Location = new System.Drawing.Point(803, 27);
+            this.cmbCheck.Name = "cmbCheck";
+            this.cmbCheck.Size = new System.Drawing.Size(136, 24);
+            this.cmbCheck.TabIndex = 10;
             // 
             // label2
             // 
@@ -98,12 +100,12 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Phê duyệt";
             // 
-            // textBox1
+            // txtStudentId
             // 
-            this.textBox1.Location = new System.Drawing.Point(478, 29);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(138, 22);
-            this.textBox1.TabIndex = 8;
+            this.txtStudentId.Location = new System.Drawing.Point(478, 29);
+            this.txtStudentId.Name = "txtStudentId";
+            this.txtStudentId.Size = new System.Drawing.Size(138, 22);
+            this.txtStudentId.TabIndex = 8;
             // 
             // label1
             // 
@@ -115,12 +117,12 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Mã sinh viên";
             // 
-            // textBox7
+            // txtHBId
             // 
-            this.textBox7.Location = new System.Drawing.Point(131, 30);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(138, 22);
-            this.textBox7.TabIndex = 7;
+            this.txtHBId.Location = new System.Drawing.Point(131, 30);
+            this.txtHBId.Name = "txtHBId";
+            this.txtHBId.Size = new System.Drawing.Size(138, 22);
+            this.txtHBId.TabIndex = 7;
             // 
             // label14
             // 
@@ -132,25 +134,16 @@
             this.label14.TabIndex = 1;
             this.label14.Text = "Mã học bổng";
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(137, 236);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(78, 49);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "Hủy";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // PheDuyetHB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Name = "PheDuyetHB";
             this.Size = new System.Drawing.Size(1039, 525);
+            this.Load += new System.EventHandler(this.PheDuyetHB_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -160,15 +153,14 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbCheck;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtStudentId;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtHBId;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button button2;
     }
 }

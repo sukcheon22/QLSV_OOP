@@ -35,6 +35,34 @@ namespace QLSV_OOP.DAO
             sda.Fill(dt);
             return dt;
         }
-        
+
+        public int CountTinChi(string maSV)
+        {
+            string query = "select sum(KhoiLuong) from Hoc_phan " +
+                "inner join Lop_hoc on Hoc_phan.MaHP = Lop_hoc.MaHP " +
+                "inner join Dang_ky on Dang_ky.MaLH = Lop_hoc.MaLH " +
+                "where MaSV = " + maSV + ";";
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return Convert.ToInt32(dt.Rows[0][0]);
+        }
+
+        public bool KiemTraTrung(string maSV, string maLop)
+        {
+            string query = "select count(*) from Dang_ky where MaSV = " + maSV + " and MaLH = " + maLop + ";";
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            int flag = Convert.ToInt32(dt.Rows[0][0]);
+            if (flag == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

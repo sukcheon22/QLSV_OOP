@@ -121,6 +121,7 @@ namespace QLSV_OOP
         private void NoDongHocPhi_Clicked(object sender, EventArgs e)
         {
             // Xử lý logic khi sự kiện NoDongHocPhiClicked xảy ra
+            FunctionMenuStrip.Instance.TuitionOweAnalysis(this);
         }
         private void TkeDiem_Clicked(object sender, EventArgs e)
         {

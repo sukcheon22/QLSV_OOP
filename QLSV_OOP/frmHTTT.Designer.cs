@@ -89,6 +89,7 @@
             this.empDataGridView.RowHeadersWidth = 51;
             this.empDataGridView.Size = new System.Drawing.Size(1006, 408);
             this.empDataGridView.TabIndex = 15;
+            this.empDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.empDataGridView_CellContentClick);
             // 
             // frmHTTT
             // 

@@ -78,5 +78,10 @@ namespace QLSV_OOP
         {
             this.Close();
         }
+
+        private void tuitionOweDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

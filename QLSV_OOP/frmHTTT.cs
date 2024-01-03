@@ -16,5 +16,10 @@ namespace QLSV_OOP
         {
             InitializeComponent();
         }
+
+        private void empDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
