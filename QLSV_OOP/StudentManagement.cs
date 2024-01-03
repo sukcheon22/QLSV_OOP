@@ -249,13 +249,7 @@ namespace QLSV_OOP
 
         private void quaylai_Click(object sender, EventArgs e)
         {
-            txtID.Text = "";
-            txtIDStu.Text = "";
-            txtTen.Text = "";
-            cmbKhoa.Text = "";
-            cmbQue.Text = "";
-            birthDateTimePicker.Value = DateTime.Today;
-            txtSDT.Text = "";
+            ResetState();
         }
 
         private void infoStuDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -306,6 +306,36 @@ namespace QLSV_OOP
             //CAST(RAND() * 1000000 AS INT) ""CAST(RAND() * 1000000 AS NVARCHAR(255)) ""CAST(CEILING(RAND() * 5 + 63) AS INT)
             //CAST(RAND() * 1000000 AS NVARCHAR(255)) "" CAST(RAND() * 1000000 AS NVARCHAR(255))
         }
+        private void ThemNhanVienMoi(string madd)
+        {
+            using (SqlCommand cmdNhanVien = new SqlCommand(
+                  "INSERT INTO Nhan_vien (MaNV, MaDD, TenNV, ViTri, Que, SDT, NgaySinh) VALUES " +
+                  "(" +
+                  "@Madd, " +
+                  "@Madd, " +
+                  "0, " +
+                  "0, " +
+                  "0, " +
+                  "0, " +
+                  "DATEADD(DAY, -CAST(RAND() * 3652 AS INT), GETDATE())" +
+                  ")", con))
+            {
+                cmdNhanVien.Parameters.AddWithValue("@Madd", madd);
 
+                con.Open();
+                cmdNhanVien.ExecuteNonQuery();
+                con.Close();
+            }
+            //CAST(RAND() * 1000000 AS INT) ""CAST(RAND() * 1000000 AS NVARCHAR(255)) ""CAST(CEILING(RAND() * 5 + 63) AS INT)
+            //CAST(RAND() * 1000000 AS NVARCHAR(255)) "" CAST(RAND() * 1000000 AS NVARCHAR(255))
+        }
+
+        private void quayLai_Click(object sender, EventArgs e)
+        {
+            txtID.Text = string.Empty;
+            txtPass.Text = string.Empty;
+            txtTen.Text = string.Empty;
+            cmbRole.SelectedIndex = 0;
+        }
     }
 }

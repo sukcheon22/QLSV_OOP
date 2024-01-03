@@ -96,6 +96,7 @@
             // 
             this.comboBox4.FormattingEnabled = true;
             this.comboBox4.Items.AddRange(new object[] {
+            "",
             "QDT",
             "QTV",
             "QSV"});
