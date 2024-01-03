@@ -38,12 +38,7 @@ namespace QLSV_OOP
             string username = txtTen.Text;
             string password = txtPass.Text;
             string roleid = cmbRole.Text;
-            infoAccDataGridView.DataSource = SearchTaiKhoan(userid, username, password, roleid);
-            
-
-            
-
-            
+            infoAccDataGridView.DataSource = SearchTaiKhoan(userid, username, password, roleid);   
         }
         private DataTable SearchTaiKhoan(string madd, string username, string password, string maquyen)
         {
