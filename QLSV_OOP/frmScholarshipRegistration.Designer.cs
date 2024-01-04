@@ -49,7 +49,7 @@
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(874, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1165, 24);
             this.menuStrip1.TabIndex = 12;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -58,7 +58,7 @@
             this.backToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.backToolStripMenuItem.Text = "Quay lại";
             this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
             // 
@@ -95,9 +95,9 @@
             // 
             // txtScholarshipID
             // 
-            this.txtScholarshipID.Location = new System.Drawing.Point(199, 148);
+            this.txtScholarshipID.Location = new System.Drawing.Point(137, 117);
             this.txtScholarshipID.Name = "txtScholarshipID";
-            this.txtScholarshipID.Size = new System.Drawing.Size(134, 22);
+            this.txtScholarshipID.Size = new System.Drawing.Size(134, 20);
             this.txtScholarshipID.TabIndex = 17;
             // 
             // btnAdd
@@ -111,7 +111,7 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(308, 216);
+            this.btnDelete.Location = new System.Drawing.Point(203, 216);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(95, 44);
             this.btnDelete.TabIndex = 19;
@@ -130,7 +130,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.empDataGridView);
             this.Controls.Add(this.menuStrip1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmScholarshipRegistration";
             this.Text = "frmScholarshipRegistration";
             this.Load += new System.EventHandler(this.frmScholarshipRegistration_Load);
