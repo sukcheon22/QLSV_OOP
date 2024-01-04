@@ -269,20 +269,7 @@
             this.tuitionDataGridView.RowTemplate.Height = 24;
             this.tuitionDataGridView.Size = new System.Drawing.Size(1149, 332);
             this.tuitionDataGridView.TabIndex = 4;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(519, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(138, 22);
-            this.textBox1.TabIndex = 13;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(860, 37);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(138, 22);
-            this.textBox2.TabIndex = 14;
+            
             // 
             // CapNhatCongNo
             // 
