@@ -249,13 +249,7 @@ namespace QLSV_OOP
 
         private void quayLai_Click(object sender, EventArgs e)
         {
-            txtID.Text = "";
-            txtTen.Text = "";
-            txtIDNhanVien.Text = "";
-            txtSDT.Text = "";
-            cmbViTri.Text = "";
-            cmbQue.Text = "";
-            birthDateTimePicker.Value = DateTime.Now;
+            ResetState();
         }
     }
 }
