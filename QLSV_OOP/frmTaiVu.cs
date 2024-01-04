@@ -17,6 +17,7 @@ namespace QLSV_OOP
     public partial class frmTaiVu : Form
     {
         Account account;
+        CapNhatHTTT capNhatHTTT = new CapNhatHTTT();
         public frmTaiVu(Account acc)
         {
             InitializeComponent();
@@ -34,6 +35,7 @@ namespace QLSV_OOP
             //CustomizeMenuStrip.Instance.SignOut.Click += new System.EventHandler(this.SignOut);
             CustomizeMenuStrip.Instance.SignOut.Click += SignOut;
             CustomizeMenuStrip.Instance.ChangePassword.Click += ChangePassword;
+            capNhatHTTT.Click += CapNhatHTTT_Clicked;
             RoleDAO.CapNhatDiemClicked += CapNhatDiem_Clicked;
             RoleDAO.DkyLopClicked += DkyLop_Clicked;
             RoleDAO.TCuuTKBClicked += TCuuTK_Clicked;
@@ -50,7 +52,12 @@ namespace QLSV_OOP
             RoleDAO.TkeHocBongClicked += TkeHocBong_Clicked;
             RoleDAO.LopHocClicked += LopHoc_Clicked;
             RoleDAO.HTThanhToanClicked += HTThanhToan_Clicked;
-
+            panel1.Controls.Add(capNhatHTTT);
+            capNhatHTTT.Location = new System.Drawing.Point(0, 0);
+            foreach (Control control in panel1.Controls)
+            {
+                control.Visible = false;
+            }
         }
 
         private void TkeHocBong_Clicked(object sender, EventArgs e)
@@ -99,7 +106,11 @@ namespace QLSV_OOP
 
         private void CapNhatHTTT_Clicked(object sender, EventArgs e)
         {
-            // Xử lý logic khi sự kiện CapNhatHTTTClicked xảy ra
+            foreach (Control control in panel1.Controls)
+            {
+                control.Visible = false;
+            }
+            capNhatHTTT.Visible = true;
         }
 
         private void CapNhatCongNo_Clicked(object sender, EventArgs e)
@@ -121,6 +132,7 @@ namespace QLSV_OOP
         private void NoDongHocPhi_Clicked(object sender, EventArgs e)
         {
             // Xử lý logic khi sự kiện NoDongHocPhiClicked xảy ra
+            FunctionMenuStrip.Instance.TuitionOweAnalysis(this);
         }
         private void TkeDiem_Clicked(object sender, EventArgs e)
         {

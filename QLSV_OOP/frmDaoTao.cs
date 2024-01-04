@@ -19,8 +19,7 @@ namespace QLSV_OOP
         Account account;
         QLLop qllop = new QLLop();
         QlyHPhan qlHP = new QlyHPhan();
-        CapNhatDiem capNhatDiem = new CapNhatDiem();
-        CNTThocbong CNTThocbong = new CNTThocbong();
+        PheDuyetHB pheDuyetHB = new PheDuyetHB();
         public frmDaoTao(Account acc)
         {
             InitializeComponent();
@@ -45,8 +44,6 @@ namespace QLSV_OOP
             CustomizeMenuStrip.Instance.ChangePassword.Click += ChangePassword;
             qlyLop.Click += QuanLyLop_Clicked;
             qlyHP.Click += QuanLyHP_Clicked;
-            capNhatDiem.Click += CapNhatDiem_Clicked;
-            CNTThocbong.Click += CapNhatTTHB_Clicked;
             RoleDAO.CapNhatDiemClicked += CapNhatDiem_Clicked;
             RoleDAO.DkyLopClicked += DkyLop_Clicked;
             RoleDAO.TCuuTKBClicked += TCuuTK_Clicked;
@@ -65,26 +62,15 @@ namespace QLSV_OOP
             RoleDAO.HTThanhToanClicked += HTThanhToan_Clicked;
             panel1.Controls.Add(qllop);
             panel1.Controls.Add(qlHP);
-            panel1.Controls.Add(capNhatDiem);
-            panel1.Controls.Add(CNTThocbong);
-            
+            panel1.Controls.Add(pheDuyetHB);
             qllop.Location = new System.Drawing.Point(0, 0);
             qlHP.Location = new System.Drawing.Point(0, 0);
-            capNhatDiem.Location = new System.Drawing.Point(0, 0);
-            CNTThocbong.Location = new System.Drawing.Point(0, 0);
-
+            pheDuyetHB.Location = new System.Drawing.Point(0, 0);
             foreach (Control control in panel1.Controls)
             {
                 control.Visible = false;
             }
             
-        }
-
-        
-
-        private void CapNhatDiem_Click(object sender, EventArgs e)
-        {
-            throw new NotImplementedException();
         }
 
         private void QuanLyLop_Clicked(object sender, EventArgs e)
@@ -94,7 +80,7 @@ namespace QLSV_OOP
                 control.Visible = false;
                 
             }
-            qllop.Visible = true; 
+            qllop.Visible = true;
             qllop.ResetState();
         }
         private void QuanLyHP_Clicked(object sender, EventArgs e)
@@ -104,7 +90,7 @@ namespace QLSV_OOP
                 control.Visible = false;
             }
             qlHP.Visible = true;
-            qlHP.ResetState();
+            //qlHP.ResetState();
         }
         private void TTinDuNo_Clicked(object sender, EventArgs e)
         {
@@ -112,12 +98,7 @@ namespace QLSV_OOP
         }
         private void CapNhatDiem_Clicked(object sender, EventArgs e)
         {
-            foreach (Control control in panel1.Controls)
-            {
-                control.Visible = false;
-            }
-            capNhatDiem.Visible = true;
-            capNhatDiem.ResetState();
+            // Xử lý logic khi sự kiện CapNhatDiemClicked xảy ra
         }
 
         private void DkyLop_Clicked(object sender, EventArgs e)
@@ -137,18 +118,19 @@ namespace QLSV_OOP
 
         private void CapNhatTTHB_Clicked(object sender, EventArgs e)
         {
-            foreach (Control control in panel1.Controls)
-            {
-                control.Visible = false;
-            }
-            CNTThocbong.Visible = true;
-            CNTThocbong.ResetState();
-
+            // Xử lý logic khi sự kiện CapNhatTTHBClicked xảy ra
         }
 
         private void PheDuyetYCHB_Clicked(object sender, EventArgs e)
         {
             // Xử lý logic khi sự kiện PheDuyetYCHBClicked xảy ra
+            foreach (Control control in panel1.Controls)
+            {
+                control.Visible = false;
+
+            }
+            pheDuyetHB.Visible = true;
+            pheDuyetHB.ResetStatus();
         }
 
         private void DKHocBongB_Clicked(object sender, EventArgs e)
