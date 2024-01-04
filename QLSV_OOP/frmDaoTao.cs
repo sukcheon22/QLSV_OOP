@@ -20,6 +20,7 @@ namespace QLSV_OOP
         QLLop qllop = new QLLop();
         QlyHPhan qlHP = new QlyHPhan();
         PheDuyetHB pheDuyetHB = new PheDuyetHB();
+        CapNhatDiem capNhatDiem = new CapNhatDiem();
         public frmDaoTao(Account acc)
         {
             InitializeComponent();
@@ -63,9 +64,11 @@ namespace QLSV_OOP
             panel1.Controls.Add(qllop);
             panel1.Controls.Add(qlHP);
             panel1.Controls.Add(pheDuyetHB);
+            panel1.Controls.Add(capNhatDiem);
             qllop.Location = new System.Drawing.Point(0, 0);
             qlHP.Location = new System.Drawing.Point(0, 0);
             pheDuyetHB.Location = new System.Drawing.Point(0, 0);
+            capNhatDiem.Location = new System.Drawing.Point(0, 0);
             foreach (Control control in panel1.Controls)
             {
                 control.Visible = false;
@@ -98,7 +101,12 @@ namespace QLSV_OOP
         }
         private void CapNhatDiem_Clicked(object sender, EventArgs e)
         {
-            // Xử lý logic khi sự kiện CapNhatDiemClicked xảy ra
+            foreach (Control control in panel1.Controls)
+            {
+                control.Visible = false;
+            }
+            capNhatDiem.Visible = true;
+            capNhatDiem.ResetState();
         }
 
         private void DkyLop_Clicked(object sender, EventArgs e)
