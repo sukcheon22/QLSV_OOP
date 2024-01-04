@@ -139,6 +139,7 @@ namespace QLSV_OOP
         private void HTThanhToan_Clicked(object sender, EventArgs e)
         {
             // Xử lý logic khi sự kiện HTThanhToanClicked xảy ra
+            FunctionMenuStrip.Instance.HTTTAnalysis(this);
         }
 
         

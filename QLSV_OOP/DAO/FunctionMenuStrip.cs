@@ -100,5 +100,37 @@ namespace QLSV_OOP.DAO
             f.ShowDialog();
             form.Show();
         }
+
+        public void ClassRegistration(Form form, Sinh_Vien sinhVien)
+        {
+            form.Hide();
+            frmClassRegistration f = new frmClassRegistration(sinhVien);
+            f.ShowDialog();
+            form.Show();
+        }
+
+        public void ScholarshipRegistration(Form form, Sinh_Vien sinhVien)
+        {
+            form.Hide();
+            frmScholarshipRegistration f = new frmScholarshipRegistration(sinhVien);
+            f.ShowDialog();
+            form.Show();
+        }
+
+        public void TuitionOweAnalysis(Form form)
+        {
+            form.Hide();
+            frmTuitionOweAnalysis f = new frmTuitionOweAnalysis();
+            f.ShowDialog();
+            form.Show();
+        }
+
+        public void HTTTAnalysis (Form form)
+        {
+            form.Hide();
+            frmHTTTAnalysis f = new frmHTTTAnalysis();
+            f.ShowDialog();
+            form.Show();
+        }
     }
 }
