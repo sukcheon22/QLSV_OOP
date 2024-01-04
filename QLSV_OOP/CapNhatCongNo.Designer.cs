@@ -134,16 +134,11 @@
             this.boxBank.FormattingEnabled = true;
             this.boxBank.Items.AddRange(new object[] {
             "",
-            "Vietcombank",
-            "VietinBank",
+            "VCB",
             "BIDV",
             "Agribank",
-            "Techcombank",
-            "MB Bank",
-            "ACB",
-            "VPBank",
-            "Sacombank",
-            "Eximbank",
+            "MB",
+            "VP",
             "HSBC",
             "VIB",
             "OCB"});
@@ -218,6 +213,7 @@
             this.btnThem.TabIndex = 5;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnQuayLai
             // 
@@ -228,6 +224,7 @@
             this.btnQuayLai.TabIndex = 4;
             this.btnQuayLai.Text = "Quay lại";
             this.btnQuayLai.UseVisualStyleBackColor = true;
+            this.btnQuayLai.Click += new System.EventHandler(this.btnQuayLai_Click);
             // 
             // btnXoa
             // 
@@ -238,6 +235,7 @@
             this.btnXoa.TabIndex = 3;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnTimKiem
             // 
@@ -248,6 +246,7 @@
             this.btnTimKiem.TabIndex = 2;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // btnSua
             // 
@@ -258,6 +257,7 @@
             this.btnSua.TabIndex = 1;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // tuitionDataGridView
             // 
@@ -269,7 +269,6 @@
             this.tuitionDataGridView.RowTemplate.Height = 24;
             this.tuitionDataGridView.Size = new System.Drawing.Size(1149, 332);
             this.tuitionDataGridView.TabIndex = 4;
-            
             // 
             // CapNhatCongNo
             // 
@@ -279,6 +278,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "CapNhatCongNo";
             this.Size = new System.Drawing.Size(1189, 675);
+            this.Load += new System.EventHandler(this.CapNhatCongNo_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

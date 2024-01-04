@@ -18,6 +18,7 @@ namespace QLSV_OOP
     {
         Account account;
         CapNhatHTTT capNhatHTTT = new CapNhatHTTT();
+        CapNhatCongNo capNhatCongNo = new CapNhatCongNo();
         public frmTaiVu(Account acc)
         {
             InitializeComponent();
@@ -36,6 +37,7 @@ namespace QLSV_OOP
             CustomizeMenuStrip.Instance.SignOut.Click += SignOut;
             CustomizeMenuStrip.Instance.ChangePassword.Click += ChangePassword;
             capNhatHTTT.Click += CapNhatHTTT_Clicked;
+            capNhatCongNo.Click += CapNhatCongNo_Clicked;
             RoleDAO.CapNhatDiemClicked += CapNhatDiem_Clicked;
             RoleDAO.DkyLopClicked += DkyLop_Clicked;
             RoleDAO.TCuuTKBClicked += TCuuTK_Clicked;
@@ -53,7 +55,9 @@ namespace QLSV_OOP
             RoleDAO.LopHocClicked += LopHoc_Clicked;
             RoleDAO.HTThanhToanClicked += HTThanhToan_Clicked;
             panel1.Controls.Add(capNhatHTTT);
+            panel1.Controls.Add(capNhatCongNo);
             capNhatHTTT.Location = new System.Drawing.Point(0, 0);
+            capNhatCongNo.Location = new System.Drawing.Point(0, 0);
             foreach (Control control in panel1.Controls)
             {
                 control.Visible = false;
@@ -115,7 +119,11 @@ namespace QLSV_OOP
 
         private void CapNhatCongNo_Clicked(object sender, EventArgs e)
         {
-            // Xử lý logic khi sự kiện CapNhatCongNoClicked xảy ra
+            foreach (Control control in panel1.Controls)
+            {
+                control.Visible = false;
+            }
+            capNhatCongNo.Visible = true;
         }
 
         private void KTraDuNo_Clicked(object sender, EventArgs e)

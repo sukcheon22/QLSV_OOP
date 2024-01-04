@@ -55,10 +55,10 @@ namespace QLSV_OOP
                 string stk = selectedRow.Cells["STK_Truong"].Value.ToString();
 
                 // Hiển thị thông tin trong GroupBox
-                DisplayStudentInfo(nganhang, stk);
+                DisplayHTTTInfo(nganhang, stk);
             }
         }
-        private void DisplayStudentInfo(string nganhang, string stk)
+        private void DisplayHTTTInfo(string nganhang, string stk)
         {
             // Hiển thị thông tin sinh viên trong GroupBox
             txtBank.Text = nganhang;
