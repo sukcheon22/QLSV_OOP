@@ -243,6 +243,7 @@
             // cmbViTri
             // 
             this.cmbViTri.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbViTri.Enabled = false;
             this.cmbViTri.FormattingEnabled = true;
             this.cmbViTri.Items.AddRange(new object[] {
             "",
