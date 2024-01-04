@@ -11,6 +11,7 @@ namespace QLSV_OOP
 {
     public class RoleDAO
     {
+        
         public static event EventHandler CapNhatDiemClicked;
         public static event EventHandler DkyLopClicked;
         public static event EventHandler TCuuTKBClicked;
@@ -128,6 +129,14 @@ namespace QLSV_OOP
             TkeHB.Click += TkeHocBong_Clicked;
             return tke;
           
+        }
+        public static DataTable quyenGridView()
+        {
+            SqlConnection con = new SqlConnection(ConnectionString.connectionString);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * from quyen", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return dt;
         }
         private static void CapNhatDiem_Clicked(object sender, EventArgs e)
         {
