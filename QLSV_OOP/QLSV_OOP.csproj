@@ -319,12 +319,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmClassRegistration.resx">
       <DependentUpon>frmClassRegistration.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDaoTao.resx">
       <DependentUpon>frmDaoTao.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmployeeAnalysis.resx">
       <DependentUpon>frmEmployeeAnalysis.cs</DependentUpon>
@@ -334,6 +336,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmHTTT.resx">
       <DependentUpon>frmHTTT.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPhanQuyen.resx">
       <DependentUpon>frmPhanQuyen.cs</DependentUpon>
@@ -386,12 +389,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TraCuuKQHT.resx">
       <DependentUpon>TraCuuKQHT.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="TraCuuTKB.resx">
       <DependentUpon>TraCuuTKB.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="TTinDuNo.resx">
       <DependentUpon>TTinDuNo.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
