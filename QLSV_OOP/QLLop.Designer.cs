@@ -67,6 +67,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1039, 526);
             this.panel1.TabIndex = 3;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // groupBox1
             // 
@@ -329,6 +330,7 @@
             this.infoLopDataGridView.RowTemplate.Height = 24;
             this.infoLopDataGridView.Size = new System.Drawing.Size(1021, 266);
             this.infoLopDataGridView.TabIndex = 4;
+            this.infoLopDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.infoLopDataGridView_CellContentClick);
             // 
             // QLLop
             // 

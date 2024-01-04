@@ -27,5 +27,12 @@ namespace QLSV_OOP.DAO
         private Tinh_trangHBDAO() { }
 
         SqlConnection con = new SqlConnection(ConnectionString.connectionString);
+        public DataTable HBGridView()
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * from HB", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            return dt;
+        }
     }
 }

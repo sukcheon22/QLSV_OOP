@@ -61,5 +61,10 @@ namespace QLSV_OOP
         {
             this.Close();
         }
+
+        private void empDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

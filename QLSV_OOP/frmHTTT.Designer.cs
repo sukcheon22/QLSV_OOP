@@ -84,6 +84,15 @@
             // 
             // htttDataGridView
             // 
+            //this.empDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            //this.empDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            //this.empDataGridView.Location = new System.Drawing.Point(49, 109);
+            //this.empDataGridView.Margin = new System.Windows.Forms.Padding(4);
+            //this.empDataGridView.Name = "empDataGridView";
+            //this.empDataGridView.RowHeadersWidth = 51;
+            //this.empDataGridView.Size = new System.Drawing.Size(1006, 408);
+            //this.empDataGridView.TabIndex = 15;
+            //this.empDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.empDataGridView_CellContentClick);
             this.htttDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.htttDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.htttDataGridView.Location = new System.Drawing.Point(55, 136);
