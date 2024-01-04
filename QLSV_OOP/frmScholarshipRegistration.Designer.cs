@@ -33,9 +33,9 @@
             this.empDataGridView = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.txtScholarshipID = new System.Windows.Forms.TextBox();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.empDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -58,8 +58,9 @@
             this.backToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
             this.backToolStripMenuItem.Text = "Quay lại";
+            this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
             // 
             // empDataGridView
             // 
@@ -70,6 +71,7 @@
             this.empDataGridView.RowHeadersWidth = 51;
             this.empDataGridView.Size = new System.Drawing.Size(484, 353);
             this.empDataGridView.TabIndex = 14;
+            this.empDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.empDataGridView_CellContentClick);
             // 
             // label1
             // 
@@ -91,30 +93,27 @@
             this.label2.TabIndex = 16;
             this.label2.Text = "Mã học bổng";
             // 
-            // textBox1
+            // txtScholarshipID
             // 
-            this.textBox1.Location = new System.Drawing.Point(149, 120);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Location = new System.Drawing.Point(199, 148);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(102, 20);
+            this.textBox1.Size = new System.Drawing.Size(134, 22);
             this.textBox1.TabIndex = 17;
             // 
-            // button1
+            // btnAdd
             // 
-            this.button1.Location = new System.Drawing.Point(29, 176);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Location = new System.Drawing.Point(39, 216);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(71, 36);
+            this.button1.Size = new System.Drawing.Size(95, 44);
             this.button1.TabIndex = 18;
             this.button1.Text = "Thêm";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnDelete
             // 
-            this.button2.Location = new System.Drawing.Point(231, 176);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Location = new System.Drawing.Point(308, 216);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(71, 36);
+            this.button2.Size = new System.Drawing.Size(95, 44);
             this.button2.TabIndex = 19;
             this.button2.Text = "Xóa";
             this.button2.UseVisualStyleBackColor = true;
@@ -123,7 +122,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(874, 476);
+            this.ClientSize = new System.Drawing.Size(1165, 586);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
@@ -150,8 +149,8 @@
         private System.Windows.Forms.DataGridView empDataGridView;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txtScholarshipID;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnDelete;
     }
 }
