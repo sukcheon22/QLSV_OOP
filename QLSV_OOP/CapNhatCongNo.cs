@@ -123,13 +123,12 @@ namespace QLSV_OOP
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             string maThanhToan = txtPaidID.Text;
-            string stk = txtPaidID.Text;
+            string stk = txtSTK.Text;
             string maSinhVien = txtStudentID.Text;
             string tienThanhToan = txtMoney.Text;
             string nganHang = boxBank.Text;
 
             tuitionDataGridView.DataSource = SearchCongNo(maThanhToan, stk, maSinhVien, tienThanhToan, nganHang);
-            InitializeDataGridView();
         }
         private void UpdateCongNoInfo(string newmaThanhToan, string newmaSinhVien, string newnganHang, string newstk, string newtienThanhToan)
         {
