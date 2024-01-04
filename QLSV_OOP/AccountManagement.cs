@@ -256,9 +256,9 @@ namespace QLSV_OOP
                 {
                     ThemSinhVienMoi(userId);
                 }
-                else if (role == "QNV")
+                else if (role == "QDT" || role == "QTV")
                 {
-                    //ThemNhanVienMoi(userId);
+                    ThemNhanVienMoi(userId);
                 }
                 MessageBox.Show("Đã thêm tài khoản mới thành công!");
             }
