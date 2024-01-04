@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLSV_OOP.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,9 +9,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using QLSV_OOP.DAO;
-using QLSV_OOP.DTO;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace QLSV_OOP
 {
@@ -20,59 +18,16 @@ namespace QLSV_OOP
         {
             InitializeComponent();
         }
+
         private SqlConnection con = new SqlConnection(ConnectionString.connectionString);
         public void ResetState()
         {
-            txtScholarshipID.Text = "";
-            txtScholarshipName.Text = "";
-            boxScholarshipType.Text = "";
-            scholarshipDataGridView.DataSource = HBDAO.Instance.scholarshipGridView();
+            txtMaHB.Text = "";
+            txtTenHB.Text = "";
+            infoHBDataGridView.DataSource = Tinh_trangHBDAO.Instance.HBGridView();
+            
         }
-
-        private void buttonTimKiem_Click(object sender, EventArgs e)
-        {
-            string scholarshipID = txtScholarshipID.Text;
-            string scholarshipName = txtScholarshipName.Text;
-            string scholarshipType = boxScholarshipType.Text;
-            scholarshipDataGridView.DataSource = SearchHocBong(scholarshipID, scholarshipName, scholarshipType);
-
-        }
-        private DataTable SearchHocBong(string scholarshipID, string scholarshipName, string scholarshipType)
-        {
-            // Tạo câu truy vấn SQL động dựa trên số lượng thuộc tính đã nhập
-            string query = "SELECT * FROM HB WHERE ";
-            bool isFirstCondition = true;
-
-            if (!string.IsNullOrEmpty(scholarshipID))
-            {
-                query += $"MaHB LIKE '%{scholarshipID}%'";
-                isFirstCondition = false;
-            }
-
-            if (!string.IsNullOrEmpty(scholarshipName))
-            {
-                if (!isFirstCondition)
-                    query += " AND ";
-                query += $"TenHB LIKE '%{scholarshipName}%'";
-                isFirstCondition = false;
-            }
-
-            if (!string.IsNullOrEmpty(scholarshipType))
-            {
-                if (!isFirstCondition)
-                    query += " AND ";
-                query += $"Loai LIKE '%{scholarshipType}%'";
-                isFirstCondition = false;
-            }
-
-            // Thực hiện truy vấn SQL SELECT với câu truy vấn động
-            SqlDataAdapter adapter = new SqlDataAdapter(query, con);
-            DataTable dataTable = new DataTable();
-            adapter.Fill(dataTable);
-
-            return dataTable;
-        }
-        public DataTable infoScholarshipGridView()
+        public DataTable infoHBGridView()
         {
             SqlDataAdapter sda = new SqlDataAdapter("SELECT * from HB", con);
             DataTable dt = new DataTable();
@@ -81,7 +36,33 @@ namespace QLSV_OOP
         }
         private void InitializeDataGridView()
         {
-            scholarshipDataGridView.DataSource = this.infoScholarshipGridView();
+            infoHBDataGridView.DataSource = this.infoHBGridView();
+        }
+
+
+        private void DataGridView_SelectionChanged(object sender, EventArgs e)
+        {
+            // Kiểm tra xem có hàng được chọn hay không
+            if (infoHBDataGridView.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = infoHBDataGridView.SelectedRows[0];
+                string maHB = selectedRow.Cells["MaHB"].Value.ToString();
+                string tenHB = selectedRow.Cells["TenHB"].Value.ToString();
+                string loai = selectedRow.Cells["Loai"].Value.ToString();
+                DisplayHBInfo(maHB, tenHB, loai);
+            }
+        }
+
+        private void DisplayHBInfo(string maHB, string tenHB, string loai)
+        {
+            txtMaHB.Text = maHB;
+            txtTenHB.Text = tenHB;
+            cmbLoaiHB.Text = loai;
+        }
+        private void CNTThocbong_Load(object sender, EventArgs e)
+        {
+            InitializeDataGridView();
+            infoHBDataGridView.SelectionChanged += DataGridView_SelectionChanged;
         }
     }
 }

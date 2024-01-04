@@ -298,6 +298,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CapNhatHTTT.resx">
       <DependentUpon>CapNhatHTTT.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="CNTThocbong.resx">
       <DependentUpon>CNTThocbong.cs</DependentUpon>
@@ -319,12 +320,14 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmClassRegistration.resx">
       <DependentUpon>frmClassRegistration.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDangNhap.resx">
       <DependentUpon>frmDangNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDaoTao.resx">
       <DependentUpon>frmDaoTao.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEmployeeAnalysis.resx">
       <DependentUpon>frmEmployeeAnalysis.cs</DependentUpon>
@@ -334,6 +337,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmHTTT.resx">
       <DependentUpon>frmHTTT.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPhanQuyen.resx">
       <DependentUpon>frmPhanQuyen.cs</DependentUpon>
@@ -343,15 +347,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmScholarshipRegistration.resx">
       <DependentUpon>frmScholarshipRegistration.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSinhVien.resx">
       <DependentUpon>frmSinhVien.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmStudentAnalysis.resx">
       <DependentUpon>frmStudentAnalysis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTaiVu.resx">
       <DependentUpon>frmTaiVu.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTuitionAnalysis.resx">
       <DependentUpon>frmTuitionAnalysis.cs</DependentUpon>
@@ -364,6 +371,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PheDuyetHB.resx">
       <DependentUpon>PheDuyetHB.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -377,21 +385,27 @@
     </Compile>
     <EmbeddedResource Include="QLLop.resx">
       <DependentUpon>QLLop.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="QlyHPhan.resx">
       <DependentUpon>QlyHPhan.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentManagement.resx">
       <DependentUpon>StudentManagement.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="TraCuuKQHT.resx">
       <DependentUpon>TraCuuKQHT.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="TraCuuTKB.resx">
       <DependentUpon>TraCuuTKB.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="TTinDuNo.resx">
       <DependentUpon>TTinDuNo.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

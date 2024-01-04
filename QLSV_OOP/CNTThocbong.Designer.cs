@@ -29,177 +29,182 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.boxScholarshipType = new System.Windows.Forms.ComboBox();
+            this.cmbLoaiHB = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtScholarshipName = new System.Windows.Forms.TextBox();
+            this.txtTenHB = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtScholarshipID = new System.Windows.Forms.TextBox();
+            this.txtMaHB = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.scholarshipDataGridView = new System.Windows.Forms.DataGridView();
-            this.buttonThem = new System.Windows.Forms.Button();
-            this.buttonQuayLai = new System.Windows.Forms.Button();
-            this.buttonXoa = new System.Windows.Forms.Button();
-            this.buttonSua = new System.Windows.Forms.Button();
-            this.buttonTimKiem = new System.Windows.Forms.Button();
+            this.infoHBDataGridView = new System.Windows.Forms.DataGridView();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnQuayLai = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnTimKiem = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.scholarshipDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.infoHBDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.boxScholarshipType);
+            this.groupBox1.Controls.Add(this.cmbLoaiHB);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtScholarshipName);
+            this.groupBox1.Controls.Add(this.txtTenHB);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtScholarshipID);
+            this.groupBox1.Controls.Add(this.txtMaHB);
             this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Location = new System.Drawing.Point(19, 24);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.groupBox1.Location = new System.Drawing.Point(13, 15);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox1.Size = new System.Drawing.Size(1155, 108);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(770, 70);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin học bổng";
             // 
-            // boxScholarshipType
+            // cmbLoaiHB
             // 
-            this.boxScholarshipType.FormattingEnabled = true;
-            this.boxScholarshipType.Items.AddRange(new object[] {
+            this.cmbLoaiHB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbLoaiHB.FormattingEnabled = true;
+            this.cmbLoaiHB.Items.AddRange(new object[] {
+            "",
             "Doanh nghiep",
             "Trao doi"});
-            this.boxScholarshipType.Location = new System.Drawing.Point(929, 34);
-            this.boxScholarshipType.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.boxScholarshipType.Name = "boxScholarshipType";
-            this.boxScholarshipType.Size = new System.Drawing.Size(167, 28);
-            this.boxScholarshipType.TabIndex = 10;
+            this.cmbLoaiHB.Location = new System.Drawing.Point(620, 22);
+            this.cmbLoaiHB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbLoaiHB.Name = "cmbLoaiHB";
+            this.cmbLoaiHB.Size = new System.Drawing.Size(113, 21);
+            this.cmbLoaiHB.TabIndex = 10;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(780, 38);
+            this.label2.Location = new System.Drawing.Point(520, 24);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 22);
+            this.label2.Size = new System.Drawing.Size(85, 15);
             this.label2.TabIndex = 9;
             this.label2.Text = "Loại học bổng";
             // 
-            // txtScholarshipName
+            // txtTenHB
             // 
-            this.txtScholarshipName.Location = new System.Drawing.Point(538, 36);
-            this.txtScholarshipName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtScholarshipName.Name = "txtScholarshipName";
-            this.txtScholarshipName.Size = new System.Drawing.Size(155, 26);
-            this.txtScholarshipName.TabIndex = 8;
+            this.txtTenHB.Location = new System.Drawing.Point(358, 24);
+            this.txtTenHB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenHB.Name = "txtTenHB";
+            this.txtTenHB.Size = new System.Drawing.Size(104, 20);
+            this.txtTenHB.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(390, 38);
+            this.label1.Location = new System.Drawing.Point(260, 24);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 22);
+            this.label1.Size = new System.Drawing.Size(82, 15);
             this.label1.TabIndex = 8;
             this.label1.Text = "Tên học bổng";
             // 
-            // txtScholarshipID
+            // txtMaHB
             // 
-            this.txtScholarshipID.Location = new System.Drawing.Point(147, 38);
-            this.txtScholarshipID.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtScholarshipID.Name = "txtScholarshipID";
-            this.txtScholarshipID.Size = new System.Drawing.Size(155, 26);
-            this.txtScholarshipID.TabIndex = 7;
+            this.txtMaHB.Location = new System.Drawing.Point(98, 24);
+            this.txtMaHB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaHB.Name = "txtMaHB";
+            this.txtMaHB.Size = new System.Drawing.Size(104, 20);
+            this.txtMaHB.TabIndex = 7;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(7, 38);
+            this.label14.Location = new System.Drawing.Point(4, 24);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(113, 22);
+            this.label14.Size = new System.Drawing.Size(79, 15);
             this.label14.TabIndex = 1;
             this.label14.Text = "Mã học bổng";
             // 
-            // scholarshipDataGridView
+            // infoHBDataGridView
             // 
-            this.scholarshipDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.scholarshipDataGridView.Location = new System.Drawing.Point(286, 139);
-            this.scholarshipDataGridView.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.scholarshipDataGridView.Name = "scholarshipDataGridView";
-            this.scholarshipDataGridView.RowHeadersWidth = 51;
-            this.scholarshipDataGridView.RowTemplate.Height = 24;
-            this.scholarshipDataGridView.Size = new System.Drawing.Size(889, 508);
-            this.scholarshipDataGridView.TabIndex = 1;
+            this.infoHBDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.infoHBDataGridView.Location = new System.Drawing.Point(190, 90);
+            this.infoHBDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.infoHBDataGridView.Name = "infoHBDataGridView";
+            this.infoHBDataGridView.RowHeadersWidth = 51;
+            this.infoHBDataGridView.RowTemplate.Height = 24;
+            this.infoHBDataGridView.Size = new System.Drawing.Size(592, 330);
+            this.infoHBDataGridView.TabIndex = 1;
             // 
-            // buttonThem
+            // btnThem
             // 
-            this.buttonThem.Location = new System.Drawing.Point(76, 151);
-            this.buttonThem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonThem.Name = "buttonThem";
-            this.buttonThem.Size = new System.Drawing.Size(126, 61);
-            this.buttonThem.TabIndex = 2;
-            this.buttonThem.Text = "Thêm";
-            this.buttonThem.UseVisualStyleBackColor = true;
+            this.btnThem.Location = new System.Drawing.Point(51, 98);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(84, 40);
+            this.btnThem.TabIndex = 2;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = true;
             // 
-            // buttonQuayLai
+            // btnQuayLai
             // 
-            this.buttonQuayLai.Location = new System.Drawing.Point(76, 544);
-            this.buttonQuayLai.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonQuayLai.Name = "buttonQuayLai";
-            this.buttonQuayLai.Size = new System.Drawing.Size(126, 61);
-            this.buttonQuayLai.TabIndex = 3;
-            this.buttonQuayLai.Text = "Quay lại";
-            this.buttonQuayLai.UseVisualStyleBackColor = true;
+            this.btnQuayLai.Location = new System.Drawing.Point(51, 353);
+            this.btnQuayLai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnQuayLai.Name = "btnQuayLai";
+            this.btnQuayLai.Size = new System.Drawing.Size(84, 40);
+            this.btnQuayLai.TabIndex = 3;
+            this.btnQuayLai.Text = "Quay lại";
+            this.btnQuayLai.UseVisualStyleBackColor = true;
             // 
-            // buttonXoa
+            // btnXoa
             // 
-            this.buttonXoa.Location = new System.Drawing.Point(76, 354);
-            this.buttonXoa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonXoa.Name = "buttonXoa";
-            this.buttonXoa.Size = new System.Drawing.Size(126, 61);
-            this.buttonXoa.TabIndex = 4;
-            this.buttonXoa.Text = "Xóa";
-            this.buttonXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Location = new System.Drawing.Point(51, 230);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(84, 40);
+            this.btnXoa.TabIndex = 4;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
             // 
-            // buttonSua
+            // btnSua
             // 
-            this.buttonSua.Location = new System.Drawing.Point(76, 251);
-            this.buttonSua.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonSua.Name = "buttonSua";
-            this.buttonSua.Size = new System.Drawing.Size(126, 61);
-            this.buttonSua.TabIndex = 5;
-            this.buttonSua.Text = "Sửa";
-            this.buttonSua.UseVisualStyleBackColor = true;
+            this.btnSua.Location = new System.Drawing.Point(51, 163);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(84, 40);
+            this.btnSua.TabIndex = 5;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = true;
             // 
-            // buttonTimKiem
+            // btnTimKiem
             // 
-            this.buttonTimKiem.Location = new System.Drawing.Point(76, 452);
-            this.buttonTimKiem.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.buttonTimKiem.Name = "buttonTimKiem";
-            this.buttonTimKiem.Size = new System.Drawing.Size(126, 61);
-            this.buttonTimKiem.TabIndex = 6;
-            this.buttonTimKiem.Text = "Tìm kiếm";
-            this.buttonTimKiem.UseVisualStyleBackColor = true;
-            this.buttonTimKiem.Click += new System.EventHandler(this.buttonTimKiem_Click);
+            this.btnTimKiem.Location = new System.Drawing.Point(51, 294);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTimKiem.Name = "btnTimKiem";
+            this.btnTimKiem.Size = new System.Drawing.Size(84, 40);
+            this.btnTimKiem.TabIndex = 6;
+            this.btnTimKiem.Text = "Tìm kiếm";
+            this.btnTimKiem.UseVisualStyleBackColor = true;
             // 
             // CNTThocbong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.buttonTimKiem);
-            this.Controls.Add(this.buttonSua);
-            this.Controls.Add(this.buttonXoa);
-            this.Controls.Add(this.buttonQuayLai);
-            this.Controls.Add(this.buttonThem);
-            this.Controls.Add(this.scholarshipDataGridView);
+            this.Controls.Add(this.btnTimKiem);
+            this.Controls.Add(this.btnSua);
+            this.Controls.Add(this.btnXoa);
+            this.Controls.Add(this.btnQuayLai);
+            this.Controls.Add(this.btnThem);
+            this.Controls.Add(this.infoHBDataGridView);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "CNTThocbong";
-            this.Size = new System.Drawing.Size(1194, 669);
+            this.Size = new System.Drawing.Size(796, 435);
+            this.Load += new System.EventHandler(this.CNTThocbong_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.scholarshipDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.infoHBDataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -209,16 +214,16 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.ComboBox boxScholarshipType;
+        private System.Windows.Forms.ComboBox cmbLoaiHB;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtScholarshipName;
+        private System.Windows.Forms.TextBox txtTenHB;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtScholarshipID;
-        private System.Windows.Forms.DataGridView scholarshipDataGridView;
-        private System.Windows.Forms.Button buttonThem;
-        private System.Windows.Forms.Button buttonQuayLai;
-        private System.Windows.Forms.Button buttonXoa;
-        private System.Windows.Forms.Button buttonSua;
-        private System.Windows.Forms.Button buttonTimKiem;
+        private System.Windows.Forms.TextBox txtMaHB;
+        private System.Windows.Forms.DataGridView infoHBDataGridView;
+        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.Button btnQuayLai;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnTimKiem;
     }
 }
