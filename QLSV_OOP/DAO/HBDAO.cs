@@ -16,7 +16,7 @@ namespace QLSV_OOP.DAO
     public class HBDAO
     {
         private static HBDAO instance;
-
+        
         public static HBDAO Instance
         {
             get
