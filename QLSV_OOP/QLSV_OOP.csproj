@@ -96,7 +96,6 @@
     <Compile Include="DAO\HBDAO.cs" />
     <Compile Include="DAO\Hoc_phanDAO.cs" />
     <Compile Include="DAO\Hoc_phiDAO.cs" />
-    <Compile Include="DAO\HTTTDAO.cs" />
     <Compile Include="DAO\KQHTDAO.cs" />
     <Compile Include="DAO\Lop_hocDAO.cs" />
     <Compile Include="DAO\Nhan_vienDAO.cs" />

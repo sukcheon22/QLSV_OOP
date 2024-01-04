@@ -38,7 +38,12 @@ namespace QLSV_OOP
             string username = txtTen.Text;
             string password = txtPass.Text;
             string roleid = cmbRole.Text;
-            infoAccDataGridView.DataSource = SearchTaiKhoan(userid, username, password, roleid);   
+            infoAccDataGridView.DataSource = SearchTaiKhoan(userid, username, password, roleid);
+            
+
+            
+
+            
         }
         private DataTable SearchTaiKhoan(string madd, string username, string password, string maquyen)
         {
@@ -330,12 +335,5 @@ namespace QLSV_OOP
             //CAST(RAND() * 1000000 AS NVARCHAR(255)) "" CAST(RAND() * 1000000 AS NVARCHAR(255))
         }
 
-        private void quayLai_Click(object sender, EventArgs e)
-        {
-            txtID.Text = string.Empty;
-            txtPass.Text = string.Empty;
-            txtTen.Text = string.Empty;
-            cmbRole.SelectedIndex = 0;
-        }
     }
 }

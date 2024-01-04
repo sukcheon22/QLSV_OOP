@@ -85,21 +85,5 @@ namespace QLSV_OOP.DAO
             return totalScholarshipOK;
         }
 
-        public bool KiemTraTrung(string maSV, string maHB)
-        {
-            string query = "select count(*) from Tinh_trang_HB where MaSV = '" + maSV + "' and MaHB = '" + maHB + "';";
-            SqlDataAdapter sda = new SqlDataAdapter(query, con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            int flag = Convert.ToInt32(dt.Rows[0][0]);
-            if (flag == 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
     }
 }

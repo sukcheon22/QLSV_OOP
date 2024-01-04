@@ -33,9 +33,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.empDataGridView = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtChoose = new System.Windows.Forms.TextBox();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.empDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -60,7 +60,6 @@
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
             this.backToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
             this.backToolStripMenuItem.Text = "Quay lại";
-            this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
             // 
             // label1
             // 
@@ -77,13 +76,12 @@
             // 
             this.empDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.empDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.empDataGridView.Location = new System.Drawing.Point(444, 121);
+            this.empDataGridView.Location = new System.Drawing.Point(506, 121);
             this.empDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.empDataGridView.Name = "empDataGridView";
             this.empDataGridView.RowHeadersWidth = 51;
-            this.empDataGridView.Size = new System.Drawing.Size(708, 434);
+            this.empDataGridView.Size = new System.Drawing.Size(646, 434);
             this.empDataGridView.TabIndex = 13;
-            this.empDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.empDataGridView_CellContentClick);
             // 
             // label2
             // 
@@ -96,48 +94,45 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "Mã lớp học";
             // 
-            // txtChoose
+            // textBox1
             // 
-            this.txtChoose.Location = new System.Drawing.Point(167, 143);
-            this.txtChoose.Name = "txtChoose";
-            this.txtChoose.Size = new System.Drawing.Size(134, 22);
-            this.txtChoose.TabIndex = 15;
+            this.textBox1.Location = new System.Drawing.Point(167, 143);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(134, 22);
+            this.textBox1.TabIndex = 15;
             // 
-            // btnAdd
+            // button1
             // 
-            this.btnAdd.Location = new System.Drawing.Point(37, 217);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(95, 44);
-            this.btnAdd.TabIndex = 16;
-            this.btnAdd.Text = "Thêm";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.button1.Location = new System.Drawing.Point(37, 217);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(95, 44);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "Thêm";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // btnDelete
+            // button2
             // 
-            this.btnDelete.Location = new System.Drawing.Point(287, 217);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(95, 44);
-            this.btnDelete.TabIndex = 17;
-            this.btnDelete.Text = "Xóa";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.button2.Location = new System.Drawing.Point(287, 217);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(95, 44);
+            this.button2.TabIndex = 17;
+            this.button2.Text = "Xóa";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // frmClassRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1165, 586);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.txtChoose);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.empDataGridView);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "frmClassRegistration";
             this.Text = "frmClassRegistration";
-            this.Load += new System.EventHandler(this.frmClassRegistration_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.empDataGridView)).EndInit();
@@ -153,8 +148,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView empDataGridView;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtChoose;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }

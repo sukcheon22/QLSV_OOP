@@ -21,7 +21,6 @@ namespace QLSV_OOP
         TTinDuNo ttinDuNo;
         TraCuuTKB traCuuTKB;
         TraCuuKQHT traCuuKQHT;
-        Sinh_Vien sinh_Vien;
         public frmSinhVien(Account acc)
         {
             InitializeComponent();
@@ -38,7 +37,6 @@ namespace QLSV_OOP
             CustomizeMenuStrip.Instance.Customize(menuStrip1, itemsSelected);
             string userid = acc.UserID;
             Sinh_Vien sinhVien = Sinh_VienDAO.Instance.GetSinhVienbyUserID(userid);
-            sinh_Vien = sinhVien;
             CustomizeMenuStrip.Instance.CustomizeAccount(menuStrip2, sinhVien.FullName);
             //CustomizeMenuStrip.Instance.SignOut.Click += new System.EventHandler(this.SignOut);
             CustomizeMenuStrip.Instance.SignOut.Click += SignOut;
@@ -97,7 +95,6 @@ namespace QLSV_OOP
         private void DkyLop_Clicked(object sender, EventArgs e)
         {
             // Xử lý logic khi sự kiện DkyLopClicked xảy ra
-            FunctionMenuStrip.Instance.ClassRegistration(this, sinh_Vien);
         }
 
         private void TCuuTK_Clicked(object sender, EventArgs e)
@@ -131,7 +128,6 @@ namespace QLSV_OOP
         private void DKHocBongB_Clicked(object sender, EventArgs e)
         {
             // Xử lý logic khi sự kiện DKHocBongBClicked xảy ra
-            FunctionMenuStrip.Instance.ScholarshipRegistration(this, sinh_Vien);
         }
 
         private void CapNhatHTTT_Clicked(object sender, EventArgs e)
