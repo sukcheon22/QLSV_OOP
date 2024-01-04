@@ -95,37 +95,37 @@
             // 
             // txtScholarshipID
             // 
-            this.textBox1.Location = new System.Drawing.Point(199, 148);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(134, 22);
-            this.textBox1.TabIndex = 17;
+            this.txtScholarshipID.Location = new System.Drawing.Point(199, 148);
+            this.txtScholarshipID.Name = "txtScholarshipID";
+            this.txtScholarshipID.Size = new System.Drawing.Size(134, 22);
+            this.txtScholarshipID.TabIndex = 17;
             // 
             // btnAdd
             // 
-            this.button1.Location = new System.Drawing.Point(39, 216);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 44);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Thêm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAdd.Location = new System.Drawing.Point(39, 216);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(95, 44);
+            this.btnAdd.TabIndex = 18;
+            this.btnAdd.Text = "Thêm";
+            this.btnAdd.UseVisualStyleBackColor = true;
             // 
             // btnDelete
             // 
-            this.button2.Location = new System.Drawing.Point(308, 216);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 44);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "Xóa";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDelete.Location = new System.Drawing.Point(308, 216);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(95, 44);
+            this.btnDelete.TabIndex = 19;
+            this.btnDelete.Text = "Xóa";
+            this.btnDelete.UseVisualStyleBackColor = true;
             // 
             // frmScholarshipRegistration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1165, 586);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.txtScholarshipID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.empDataGridView);

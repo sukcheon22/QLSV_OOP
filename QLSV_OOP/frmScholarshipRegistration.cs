@@ -178,9 +178,6 @@ namespace QLSV_OOP
 
         }
 
-        private void frmScholarshipRegistration_Load(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
