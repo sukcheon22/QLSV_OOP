@@ -119,6 +119,7 @@ namespace QLSV_OOP
             return dataTable;
         }
 
+
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             string maThanhToan = txtPaidID.Text;
@@ -128,6 +129,7 @@ namespace QLSV_OOP
             string nganHang = boxBank.Text;
 
             tuitionDataGridView.DataSource = SearchCongNo(maThanhToan, stk, maSinhVien, tienThanhToan, nganHang);
+            InitializeDataGridView();
         }
         private void UpdateCongNoInfo(string newmaThanhToan, string newmaSinhVien, string newnganHang, string newstk, string newtienThanhToan)
         {
