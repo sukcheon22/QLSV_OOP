@@ -45,22 +45,21 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(280, 32);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(373, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(224, 26);
+            this.label1.Size = new System.Drawing.Size(286, 32);
             this.label1.TabIndex = 1;
             this.label1.Text = "Quản lý phân quyền";
             // 
             // infoQuyenDataGridView
             // 
             this.infoQuyenDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.infoQuyenDataGridView.Location = new System.Drawing.Point(230, 93);
-            this.infoQuyenDataGridView.Margin = new System.Windows.Forms.Padding(2);
+            this.infoQuyenDataGridView.Location = new System.Drawing.Point(307, 114);
+            this.infoQuyenDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.infoQuyenDataGridView.Name = "infoQuyenDataGridView";
             this.infoQuyenDataGridView.RowHeadersWidth = 51;
             this.infoQuyenDataGridView.RowTemplate.Height = 24;
-            this.infoQuyenDataGridView.Size = new System.Drawing.Size(541, 332);
+            this.infoQuyenDataGridView.Size = new System.Drawing.Size(721, 409);
             this.infoQuyenDataGridView.TabIndex = 2;
             // 
             // menuStripHB
@@ -71,8 +70,8 @@
             this.backToolStripMenuItem});
             this.menuStripHB.Location = new System.Drawing.Point(0, 0);
             this.menuStripHB.Name = "menuStripHB";
-            this.menuStripHB.Padding = new System.Windows.Forms.Padding(5, 1, 0, 1);
-            this.menuStripHB.Size = new System.Drawing.Size(789, 24);
+            this.menuStripHB.Padding = new System.Windows.Forms.Padding(7, 1, 0, 1);
+            this.menuStripHB.Size = new System.Drawing.Size(1052, 26);
             this.menuStripHB.TabIndex = 14;
             this.menuStripHB.Text = "menuStrip1";
             // 
@@ -81,17 +80,16 @@
             this.backToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(62, 22);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
             this.backToolStripMenuItem.Text = "Quay lại";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(9, 94);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Location = new System.Drawing.Point(12, 116);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(61, 15);
+            this.label14.Size = new System.Drawing.Size(72, 18);
             this.label14.TabIndex = 15;
             this.label14.Text = "Mã quyền";
             // 
@@ -101,14 +99,13 @@
             this.cmbMaQuyen.FormattingEnabled = true;
             this.cmbMaQuyen.Items.AddRange(new object[] {
             "",
-            "QAD",
             "QDT",
             "QTV",
             "QSV"});
-            this.cmbMaQuyen.Location = new System.Drawing.Point(94, 93);
-            this.cmbMaQuyen.Margin = new System.Windows.Forms.Padding(2);
+            this.cmbMaQuyen.Location = new System.Drawing.Point(125, 114);
+            this.cmbMaQuyen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbMaQuyen.Name = "cmbMaQuyen";
-            this.cmbMaQuyen.Size = new System.Drawing.Size(104, 21);
+            this.cmbMaQuyen.Size = new System.Drawing.Size(137, 24);
             this.cmbMaQuyen.TabIndex = 16;
             // 
             // checkedListBoxQuyen
@@ -132,37 +129,37 @@
             "Thống kê học bổng",
             "Thống kê lớp học",
             "Thống kê hình thức thanh toán"});
-            this.checkedListBoxQuyen.Location = new System.Drawing.Point(11, 128);
-            this.checkedListBoxQuyen.Margin = new System.Windows.Forms.Padding(2);
+            this.checkedListBoxQuyen.Location = new System.Drawing.Point(15, 158);
+            this.checkedListBoxQuyen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkedListBoxQuyen.Name = "checkedListBoxQuyen";
-            this.checkedListBoxQuyen.Size = new System.Drawing.Size(188, 244);
+            this.checkedListBoxQuyen.Size = new System.Drawing.Size(249, 289);
             this.checkedListBoxQuyen.TabIndex = 17;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(11, 396);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Location = new System.Drawing.Point(15, 487);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(64, 29);
+            this.button1.Size = new System.Drawing.Size(85, 36);
             this.button1.TabIndex = 18;
             this.button1.Text = "Xác nhận";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(134, 396);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
+            this.button2.Location = new System.Drawing.Point(179, 487);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(64, 29);
+            this.button2.Size = new System.Drawing.Size(85, 36);
             this.button2.TabIndex = 19;
             this.button2.Text = "Hủy";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // frmPhanQuyen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(789, 436);
+            this.ClientSize = new System.Drawing.Size(1052, 537);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.checkedListBoxQuyen);
@@ -171,7 +168,7 @@
             this.Controls.Add(this.menuStripHB);
             this.Controls.Add(this.infoQuyenDataGridView);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmPhanQuyen";
             this.Text = "frmPhanQuyen";
             this.Load += new System.EventHandler(this.frmPhanQuyen_Load);

@@ -45,11 +45,11 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.quayLai = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.infoNVDataGridView = new System.Windows.Forms.DataGridView();
-            this.quayLai = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -112,8 +112,10 @@
             // 
             // cmbQue
             // 
+            this.cmbQue.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbQue.FormattingEnabled = true;
             this.cmbQue.Items.AddRange(new object[] {
+            "",
             "An Giang",
             "Ba Ria-Vung Tau",
             "Bac Giang",
@@ -240,8 +242,10 @@
             // 
             // cmbViTri
             // 
+            this.cmbViTri.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbViTri.FormattingEnabled = true;
             this.cmbViTri.Items.AddRange(new object[] {
+            "",
             "Dao Tao",
             "Tai Vu"});
             this.cmbViTri.Location = new System.Drawing.Point(369, 84);
@@ -305,6 +309,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Chức năng";
             // 
+            // quayLai
+            // 
+            this.quayLai.Location = new System.Drawing.Point(762, 20);
+            this.quayLai.Name = "quayLai";
+            this.quayLai.Size = new System.Drawing.Size(87, 32);
+            this.quayLai.TabIndex = 4;
+            this.quayLai.Text = "Quay lại";
+            this.quayLai.UseVisualStyleBackColor = true;
+            this.quayLai.Click += new System.EventHandler(this.quayLai_Click);
+            // 
             // btnXoa
             // 
             this.btnXoa.Location = new System.Drawing.Point(587, 21);
@@ -348,16 +362,6 @@
             this.infoNVDataGridView.RowTemplate.Height = 24;
             this.infoNVDataGridView.Size = new System.Drawing.Size(1021, 266);
             this.infoNVDataGridView.TabIndex = 4;
-            // 
-            // quayLai
-            // 
-            this.quayLai.Location = new System.Drawing.Point(762, 20);
-            this.quayLai.Name = "quayLai";
-            this.quayLai.Size = new System.Drawing.Size(87, 32);
-            this.quayLai.TabIndex = 4;
-            this.quayLai.Text = "Quay lại";
-            this.quayLai.UseVisualStyleBackColor = true;
-            this.quayLai.Click += new System.EventHandler(this.quayLai_Click);
             // 
             // EmployeeManagement
             // 

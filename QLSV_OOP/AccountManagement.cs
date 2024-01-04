@@ -335,5 +335,9 @@ namespace QLSV_OOP
             //CAST(RAND() * 1000000 AS NVARCHAR(255)) "" CAST(RAND() * 1000000 AS NVARCHAR(255))
         }
 
+        private void btnReturn_Click(object sender, EventArgs e)
+        {
+            ResetState();
+        }
     }
 }
