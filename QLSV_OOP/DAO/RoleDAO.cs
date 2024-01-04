@@ -133,7 +133,7 @@ namespace QLSV_OOP
         public static DataTable quyenGridView()
         {
             SqlConnection con = new SqlConnection(ConnectionString.connectionString);
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT * from quyen", con);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM (SELECT *, ROW_NUMBER() OVER (ORDER BY (SELECT NULL)) AS RowNum FROM quyen) AS temp WHERE RowNum >= 2", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             return dt;
