@@ -16,5 +16,10 @@ namespace QLSV_OOP
         {
             InitializeComponent();
         }
+
+        private void frmScholarshipRegistration_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
