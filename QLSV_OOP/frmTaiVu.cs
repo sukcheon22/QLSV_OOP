@@ -126,7 +126,7 @@ namespace QLSV_OOP
         private void HocPhi_Clicked(object sender, EventArgs e)
         {
             // Xử lý logic khi sự kiện HocPhiClicked xảy ra
-            //FunctionMenuStrip.Instance.TuitionAnalysis(this);
+            FunctionMenuStrip.Instance.TuitionAnalysis(this);
         }
 
         private void NoDongHocPhi_Clicked(object sender, EventArgs e)
@@ -151,6 +151,7 @@ namespace QLSV_OOP
         private void HTThanhToan_Clicked(object sender, EventArgs e)
         {
             // Xử lý logic khi sự kiện HTThanhToanClicked xảy ra
+            FunctionMenuStrip.Instance.HTTTAnalysis(this);
         }
 
         

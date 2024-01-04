@@ -124,5 +124,13 @@ namespace QLSV_OOP.DAO
             f.ShowDialog();
             form.Show();
         }
+
+        public void HTTTAnalysis (Form form)
+        {
+            form.Hide();
+            frmHTTTAnalysis f = new frmHTTTAnalysis();
+            f.ShowDialog();
+            form.Show();
+        }
     }
 }
