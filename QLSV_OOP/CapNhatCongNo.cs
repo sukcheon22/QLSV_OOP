@@ -130,6 +130,7 @@ namespace QLSV_OOP
 
             tuitionDataGridView.DataSource = SearchCongNo(maThanhToan, stk, maSinhVien, tienThanhToan, nganHang);
         }
+
         private void UpdateCongNoInfo(string newmaThanhToan, string newmaSinhVien, string newnganHang, string newstk, string newtienThanhToan)
         {
             try
@@ -210,6 +211,11 @@ namespace QLSV_OOP
         {
             try
             {
+                if (IsPaymentIDExists(newmaThanhToan))
+                {
+                    MessageBox.Show("Mã thanh toán đã tồn tại. Vui lòng chọn một mã thanh toán khác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; // Dừng thực thi nếu Mã thanh toán đã tồn tại
+                }
                 using (SqlCommand cmd = new SqlCommand("INSERT INTO Hoc_phi (MaTT, MaSV, TenNH, STK, TienTT) VALUES (@MaTT, @MaSV, @TenNH, @STK, @TienTT)", con))
                 {
                     cmd.Parameters.AddWithValue("@MaTT", newmaThanhToan);
@@ -252,6 +258,20 @@ namespace QLSV_OOP
             AddCongNoInfo(newmaThanhToan, newmaSinhVien, newnganHang, newstk, newtienThanhToan);
 
             InitializeDataGridView();
+        }
+        private bool IsPaymentIDExists(string maThanhToan)
+        {
+            using (SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Hoc_phi WHERE MaTT = @MaTT", con))
+            {
+                cmd.Parameters.AddWithValue("@MaTT", maThanhToan);
+
+                con.Open();
+                int count = (int)cmd.ExecuteScalar();
+                con.Close();
+
+                return count > 0;
+            }
+
         }
         private void btnQuayLai_Click(object sender, EventArgs e)
         {
