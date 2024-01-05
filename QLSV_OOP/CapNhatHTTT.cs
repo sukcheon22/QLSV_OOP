@@ -52,7 +52,7 @@ namespace QLSV_OOP
                 // Lấy dữ liệu từ hàng được chọn
                 DataGridViewRow selectedRow = TTdataGridView.SelectedRows[0];
                 string nganhang = selectedRow.Cells["TenNH"].Value.ToString();
-                string stk = selectedRow.Cells["STK_Truong"].Value.ToString();
+                string stk = selectedRow.Cells["STK"].Value.ToString();
 
                 // Hiển thị thông tin trong GroupBox
                 DisplayHTTTInfo(nganhang, stk);
@@ -79,7 +79,7 @@ namespace QLSV_OOP
             {
                 if (!isFirstCondition)
                     query += " AND ";
-                query += $"STK_Truong LIKE '%{stk}%'";
+                query += $"STK LIKE '%{stk}%'";
                 isFirstCondition = false;
             }
 
@@ -112,7 +112,7 @@ namespace QLSV_OOP
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand("UPDATE HTTT SET STK_Truong = @STK_Truong WHERE TenNH = @TenNH", con))
+                using (SqlCommand cmd = new SqlCommand("UPDATE HTTT SET STK = @STK_Truong WHERE TenNH = @TenNH", con))
                 {
                     cmd.Parameters.AddWithValue("@TenNH", newbankname);
                     cmd.Parameters.AddWithValue("@STK_Truong", newSTK);
@@ -147,10 +147,10 @@ namespace QLSV_OOP
             {
                 // Lấy giá trị cần xóa từ hàng được chọn
                 DataGridViewRow selectedRow = TTdataGridView.SelectedRows[0];
-                string bankToDelete = selectedRow.Cells["TenNH"].Value.ToString();
+                string stk = selectedRow.Cells["STK"].Value.ToString();
 
                 // Gọi hàm DeleteTaiKhoan để thực hiện xóa từ CSDL
-                DeleteHTTT(bankToDelete);
+                DeleteHTTT(stk);
 
                 // Cập nhật lại DataGridView sau khi xóa
                 InitializeDataGridView();
@@ -162,11 +162,11 @@ namespace QLSV_OOP
                 MessageBox.Show("Vui lòng chọn một hàng để xóa!");
             }
         }
-        private void DeleteHTTT(string nganghang)
+        private void DeleteHTTT(string stk)
         {
-            using (SqlCommand cmd = new SqlCommand("DELETE FROM HTTT WHERE TenNH = @Bank", con))
+            using (SqlCommand cmd = new SqlCommand("DELETE FROM HTTT WHERE STK = @STK", con))
             {
-                cmd.Parameters.AddWithValue("@Bank", nganghang);
+                cmd.Parameters.AddWithValue("@STK", stk);
 
                 con.Open();
                 cmd.ExecuteNonQuery();
@@ -188,10 +188,10 @@ namespace QLSV_OOP
             // Sử dụng SqlCommand để thực hiện câu truy vấn INSERT
             try
             {
-                using (SqlCommand cmd = new SqlCommand("INSERT INTO HTTT (TenNH, STK_Truong) VALUES (@TenNH, @STK_Truong)", con))
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO HTTT (TenNH, STK) VALUES (@TenNH, @STK)", con))
                 {
                     cmd.Parameters.AddWithValue("@TenNH", bank);
-                    cmd.Parameters.AddWithValue("@STK_Truong", STK);
+                    cmd.Parameters.AddWithValue("@STK", STK);
 
                     con.Open();
                     cmd.ExecuteNonQuery();
