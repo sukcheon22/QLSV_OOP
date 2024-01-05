@@ -68,7 +68,7 @@ namespace QLSV_OOP
             txtSTK.Text = stk;
             txtStudentID.Text = maSinhVien;
             txtMoney.Text = tienThanhToan;
-            boxBank.Text = maThanhToan;
+            boxBank.Text = nganHang;
         }
         private DataTable SearchCongNo(string maThanhToan, string stk, string maSinhVien, string tienThanhToan, string nganHang)
         {
