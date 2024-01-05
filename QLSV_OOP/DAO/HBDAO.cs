@@ -51,9 +51,9 @@ namespace QLSV_OOP.DAO
             sda.Fill(dt);
             return Convert.ToInt32(dt.Rows[0][0]);
         }
-        public DataTable scholarshipGridView()
+        public DataTable HBGridView()
         {
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT * from Tinh_trang_HB", con);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * from HB", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             return dt;
@@ -101,5 +101,6 @@ namespace QLSV_OOP.DAO
                 return false;
             }
         }
+
     }
 }

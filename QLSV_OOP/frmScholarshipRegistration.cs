@@ -19,22 +19,13 @@ namespace QLSV_OOP
         public frmScholarshipRegistration(Sinh_Vien sinhVien)
         {
             InitializeComponent();
-            empDataGridView.DataSource = classGridView(sinhVien.StudentID);
+            empDataGridView.DataSource = Tinh_trangHBDAO.Instance.classGridView(sinhVien.StudentID);
             MaSV = sinhVien.StudentID;
         }
 
         SqlConnection con = new SqlConnection(ConnectionString.connectionString);
 
-        private DataTable classGridView(string maSV)
-        {
-            string query = "select Tinh_trang_HB.MaHB as \"Mã học bổng\", TenHB as \"Tên học bổng\", Loai as \"Loại\" from Tinh_trang_HB "+
-                           "inner join HB on Tinh_trang_HB.MaHB = HB.MaHB " +
-                           "where MaSV = "+ maSV +";";
-            SqlDataAdapter sda = new SqlDataAdapter(query, con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            return dt;
-        }
+        
         private void backToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -42,65 +33,16 @@ namespace QLSV_OOP
 
         private void InitializeDataGridView()
         {
-            empDataGridView.DataSource = classGridView(MaSV);
+            empDataGridView.DataSource = Tinh_trangHBDAO.Instance.classGridView(MaSV);
         }
 
-        private void DangKyMoi(string maHB, string maSV)
-        {
-            try
-            {
-                if (HBDAO.Instance.KiemTraTrung(maSV, maHB))
-                {
-                    using (SqlCommand cmd = new SqlCommand("INSERT INTO Tinh_trang_HB (MaSV, MaHB, TinhTrang) VALUES ('" + maSV + "', '" + maHB + "','False')", con))
-                    {
-                        con.Open();
-                        cmd.ExecuteNonQuery();
-
-                        con.Close();
-                    }
-                    MessageBox.Show("Đã đăng ký học bổng thành công!");
-                }
-                
-                else 
-                {
-                    MessageBox.Show("Học bổng đã được đăng ký", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-            }
-            catch (SqlException ex)
-            {
-                // Xử lý lỗi SQL
-                if (ex.Number == 547)  // 547 là mã lỗi cho việc vi phạm khóa ngoại
-                {
-                    MessageBox.Show("Mã học bổng không tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    MessageBox.Show($"Lỗi SQL: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            catch (Exception ex)
-            {
-                // Xử lý lỗi khác (nếu có)
-
-                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                // Đảm bảo rằng kết nối sẽ được đóng dù có lỗi hay không
-                if (con.State == ConnectionState.Open)
-                {
-                    con.Close();
-                }
-            }
-
-        }
+        
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
             string maHB = txtScholarshipID.Text;
             string maSV = MaSV;
-            DangKyMoi(maHB, maSV);
+            Tinh_trangHBDAO.Instance.DangKyMoi(maHB, maSV);
             InitializeDataGridView();
         }
 
@@ -111,24 +53,9 @@ namespace QLSV_OOP
 
         }
 
-        private void XoaHocBong(string maHB, string maSV)
-        {
-            using (SqlCommand cmd = new SqlCommand("DELETE FROM Tinh_trang_HB WHERE MaSV = '" + maSV + "' AND MaHB = '" + maHB + "'", con))
-            {
-                con.Open();
-                cmd.ExecuteNonQuery();
-                con.Close();
-            }
-        }
+        
 
-        private bool CheckXoa(string maHB, string maSV)
-        {
-            string query = "select TinhTrang from Tinh_trang_HB where MaSV = '" + maSV + "' and MaHB = '" + maHB + "';";
-            SqlDataAdapter sda = new SqlDataAdapter(query, con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            return Convert.ToBoolean(dt.Rows[0][0]);
-        }
+        
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
@@ -139,13 +66,13 @@ namespace QLSV_OOP
                     // Lấy giá trị cần xóa từ hàng được chọn
                     DataGridViewRow selectedRow = empDataGridView.SelectedRows[0];
                     string maHB = selectedRow.Cells["Mã học bổng"].Value.ToString();
-                    if (CheckXoa(maHB, MaSV))
+                    if (Tinh_trangHBDAO.Instance.CheckXoa(maHB, MaSV))
                     {
                         MessageBox.Show("Học bổng đã được duyệt, không thể xóa", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
-                        XoaHocBong(maHB, MaSV);
+                        Tinh_trangHBDAO.Instance.XoaHocBong(maHB, MaSV);
                         InitializeDataGridView();
                         MessageBox.Show("Đã xóa thông tin thành công!");
                     }

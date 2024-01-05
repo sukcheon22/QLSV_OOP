@@ -28,7 +28,7 @@ namespace QLSV_OOP
             txtStudentUni.Text = HBDAO.Instance.StudentUni().ToString();           
             txtNumScholarshipOK.Text = HBDAO.Instance.NumScholarshipOK().ToString();
 
-            scholarshipDataGridView.DataSource = HBDAO.Instance.scholarshipGridView();
+            scholarshipDataGridView.DataSource = Tinh_trangHBDAO.Instance.scholarshipGridView();
         }
         private void exportFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
