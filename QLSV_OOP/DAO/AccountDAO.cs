@@ -161,14 +161,15 @@ namespace QLSV_OOP.DAO
 
             return dataTable;
         }
-        public void UpdateInfoAccInfo(string userid, string newusername, string newpassword)
+        public void UpdateInfoAccInfo(string userid, string newusername, string newpassword, string roleid)
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand("UPDATE Tai_khoan SET Username = @Name , Password = @Password WHERE MaDD = @Madd", con))
+                using (SqlCommand cmd = new SqlCommand("UPDATE Tai_khoan SET Username = @Name , Password = @Password, MaQuyen = @MaQuyen WHERE MaDD = @Madd", con))
                 {
                     cmd.Parameters.AddWithValue("@Name", newusername);
                     cmd.Parameters.AddWithValue("@Password", newpassword);
+                    cmd.Parameters.AddWithValue("@MaQuyen", roleid);
                     cmd.Parameters.AddWithValue("@Madd", userid);
 
                     con.Open();

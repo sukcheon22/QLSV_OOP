@@ -82,9 +82,9 @@ namespace QLSV_OOP
             string userid = txtID.Text;
             string newusername = txtTen.Text;
             string newpassword = txtPass.Text;
-
+            string roleid = cmbRole.Text;
             // Gọi hàm cập nhật thông tin sinh viên
-            AccountDAO.Instance.UpdateInfoAccInfo(userid, newusername, newpassword);
+            AccountDAO.Instance.UpdateInfoAccInfo(userid, newusername, newpassword, roleid);
 
             // Cập nhật lại DataGridView sau khi cập nhật CSDL
             InitializeDataGridView();
