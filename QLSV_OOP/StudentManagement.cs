@@ -167,34 +167,63 @@ namespace QLSV_OOP
             InitializeDataGridView();
             
         }
+
+        private bool KiemTraTrung(string maSV, string maDD)
+        {
+            string query = "select count(*) from Sinh__vien where MaSV = '" + maSV + "';";
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            int flag = Convert.ToInt32(dt.Rows[0][0]);
+
+            string query1 = "select MaSV from Sinh__vien where MaDD = '" + maDD + "';";
+            SqlDataAdapter sda1 = new SqlDataAdapter(query1, con);
+            DataTable dt1 = new DataTable();
+            sda1.Fill(dt1);
+            string maSVCheck = Convert.ToString(dt1.Rows[0][0]);
+            if (flag == 0 || maSV == maSVCheck)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         private void UpdateInfoStudent(string maDD, string maSV, string newTenSV, string newKhoa, string newQue, string newSDT, DateTime newNgaySinh)
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand("UPDATE Sinh__vien SET MaSV = @MaSV, TenSV = @TenSV, Khoa = @Khoa, Que = @Que, SDT = @SDT, NgaySinh = @NgaySinh WHERE MaDD = @MaDD", con))
+                if (KiemTraTrung(maSV, maDD))
                 {
-                    cmd.Parameters.AddWithValue("@TenSV", newTenSV);
-                    cmd.Parameters.AddWithValue("@Khoa", newKhoa);
-                    cmd.Parameters.AddWithValue("@Que", newQue);
-                    cmd.Parameters.AddWithValue("@SDT", newSDT);
-                    cmd.Parameters.AddWithValue("@NgaySinh", newNgaySinh.ToString("yyyy-MM-dd"));
-                    cmd.Parameters.AddWithValue("@MaSV", maSV);
-                    cmd.Parameters.AddWithValue("@MaDD", maDD);
+                    using (SqlCommand cmd = new SqlCommand("UPDATE Sinh__vien SET MaSV = @MaSV, TenSV = @TenSV, Khoa = @Khoa, Que = @Que, SDT = @SDT, NgaySinh = @NgaySinh WHERE MaDD = @MaDD", con))
+                    {
+                        cmd.Parameters.AddWithValue("@TenSV", newTenSV);
+                        cmd.Parameters.AddWithValue("@Khoa", newKhoa);
+                        cmd.Parameters.AddWithValue("@Que", newQue);
+                        cmd.Parameters.AddWithValue("@SDT", newSDT);
+                        cmd.Parameters.AddWithValue("@NgaySinh", newNgaySinh.ToString("yyyy-MM-dd"));
+                        cmd.Parameters.AddWithValue("@MaSV", maSV);
+                        cmd.Parameters.AddWithValue("@MaDD", maDD);
 
-                    con.Open();
-                    int rowsAffected = cmd.ExecuteNonQuery();
-                    con.Close();
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show("Đã cập nhật thông tin sinh viên thành công!");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Không có sinh viên nào được cập nhật. Có thể không tồn tại Mã SV tương ứng hoặc Mã DD không khớp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        con.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        con.Close();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Đã cập nhật thông tin sinh viên thành công!");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Không có sinh viên nào được cập nhật. Có thể không tồn tại Mã SV tương ứng hoặc Mã DD không khớp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
                 }
-                
-
+                else
+                {
+                    MessageBox.Show("Mã sinh viên đã tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }    
             }
             catch (SqlException ex)
             {
