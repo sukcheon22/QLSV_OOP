@@ -48,8 +48,8 @@
             this.backToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1165, 24);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1553, 28);
             this.menuStrip1.TabIndex = 12;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -58,7 +58,7 @@
             this.backToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateGray;
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
             this.backToolStripMenuItem.Text = "Quay lại";
             this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
             // 
@@ -66,10 +66,11 @@
             // 
             this.empDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.empDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.empDataGridView.Location = new System.Drawing.Point(370, 105);
+            this.empDataGridView.Location = new System.Drawing.Point(493, 129);
+            this.empDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.empDataGridView.Name = "empDataGridView";
             this.empDataGridView.RowHeadersWidth = 51;
-            this.empDataGridView.Size = new System.Drawing.Size(484, 353);
+            this.empDataGridView.Size = new System.Drawing.Size(645, 434);
             this.empDataGridView.TabIndex = 14;
             this.empDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.empDataGridView_CellContentClick);
             // 
@@ -77,9 +78,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(309, 42);
+            this.label1.Location = new System.Drawing.Point(412, 52);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(246, 33);
+            this.label1.Size = new System.Drawing.Size(313, 41);
             this.label1.TabIndex = 15;
             this.label1.Text = "ĐĂNG KÝ HỌC BỔNG";
             // 
@@ -87,42 +89,48 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(26, 118);
+            this.label2.Location = new System.Drawing.Point(35, 145);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(93, 19);
+            this.label2.Size = new System.Drawing.Size(119, 24);
             this.label2.TabIndex = 16;
             this.label2.Text = "Mã học bổng";
             // 
             // txtScholarshipID
             // 
-            this.txtScholarshipID.Location = new System.Drawing.Point(137, 117);
+            this.txtScholarshipID.Location = new System.Drawing.Point(183, 144);
+            this.txtScholarshipID.Margin = new System.Windows.Forms.Padding(4);
             this.txtScholarshipID.Name = "txtScholarshipID";
-            this.txtScholarshipID.Size = new System.Drawing.Size(134, 20);
+            this.txtScholarshipID.Size = new System.Drawing.Size(177, 22);
             this.txtScholarshipID.TabIndex = 17;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(39, 216);
+            this.btnAdd.Location = new System.Drawing.Point(52, 266);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(95, 44);
+            this.btnAdd.Size = new System.Drawing.Size(127, 54);
             this.btnAdd.TabIndex = 18;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(203, 216);
+            this.btnDelete.Location = new System.Drawing.Point(271, 266);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(95, 44);
+            this.btnDelete.Size = new System.Drawing.Size(127, 54);
             this.btnDelete.TabIndex = 19;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // frmScholarshipRegistration
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1165, 586);
+            this.ClientSize = new System.Drawing.Size(1553, 721);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtScholarshipID);
@@ -130,7 +138,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.empDataGridView);
             this.Controls.Add(this.menuStrip1);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmScholarshipRegistration";
             this.Text = "frmScholarshipRegistration";
             this.Load += new System.EventHandler(this.frmScholarshipRegistration_Load);

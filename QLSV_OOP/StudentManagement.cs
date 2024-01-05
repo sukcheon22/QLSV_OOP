@@ -30,20 +30,13 @@ namespace QLSV_OOP
             txtSDT.Text = "";
             cmbKhoa.Text = "";
             cmbQue.Text = "";
-            infoStuDataGridView.DataSource = Sinh_VienDAO.Instance.svGridView();
+            InitializeDataGridView();
 
 
-        }
-        public DataTable infoStuGridView()
-        {
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT * from Sinh__vien", con);
-            DataTable dt = new DataTable();
-            sda.Fill(dt);
-            return dt;
         }
         private void InitializeDataGridView()
         {
-            infoStuDataGridView.DataSource = this.infoStuGridView();
+            infoStuDataGridView.DataSource = Sinh_VienDAO.Instance.svGridView();
         }
 
 
@@ -80,68 +73,6 @@ namespace QLSV_OOP
             infoStuDataGridView.SelectionChanged += DataGridView_SelectionChanged;
         }
 
-        private DataTable SearchSinhVien(string maSV, string maDD, string tenSV, string khoa, string que, string sdt)
-        {
-            // Tạo câu truy vấn SQL động dựa trên số lượng thuộc tính đã nhập
-            string query = "SELECT * FROM Sinh__vien WHERE ";
-            bool isFirstCondition = true;
-
-            if (!string.IsNullOrEmpty(maSV))
-            {
-                query += $"MaSV LIKE '%{maSV}%'";
-                isFirstCondition = false;
-            }
-
-            if (!string.IsNullOrEmpty(maDD))
-            {
-                if (!isFirstCondition)
-                    query += " AND ";
-                query += $"MaDD LIKE '%{maDD}%'";
-                isFirstCondition = false;
-            }
-
-            if (!string.IsNullOrEmpty(tenSV))
-            {
-                if (!isFirstCondition)
-                    query += " AND ";
-                query += $"TenSV LIKE '%{tenSV}%'";
-                isFirstCondition = false;
-            }
-
-            if (!string.IsNullOrEmpty(khoa))
-            {
-                if (!isFirstCondition)
-                    query += " AND ";
-                query += $"Khoa = {khoa}";
-                isFirstCondition = false;
-            }
-
-            if (!string.IsNullOrEmpty(que))
-            {
-                if (!isFirstCondition)
-                    query += " AND ";
-                query += $"Que LIKE '%{que}%'";
-                isFirstCondition = false;
-            }
-
-            if (!string.IsNullOrEmpty(sdt))
-            {
-                if (!isFirstCondition)
-                    query += " AND ";
-                query += $"SDT LIKE '%{sdt}%'";
-
-            }
-
-
-
-            // Thực hiện truy vấn SQL SELECT với câu truy vấn động
-            SqlDataAdapter adapter = new SqlDataAdapter(query, con);
-            DataTable dataTable = new DataTable();
-            adapter.Fill(dataTable);
-
-            return dataTable;
-        }
-
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             string maSV = txtIDStu.Text;
@@ -151,7 +82,7 @@ namespace QLSV_OOP
             string que = cmbQue.Text;
             string sdt = txtSDT.Text;
 
-            infoStuDataGridView.DataSource = SearchSinhVien(maSV, maDD, tenSV, khoa, que, sdt);
+            infoStuDataGridView.DataSource = Sinh_VienDAO.Instance.SearchSinhVien(maSV, maDD, tenSV, khoa, que, sdt);
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -163,56 +94,11 @@ namespace QLSV_OOP
             string newQue = cmbQue.Text;
             DateTime newNgaySinh = birthDateTimePicker.Value;
             string newSDT = txtSDT.Text;
-            UpdateInfoStudent(maDD, maSV, newTenSV, newKhoa, newQue, newSDT, newNgaySinh);
+            Sinh_VienDAO.Instance.UpdateInfoStudent(maDD, maSV, newTenSV, newKhoa, newQue, newSDT, newNgaySinh);
             InitializeDataGridView();
             
         }
-        private void UpdateInfoStudent(string maDD, string maSV, string newTenSV, string newKhoa, string newQue, string newSDT, DateTime newNgaySinh)
-        {
-            try
-            {
-                using (SqlCommand cmd = new SqlCommand("UPDATE Sinh__vien SET MaSV = @MaSV, TenSV = @TenSV, Khoa = @Khoa, Que = @Que, SDT = @SDT, NgaySinh = @NgaySinh WHERE MaDD = @MaDD", con))
-                {
-                    cmd.Parameters.AddWithValue("@TenSV", newTenSV);
-                    cmd.Parameters.AddWithValue("@Khoa", newKhoa);
-                    cmd.Parameters.AddWithValue("@Que", newQue);
-                    cmd.Parameters.AddWithValue("@SDT", newSDT);
-                    cmd.Parameters.AddWithValue("@NgaySinh", newNgaySinh.ToString("yyyy-MM-dd"));
-                    cmd.Parameters.AddWithValue("@MaSV", maSV);
-                    cmd.Parameters.AddWithValue("@MaDD", maDD);
 
-                    con.Open();
-                    int rowsAffected = cmd.ExecuteNonQuery();
-                    con.Close();
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show("Đã cập nhật thông tin sinh viên thành công!");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Không có sinh viên nào được cập nhật. Có thể không tồn tại Mã SV tương ứng hoặc Mã DD không khớp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-                
-
-            }
-            catch (SqlException ex)
-            {
-                // Xử lý lỗi SQL
-                MessageBox.Show($"Lỗi SQL: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                // Đảm bảo rằng kết nối sẽ được đóng dù có lỗi hay không
-                if (con.State == ConnectionState.Open)
-                {
-                    con.Close();
-                }
-            }
-
-        }
-
- 
         private void btnXoa_Click(object sender, EventArgs e)
         {
             if (infoStuDataGridView.SelectedRows.Count > 0)
@@ -222,7 +108,7 @@ namespace QLSV_OOP
                 string maddToDelete = selectedRow.Cells["Madd"].Value.ToString();
 
                 // Gọi hàm DeleteTaiKhoan để thực hiện xóa từ CSDL
-                DeleteSinhVien(maddToDelete);
+                Sinh_VienDAO.Instance.DeleteSinhVien(maddToDelete);
 
                 // Cập nhật lại DataGridView sau khi xóa
                 InitializeDataGridView();
@@ -234,19 +120,7 @@ namespace QLSV_OOP
                 MessageBox.Show("Vui lòng chọn một hàng để xóa!");
             }
         }
-        private void DeleteSinhVien(string madd)
-        {
-            // Thực hiện truy vấn SQL DELETE để xóa dữ liệu từ CSDL
-            using (SqlCommand cmd = new SqlCommand("DELETE FROM Sinh__vien WHERE Madd = @Madd", con))
-            {
-                cmd.Parameters.AddWithValue("@Madd", madd);
-
-                con.Open();
-                cmd.ExecuteNonQuery();
-                con.Close();
-            }
-        }
-
+ 
         private void quaylai_Click(object sender, EventArgs e)
         {
             ResetState();

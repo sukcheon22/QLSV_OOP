@@ -102,6 +102,7 @@
             this.txtChoose.Name = "txtChoose";
             this.txtChoose.Size = new System.Drawing.Size(134, 22);
             this.txtChoose.TabIndex = 15;
+            this.txtChoose.TextChanged += new System.EventHandler(this.txtChoose_TextChanged);
             // 
             // btnAdd
             // 

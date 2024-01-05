@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using QLSV_OOP;
 using QLSV_OOP.DTO;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
@@ -94,7 +95,150 @@ namespace QLSV_OOP.DAO
             sda.Fill(dt);
             return dt;
         }
+        public DataTable SearchCongNo(string maThanhToan, string stk, string maSinhVien, string tienThanhToan, string nganHang)
+        {
+            string query = "SELECT * FROM Hoc_phi WHERE ";
+            bool isFirstCondition = true;
 
+            if (!string.IsNullOrEmpty(maThanhToan))
+            {
+                query += $"MaTT LIKE '%{maThanhToan}%'";
+                isFirstCondition = false;
+            }
+
+            if (!string.IsNullOrEmpty(stk))
+            {
+                if (!isFirstCondition)
+                    query += " AND ";
+                query += $"STK LIKE '%{stk}%'";
+                isFirstCondition = false;
+            }
+
+            if (!string.IsNullOrEmpty(maSinhVien))
+            {
+                if (!isFirstCondition)
+                    query += " AND ";
+                query += $"MaSV LIKE '%{maSinhVien}%'";
+                isFirstCondition = false;
+            }
+
+            if (!string.IsNullOrEmpty(tienThanhToan))
+            {
+                if (!isFirstCondition)
+                    query += " AND ";
+                query += $"TienTT LIKE '%{tienThanhToan}%'";
+                isFirstCondition = false;
+            }
+
+            if (!string.IsNullOrEmpty(nganHang))
+            {
+                if (!isFirstCondition)
+                    query += " AND ";
+                query += $"TenNH LIKE '%{nganHang}%'";
+            }
+
+            SqlDataAdapter adapter = new SqlDataAdapter(query, con);
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+
+            return dataTable;
+        }
+        public void UpdateCongNoInfo(string newmaThanhToan, string newmaSinhVien, string newnganHang, string newstk, string newtienThanhToan)
+        {
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("UPDATE Hoc_phi SET MaTT = @MaTT, MaSV = @MaSV, TenNH = @TenNH, STK = @STK, TienTT = @TienTT WHERE MaTT = @MaTT", con))
+                {
+                    cmd.Parameters.AddWithValue("@MaTT", newmaThanhToan);
+                    cmd.Parameters.AddWithValue("@MaSV", newmaSinhVien);
+                    cmd.Parameters.AddWithValue("@TenNH", newnganHang);
+                    cmd.Parameters.AddWithValue("@STK", newstk);
+                    cmd.Parameters.AddWithValue("@TienTT", newtienThanhToan);
+
+                    con.Open();
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    con.Close();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Đã cập nhật thông tin học phí thành công!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không có thông tin học phí nào được cập nhật. Có thể không tìm thấy thông tin tương ứng hoặc điều kiện cập nhật không khớp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show($"Lỗi SQL: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void DeleteCongNo(string maThanhToan)
+        {
+            using (SqlCommand cmd = new SqlCommand("DELETE FROM Hoc_phi WHERE MaTT = @maThanhToan", con))
+            {
+                cmd.Parameters.AddWithValue("@maThanhToan", maThanhToan);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+        }
+        public void AddCongNoInfo(string newmaThanhToan, string newmaSinhVien, string newnganHang, string newstk, string newtienThanhToan)
+        {
+            try
+            {
+                if (IsPaymentIDExists(newmaThanhToan))
+                {
+                    MessageBox.Show("Mã thanh toán đã tồn tại. Vui lòng chọn một mã thanh toán khác.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return; // Dừng thực thi nếu Mã thanh toán đã tồn tại
+                }
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO Hoc_phi (MaTT, MaSV, TenNH, STK, TienTT) VALUES (@MaTT, @MaSV, @TenNH, @STK, @TienTT)", con))
+                {
+                    cmd.Parameters.AddWithValue("@MaTT", newmaThanhToan);
+                    cmd.Parameters.AddWithValue("@MaSV", newmaSinhVien);
+                    cmd.Parameters.AddWithValue("@TenNH", newnganHang);
+                    cmd.Parameters.AddWithValue("@STK", newstk);
+                    cmd.Parameters.AddWithValue("@TienTT", newtienThanhToan);
+
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                }
+
+                MessageBox.Show("Đã thêm thông tin công nợ học phí thành công!");
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show($"Lỗi SQL: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
+        }
+        private bool IsPaymentIDExists(string maThanhToan)
+        {
+            using (SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Hoc_phi WHERE MaTT = @MaTT", con))
+            {
+                cmd.Parameters.AddWithValue("@MaTT", maThanhToan);
+
+                con.Open();
+                int count = (int)cmd.ExecuteScalar();
+                con.Close();
+
+                return count > 0;
+            }
+
+        }
 
     }
 }

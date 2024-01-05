@@ -97,6 +97,11 @@ namespace QLSV_OOP
         {
             FunctionMenuStrip.Instance.RoleChanging(this);
         }
+
+        private void employeeManagement1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLSV_OOP.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -63,36 +64,7 @@ namespace QLSV_OOP
             }
         }
 
-        private void ConfirmInformation(string maSV, string maHB, string check)
-        {
-            try
-            {
-                using (SqlCommand cmd = new SqlCommand("UPDATE Tinh_trang_HB SET TinhTrang = '" + check + "' WHERE MaSV = '" + maSV + "' AND MaHB = '" + maHB + "'", con))
-                { 
-
-                    con.Open();
-                    int rowsAffected = cmd.ExecuteNonQuery();
-                    con.Close();
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show("Phê duyệt thành công!");
-                    }
-                }
-            }
-            catch (SqlException ex)
-            {
-                // Xử lý lỗi SQL
-                MessageBox.Show($"Lỗi SQL: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                // Đảm bảo rằng kết nối sẽ được đóng dù có lỗi hay không
-                if (con.State == ConnectionState.Open)
-                {
-                    con.Close();
-                }
-            }
-        }
+        
 
         private void InitializeDataGridView()
         {
@@ -103,7 +75,7 @@ namespace QLSV_OOP
             string maSV = txtStudentId.Text;
             string maHB = txtHBId.Text;
             string check = cmbCheck.Text;
-            ConfirmInformation(maSV, maHB, check);
+            Tinh_trangHBDAO.Instance.ConfirmInformation(maSV, maHB, check);
             InitializeDataGridView();
         }
 

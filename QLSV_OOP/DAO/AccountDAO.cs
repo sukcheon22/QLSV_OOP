@@ -10,6 +10,7 @@ using QLSV_OOP;
 using System.Drawing;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using System.Drawing.Text;
+using System.Windows.Forms;
 
 namespace QLSV_OOP.DAO
 {
@@ -118,6 +119,153 @@ namespace QLSV_OOP.DAO
             sda.Fill(dt);
             return dt;
         }
+        public DataTable SearchTaiKhoan(string madd, string username, string password, string maquyen)
+        {
+            // Tạo câu truy vấn SQL động dựa trên số lượng thuộc tính đã nhập
+            string query = "SELECT * FROM Tai_khoan WHERE ";
+            bool isFirstCondition = true;
+
+            if (!string.IsNullOrEmpty(madd))
+            {
+                query += $"MaDD LIKE '%{madd}%'";
+                isFirstCondition = false;
+            }
+
+            if (!string.IsNullOrEmpty(username))
+            {
+                if (!isFirstCondition)
+                    query += " AND ";
+                query += $"Username LIKE '%{username}%'";
+                isFirstCondition = false;
+            }
+
+            if (!string.IsNullOrEmpty(password))
+            {
+                if (!isFirstCondition)
+                    query += " AND ";
+                query += $"Password LIKE '%{password}%'";
+                isFirstCondition = false;
+            }
+
+            if (!string.IsNullOrEmpty(maquyen))
+            {
+                if (!isFirstCondition)
+                    query += " AND ";
+                query += $"MaQuyen LIKE '%{maquyen}%'";
+            }
+
+            // Thực hiện truy vấn SQL SELECT với câu truy vấn động
+            SqlDataAdapter adapter = new SqlDataAdapter(query, con);
+            DataTable dataTable = new DataTable();
+            adapter.Fill(dataTable);
+
+            return dataTable;
+        }
+        public void UpdateInfoAccInfo(string userid, string newusername, string newpassword, string roleid)
+        {
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("UPDATE Tai_khoan SET Username = @Name , Password = @Password, MaQuyen = @MaQuyen WHERE MaDD = @Madd", con))
+                {
+                    cmd.Parameters.AddWithValue("@Name", newusername);
+                    cmd.Parameters.AddWithValue("@Password", newpassword);
+                    cmd.Parameters.AddWithValue("@MaQuyen", roleid);
+                    cmd.Parameters.AddWithValue("@Madd", userid);
+
+                    con.Open();
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    con.Close();
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Đã cập nhật thông tin tài khoản thành công!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Không có tài khoản nào được cập nhật. Có thể không tồn tại Mã DD tương ứng hoặc Mã DD không khớp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
+                }
+            }
+            catch (SqlException ex)
+            {
+                // Xử lý lỗi SQL
+                MessageBox.Show($"Lỗi SQL: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public void ThemTaiKhoanMoi(string userId, string username, string password, string role)
+        {
+            // Thêm một tài khoản mới vào cơ sở dữ liệu
+            // Sử dụng SqlCommand để thực hiện câu truy vấn INSERT
+            try
+            {
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO Tai_khoan (Madd, Username, Password, MaQuyen) VALUES (@Madd, @Username, @Password, @MaQuyen)", con))
+                {
+                    cmd.Parameters.AddWithValue("@Madd", userId);
+                    cmd.Parameters.AddWithValue("@Username", username);
+                    cmd.Parameters.AddWithValue("@Password", password);
+                    cmd.Parameters.AddWithValue("@MaQuyen", role);
+
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+
+
+                }
+                if (role == "QSV")
+                {
+                    Sinh_VienDAO.Instance.ThemSinhVienMoi(userId);
+                }
+                else if (role == "QDT")
+                {
+                    Nhan_vienDAO.Instance.ThemNhanVienDaoTaoMoi(userId);
+                }
+                else if (role == "QTV")
+                {
+                    Nhan_vienDAO.Instance.ThemNhanVienTaiVuMoi(userId);
+                }
+
+                MessageBox.Show("Đã thêm tài khoản mới thành công!");
+            }
+            catch (SqlException ex)
+            {
+                // Xử lý lỗi SQL
+                if (ex.Number == 2627)  // 2627 là mã lỗi cho việc vi phạm ràng buộc duy nhất (unique constraint)
+                {
+                    MessageBox.Show($"Mã '{userId}' đã tồn tại trong cơ sở dữ liệu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show($"Lỗi SQL: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Xử lý lỗi khác (nếu có)
+                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                // Đảm bảo rằng kết nối sẽ được đóng dù có lỗi hay không
+                if (con.State == ConnectionState.Open)
+                {
+                    con.Close();
+                }
+            }
+        }
+        public void DeleteTaiKhoan(string madd)
+        {
+            // Thực hiện truy vấn SQL DELETE để xóa dữ liệu từ CSDL
+            using (SqlCommand cmd = new SqlCommand("DELETE FROM Tai_khoan WHERE Madd = @Madd", con))
+            {
+                cmd.Parameters.AddWithValue("@Madd", madd);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+        }
+
+
     }
 
 }

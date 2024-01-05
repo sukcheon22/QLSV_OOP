@@ -140,7 +140,7 @@
             "3",
             "4"});
             this.cmbDiem.Location = new System.Drawing.Point(809, 30);
-            this.cmbDiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbDiem.Margin = new System.Windows.Forms.Padding(4);
             this.cmbDiem.Name = "cmbDiem";
             this.cmbDiem.Size = new System.Drawing.Size(160, 24);
             this.cmbDiem.TabIndex = 12;
@@ -150,7 +150,7 @@
             this.cmbMaHP.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMaHP.FormattingEnabled = true;
             this.cmbMaHP.Location = new System.Drawing.Point(144, 30);
-            this.cmbMaHP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmbMaHP.Margin = new System.Windows.Forms.Padding(4);
             this.cmbMaHP.Name = "cmbMaHP";
             this.cmbMaHP.Size = new System.Drawing.Size(160, 24);
             this.cmbMaHP.TabIndex = 11;
@@ -172,6 +172,7 @@
             this.txtMaSV.Name = "txtMaSV";
             this.txtMaSV.Size = new System.Drawing.Size(137, 22);
             this.txtMaSV.TabIndex = 8;
+            this.txtMaSV.TextChanged += new System.EventHandler(this.txtMaSV_TextChanged);
             // 
             // label1
             // 
