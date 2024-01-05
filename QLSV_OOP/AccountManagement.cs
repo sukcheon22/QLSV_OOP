@@ -163,11 +163,11 @@ namespace QLSV_OOP
                     con.Close();
                     if (rowsAffected > 0)
                     {
-                        MessageBox.Show("Đã cập nhật thông tin sinh viên thành công!");
+                        MessageBox.Show("Đã cập nhật thông tin tài khoản thành công!");
                     }
                     else
                     {
-                        MessageBox.Show("Không có sinh viên nào được cập nhật. Có thể không tồn tại Mã SV tương ứng hoặc Mã DD không khớp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Không có tài khoản nào được cập nhật. Có thể không tồn tại Mã DD tương ứng hoặc Mã DD không khớp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
 
                 }
@@ -272,7 +272,7 @@ namespace QLSV_OOP
                 // Xử lý lỗi SQL
                 if (ex.Number == 2627)  // 2627 là mã lỗi cho việc vi phạm ràng buộc duy nhất (unique constraint)
                 {
-                    MessageBox.Show($"Mã sinh viên '{userId}' đã tồn tại trong cơ sở dữ liệu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"Mã '{userId}' đã tồn tại trong cơ sở dữ liệu.", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
