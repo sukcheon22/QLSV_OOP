@@ -62,7 +62,7 @@ namespace QLSV_OOP
             txtSTK.Text = stk;
             txtStudentID.Text = maSinhVien;
             txtMoney.Text = tienThanhToan;
-            boxBank.Text = maThanhToan;
+            boxBank.Text = nganHang;
         }
         
 
