@@ -165,35 +165,40 @@ namespace QLSV_OOP.DAO
         {
             try
             {
+                string roleOld = "";
                 SqlDataAdapter sda = new SqlDataAdapter("SELECT MaQuyen from tai_khoan where MaDD = '" + userid + "';", con);
                 DataTable dt = new DataTable();
                 sda.Fill(dt);
-                string roleOld =  Convert.ToString(dt.Rows[0][0]);
-                if (roleid == roleOld)
+                if (dt.Rows.Count > 0)
                 {
-                    using (SqlCommand cmd = new SqlCommand("UPDATE tai_khoan SET Username = @Name , Password = @Password WHERE MaDD = @Madd", con))
+                    roleOld = Convert.ToString(dt.Rows[0][0]);
+                }
+                using (SqlCommand cmd = new SqlCommand("UPDATE tai_khoan SET Username = @Name , Password = @Password WHERE MaDD = @Madd", con))
+                {
+                    cmd.Parameters.AddWithValue("@Name", newusername);
+                    cmd.Parameters.AddWithValue("@Password", newpassword);
+                    cmd.Parameters.AddWithValue("@Madd", userid);
+                    con.Open();
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    con.Close();
+                    if (rowsAffected > 0)
                     {
-                        cmd.Parameters.AddWithValue("@Name", newusername);
-                        cmd.Parameters.AddWithValue("@Password", newpassword);
-                        cmd.Parameters.AddWithValue("@Madd", userid);
-                        con.Open();
-                        int rowsAffected = cmd.ExecuteNonQuery();
-                        con.Close();
-                        if (rowsAffected > 0)
+                        if (roleid == roleOld)
                         {
                             MessageBox.Show("Đã cập nhật thông tin tài khoản thành công!");
                         }
                         else
                         {
-                            MessageBox.Show("Không có tài khoản nào được cập nhật. Có thể không tồn tại Mã DD tương ứng hoặc Mã DD không khớp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Không thể thay đổi quyền. Vui lòng xóa tài khoản để cập nhật quyền mới!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-
                     }
+                    else
+                    {
+                        MessageBox.Show("Không có tài khoản nào được cập nhật. Có thể không tồn tại Mã DD tương ứng hoặc Mã DD không khớp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
                 }
-                else
-                {
-                    MessageBox.Show("Không thể thay đổi quyền. Vui lòng xóa tài khoản để cập nhật quyền mới!");
-                }    
+                  
             }
             catch (SqlException ex)
             {

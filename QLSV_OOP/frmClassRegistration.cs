@@ -24,9 +24,6 @@ namespace QLSV_OOP
             MaSV = sinhVien.StudentID;
         }
 
-        SqlConnection con = new SqlConnection(ConnectionString.connectionString);
-
-        
 
         private void InitializeDataGridView()
         {
@@ -53,10 +50,7 @@ namespace QLSV_OOP
             InitializeDataGridView();
         }
 
-        
-
-        
-
+ 
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (empDataGridView.SelectedRows.Count > 0)
