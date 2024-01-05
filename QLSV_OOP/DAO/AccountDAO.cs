@@ -34,7 +34,7 @@ namespace QLSV_OOP.DAO
         
         public bool Login(string username, string password, string roleid)
         {
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM Tai_khoan WHERE Username ='" + username + "' AND Password='" + password + "' AND MaQuyen= '"+ roleid +"'", con);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM tai_khoan WHERE Username ='" + username + "' AND Password='" + password + "' AND MaQuyen= '"+ roleid +"'", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             if (dt.Rows[0][0].ToString() == "1")
@@ -78,14 +78,14 @@ namespace QLSV_OOP.DAO
 
         public int NumAdmin()
         {
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM Tai_khoan WHERE MaQuyen = 'QAD'", con);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM tai_khoan WHERE MaQuyen = 'QAD'", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             return Convert.ToInt32(dt.Rows[0][0]);
         }
         public int NumStudent()
         {
-            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM Tai_khoan WHERE MaQuyen = 'QSV'", con);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT COUNT(*) FROM tai_khoan WHERE MaQuyen = 'QSV'", con);
             DataTable dt = new DataTable();
             sda.Fill(dt);
             return Convert.ToInt32(dt.Rows[0][0]);
@@ -122,7 +122,7 @@ namespace QLSV_OOP.DAO
         public DataTable SearchTaiKhoan(string madd, string username, string password, string maquyen)
         {
             // Tạo câu truy vấn SQL động dựa trên số lượng thuộc tính đã nhập
-            string query = "SELECT * FROM Tai_khoan WHERE ";
+            string query = "SELECT * FROM tai_khoan WHERE ";
             bool isFirstCondition = true;
 
             if (!string.IsNullOrEmpty(madd))
@@ -165,26 +165,35 @@ namespace QLSV_OOP.DAO
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand("UPDATE Tai_khoan SET Username = @Name , Password = @Password, MaQuyen = @MaQuyen WHERE MaDD = @Madd", con))
+                SqlDataAdapter sda = new SqlDataAdapter("SELECT MaQuyen from tai_khoan where MaDD = '" + userid + "';", con);
+                DataTable dt = new DataTable();
+                sda.Fill(dt);
+                string roleOld =  Convert.ToString(dt.Rows[0][0]);
+                if (roleid == roleOld)
                 {
-                    cmd.Parameters.AddWithValue("@Name", newusername);
-                    cmd.Parameters.AddWithValue("@Password", newpassword);
-                    cmd.Parameters.AddWithValue("@MaQuyen", roleid);
-                    cmd.Parameters.AddWithValue("@Madd", userid);
-
-                    con.Open();
-                    int rowsAffected = cmd.ExecuteNonQuery();
-                    con.Close();
-                    if (rowsAffected > 0)
+                    using (SqlCommand cmd = new SqlCommand("UPDATE tai_khoan SET Username = @Name , Password = @Password WHERE MaDD = @Madd", con))
                     {
-                        MessageBox.Show("Đã cập nhật thông tin tài khoản thành công!");
-                    }
-                    else
-                    {
-                        MessageBox.Show("Không có tài khoản nào được cập nhật. Có thể không tồn tại Mã DD tương ứng hoặc Mã DD không khớp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
+                        cmd.Parameters.AddWithValue("@Name", newusername);
+                        cmd.Parameters.AddWithValue("@Password", newpassword);
+                        cmd.Parameters.AddWithValue("@Madd", userid);
+                        con.Open();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        con.Close();
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Đã cập nhật thông tin tài khoản thành công!");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Không có tài khoản nào được cập nhật. Có thể không tồn tại Mã DD tương ứng hoặc Mã DD không khớp.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
 
+                    }
                 }
+                else
+                {
+                    MessageBox.Show("Không thể thay đổi quyền. Vui lòng xóa tài khoản để cập nhật quyền mới!");
+                }    
             }
             catch (SqlException ex)
             {
@@ -198,7 +207,7 @@ namespace QLSV_OOP.DAO
             // Sử dụng SqlCommand để thực hiện câu truy vấn INSERT
             try
             {
-                using (SqlCommand cmd = new SqlCommand("INSERT INTO Tai_khoan (Madd, Username, Password, MaQuyen) VALUES (@Madd, @Username, @Password, @MaQuyen)", con))
+                using (SqlCommand cmd = new SqlCommand("INSERT INTO tai_khoan (Madd, Username, Password, MaQuyen) VALUES (@Madd, @Username, @Password, @MaQuyen)", con))
                 {
                     cmd.Parameters.AddWithValue("@Madd", userId);
                     cmd.Parameters.AddWithValue("@Username", username);
@@ -255,7 +264,7 @@ namespace QLSV_OOP.DAO
         public void DeleteTaiKhoan(string madd)
         {
             // Thực hiện truy vấn SQL DELETE để xóa dữ liệu từ CSDL
-            using (SqlCommand cmd = new SqlCommand("DELETE FROM Tai_khoan WHERE Madd = @Madd", con))
+            using (SqlCommand cmd = new SqlCommand("DELETE FROM tai_khoan WHERE Madd = @Madd", con))
             {
                 cmd.Parameters.AddWithValue("@Madd", madd);
 
