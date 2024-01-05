@@ -225,23 +225,48 @@ namespace QLSV_OOP
             InitializeDataGridView();
         }
 
+        public bool KiemTraTrung(string maSV, string maHP)
+        {
+            string query = "select count(*) from KQHT where MaSV = '" + maSV + "' and MaHP = '" + maHP + "';";
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            int flag = Convert.ToInt32(dt.Rows[0][0]);
+            if (flag == 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         private void ThemKQHTMoi(string maHP, string maSV, string diem)
         {
+                 
             try
             {
-                // Thực hiện câu truy vấn INSERT
-                using (SqlCommand cmd = new SqlCommand("INSERT INTO KQHT (MaHP, MaSV, Diem) VALUES (@MaHocPhan, @MaSinhVien, @Diem)", con))
+                if (KiemTraTrung(maSV, maHP))
                 {
-                    cmd.Parameters.AddWithValue("@MaHocPhan", maHP);
-                    cmd.Parameters.AddWithValue("@MaSinhVien", maSV);
-                    cmd.Parameters.AddWithValue("@Diem", diem);
+                    // Thực hiện câu truy vấn INSERT
+                    using (SqlCommand cmd = new SqlCommand("INSERT INTO KQHT (MaHP, MaSV, Diem) VALUES (@MaHocPhan, @MaSinhVien, @Diem)", con))
+                    {
+                        cmd.Parameters.AddWithValue("@MaHocPhan", maHP);
+                        cmd.Parameters.AddWithValue("@MaSinhVien", maSV);
+                        cmd.Parameters.AddWithValue("@Diem", diem);
 
-                    con.Open();
-                    cmd.ExecuteNonQuery();
-                    con.Close();
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                        con.Close();
+                    }
+
+                    MessageBox.Show("Đã thêm mới thông tin KQHT thành công!");
                 }
-
-                MessageBox.Show("Đã thêm mới thông tin KQHT thành công!");
+                else
+                {
+                    MessageBox.Show("Kết quả học tập cho trường hợp này đã tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
             catch (SqlException ex)
             {
@@ -306,6 +331,10 @@ namespace QLSV_OOP
             }
         }
 
+        private void txtMaSV_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }
