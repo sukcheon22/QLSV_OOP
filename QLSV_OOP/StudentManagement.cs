@@ -245,6 +245,20 @@ namespace QLSV_OOP
                 cmd.ExecuteNonQuery();
                 con.Close();
             }
+            XoaTaiKhoanSinhVien(madd);
+        }
+
+        private void XoaTaiKhoanSinhVien(string madd)
+        {
+            
+            using (SqlCommand cmd = new SqlCommand("DELETE FROM Tai_khoan WHERE MaDD = @Madd", con))
+            {
+                cmd.Parameters.AddWithValue("@Madd", madd);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
         }
 
         private void quaylai_Click(object sender, EventArgs e)

@@ -153,7 +153,18 @@ namespace QLSV_OOP
 
             infoNVDataGridView.DataSource = SearchNhanVien(maNV, maDD, tenNV, vitri, que, sdt);
         }
-
+        private bool IsMaNhanVienExist(string maNV)
+        {
+            // Kiểm tra xem mã nhân viên đã tồn tại hay chưa
+            using (SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM Nhan_vien WHERE MaNV = @MaNV", con))
+            {
+                cmd.Parameters.AddWithValue("@MaNV", maNV);
+                con.Open();
+                int count = (int)cmd.ExecuteScalar();
+                con.Close();
+                return count > 0;
+            }
+        }
         private void btnSua_Click(object sender, EventArgs e)
         {
             string maDD = txtID.Text;
@@ -163,6 +174,7 @@ namespace QLSV_OOP
             string newQue = cmbQue.Text;
             DateTime newNgaySinh = birthDateTimePicker.Value;
             string newSDT = txtSDT.Text;
+
             UpdateInfoEmployee(maDD, maNV, newTenNV, newViTri, newQue, newSDT, newNgaySinh);
             InitializeDataGridView();
 
@@ -238,6 +250,19 @@ namespace QLSV_OOP
         {
             // Thực hiện truy vấn SQL DELETE để xóa dữ liệu từ CSDL
             using (SqlCommand cmd = new SqlCommand("DELETE FROM Nhan_vien WHERE Madd = @Madd", con))
+            {
+                cmd.Parameters.AddWithValue("@Madd", madd);
+
+                con.Open();
+                cmd.ExecuteNonQuery();
+                con.Close();
+            }
+            XoaTaiKhoanNhanVien(madd);
+        }
+        private void XoaTaiKhoanNhanVien(string madd)
+        {
+            
+            using (SqlCommand cmd = new SqlCommand("DELETE FROM Tai_khoan WHERE MaDD = @Madd", con))
             {
                 cmd.Parameters.AddWithValue("@Madd", madd);
 
