@@ -102,28 +102,28 @@
             // accountToolStripMenuItem
             // 
             this.accountToolStripMenuItem.Name = "accountToolStripMenuItem";
-            this.accountToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.accountToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
             this.accountToolStripMenuItem.Text = "Tài khoản";
             this.accountToolStripMenuItem.Click += new System.EventHandler(this.accountToolStripMenuItem_Click);
             // 
             // employeeToolStripMenuItem
             // 
             this.employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
-            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
             this.employeeToolStripMenuItem.Text = "Nhân viên";
             this.employeeToolStripMenuItem.Click += new System.EventHandler(this.employeeToolStripMenuItem_Click);
             // 
             // studentToolStripMenuItem
             // 
             this.studentToolStripMenuItem.Name = "studentToolStripMenuItem";
-            this.studentToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.studentToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
             this.studentToolStripMenuItem.Text = "Sinh viên";
             this.studentToolStripMenuItem.Click += new System.EventHandler(this.studentToolStripMenuItem_Click);
             // 
             // authorizeToolStripMenuItem
             // 
             this.authorizeToolStripMenuItem.Name = "authorizeToolStripMenuItem";
-            this.authorizeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.authorizeToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
             this.authorizeToolStripMenuItem.Text = "Phân quyền";
             this.authorizeToolStripMenuItem.Click += new System.EventHandler(this.authorizeToolStripMenuItem_Click);
             // 
@@ -182,6 +182,7 @@
             this.employeeManagement1.Name = "employeeManagement1";
             this.employeeManagement1.Size = new System.Drawing.Size(1057, 530);
             this.employeeManagement1.TabIndex = 2;
+            this.employeeManagement1.Load += new System.EventHandler(this.employeeManagement1_Load);
             // 
             // accountManagement1
             // 

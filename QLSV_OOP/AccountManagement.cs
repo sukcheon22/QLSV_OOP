@@ -39,7 +39,6 @@ namespace QLSV_OOP
             infoAccDataGridView.DataSource = AccountDAO.Instance.SearchTaiKhoan(userid, username, password, roleid); 
         }
         
-        
         private void InitializeDataGridView()
         {
             infoAccDataGridView.DataSource = AccountDAO.Instance.accGridView();
@@ -89,12 +88,7 @@ namespace QLSV_OOP
 
             // Cập nhật lại DataGridView sau khi cập nhật CSDL
             InitializeDataGridView();
-
-            
         }
-        
-
-        
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
@@ -132,16 +126,8 @@ namespace QLSV_OOP
             AccountDAO.Instance.ThemTaiKhoanMoi(newUserId, newUsername, newPassword, newRole);
 
             // Làm mới DataGridView
-            InitializeDataGridView();
-
-            
-                
-            
+            InitializeDataGridView();  
         }
-
-        
-        
-        
 
         private void btnReturn_Click(object sender, EventArgs e)
         {

@@ -83,5 +83,10 @@ namespace QLSV_OOP
         {
             this.Close();
         }
+
+        private void txtChoose_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

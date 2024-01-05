@@ -73,8 +73,6 @@ namespace QLSV_OOP
             infoStuDataGridView.SelectionChanged += DataGridView_SelectionChanged;
         }
 
-        
-
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             string maSV = txtIDStu.Text;
@@ -101,11 +99,6 @@ namespace QLSV_OOP
             
         }
 
-        
-
-        
-
- 
         private void btnXoa_Click(object sender, EventArgs e)
         {
             if (infoStuDataGridView.SelectedRows.Count > 0)
@@ -127,10 +120,7 @@ namespace QLSV_OOP
                 MessageBox.Show("Vui lòng chọn một hàng để xóa!");
             }
         }
-        
-
-        
-
+ 
         private void quaylai_Click(object sender, EventArgs e)
         {
             ResetState();

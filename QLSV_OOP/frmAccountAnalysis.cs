@@ -32,10 +32,6 @@ namespace QLSV_OOP
 
         }
 
-        
-
-        
-
         private void exportFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Excel.Application excelApp = new Excel.Application();

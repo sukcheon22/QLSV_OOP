@@ -67,7 +67,7 @@
             this.empDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.empDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.empDataGridView.Location = new System.Drawing.Point(493, 129);
-            this.empDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.empDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.empDataGridView.Name = "empDataGridView";
             this.empDataGridView.RowHeadersWidth = 51;
             this.empDataGridView.Size = new System.Drawing.Size(645, 434);
@@ -99,7 +99,7 @@
             // txtScholarshipID
             // 
             this.txtScholarshipID.Location = new System.Drawing.Point(183, 144);
-            this.txtScholarshipID.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtScholarshipID.Margin = new System.Windows.Forms.Padding(4);
             this.txtScholarshipID.Name = "txtScholarshipID";
             this.txtScholarshipID.Size = new System.Drawing.Size(177, 22);
             this.txtScholarshipID.TabIndex = 17;
@@ -107,7 +107,7 @@
             // btnAdd
             // 
             this.btnAdd.Location = new System.Drawing.Point(52, 266);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(127, 54);
             this.btnAdd.TabIndex = 18;
@@ -118,12 +118,13 @@
             // btnDelete
             // 
             this.btnDelete.Location = new System.Drawing.Point(271, 266);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(127, 54);
             this.btnDelete.TabIndex = 19;
             this.btnDelete.Text = "Xóa";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // frmScholarshipRegistration
             // 
