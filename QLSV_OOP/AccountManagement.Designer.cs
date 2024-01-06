@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.infoAccDataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnReturn = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
@@ -46,7 +48,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
-            this.btnReturn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.infoAccDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -61,18 +62,26 @@
             this.panel1.Location = new System.Drawing.Point(3, 2);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(699, 526);
+            this.panel1.Size = new System.Drawing.Size(666, 522);
             this.panel1.TabIndex = 0;
             // 
             // infoAccDataGridView
             // 
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.infoAccDataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.infoAccDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.infoAccDataGridView.Location = new System.Drawing.Point(15, 244);
             this.infoAccDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.infoAccDataGridView.Name = "infoAccDataGridView";
             this.infoAccDataGridView.RowHeadersWidth = 51;
             this.infoAccDataGridView.RowTemplate.Height = 24;
-            this.infoAccDataGridView.Size = new System.Drawing.Size(653, 266);
+            this.infoAccDataGridView.Size = new System.Drawing.Size(629, 266);
             this.infoAccDataGridView.TabIndex = 2;
             // 
             // groupBox1
@@ -82,21 +91,32 @@
             this.groupBox1.Controls.Add(this.btnXoa);
             this.groupBox1.Controls.Add(this.btnTimKiem);
             this.groupBox1.Controls.Add(this.btnSua);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(15, 153);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.groupBox1.Size = new System.Drawing.Size(653, 71);
+            this.groupBox1.Size = new System.Drawing.Size(629, 87);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Chức năng";
             // 
+            // btnReturn
+            // 
+            this.btnReturn.Location = new System.Drawing.Point(522, 23);
+            this.btnReturn.Name = "btnReturn";
+            this.btnReturn.Size = new System.Drawing.Size(83, 45);
+            this.btnReturn.TabIndex = 5;
+            this.btnReturn.Text = "Quay lại";
+            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
+            // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(29, 21);
+            this.btnThem.Location = new System.Drawing.Point(27, 23);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(87, 32);
+            this.btnThem.Size = new System.Drawing.Size(83, 46);
             this.btnThem.TabIndex = 4;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
@@ -104,10 +124,10 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(406, 22);
+            this.btnXoa.Location = new System.Drawing.Point(279, 22);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(87, 32);
+            this.btnXoa.Size = new System.Drawing.Size(83, 46);
             this.btnXoa.TabIndex = 3;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
@@ -115,10 +135,10 @@
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.Location = new System.Drawing.Point(275, 22);
+            this.btnTimKiem.Location = new System.Drawing.Point(398, 23);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(87, 32);
+            this.btnTimKiem.Size = new System.Drawing.Size(83, 45);
             this.btnTimKiem.TabIndex = 2;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
@@ -126,10 +146,11 @@
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(142, 22);
+            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.Location = new System.Drawing.Point(156, 23);
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(87, 32);
+            this.btnSua.Size = new System.Drawing.Size(83, 45);
             this.btnSua.TabIndex = 1;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
@@ -145,11 +166,12 @@
             this.grbTTinAcc.Controls.Add(this.label3);
             this.grbTTinAcc.Controls.Add(this.label2);
             this.grbTTinAcc.Controls.Add(this.label1);
+            this.grbTTinAcc.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grbTTinAcc.Location = new System.Drawing.Point(15, 18);
             this.grbTTinAcc.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grbTTinAcc.Name = "grbTTinAcc";
             this.grbTTinAcc.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.grbTTinAcc.Size = new System.Drawing.Size(653, 128);
+            this.grbTTinAcc.Size = new System.Drawing.Size(629, 128);
             this.grbTTinAcc.TabIndex = 0;
             this.grbTTinAcc.TabStop = false;
             this.grbTTinAcc.Text = "Thông tin tài khoản";
@@ -234,16 +256,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Mã định danh";
             // 
-            // btnReturn
-            // 
-            this.btnReturn.Location = new System.Drawing.Point(531, 23);
-            this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(86, 31);
-            this.btnReturn.TabIndex = 5;
-            this.btnReturn.Text = "Quay lại";
-            this.btnReturn.UseVisualStyleBackColor = true;
-            this.btnReturn.Click += new System.EventHandler(this.btnReturn_Click);
-            // 
             // AccountManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -251,7 +263,7 @@
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AccountManagement";
-            this.Size = new System.Drawing.Size(712, 538);
+            this.Size = new System.Drawing.Size(674, 532);
             this.Load += new System.EventHandler(this.AccountManagement_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.infoAccDataGridView)).EndInit();

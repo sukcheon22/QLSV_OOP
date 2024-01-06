@@ -40,7 +40,7 @@ namespace QLSV_OOP
         private void DataGridView_SelectionChanged(object sender, EventArgs e)
         {
             // Kiểm tra xem có hàng được chọn hay không
-            if (infoLopDataGridView.SelectedRows.Count > 0)
+            if (infoLopDataGridView.SelectedRows.Count == 1)
             {
                 DataGridViewRow selectedRow = infoLopDataGridView.SelectedRows[0];
                 string maLH = selectedRow.Cells["MaLH"].Value.ToString();
@@ -146,7 +146,7 @@ namespace QLSV_OOP
         
         private void btnXoaLopHoc_Click(object sender, EventArgs e)
         {
-            if (infoLopDataGridView.SelectedRows.Count > 0)
+            if (infoLopDataGridView.SelectedRows.Count == 1)
             {
                 // Lấy giá trị cần xóa từ hàng được chọn
                 DataGridViewRow selectedRow = infoLopDataGridView.SelectedRows[0];

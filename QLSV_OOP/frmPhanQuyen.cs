@@ -47,7 +47,7 @@ namespace QLSV_OOP
         private void DataGridView_SelectionChanged(object sender, EventArgs e)
         {
             // Kiểm tra xem có hàng được chọn hay không
-            if (infoQuyenDataGridView.SelectedRows.Count > 0)
+            if (infoQuyenDataGridView.SelectedRows.Count == 1)
             {
                 DataGridViewRow selectedRow = infoQuyenDataGridView.SelectedRows[0];
                 string maQuyen = selectedRow.Cells["MaQuyen"].Value.ToString();
@@ -126,7 +126,7 @@ namespace QLSV_OOP
         private void btnXacNhan_Click(object sender, EventArgs e)
         {
             int selectedIndex = -1;
-            if (infoQuyenDataGridView.SelectedRows.Count > 0)
+            if (infoQuyenDataGridView.SelectedRows.Count == 1)
             {
                 selectedIndex = infoQuyenDataGridView.SelectedRows[0].Index;
                 DataGridViewRow selectedRow = infoQuyenDataGridView.SelectedRows[0];

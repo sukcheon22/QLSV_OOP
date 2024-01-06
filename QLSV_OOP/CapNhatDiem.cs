@@ -55,7 +55,7 @@ namespace QLSV_OOP
         private void DataGridView_SelectionChanged(object sender, EventArgs e)
         {
             // Kiểm tra xem có hàng được chọn hay không
-            if (infoGradeDataGridView.SelectedRows.Count > 0)
+            if (infoGradeDataGridView.SelectedRows.Count == 1)
             {
                 DataGridViewRow selectedRow = infoGradeDataGridView.SelectedRows[0];
                 string maSV  = selectedRow.Cells["MaSV"].Value.ToString();
@@ -122,7 +122,7 @@ namespace QLSV_OOP
         
         private void btnXoaKQHT_Click(object sender, EventArgs e)
         {
-            if (infoGradeDataGridView.SelectedRows.Count > 0)
+            if (infoGradeDataGridView.SelectedRows.Count == 1)
             {
                 // Lấy giá trị cần xóa từ hàng được chọn
                 DataGridViewRow selectedRow = infoGradeDataGridView.SelectedRows[0];

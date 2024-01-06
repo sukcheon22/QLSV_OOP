@@ -53,7 +53,7 @@ namespace QLSV_OOP
 
         private void dataGridView1_SelectionChanged(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
+            if (dataGridView1.SelectedRows.Count == 1)
             {
                 DataGridViewRow selectedRow = dataGridView1.SelectedRows[0];
                 string maHB = selectedRow.Cells["Mã học bổng"].Value.ToString();

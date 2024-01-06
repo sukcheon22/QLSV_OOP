@@ -53,7 +53,7 @@ namespace QLSV_OOP
  
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (empDataGridView.SelectedRows.Count > 0)
+            if (empDataGridView.SelectedRows.Count == 1)
             {
                 // Lấy giá trị cần xóa từ hàng được chọn
                 DataGridViewRow selectedRow = empDataGridView.SelectedRows[0];

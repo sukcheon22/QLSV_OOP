@@ -61,7 +61,7 @@ namespace QLSV_OOP
         {
             try
             {
-                if (empDataGridView.SelectedRows.Count > 0)
+                if (empDataGridView.SelectedRows.Count == 1)
                 {
                     // Lấy giá trị cần xóa từ hàng được chọn
                     DataGridViewRow selectedRow = empDataGridView.SelectedRows[0];
