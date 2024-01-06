@@ -102,6 +102,37 @@ namespace QLSV_OOP
         {
 
         }
+
+        private void personalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            personalToolStripMenuItem.ForeColor = Color.Navy;
+        }
+
+        private void personalToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            personalToolStripMenuItem.ForeColor = Color.Lavender;
+        }
+
+        private void manageToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            manageToolStripMenuItem.ForeColor = Color.Navy;
+        }
+
+        private void manageToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            manageToolStripMenuItem.ForeColor = Color.Lavender;
+        }
+
+        private void analyzeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            analyzeToolStripMenuItem.ForeColor = Color.Navy;
+        }
+
+        private void analyzeToolStripMenuItem_MouseLeave(object sender, EventArgs e)
+        {
+            analyzeToolStripMenuItem.ForeColor = Color.Lavender;
+        }
     }
 
 }

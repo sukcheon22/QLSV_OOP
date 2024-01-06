@@ -30,6 +30,7 @@ namespace QLSV_OOP
             ToolStripMenuItem hocbong = RoleDAO.CreateHB();
             ToolStripMenuItem taivu = RoleDAO.CreateTaiVu();
             ToolStripMenuItem thongke = RoleDAO.CreateThongKe();
+            
             menuStrip1.Items.AddRange(new ToolStripItem[] { daotao, hocbong, taivu, thongke });
             string roleid = acc.RoleID;
             List<string> itemsSelected = CustomizeMenuStrip.Instance.RetrieveRole(roleid);
@@ -39,12 +40,17 @@ namespace QLSV_OOP
             ToolStripMenuItem qlyHP = new ToolStripMenuItem("Quản lý học phần");
             qly.DropDownItems.AddRange(new ToolStripItem[] { qlyLop, qlyHP });
             menuStrip1.Items.Add(qly);
+            menuStrip1.ForeColor = Color.Lavender;
             string userid = acc.UserID;
             Nhan_vien nhanVien = Nhan_vienDAO.Instance.GetNhanVienbyUserID(userid);
             CustomizeMenuStrip.Instance.CustomizeAccount(menuStrip2, nhanVien.StaffName);
             //CustomizeMenuStrip.Instance.SignOut.Click += new System.EventHandler(this.SignOut);
+            
             CustomizeMenuStrip.Instance.SignOut.Click += SignOut;
             CustomizeMenuStrip.Instance.ChangePassword.Click += ChangePassword;
+            CustomizeMenuStrip.Instance.HoTen.ForeColor = Color.Yellow;
+            CustomizeMenuStrip.Instance.HoTen.Click += HoTen_Clicked;
+            CustomizeMenuStrip.Instance.HoTen.MouseLeave += HoTen_MouseLeave;
             qlyLop.Click += QuanLyLop_Clicked;
             qlyHP.Click += QuanLyHP_Clicked;
             RoleDAO.CapNhatDiemClicked += CapNhatDiem_Clicked;
@@ -80,6 +86,15 @@ namespace QLSV_OOP
             
         }
 
+        public void HoTen_Clicked(object sender, EventArgs e)
+        {
+            CustomizeMenuStrip.Instance.HoTen.ForeColor = Color.Navy;
+        }
+
+        public void HoTen_MouseLeave(object sender, EventArgs e)
+        {
+            CustomizeMenuStrip.Instance.HoTen.ForeColor = Color.Yellow;
+        }
         private void QuanLyLop_Clicked(object sender, EventArgs e)
         {
             foreach (Control control in panel1.Controls)

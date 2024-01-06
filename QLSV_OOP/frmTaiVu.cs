@@ -30,12 +30,16 @@ namespace QLSV_OOP
             string roleid = acc.RoleID;
             List<string> itemsSelected = CustomizeMenuStrip.Instance.RetrieveRole(roleid);
             CustomizeMenuStrip.Instance.Customize(menuStrip1, itemsSelected);
+            menuStrip1.ForeColor = Color.Lavender;
             string userid = acc.UserID;
             Nhan_vien nhanVien = Nhan_vienDAO.Instance.GetNhanVienbyUserID(userid);
             CustomizeMenuStrip.Instance.CustomizeAccount(menuStrip2, nhanVien.StaffName);
             //CustomizeMenuStrip.Instance.SignOut.Click += new System.EventHandler(this.SignOut);
             CustomizeMenuStrip.Instance.SignOut.Click += SignOut;
             CustomizeMenuStrip.Instance.ChangePassword.Click += ChangePassword;
+            CustomizeMenuStrip.Instance.HoTen.ForeColor = Color.Yellow;
+            CustomizeMenuStrip.Instance.HoTen.Click += HoTen_Clicked;
+            CustomizeMenuStrip.Instance.HoTen.MouseLeave += HoTen_MouseLeave;
             capNhatHTTT.Click += CapNhatHTTT_Clicked;
             capNhatCongNo.Click += CapNhatCongNo_Clicked;
             RoleDAO.CapNhatDiemClicked += CapNhatDiem_Clicked;
@@ -62,6 +66,16 @@ namespace QLSV_OOP
             {
                 control.Visible = false;
             }
+        }
+
+        public void HoTen_Clicked(object sender, EventArgs e)
+        {
+            CustomizeMenuStrip.Instance.HoTen.ForeColor = Color.Navy;
+        }
+
+        public void HoTen_MouseLeave(object sender, EventArgs e)
+        {
+            CustomizeMenuStrip.Instance.HoTen.ForeColor = Color.Yellow;
         }
 
         private void TkeHocBong_Clicked(object sender, EventArgs e)

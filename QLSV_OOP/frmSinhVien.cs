@@ -36,6 +36,7 @@ namespace QLSV_OOP
             List<string> itemsSelected = CustomizeMenuStrip.Instance.RetrieveRole(roleid);
             //List<string> itemsSelected = new List<string>{ "Đào Tạo","Đăng ký lớp", "Đào Tạo", "Cập nhật điểm"};
             CustomizeMenuStrip.Instance.Customize(menuStrip1, itemsSelected);
+            menuStrip1.ForeColor = Color.Lavender;
             string userid = acc.UserID;
             Sinh_Vien sinhVien = Sinh_VienDAO.Instance.GetSinhVienbyUserID(userid);
             sinh_Vien = sinhVien;
@@ -43,6 +44,11 @@ namespace QLSV_OOP
             //CustomizeMenuStrip.Instance.SignOut.Click += new System.EventHandler(this.SignOut);
             CustomizeMenuStrip.Instance.SignOut.Click += SignOut;
             CustomizeMenuStrip.Instance.ChangePassword.Click += ChangePassword;
+            CustomizeMenuStrip.Instance.HoTen.ForeColor = Color.Yellow;
+            CustomizeMenuStrip.Instance.SignOut.ForeColor = Color.Navy;
+            CustomizeMenuStrip.Instance.ChangePassword.ForeColor = Color.Navy;
+            CustomizeMenuStrip.Instance.HoTen.Click += HoTen_Clicked;
+            CustomizeMenuStrip.Instance.HoTen.MouseLeave += HoTen_MouseLeave;
             RoleDAO.TkeHocBongClicked += TkeHocBong_Clicked;
             ttinDuNo = new TTinDuNo(sinhVien.StudentID);
             traCuuTKB = new TraCuuTKB(sinhVien.StudentID);
@@ -75,7 +81,14 @@ namespace QLSV_OOP
             RoleDAO.HTThanhToanClicked += HTThanhToan_Clicked;
         }
 
-        
+        public void HoTen_Clicked(object sender, EventArgs e)
+        {
+            CustomizeMenuStrip.Instance.HoTen.ForeColor = Color.Navy;
+        }
+        public void HoTen_MouseLeave(object sender, EventArgs e)
+        {
+            CustomizeMenuStrip.Instance.HoTen.ForeColor = Color.Yellow;
+        }
         public void TTinDuNo_Clicked(object sender, EventArgs e)
         {
             foreach (Control control in panel1.Controls)

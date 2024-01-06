@@ -18,6 +18,7 @@ namespace QLSV_OOP
         public frmAccountAnalysis()
         {
             InitializeComponent();
+
         }
 
         private void frmAccountAnalysis_Load(object sender, EventArgs e)
@@ -34,6 +35,7 @@ namespace QLSV_OOP
 
         private void exportFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //exportFileToolStripMenuItem.ForeColor = Color.Navy;
             Excel.Application excelApp = new Excel.Application();
             Excel.Workbook workbook = excelApp.Workbooks.Add();
             Excel.Worksheet worksheet = workbook.Sheets[1];
@@ -94,9 +96,34 @@ namespace QLSV_OOP
 
         }
 
-        private void backToolStripMenuItem_Click(object sender, EventArgs e)
+        
+            
+       
+
+        private void exportFileToolStripMenuItem_MouseLeave(object sender, EventArgs e)
         {
-            this.Close();
+            //exportFileToolStripMenuItem.ForeColor = Color.Lavender;
+        }
+
+        
+        private void accDataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNumFinancialEmployee_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void backToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+             this.Close();
         }
     }
 }

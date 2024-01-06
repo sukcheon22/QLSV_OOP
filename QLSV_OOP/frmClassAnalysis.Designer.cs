@@ -39,7 +39,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.menuStrip1.BackColor = System.Drawing.Color.Navy;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.exportFileToolStripMenuItem,
@@ -53,9 +53,9 @@
             // 
             // exportFileToolStripMenuItem
             // 
-            this.exportFileToolStripMenuItem.BackColor = System.Drawing.Color.RoyalBlue;
+            this.exportFileToolStripMenuItem.BackColor = System.Drawing.Color.Navy;
             this.exportFileToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exportFileToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.exportFileToolStripMenuItem.ForeColor = System.Drawing.Color.Lavender;
             this.exportFileToolStripMenuItem.Name = "exportFileToolStripMenuItem";
             this.exportFileToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
             this.exportFileToolStripMenuItem.Text = "Xuất file";
@@ -64,7 +64,7 @@
             // backToolStripMenuItem
             // 
             this.backToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backToolStripMenuItem.ForeColor = System.Drawing.Color.DarkSlateGray;
+            this.backToolStripMenuItem.ForeColor = System.Drawing.Color.Lavender;
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
             this.backToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
             this.backToolStripMenuItem.Text = "Quay lại";
@@ -101,8 +101,9 @@
             this.Controls.Add(this.classDataGridView);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
+            this.MaximizeBox = false;
             this.Name = "frmClassAnalysis";
-            this.Text = "frmClassAnalysis";
+            this.Text = "Thống kê lớp học";
             this.Load += new System.EventHandler(this.frmClassAnalysis_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

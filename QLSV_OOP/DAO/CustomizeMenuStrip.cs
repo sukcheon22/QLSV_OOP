@@ -139,6 +139,7 @@ namespace QLSV_OOP
         }
         public ToolStripMenuItem SignOut;
         public ToolStripMenuItem ChangePassword;
+        public ToolStripMenuItem HoTen;
         public void CustomizeAccount(MenuStrip menuStrip, string fullName)
         {
             ToolStripMenuItem hoten = new ToolStripMenuItem("Xin chào " + fullName);
@@ -146,6 +147,7 @@ namespace QLSV_OOP
             ToolStripMenuItem signOut = new ToolStripMenuItem("Thoát");
             SignOut = signOut;
             ChangePassword = changePassword;
+            HoTen = hoten;
             //signOut.Click += FunctionMenuStrip.Instance.SignOut;
             hoten.DropDownItems.Add(changePassword);
             hoten.DropDownItems.Add(signOut);

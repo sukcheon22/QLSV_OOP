@@ -17,6 +17,7 @@ namespace QLSV_OOP
         public CapNhatDiem()
         {
             InitializeComponent();
+            
         }
         private SqlConnection con = new SqlConnection(ConnectionString.connectionString);
         public void ResetState()

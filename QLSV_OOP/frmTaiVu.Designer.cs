@@ -35,6 +35,7 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.Navy;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Location = new System.Drawing.Point(0, 24);
             this.menuStrip1.Name = "menuStrip1";
@@ -45,6 +46,7 @@
             // 
             // menuStrip2
             // 
+            this.menuStrip2.BackColor = System.Drawing.Color.Navy;
             this.menuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip2.Location = new System.Drawing.Point(0, 0);
             this.menuStrip2.Name = "menuStrip2";
@@ -55,9 +57,10 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.AliceBlue;
             this.panel1.Location = new System.Drawing.Point(0, 61);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1059, 541);
+            this.panel1.Size = new System.Drawing.Size(1071, 545);
             this.panel1.TabIndex = 2;
             // 
             // frmTaiVu
@@ -69,8 +72,9 @@
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "frmTaiVu";
-            this.Text = "frmTaiVu";
+            this.Text = "Tài vụ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmTaiVu_FormClosing);
             this.Load += new System.EventHandler(this.frmTaiVu_Load);
             this.ResumeLayout(false);

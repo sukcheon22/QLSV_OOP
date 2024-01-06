@@ -54,9 +54,12 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtMaHB);
             this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Location = new System.Drawing.Point(20, 23);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(18, 18);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1155, 108);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.groupBox1.Size = new System.Drawing.Size(1027, 86);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin học bổng";
@@ -64,123 +67,154 @@
             // cmbLoaiHB
             // 
             this.cmbLoaiHB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbLoaiHB.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbLoaiHB.FormattingEnabled = true;
             this.cmbLoaiHB.Items.AddRange(new object[] {
             "",
             "Doanh nghiep",
             "Trao doi"});
-            this.cmbLoaiHB.Location = new System.Drawing.Point(930, 34);
+            this.cmbLoaiHB.Location = new System.Drawing.Point(827, 27);
+            this.cmbLoaiHB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cmbLoaiHB.Name = "cmbLoaiHB";
-            this.cmbLoaiHB.Size = new System.Drawing.Size(168, 28);
+            this.cmbLoaiHB.Size = new System.Drawing.Size(150, 24);
             this.cmbLoaiHB.TabIndex = 10;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(780, 37);
+            this.label2.ForeColor = System.Drawing.Color.Navy;
+            this.label2.Location = new System.Drawing.Point(693, 30);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 22);
+            this.label2.Size = new System.Drawing.Size(102, 18);
             this.label2.TabIndex = 9;
             this.label2.Text = "Loại học bổng";
             // 
             // txtTenHB
             // 
-            this.txtTenHB.Location = new System.Drawing.Point(537, 37);
+            this.txtTenHB.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTenHB.Location = new System.Drawing.Point(477, 30);
+            this.txtTenHB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTenHB.Name = "txtTenHB";
-            this.txtTenHB.Size = new System.Drawing.Size(154, 26);
+            this.txtTenHB.Size = new System.Drawing.Size(137, 22);
             this.txtTenHB.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(390, 37);
+            this.label1.ForeColor = System.Drawing.Color.Navy;
+            this.label1.Location = new System.Drawing.Point(347, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(121, 22);
+            this.label1.Size = new System.Drawing.Size(99, 18);
             this.label1.TabIndex = 8;
             this.label1.Text = "Tên học bổng";
             // 
             // txtMaHB
             // 
-            this.txtMaHB.Location = new System.Drawing.Point(147, 37);
+            this.txtMaHB.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMaHB.Location = new System.Drawing.Point(131, 30);
+            this.txtMaHB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtMaHB.Name = "txtMaHB";
-            this.txtMaHB.Size = new System.Drawing.Size(154, 26);
+            this.txtMaHB.Size = new System.Drawing.Size(137, 22);
             this.txtMaHB.TabIndex = 7;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(6, 37);
+            this.label14.ForeColor = System.Drawing.Color.Navy;
+            this.label14.Location = new System.Drawing.Point(5, 30);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(113, 22);
+            this.label14.Size = new System.Drawing.Size(95, 18);
             this.label14.TabIndex = 1;
             this.label14.Text = "Mã học bổng";
             // 
             // infoHBDataGridView
             // 
+            this.infoHBDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.infoHBDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.infoHBDataGridView.Location = new System.Drawing.Point(285, 138);
+            this.infoHBDataGridView.Location = new System.Drawing.Point(253, 110);
+            this.infoHBDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.infoHBDataGridView.Name = "infoHBDataGridView";
             this.infoHBDataGridView.RowHeadersWidth = 51;
             this.infoHBDataGridView.RowTemplate.Height = 24;
-            this.infoHBDataGridView.Size = new System.Drawing.Size(888, 508);
+            this.infoHBDataGridView.Size = new System.Drawing.Size(789, 406);
             this.infoHBDataGridView.TabIndex = 1;
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(76, 151);
+            this.btnThem.BackColor = System.Drawing.Color.MediumBlue;
+            this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThem.ForeColor = System.Drawing.Color.Lavender;
+            this.btnThem.Location = new System.Drawing.Point(68, 121);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(126, 62);
+            this.btnThem.Size = new System.Drawing.Size(112, 50);
             this.btnThem.TabIndex = 2;
             this.btnThem.Text = "Thêm";
-            this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.UseVisualStyleBackColor = false;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnQuayLai
             // 
-            this.btnQuayLai.Location = new System.Drawing.Point(76, 543);
+            this.btnQuayLai.BackColor = System.Drawing.Color.Navy;
+            this.btnQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuayLai.ForeColor = System.Drawing.Color.Lavender;
+            this.btnQuayLai.Location = new System.Drawing.Point(68, 434);
+            this.btnQuayLai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQuayLai.Name = "btnQuayLai";
-            this.btnQuayLai.Size = new System.Drawing.Size(126, 62);
+            this.btnQuayLai.Size = new System.Drawing.Size(112, 50);
             this.btnQuayLai.TabIndex = 3;
             this.btnQuayLai.Text = "Quay lại";
-            this.btnQuayLai.UseVisualStyleBackColor = true;
+            this.btnQuayLai.UseVisualStyleBackColor = false;
             this.btnQuayLai.Click += new System.EventHandler(this.buttonQuayLai_Click);
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(76, 354);
+            this.btnXoa.BackColor = System.Drawing.Color.MediumBlue;
+            this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoa.ForeColor = System.Drawing.Color.Lavender;
+            this.btnXoa.Location = new System.Drawing.Point(68, 283);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(126, 62);
+            this.btnXoa.Size = new System.Drawing.Size(112, 50);
             this.btnXoa.TabIndex = 4;
             this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.UseVisualStyleBackColor = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(76, 251);
+            this.btnSua.BackColor = System.Drawing.Color.MediumBlue;
+            this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSua.ForeColor = System.Drawing.Color.Lavender;
+            this.btnSua.Location = new System.Drawing.Point(68, 201);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(126, 62);
+            this.btnSua.Size = new System.Drawing.Size(112, 50);
             this.btnSua.TabIndex = 5;
             this.btnSua.Text = "Sửa";
-            this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.UseVisualStyleBackColor = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnTimKiem
             // 
-            this.btnTimKiem.Location = new System.Drawing.Point(76, 452);
+            this.btnTimKiem.BackColor = System.Drawing.Color.MediumBlue;
+            this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTimKiem.ForeColor = System.Drawing.Color.Lavender;
+            this.btnTimKiem.Location = new System.Drawing.Point(68, 362);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(126, 62);
+            this.btnTimKiem.Size = new System.Drawing.Size(112, 50);
             this.btnTimKiem.TabIndex = 6;
             this.btnTimKiem.Text = "Tìm kiếm";
-            this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.UseVisualStyleBackColor = false;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // CNTThocbong
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.btnSua);
@@ -189,8 +223,9 @@
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.infoHBDataGridView);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CNTThocbong";
-            this.Size = new System.Drawing.Size(1194, 669);
+            this.Size = new System.Drawing.Size(1061, 535);
             this.Load += new System.EventHandler(this.CNTThocbong_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
