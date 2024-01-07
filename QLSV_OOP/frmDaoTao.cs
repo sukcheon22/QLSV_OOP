@@ -156,6 +156,7 @@ namespace QLSV_OOP
         private void PheDuyetYCHB_Clicked(object sender, EventArgs e)
         {
             // Xử lý logic khi sự kiện PheDuyetYCHBClicked xảy ra
+            pheDuyetHB.InitializeDataGridView();
             foreach (Control control in panel1.Controls)
             {
                 control.Visible = false;

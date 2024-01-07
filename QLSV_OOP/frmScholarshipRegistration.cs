@@ -21,6 +21,7 @@ namespace QLSV_OOP
             InitializeComponent();
             empDataGridView.DataSource = Tinh_trangHBDAO.Instance.classGridView(sinhVien.StudentID);
             MaSV = sinhVien.StudentID;
+            availableHBDataGridView1.DataSource = HBDAO.Instance.HBGridView();
         }
 
         SqlConnection con = new SqlConnection(ConnectionString.connectionString);
@@ -34,6 +35,7 @@ namespace QLSV_OOP
         private void InitializeDataGridView()
         {
             empDataGridView.DataSource = Tinh_trangHBDAO.Instance.classGridView(MaSV);
+            availableHBDataGridView1.DataSource = HBDAO.Instance.HBGridView();
         }
 
         

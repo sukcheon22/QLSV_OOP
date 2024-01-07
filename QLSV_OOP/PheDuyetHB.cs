@@ -66,7 +66,7 @@ namespace QLSV_OOP
 
         
 
-        private void InitializeDataGridView()
+        public void InitializeDataGridView()
         {
             dataGridView1.DataSource = classGridView();
         }

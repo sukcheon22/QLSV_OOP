@@ -202,6 +202,7 @@ namespace QLSV_OOP.DAO
             sda.Fill(dt);
             return dt;
         }
+
         public void XoaHocBong(string maHB, string maSV)
         {
             using (SqlCommand cmd = new SqlCommand("DELETE FROM Tinh_trang_HB WHERE MaSV = '" + maSV + "' AND MaHB = '" + maHB + "'", con))

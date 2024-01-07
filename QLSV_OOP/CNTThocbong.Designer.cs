@@ -158,7 +158,7 @@
             // 
             // btnQuayLai
             // 
-            this.btnQuayLai.BackColor = System.Drawing.Color.Navy;
+            this.btnQuayLai.BackColor = System.Drawing.Color.MediumBlue;
             this.btnQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuayLai.ForeColor = System.Drawing.Color.Lavender;
             this.btnQuayLai.Location = new System.Drawing.Point(68, 434);
