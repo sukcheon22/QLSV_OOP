@@ -47,7 +47,7 @@ namespace QLSV_OOP
                 txtMatKhauCu.Text = "Nhập mật khẩu cũ";
                 txtMatKhauCu.ForeColor = Color.Silver;
             }
-            if (txtMatKhauCu.Text != account.Password)
+            else if (txtMatKhauCu.Text != account.Password )
             {
                 MessageBox.Show("Sai mật khẩu", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtMatKhauCu.Text = "Nhập mật khẩu cũ";
@@ -94,7 +94,7 @@ namespace QLSV_OOP
                 txtNhapLai.Text = "Nhập lại mật khẩu mới";
                 txtNhapLai.ForeColor = Color.Silver;
             }
-            if (txtNhapLai.Text != txtMatKhauMoi.Text)
+            else if (txtNhapLai.Text != txtMatKhauMoi.Text && txtMatKhauMoi.Text != "" && txtMatKhauMoi.Text != "Nhập mật khẩu mới")
             {
                 MessageBox.Show("Gõ lại mật khẩu không trùng khớp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtNhapLai.Text = "Nhập lại mật khẩu mới";
@@ -122,6 +122,9 @@ namespace QLSV_OOP
             this.Close();
         }
 
-        
+        private void txtMatKhauCu_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

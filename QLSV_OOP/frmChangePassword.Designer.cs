@@ -86,6 +86,7 @@
             this.txtMatKhauCu.Name = "txtMatKhauCu";
             this.txtMatKhauCu.Size = new System.Drawing.Size(310, 38);
             this.txtMatKhauCu.TabIndex = 2;
+            this.txtMatKhauCu.TextChanged += new System.EventHandler(this.txtMatKhauCu_TextChanged);
             this.txtMatKhauCu.Enter += new System.EventHandler(this.txtMatKhauCu_Enter);
             this.txtMatKhauCu.Leave += new System.EventHandler(this.txtMatKhauCu_Leave);
             // 
