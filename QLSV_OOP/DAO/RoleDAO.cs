@@ -6,32 +6,42 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data;
 using System.Data.SqlClient;
+using QLSV_OOP.DAO;
 
 namespace QLSV_OOP
 {
     public class RoleDAO
     {
-        
+        private static RoleDAO instance;
+
+        public static RoleDAO Instance
+        {
+            get
+            {
+                if (instance == null) instance = new RoleDAO();
+                return instance;
+            }
+            private set => instance = value;
+        }
+        private RoleDAO() { }
+
         public static event EventHandler CapNhatDiemClicked;
-        public static event EventHandler DkyLopClicked;
+        //public static event EventHandler DkyLopClicked;
         public static event EventHandler TCuuTKBClicked;
         public static event EventHandler TCuuKQHTClicked;
         public static event EventHandler CapNhatTTHBClicked;
         public static event EventHandler PheDuyetYCHBClicked;
-        public static event EventHandler DKHocBongClicked;
+        //public static event EventHandler DKHocBongClicked;
         public static event EventHandler CapNhatHTTTClicked;
         public static event EventHandler CapNhatCongNoClicked;
         //public static event EventHandler KTraDuNoClicked;
-        public static event EventHandler HocPhiClicked;
-        public static event EventHandler NoDongHocPhiClicked;
-        public static event EventHandler TkeDiemClicked;
-        public static event EventHandler TkeHocBongClicked;
-        public static event EventHandler LopHocClicked;
-        public static event EventHandler HTThanhToanClicked;
+        
 
 
         //public static event EventHandler TkeHocBongClicked;
         public static event EventHandler TTinDuNoClicked;
+
+        public ToolStripMenuItem DKLop;
         public static ToolStripMenuItem CreateDaoTao()
         {
             ToolStripMenuItem daotao = new ToolStripMenuItem("Đào Tạo");
@@ -40,7 +50,7 @@ namespace QLSV_OOP
             CapNhatDiem.Click += CapNhatDiem_Clicked;
 
             ToolStripMenuItem DangKyLop = new ToolStripMenuItem("Đăng ký lớp");
-            DangKyLop.Click += DkyLop_Clicked;
+            RoleDAO.Instance.DKLop = DangKyLop;
 
             ToolStripMenuItem TraCuuTKB = new ToolStripMenuItem("Tra cứu TKB");
             TraCuuTKB.Click += TCuuTKB_Clicked;
@@ -55,7 +65,7 @@ namespace QLSV_OOP
 
             return daotao;
         }
-
+        public ToolStripMenuItem DKHB;
         public static ToolStripMenuItem CreateHB()
         {
             ToolStripMenuItem hb = new ToolStripMenuItem("Học Bổng");
@@ -67,7 +77,7 @@ namespace QLSV_OOP
             PheDuyetHB.Click += PheDuyetYCHB_Clicked;
 
             ToolStripMenuItem DangKyHB = new ToolStripMenuItem("Đăng ký học bổng");
-            DangKyHB.Click += DKHocBong_Clicked;
+            RoleDAO.Instance.DKHB = DangKyHB;
 
             hb.DropDownItems.Add(CapNhatHB);
             hb.DropDownItems.Add(PheDuyetHB);
@@ -96,16 +106,21 @@ namespace QLSV_OOP
             return taivu;
         }
 
-
+        public ToolStripMenuItem TKeDiem;
+        public ToolStripMenuItem TKeHocPhi;
+        public ToolStripMenuItem TKeNoHPhi;
+        public ToolStripMenuItem TKeHB;
+        public ToolStripMenuItem TKeLopHoc;
+        public ToolStripMenuItem TKeHTTT;
         public static ToolStripMenuItem CreateThongKe()
         {
             ToolStripMenuItem tke = new ToolStripMenuItem("Thống Kê");
 
             ToolStripMenuItem TkeHocPhi = new ToolStripMenuItem("Học phí");
-            TkeHocPhi.Click += HocPhi_Clicked;
+            RoleDAO.Instance.TKeHocPhi = TkeHocPhi;
 
             ToolStripMenuItem TkeNoHPhi = new ToolStripMenuItem("Nợ đọng học phí");
-            TkeNoHPhi.Click += NoDongHocPhi_Clicked;
+            RoleDAO.Instance.TKeNoHPhi = TkeNoHPhi;
 
             ToolStripMenuItem TkeDiem = new ToolStripMenuItem("Điểm");
             
@@ -114,19 +129,21 @@ namespace QLSV_OOP
             
 
             ToolStripMenuItem TkeLopHoc = new ToolStripMenuItem("Lớp học");
-            TkeLopHoc.Click += LopHoc_Clicked;
+            RoleDAO.Instance.TKeLopHoc = TkeLopHoc;
 
             ToolStripMenuItem TkeHTTT = new ToolStripMenuItem("Hình thức thanh toán");
-            TkeHTTT.Click += HTThanhToan_Clicked;
-
+            RoleDAO.Instance.TKeHTTT = TkeHTTT;
+            RoleDAO.Instance.TKeDiem = TkeDiem; 
             tke.DropDownItems.Add(TkeHocPhi);
             tke.DropDownItems.Add(TkeNoHPhi);
             tke.DropDownItems.Add(TkeDiem);
             tke.DropDownItems.Add(TkeHB);
             tke.DropDownItems.Add(TkeLopHoc);
             tke.DropDownItems.Add(TkeHTTT);
-            TkeDiem.Click += TkeDiem_Clicked;
-            TkeHB.Click += TkeHocBong_Clicked;
+            //TkeDiem.Click += TkeDiem_Clicked;
+            RoleDAO.Instance.TKeHB = TkeHB;
+
+            
             return tke;
           
         }
@@ -143,10 +160,7 @@ namespace QLSV_OOP
             CapNhatDiemClicked?.Invoke(sender, e);
         }
 
-        private static void DkyLop_Clicked(object sender, EventArgs e)
-        {
-            DkyLopClicked?.Invoke(sender, e);
-        }
+        
 
         private static void TCuuTKB_Clicked(object sender, EventArgs e)
         {
@@ -168,10 +182,7 @@ namespace QLSV_OOP
             PheDuyetYCHBClicked?.Invoke(sender, e);
         }
 
-        private static void DKHocBong_Clicked(object sender, EventArgs e)
-        {
-            DKHocBongClicked?.Invoke(sender, e);
-        }
+        
 
         private static void CapNhatHTTT_Clicked(object sender, EventArgs e)
         {
@@ -183,39 +194,6 @@ namespace QLSV_OOP
             CapNhatCongNoClicked?.Invoke(sender, e);
         }
 
-        
-
-        private static void HocPhi_Clicked(object sender, EventArgs e)
-        {
-            HocPhiClicked?.Invoke(sender, e);
-        }
-
-        private static void NoDongHocPhi_Clicked(object sender, EventArgs e)
-        {
-            NoDongHocPhiClicked?.Invoke(sender, e);
-        }
-
-        private static void TkeDiem_Clicked(object sender, EventArgs e)
-        {
-            TkeDiemClicked?.Invoke(sender, e);
-        }
-
-        private static void TkeHocBong_Clicked(object sender, EventArgs e)
-        {
-            TkeHocBongClicked?.Invoke(sender, e);
-        }
-
-        private static void LopHoc_Clicked(object sender, EventArgs e)
-        {
-            LopHocClicked?.Invoke(sender, e);
-        }
-
-        private static void HTThanhToan_Clicked(object sender, EventArgs e)
-        {
-            HTThanhToanClicked?.Invoke(sender, e);
-        }
-
-        
 
         private static void TTinDuNo_Clicked(object sender, EventArgs e)
         {

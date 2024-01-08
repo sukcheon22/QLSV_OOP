@@ -53,14 +53,13 @@
             // 
             // infoQuyenDataGridView
             // 
-            this.infoQuyenDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.infoQuyenDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.infoQuyenDataGridView.Location = new System.Drawing.Point(307, 114);
+            this.infoQuyenDataGridView.Location = new System.Drawing.Point(299, 158);
             this.infoQuyenDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.infoQuyenDataGridView.Name = "infoQuyenDataGridView";
             this.infoQuyenDataGridView.RowHeadersWidth = 51;
             this.infoQuyenDataGridView.RowTemplate.Height = 24;
-            this.infoQuyenDataGridView.Size = new System.Drawing.Size(721, 409);
+            this.infoQuyenDataGridView.Size = new System.Drawing.Size(721, 273);
             this.infoQuyenDataGridView.TabIndex = 2;
             // 
             // menuStripHB
@@ -72,7 +71,7 @@
             this.menuStripHB.Location = new System.Drawing.Point(0, 0);
             this.menuStripHB.Name = "menuStripHB";
             this.menuStripHB.Padding = new System.Windows.Forms.Padding(7, 1, 0, 1);
-            this.menuStripHB.Size = new System.Drawing.Size(1052, 30);
+            this.menuStripHB.Size = new System.Drawing.Size(1052, 26);
             this.menuStripHB.TabIndex = 14;
             this.menuStripHB.Text = "menuStrip1";
             // 
@@ -81,7 +80,7 @@
             this.backToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.backToolStripMenuItem.ForeColor = System.Drawing.Color.Lavender;
             this.backToolStripMenuItem.Name = "backToolStripMenuItem";
-            this.backToolStripMenuItem.Size = new System.Drawing.Size(79, 28);
+            this.backToolStripMenuItem.Size = new System.Drawing.Size(79, 24);
             this.backToolStripMenuItem.Text = "Quay lại";
             this.backToolStripMenuItem.Click += new System.EventHandler(this.backToolStripMenuItem_Click);
             // 
@@ -155,7 +154,7 @@
             // 
             this.txtMaQuyen.Enabled = false;
             this.txtMaQuyen.Location = new System.Drawing.Point(131, 114);
-            this.txtMaQuyen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMaQuyen.Margin = new System.Windows.Forms.Padding(4);
             this.txtMaQuyen.Name = "txtMaQuyen";
             this.txtMaQuyen.Size = new System.Drawing.Size(132, 22);
             this.txtMaQuyen.TabIndex = 21;

@@ -131,6 +131,7 @@
             // 
             // txtNumGood
             // 
+            this.txtNumGood.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumGood.Location = new System.Drawing.Point(363, 39);
             this.txtNumGood.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumGood.Name = "txtNumGood";
@@ -140,6 +141,7 @@
             // 
             // txtNumExcellent
             // 
+            this.txtNumExcellent.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumExcellent.Location = new System.Drawing.Point(120, 39);
             this.txtNumExcellent.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumExcellent.Name = "txtNumExcellent";

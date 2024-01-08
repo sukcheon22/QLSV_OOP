@@ -49,7 +49,7 @@ namespace QLSV_OOP
             CustomizeMenuStrip.Instance.ChangePassword.ForeColor = Color.Navy;
             CustomizeMenuStrip.Instance.HoTen.Click += HoTen_Clicked;
             CustomizeMenuStrip.Instance.HoTen.MouseLeave += HoTen_MouseLeave;
-            RoleDAO.TkeHocBongClicked += TkeHocBong_Clicked;
+            
             ttinDuNo = new TTinDuNo(sinhVien.StudentID);
             traCuuTKB = new TraCuuTKB(sinhVien.StudentID);
             traCuuKQHT = new TraCuuKQHT(sinhVien.StudentID);
@@ -66,19 +66,20 @@ namespace QLSV_OOP
             RoleDAO.TTinDuNoClicked += TTinDuNo_Clicked;
 
             RoleDAO.CapNhatDiemClicked += CapNhatDiem_Clicked;
-            RoleDAO.DkyLopClicked += DkyLop_Clicked;
+            RoleDAO.Instance.DKLop.Click += DkyLop_Clicked;
             RoleDAO.TCuuTKBClicked += TCuuTK_Clicked;
             RoleDAO.TCuuKQHTClicked += TCuuKQHT_Clicked;
             RoleDAO.CapNhatTTHBClicked += CapNhatTTHB_Clicked;
             RoleDAO.PheDuyetYCHBClicked += PheDuyetYCHB_Clicked;
-            RoleDAO.DKHocBongClicked += DKHocBongB_Clicked;
+            RoleDAO.Instance.DKHB.Click += DKHocBongB_Clicked;
             RoleDAO.CapNhatHTTTClicked += CapNhatHTTT_Clicked;
-            RoleDAO.CapNhatCongNoClicked += CapNhatCongNo_Clicked;          
-            RoleDAO.HocPhiClicked += HocPhi_Clicked;
-            RoleDAO.NoDongHocPhiClicked += NoDongHocPhi_Clicked;
-            RoleDAO.TkeDiemClicked += TkeDiem_Clicked;
-            RoleDAO.LopHocClicked += LopHoc_Clicked;
-            RoleDAO.HTThanhToanClicked += HTThanhToan_Clicked;
+            RoleDAO.CapNhatCongNoClicked += CapNhatCongNo_Clicked;
+            RoleDAO.Instance.TKeNoHPhi.Click += NoDongHocPhi_Clicked;
+            RoleDAO.Instance.TKeDiem.Click += TkeDiem_Clicked;
+            RoleDAO.Instance.TKeHB.Click += TkeHocBong_Clicked;
+            RoleDAO.Instance.TKeHocPhi.Click += HocPhi_Clicked;
+            RoleDAO.Instance.TKeHTTT.Click += HTThanhToan_Clicked;
+            RoleDAO.Instance.TKeLopHoc.Click += LopHoc_Clicked;
         }
 
         public void HoTen_Clicked(object sender, EventArgs e)
