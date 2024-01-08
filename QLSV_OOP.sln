@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLSV_OOP", "QLSV_OOP\QLSV_OOP.csproj", "{9472E0AB-9998-4A17-977B-A371A23BB5AA}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "Setup1\Setup1.vdproj", "{5F51403F-6930-456D-BC8C-EB89DD3E661C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,8 @@ Global
 		{9472E0AB-9998-4A17-977B-A371A23BB5AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9472E0AB-9998-4A17-977B-A371A23BB5AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9472E0AB-9998-4A17-977B-A371A23BB5AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F51403F-6930-456D-BC8C-EB89DD3E661C}.Debug|Any CPU.ActiveCfg = Debug
+		{5F51403F-6930-456D-BC8C-EB89DD3E661C}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
