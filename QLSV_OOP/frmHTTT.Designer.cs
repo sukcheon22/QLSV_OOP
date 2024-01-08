@@ -74,19 +74,19 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Calibri", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(350, 47);
+            this.label1.Location = new System.Drawing.Point(281, 49);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(380, 41);
+            this.label1.Size = new System.Drawing.Size(537, 41);
             this.label1.TabIndex = 13;
-            this.label1.Text = "HÌNH THỨC THANH TOÁN";
+            this.label1.Text = "THỐNG KÊ HÌNH THỨC THANH TOÁN";
             // 
             // htttDataGridView
             // 
             this.htttDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.htttDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.htttDataGridView.Location = new System.Drawing.Point(49, 109);
-            this.htttDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.htttDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.htttDataGridView.Name = "htttDataGridView";
             this.htttDataGridView.RowHeadersWidth = 51;
             this.htttDataGridView.Size = new System.Drawing.Size(1006, 408);
