@@ -50,6 +50,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.infoStuDataGridView)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -61,7 +62,7 @@
             this.panel1.Controls.Add(this.infoStuDataGridView);
             this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Controls.Add(this.groupBox2);
-            this.panel1.Location = new System.Drawing.Point(7, 7);
+            this.panel1.Location = new System.Drawing.Point(3, 50);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1039, 526);
@@ -393,14 +394,25 @@
             this.label14.TabIndex = 0;
             this.label14.Text = "Mã định danh";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(382, 12);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(219, 25);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "QUẢN LÝ SINH VIÊN";
+            // 
             // StudentManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "StudentManagement";
-            this.Size = new System.Drawing.Size(1061, 538);
+            this.Size = new System.Drawing.Size(1061, 578);
             this.Load += new System.EventHandler(this.StudentManagement_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.infoStuDataGridView)).EndInit();
@@ -408,6 +420,7 @@
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -435,5 +448,6 @@
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button quaylai;
+        private System.Windows.Forms.Label label5;
     }
 }

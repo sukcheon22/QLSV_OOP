@@ -39,6 +39,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtBank = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TTdataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -48,7 +49,7 @@
             this.buttonTimKiem.BackColor = System.Drawing.Color.MediumBlue;
             this.buttonTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonTimKiem.ForeColor = System.Drawing.Color.Lavender;
-            this.buttonTimKiem.Location = new System.Drawing.Point(57, 356);
+            this.buttonTimKiem.Location = new System.Drawing.Point(58, 401);
             this.buttonTimKiem.Name = "buttonTimKiem";
             this.buttonTimKiem.Size = new System.Drawing.Size(112, 49);
             this.buttonTimKiem.TabIndex = 27;
@@ -61,7 +62,7 @@
             this.buttonSua.BackColor = System.Drawing.Color.MediumBlue;
             this.buttonSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonSua.ForeColor = System.Drawing.Color.Lavender;
-            this.buttonSua.Location = new System.Drawing.Point(57, 196);
+            this.buttonSua.Location = new System.Drawing.Point(58, 241);
             this.buttonSua.Name = "buttonSua";
             this.buttonSua.Size = new System.Drawing.Size(112, 49);
             this.buttonSua.TabIndex = 26;
@@ -74,7 +75,7 @@
             this.buttonXoa.BackColor = System.Drawing.Color.MediumBlue;
             this.buttonXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonXoa.ForeColor = System.Drawing.Color.Lavender;
-            this.buttonXoa.Location = new System.Drawing.Point(57, 277);
+            this.buttonXoa.Location = new System.Drawing.Point(58, 322);
             this.buttonXoa.Name = "buttonXoa";
             this.buttonXoa.Size = new System.Drawing.Size(112, 49);
             this.buttonXoa.TabIndex = 25;
@@ -87,7 +88,7 @@
             this.buttonQuayLai.BackColor = System.Drawing.Color.MediumBlue;
             this.buttonQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonQuayLai.ForeColor = System.Drawing.Color.Lavender;
-            this.buttonQuayLai.Location = new System.Drawing.Point(57, 429);
+            this.buttonQuayLai.Location = new System.Drawing.Point(58, 474);
             this.buttonQuayLai.Name = "buttonQuayLai";
             this.buttonQuayLai.Size = new System.Drawing.Size(112, 49);
             this.buttonQuayLai.TabIndex = 24;
@@ -100,7 +101,7 @@
             this.buttonThem.BackColor = System.Drawing.Color.MediumBlue;
             this.buttonThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonThem.ForeColor = System.Drawing.Color.Lavender;
-            this.buttonThem.Location = new System.Drawing.Point(57, 115);
+            this.buttonThem.Location = new System.Drawing.Point(58, 160);
             this.buttonThem.Name = "buttonThem";
             this.buttonThem.Size = new System.Drawing.Size(112, 49);
             this.buttonThem.TabIndex = 23;
@@ -112,7 +113,7 @@
             // 
             this.TTdataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.TTdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TTdataGridView.Location = new System.Drawing.Point(243, 105);
+            this.TTdataGridView.Location = new System.Drawing.Point(244, 150);
             this.TTdataGridView.Name = "TTdataGridView";
             this.TTdataGridView.RowHeadersWidth = 51;
             this.TTdataGridView.RowTemplate.Height = 24;
@@ -126,7 +127,7 @@
             this.groupBox1.Controls.Add(this.txtBank);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(6, 13);
+            this.groupBox1.Location = new System.Drawing.Point(7, 58);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1027, 86);
             this.groupBox1.TabIndex = 21;
@@ -171,10 +172,21 @@
             this.label14.TabIndex = 1;
             this.label14.Text = "Ngân hàng";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(318, 19);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(392, 25);
+            this.label5.TabIndex = 28;
+            this.label5.Text = "CẬP NHẬT HÌNH THỨC THANH TOÁN";
+            // 
             // CapNhatHTTT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.buttonTimKiem);
             this.Controls.Add(this.buttonSua);
             this.Controls.Add(this.buttonXoa);
@@ -183,12 +195,13 @@
             this.Controls.Add(this.TTdataGridView);
             this.Controls.Add(this.groupBox1);
             this.Name = "CapNhatHTTT";
-            this.Size = new System.Drawing.Size(1065, 525);
+            this.Size = new System.Drawing.Size(1065, 571);
             this.Load += new System.EventHandler(this.CapNhatHTTT_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TTdataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -205,5 +218,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBank;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label5;
     }
 }

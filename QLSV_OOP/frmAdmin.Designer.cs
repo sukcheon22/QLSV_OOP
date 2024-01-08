@@ -184,15 +184,15 @@
             this.panel1.Location = new System.Drawing.Point(0, 30);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1071, 577);
+            this.panel1.Size = new System.Drawing.Size(1071, 609);
             this.panel1.TabIndex = 1;
             // 
             // employeeManagement1
             // 
-            this.employeeManagement1.Location = new System.Drawing.Point(-1, 0);
+            this.employeeManagement1.Location = new System.Drawing.Point(0, 0);
             this.employeeManagement1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.employeeManagement1.Name = "employeeManagement1";
-            this.employeeManagement1.Size = new System.Drawing.Size(1057, 530);
+            this.employeeManagement1.Size = new System.Drawing.Size(1068, 607);
             this.employeeManagement1.TabIndex = 2;
             this.employeeManagement1.Load += new System.EventHandler(this.employeeManagement1_Load);
             // 
@@ -201,7 +201,7 @@
             this.accountManagement1.Location = new System.Drawing.Point(0, 0);
             this.accountManagement1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.accountManagement1.Name = "accountManagement1";
-            this.accountManagement1.Size = new System.Drawing.Size(757, 538);
+            this.accountManagement1.Size = new System.Drawing.Size(757, 607);
             this.accountManagement1.TabIndex = 1;
             // 
             // studentManagement1
@@ -209,14 +209,14 @@
             this.studentManagement1.Location = new System.Drawing.Point(0, 0);
             this.studentManagement1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.studentManagement1.Name = "studentManagement1";
-            this.studentManagement1.Size = new System.Drawing.Size(1056, 538);
+            this.studentManagement1.Size = new System.Drawing.Size(1056, 607);
             this.studentManagement1.TabIndex = 0;
             // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1071, 604);
+            this.ClientSize = new System.Drawing.Size(1071, 640);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;

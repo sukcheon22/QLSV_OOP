@@ -41,6 +41,7 @@
             this.txtMaSV = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.infoGradeDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -50,7 +51,7 @@
             this.btnTimKiem.BackColor = System.Drawing.Color.MediumBlue;
             this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiem.ForeColor = System.Drawing.Color.Lavender;
-            this.btnTimKiem.Location = new System.Drawing.Point(57, 356);
+            this.btnTimKiem.Location = new System.Drawing.Point(61, 412);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(112, 49);
@@ -64,7 +65,7 @@
             this.btnSua.BackColor = System.Drawing.Color.MediumBlue;
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.Lavender;
-            this.btnSua.Location = new System.Drawing.Point(57, 194);
+            this.btnSua.Location = new System.Drawing.Point(61, 250);
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(112, 49);
@@ -78,7 +79,7 @@
             this.btnXoa.BackColor = System.Drawing.Color.MediumBlue;
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.Lavender;
-            this.btnXoa.Location = new System.Drawing.Point(57, 277);
+            this.btnXoa.Location = new System.Drawing.Point(61, 333);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(112, 49);
@@ -92,7 +93,7 @@
             this.btnQuayLai.BackColor = System.Drawing.Color.MediumBlue;
             this.btnQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuayLai.ForeColor = System.Drawing.Color.Lavender;
-            this.btnQuayLai.Location = new System.Drawing.Point(57, 430);
+            this.btnQuayLai.Location = new System.Drawing.Point(61, 486);
             this.btnQuayLai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQuayLai.Name = "btnQuayLai";
             this.btnQuayLai.Size = new System.Drawing.Size(112, 49);
@@ -106,7 +107,7 @@
             this.btnThem.BackColor = System.Drawing.Color.MediumBlue;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.Lavender;
-            this.btnThem.Location = new System.Drawing.Point(57, 114);
+            this.btnThem.Location = new System.Drawing.Point(61, 170);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(112, 49);
@@ -119,7 +120,7 @@
             // 
             this.infoGradeDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.infoGradeDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.infoGradeDataGridView.Location = new System.Drawing.Point(243, 105);
+            this.infoGradeDataGridView.Location = new System.Drawing.Point(247, 161);
             this.infoGradeDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.infoGradeDataGridView.Name = "infoGradeDataGridView";
             this.infoGradeDataGridView.RowHeadersWidth = 51;
@@ -136,7 +137,7 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(5, 14);
+            this.groupBox1.Location = new System.Drawing.Point(9, 70);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -217,10 +218,21 @@
             this.label14.TabIndex = 1;
             this.label14.Text = "Mã học phần";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(419, 24);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(181, 25);
+            this.label5.TabIndex = 21;
+            this.label5.Text = "CẬP NHẬT ĐIỂM";
+            // 
             // CapNhatDiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
@@ -230,12 +242,13 @@
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CapNhatDiem";
-            this.Size = new System.Drawing.Size(1039, 526);
+            this.Size = new System.Drawing.Size(1039, 582);
             this.Load += new System.EventHandler(this.CapNhatDiem_Load);
             ((System.ComponentModel.ISupportInitialize)(this.infoGradeDataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -254,5 +267,6 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.ComboBox cmbMaHP;
         private System.Windows.Forms.ComboBox cmbDiem;
+        private System.Windows.Forms.Label label5;
     }
 }

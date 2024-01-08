@@ -37,6 +37,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtHBId = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -46,7 +47,7 @@
             this.btnConfirm.BackColor = System.Drawing.Color.Navy;
             this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.ForeColor = System.Drawing.Color.Lavender;
-            this.btnConfirm.Location = new System.Drawing.Point(47, 149);
+            this.btnConfirm.Location = new System.Drawing.Point(50, 192);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(124, 49);
             this.btnConfirm.TabIndex = 23;
@@ -58,7 +59,7 @@
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(243, 105);
+            this.dataGridView1.Location = new System.Drawing.Point(246, 148);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -76,7 +77,7 @@
             this.groupBox1.Controls.Add(this.txtHBId);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(6, 13);
+            this.groupBox1.Location = new System.Drawing.Point(9, 56);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1027, 86);
             this.groupBox1.TabIndex = 21;
@@ -145,20 +146,32 @@
             this.label14.TabIndex = 1;
             this.label14.Text = "Mã học bổng";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(395, 17);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(255, 25);
+            this.label5.TabIndex = 24;
+            this.label5.Text = "PHÊ DUYỆT HỌC BỔNG";
+            // 
             // PheDuyetHB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.groupBox1);
             this.Name = "PheDuyetHB";
-            this.Size = new System.Drawing.Size(1039, 525);
+            this.Size = new System.Drawing.Size(1039, 570);
             this.Load += new System.EventHandler(this.PheDuyetHB_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -173,5 +186,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtHBId;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label5;
     }
 }

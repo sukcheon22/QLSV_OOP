@@ -42,6 +42,7 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.infoHBDataGridView)).BeginInit();
             this.SuspendLayout();
@@ -55,7 +56,7 @@
             this.groupBox1.Controls.Add(this.txtMaHB);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(18, 18);
+            this.groupBox1.Location = new System.Drawing.Point(11, 65);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -134,7 +135,7 @@
             // 
             this.infoHBDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.infoHBDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.infoHBDataGridView.Location = new System.Drawing.Point(253, 110);
+            this.infoHBDataGridView.Location = new System.Drawing.Point(246, 157);
             this.infoHBDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.infoHBDataGridView.Name = "infoHBDataGridView";
             this.infoHBDataGridView.RowHeadersWidth = 51;
@@ -147,7 +148,7 @@
             this.btnThem.BackColor = System.Drawing.Color.MediumBlue;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.Lavender;
-            this.btnThem.Location = new System.Drawing.Point(68, 121);
+            this.btnThem.Location = new System.Drawing.Point(61, 168);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(112, 50);
@@ -161,7 +162,7 @@
             this.btnQuayLai.BackColor = System.Drawing.Color.MediumBlue;
             this.btnQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuayLai.ForeColor = System.Drawing.Color.Lavender;
-            this.btnQuayLai.Location = new System.Drawing.Point(68, 434);
+            this.btnQuayLai.Location = new System.Drawing.Point(61, 481);
             this.btnQuayLai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQuayLai.Name = "btnQuayLai";
             this.btnQuayLai.Size = new System.Drawing.Size(112, 50);
@@ -175,7 +176,7 @@
             this.btnXoa.BackColor = System.Drawing.Color.MediumBlue;
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.Lavender;
-            this.btnXoa.Location = new System.Drawing.Point(68, 283);
+            this.btnXoa.Location = new System.Drawing.Point(61, 330);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(112, 50);
@@ -189,7 +190,7 @@
             this.btnSua.BackColor = System.Drawing.Color.MediumBlue;
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.Lavender;
-            this.btnSua.Location = new System.Drawing.Point(68, 201);
+            this.btnSua.Location = new System.Drawing.Point(61, 248);
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(112, 50);
@@ -203,7 +204,7 @@
             this.btnTimKiem.BackColor = System.Drawing.Color.MediumBlue;
             this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiem.ForeColor = System.Drawing.Color.Lavender;
-            this.btnTimKiem.Location = new System.Drawing.Point(68, 362);
+            this.btnTimKiem.Location = new System.Drawing.Point(61, 409);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(112, 50);
@@ -212,10 +213,21 @@
             this.btnTimKiem.UseVisualStyleBackColor = false;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(337, 24);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(368, 25);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "CẬP NHẬT THÔNG TIN HỌC BỔNG";
+            // 
             // CNTThocbong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
@@ -225,12 +237,13 @@
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "CNTThocbong";
-            this.Size = new System.Drawing.Size(1061, 535);
+            this.Size = new System.Drawing.Size(1061, 579);
             this.Load += new System.EventHandler(this.CNTThocbong_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.infoHBDataGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -250,5 +263,6 @@
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnTimKiem;
+        private System.Windows.Forms.Label label5;
     }
 }

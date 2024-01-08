@@ -41,6 +41,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtMaHP = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.infoHPDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -50,7 +51,7 @@
             this.btnTimKiem.BackColor = System.Drawing.Color.Navy;
             this.btnTimKiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnTimKiem.ForeColor = System.Drawing.Color.Lavender;
-            this.btnTimKiem.Location = new System.Drawing.Point(57, 356);
+            this.btnTimKiem.Location = new System.Drawing.Point(61, 400);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(112, 49);
@@ -64,7 +65,7 @@
             this.btnSua.BackColor = System.Drawing.Color.Navy;
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.Lavender;
-            this.btnSua.Location = new System.Drawing.Point(57, 194);
+            this.btnSua.Location = new System.Drawing.Point(61, 238);
             this.btnSua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(112, 49);
@@ -78,7 +79,7 @@
             this.btnXoa.BackColor = System.Drawing.Color.Navy;
             this.btnXoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnXoa.ForeColor = System.Drawing.Color.Lavender;
-            this.btnXoa.Location = new System.Drawing.Point(57, 277);
+            this.btnXoa.Location = new System.Drawing.Point(61, 321);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(112, 49);
@@ -92,7 +93,7 @@
             this.btnQuayLai.BackColor = System.Drawing.Color.Navy;
             this.btnQuayLai.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuayLai.ForeColor = System.Drawing.Color.Lavender;
-            this.btnQuayLai.Location = new System.Drawing.Point(57, 430);
+            this.btnQuayLai.Location = new System.Drawing.Point(61, 474);
             this.btnQuayLai.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnQuayLai.Name = "btnQuayLai";
             this.btnQuayLai.Size = new System.Drawing.Size(112, 49);
@@ -106,7 +107,7 @@
             this.btnThem.BackColor = System.Drawing.Color.Navy;
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.Lavender;
-            this.btnThem.Location = new System.Drawing.Point(57, 114);
+            this.btnThem.Location = new System.Drawing.Point(61, 158);
             this.btnThem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(112, 49);
@@ -119,7 +120,7 @@
             // 
             this.infoHPDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.infoHPDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.infoHPDataGridView.Location = new System.Drawing.Point(243, 105);
+            this.infoHPDataGridView.Location = new System.Drawing.Point(247, 149);
             this.infoHPDataGridView.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.infoHPDataGridView.Name = "infoHPDataGridView";
             this.infoHPDataGridView.RowHeadersWidth = 51;
@@ -136,7 +137,7 @@
             this.groupBox1.Controls.Add(this.txtMaHP);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(5, 14);
+            this.groupBox1.Location = new System.Drawing.Point(9, 58);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -216,10 +217,21 @@
             this.label14.TabIndex = 1;
             this.label14.Text = "Mã học phần";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(375, 17);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(225, 25);
+            this.label5.TabIndex = 14;
+            this.label5.Text = "QUẢN LÝ HỌC PHẦN";
+            // 
             // QlyHPhan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
@@ -229,12 +241,13 @@
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "QlyHPhan";
-            this.Size = new System.Drawing.Size(1039, 526);
+            this.Size = new System.Drawing.Size(1039, 577);
             this.Load += new System.EventHandler(this.QlyHPhan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.infoHPDataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -253,5 +266,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtMaHP;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label5;
     }
 }

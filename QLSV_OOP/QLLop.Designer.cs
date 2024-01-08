@@ -51,6 +51,7 @@
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.infoLopDataGridView = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -62,7 +63,7 @@
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.infoLopDataGridView);
-            this.panel1.Location = new System.Drawing.Point(3, 2);
+            this.panel1.Location = new System.Drawing.Point(3, 53);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1039, 526);
@@ -359,14 +360,25 @@
             this.infoLopDataGridView.TabIndex = 4;
             this.infoLopDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.infoLopDataGridView_CellContentClick);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(389, 13);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(209, 25);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "QUẢN LÝ LỚP HỌC";
+            // 
             // QLLop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "QLLop";
-            this.Size = new System.Drawing.Size(1053, 535);
+            this.Size = new System.Drawing.Size(1053, 581);
             this.Load += new System.EventHandler(this.QLLop_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -374,6 +386,7 @@
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.infoLopDataGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -402,5 +415,6 @@
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.DateTimePicker endDateTimePicker;
         private System.Windows.Forms.ComboBox cmbThu;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -47,6 +47,7 @@
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.tuitionDataGridView = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -58,9 +59,9 @@
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.tuitionDataGridView);
-            this.panel1.Location = new System.Drawing.Point(8, 8);
+            this.panel1.Location = new System.Drawing.Point(3, 43);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1046, 525);
+            this.panel1.Size = new System.Drawing.Size(1046, 540);
             this.panel1.TabIndex = 4;
             // 
             // groupBox1
@@ -274,16 +275,27 @@
             this.tuitionDataGridView.Name = "tuitionDataGridView";
             this.tuitionDataGridView.RowHeadersWidth = 51;
             this.tuitionDataGridView.RowTemplate.Height = 24;
-            this.tuitionDataGridView.Size = new System.Drawing.Size(1021, 266);
+            this.tuitionDataGridView.Size = new System.Drawing.Size(1021, 281);
             this.tuitionDataGridView.TabIndex = 4;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(331, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(354, 25);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "CẬP NHẬT THÔNG TIN CÔNG NỢ";
             // 
             // CapNhatCongNo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
             this.Name = "CapNhatCongNo";
-            this.Size = new System.Drawing.Size(1057, 540);
+            this.Size = new System.Drawing.Size(1057, 586);
             this.Load += new System.EventHandler(this.CapNhatCongNo_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
@@ -291,6 +303,7 @@
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tuitionDataGridView)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -315,5 +328,6 @@
         private System.Windows.Forms.DataGridView tuitionDataGridView;
         private System.Windows.Forms.TextBox txtMoney;
         private System.Windows.Forms.TextBox txtSTK;
+        private System.Windows.Forms.Label label5;
     }
 }
