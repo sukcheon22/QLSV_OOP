@@ -65,7 +65,7 @@ namespace QLSV_OOP.DAO
         {
             try
             {
-                using (SqlCommand cmd = new SqlCommand("UPDATE HTTT SET STK = @STK_Truong WHERE TenNH = @TenNH", con))
+                using (SqlCommand cmd = new SqlCommand("UPDATE HTTT SET TenNH = @TenNH WHERE STK = @STK_Truong", con))
                 {
                     cmd.Parameters.AddWithValue("@TenNH", newbankname);
                     cmd.Parameters.AddWithValue("@STK_Truong", newSTK);

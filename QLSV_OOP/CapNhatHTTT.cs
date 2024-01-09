@@ -19,6 +19,7 @@ namespace QLSV_OOP
         public CapNhatHTTT()
         {
             InitializeComponent();
+            
         }
         private SqlConnection con = new SqlConnection(ConnectionString.connectionString);
         public void ResetState()
@@ -31,6 +32,8 @@ namespace QLSV_OOP
         private void InitializeDataGridView()
         {
             TTdataGridView.DataSource = HTTTDAO.Instance.htttGridView();
+            txtSTK.Enabled = true;
+            
         }
 
         private void CapNhatHTTT_Load(object sender, EventArgs e)
@@ -57,6 +60,7 @@ namespace QLSV_OOP
             // Hiển thị thông tin sinh viên trong GroupBox
             txtBank.Text = nganhang;
             txtSTK.Text = stk;
+            txtSTK.Enabled = false;
         }
         
 
