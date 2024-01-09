@@ -110,7 +110,7 @@
             // 
             this.accountToolStripMenuItem.ForeColor = System.Drawing.Color.Navy;
             this.accountToolStripMenuItem.Name = "accountToolStripMenuItem";
-            this.accountToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.accountToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.accountToolStripMenuItem.Text = "Tài khoản";
             this.accountToolStripMenuItem.Click += new System.EventHandler(this.accountToolStripMenuItem_Click);
             // 
@@ -118,7 +118,7 @@
             // 
             this.employeeToolStripMenuItem.ForeColor = System.Drawing.Color.Navy;
             this.employeeToolStripMenuItem.Name = "employeeToolStripMenuItem";
-            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.employeeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.employeeToolStripMenuItem.Text = "Nhân viên";
             this.employeeToolStripMenuItem.Click += new System.EventHandler(this.employeeToolStripMenuItem_Click);
             // 
@@ -126,7 +126,7 @@
             // 
             this.studentToolStripMenuItem.ForeColor = System.Drawing.Color.Navy;
             this.studentToolStripMenuItem.Name = "studentToolStripMenuItem";
-            this.studentToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
+            this.studentToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.studentToolStripMenuItem.Text = "Sinh viên";
             this.studentToolStripMenuItem.Click += new System.EventHandler(this.studentToolStripMenuItem_Click);
             // 
@@ -134,8 +134,8 @@
             // 
             this.authorizeToolStripMenuItem.ForeColor = System.Drawing.Color.Navy;
             this.authorizeToolStripMenuItem.Name = "authorizeToolStripMenuItem";
-            this.authorizeToolStripMenuItem.Size = new System.Drawing.Size(168, 26);
-            this.authorizeToolStripMenuItem.Text = "Phân quyền";
+            this.authorizeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.authorizeToolStripMenuItem.Text = "Quyền";
             this.authorizeToolStripMenuItem.Click += new System.EventHandler(this.authorizeToolStripMenuItem_Click);
             // 
             // analyzeToolStripMenuItem
