@@ -167,12 +167,29 @@ namespace QLSV_OOP.DAO
             }
         }
 
+        public bool KiemTraTonTaiMaSV(string maSV)
+        {
+            string query = "select count(*) from Sinh__vien where MaSV = '" + maSV + "';";
+            SqlDataAdapter sda = new SqlDataAdapter(query, con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            int flag = Convert.ToInt32(dt.Rows[0][0]);
+            if (flag == 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
         public void ThemKQHTMoi(string maHP, string maSV, string diem)
         {
 
             try
             {
-                if (KiemTraTrung(maSV, maHP))
+                if (KiemTraTrung(maSV, maHP) && KiemTraTonTaiMaSV(maSV))
                 {
                     // Thực hiện câu truy vấn INSERT
                     using (SqlCommand cmd = new SqlCommand("INSERT INTO KQHT (MaHP, MaSV, Diem) VALUES (@MaHocPhan, @MaSinhVien, @Diem)", con))
@@ -188,9 +205,13 @@ namespace QLSV_OOP.DAO
 
                     MessageBox.Show("Đã thêm mới thông tin KQHT thành công!");
                 }
-                else
+                else if (!KiemTraTrung(maSV, maHP))
                 {
                     MessageBox.Show("Kết quả học tập cho trường hợp này đã tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else if (!KiemTraTonTaiMaSV(maSV)) 
+                {
+                    MessageBox.Show("Mã sinh viên không tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (SqlException ex)

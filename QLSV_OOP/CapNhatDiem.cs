@@ -50,6 +50,8 @@ namespace QLSV_OOP
         private void InitializeDataGridView()
         {
             infoGradeDataGridView.DataSource = KQHTDAO.Instance.gradeGridView();
+            cmbMaHP.Enabled = true;
+            txtMaSV.Enabled = true;
         }
 
 
@@ -71,6 +73,8 @@ namespace QLSV_OOP
             cmbDiem.Text = diem;
             cmbMaHP.Text = maHP;
             txtMaSV.Text = maSV;
+            cmbMaHP.Enabled = false;
+            txtMaSV.Enabled = false;
         }
 
         private void CapNhatDiem_Load(object sender, EventArgs e)
@@ -101,7 +105,7 @@ namespace QLSV_OOP
             string maHP = cmbMaHP.Text;
             string maSV = txtMaSV.Text;
             string diem = cmbDiem.Text;
-
+            
             KQHTDAO.Instance.CapNhatThongTinKQHT(maHP, maSV, diem);
             InitializeDataGridView(); 
         }
