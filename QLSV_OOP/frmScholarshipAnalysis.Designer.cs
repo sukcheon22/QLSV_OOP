@@ -73,6 +73,7 @@
             // 
             // txtNumScholarshipOK
             // 
+            this.txtNumScholarshipOK.Enabled = false;
             this.txtNumScholarshipOK.Location = new System.Drawing.Point(826, 106);
             this.txtNumScholarshipOK.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumScholarshipOK.Name = "txtNumScholarshipOK";
@@ -106,6 +107,7 @@
             // 
             // txtStudentCompany
             // 
+            this.txtStudentCompany.Enabled = false;
             this.txtStudentCompany.Location = new System.Drawing.Point(826, 22);
             this.txtStudentCompany.Margin = new System.Windows.Forms.Padding(4);
             this.txtStudentCompany.Name = "txtStudentCompany";
@@ -127,6 +129,7 @@
             // 
             // txtStudentUni
             // 
+            this.txtStudentUni.Enabled = false;
             this.txtStudentUni.Location = new System.Drawing.Point(826, 63);
             this.txtStudentUni.Margin = new System.Windows.Forms.Padding(4);
             this.txtStudentUni.Name = "txtStudentUni";
@@ -136,6 +139,7 @@
             // 
             // txtNumScholarship
             // 
+            this.txtNumScholarship.Enabled = false;
             this.txtNumScholarship.Location = new System.Drawing.Point(354, 105);
             this.txtNumScholarship.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumScholarship.Name = "txtNumScholarship";
@@ -169,6 +173,7 @@
             // 
             // txtNumCompany
             // 
+            this.txtNumCompany.Enabled = false;
             this.txtNumCompany.Location = new System.Drawing.Point(354, 21);
             this.txtNumCompany.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumCompany.Name = "txtNumCompany";
@@ -190,6 +195,7 @@
             // 
             // txtNumUni
             // 
+            this.txtNumUni.Enabled = false;
             this.txtNumUni.Location = new System.Drawing.Point(354, 62);
             this.txtNumUni.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumUni.Name = "txtNumUni";

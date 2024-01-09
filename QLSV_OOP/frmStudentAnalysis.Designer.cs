@@ -105,6 +105,7 @@
             // 
             // txtNumCountStudent
             // 
+            this.txtNumCountStudent.Enabled = false;
             this.txtNumCountStudent.Location = new System.Drawing.Point(417, 108);
             this.txtNumCountStudent.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumCountStudent.Name = "txtNumCountStudent";
@@ -138,6 +139,7 @@
             // 
             // txtNumCountK67
             // 
+            this.txtNumCountK67.Enabled = false;
             this.txtNumCountK67.Location = new System.Drawing.Point(645, 16);
             this.txtNumCountK67.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumCountK67.Name = "txtNumCountK67";
@@ -159,6 +161,7 @@
             // 
             // txtNumCountK68
             // 
+            this.txtNumCountK68.Enabled = false;
             this.txtNumCountK68.Location = new System.Drawing.Point(645, 62);
             this.txtNumCountK68.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumCountK68.Name = "txtNumCountK68";
@@ -190,6 +193,7 @@
             // 
             // txtNumCountK65
             // 
+            this.txtNumCountK65.Enabled = false;
             this.txtNumCountK65.Location = new System.Drawing.Point(165, 16);
             this.txtNumCountK65.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumCountK65.Name = "txtNumCountK65";
@@ -211,6 +215,7 @@
             // 
             // txtNumCountK66
             // 
+            this.txtNumCountK66.Enabled = false;
             this.txtNumCountK66.Location = new System.Drawing.Point(165, 62);
             this.txtNumCountK66.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumCountK66.Name = "txtNumCountK66";

@@ -42,10 +42,10 @@
             this.txtNumFinancialEmployee = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.exportFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.quayLạiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.exportFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quayLạiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.accDataGridView)).BeginInit();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -88,6 +88,7 @@
             // 
             // txtNumAdmin
             // 
+            this.txtNumAdmin.Enabled = false;
             this.txtNumAdmin.Location = new System.Drawing.Point(121, 16);
             this.txtNumAdmin.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumAdmin.Name = "txtNumAdmin";
@@ -97,6 +98,7 @@
             // 
             // txtNumStudent
             // 
+            this.txtNumStudent.Enabled = false;
             this.txtNumStudent.Location = new System.Drawing.Point(121, 57);
             this.txtNumStudent.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumStudent.Name = "txtNumStudent";
@@ -118,6 +120,7 @@
             // 
             // txtNumEduEmployee
             // 
+            this.txtNumEduEmployee.Enabled = false;
             this.txtNumEduEmployee.Location = new System.Drawing.Point(544, 14);
             this.txtNumEduEmployee.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumEduEmployee.Name = "txtNumEduEmployee";
@@ -157,6 +160,7 @@
             // 
             // txtNumAcc
             // 
+            this.txtNumAcc.Enabled = false;
             this.txtNumAcc.Location = new System.Drawing.Point(121, 103);
             this.txtNumAcc.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumAcc.Name = "txtNumAcc";
@@ -178,6 +182,7 @@
             // 
             // txtNumFinancialEmployee
             // 
+            this.txtNumFinancialEmployee.Enabled = false;
             this.txtNumFinancialEmployee.Location = new System.Drawing.Point(544, 59);
             this.txtNumFinancialEmployee.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumFinancialEmployee.Name = "txtNumFinancialEmployee";
@@ -212,6 +217,24 @@
             this.menuStrip1.TabIndex = 10;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // exportToolStripMenuItem
+            // 
+            this.exportToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exportToolStripMenuItem.ForeColor = System.Drawing.Color.Lavender;
+            this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
+            this.exportToolStripMenuItem.Size = new System.Drawing.Size(82, 24);
+            this.exportToolStripMenuItem.Text = "Xuất file";
+            this.exportToolStripMenuItem.Click += new System.EventHandler(this.exportFileToolStripMenuItem_Click);
+            // 
+            // backToolStripMenuItem1
+            // 
+            this.backToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backToolStripMenuItem1.ForeColor = System.Drawing.Color.Lavender;
+            this.backToolStripMenuItem1.Name = "backToolStripMenuItem1";
+            this.backToolStripMenuItem1.Size = new System.Drawing.Size(79, 24);
+            this.backToolStripMenuItem1.Text = "Quay lại";
+            this.backToolStripMenuItem1.Click += new System.EventHandler(this.backToolStripMenuItem1_Click);
+            // 
             // exportFileToolStripMenuItem
             // 
             this.exportFileToolStripMenuItem.Name = "exportFileToolStripMenuItem";
@@ -223,24 +246,6 @@
             this.quayLạiToolStripMenuItem.Name = "quayLạiToolStripMenuItem";
             this.quayLạiToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
             this.quayLạiToolStripMenuItem.Text = "Quay lại";
-            // 
-            // exportToolStripMenuItem
-            // 
-            this.exportToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exportToolStripMenuItem.ForeColor = System.Drawing.Color.Lavender;
-            this.exportToolStripMenuItem.Name = "exportToolStripMenuItem";
-            this.exportToolStripMenuItem.Size = new System.Drawing.Size(82, 26);
-            this.exportToolStripMenuItem.Text = "Xuất file";
-            this.exportToolStripMenuItem.Click += new System.EventHandler(this.exportFileToolStripMenuItem_Click);
-            // 
-            // backToolStripMenuItem1
-            // 
-            this.backToolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.backToolStripMenuItem1.ForeColor = System.Drawing.Color.Lavender;
-            this.backToolStripMenuItem1.Name = "backToolStripMenuItem1";
-            this.backToolStripMenuItem1.Size = new System.Drawing.Size(79, 26);
-            this.backToolStripMenuItem1.Text = "Quay lại";
-            this.backToolStripMenuItem1.Click += new System.EventHandler(this.backToolStripMenuItem1_Click);
             // 
             // frmAccountAnalysis
             // 

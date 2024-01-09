@@ -51,8 +51,7 @@
             this.backToolStripMenuItem});
             this.menuStripTuition.Location = new System.Drawing.Point(0, 0);
             this.menuStripTuition.Name = "menuStripTuition";
-            this.menuStripTuition.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
-            this.menuStripTuition.Size = new System.Drawing.Size(1104, 30);
+            this.menuStripTuition.Size = new System.Drawing.Size(1104, 28);
             this.menuStripTuition.TabIndex = 1;
             this.menuStripTuition.Text = "menuStrip1";
             // 
@@ -80,7 +79,7 @@
             this.tuitionDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tuitionDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tuitionDataGridView.Location = new System.Drawing.Point(41, 202);
-            this.tuitionDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tuitionDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.tuitionDataGridView.Name = "tuitionDataGridView";
             this.tuitionDataGridView.RowHeadersWidth = 62;
             this.tuitionDataGridView.Size = new System.Drawing.Size(1032, 332);
@@ -111,6 +110,7 @@
             // 
             // txtSumMoney
             // 
+            this.txtSumMoney.Enabled = false;
             this.txtSumMoney.Location = new System.Drawing.Point(253, 134);
             this.txtSumMoney.Name = "txtSumMoney";
             this.txtSumMoney.Size = new System.Drawing.Size(175, 22);
@@ -130,6 +130,7 @@
             // 
             // txtMostBank
             // 
+            this.txtMostBank.Enabled = false;
             this.txtMostBank.Location = new System.Drawing.Point(909, 134);
             this.txtMostBank.Name = "txtMostBank";
             this.txtMostBank.Size = new System.Drawing.Size(150, 22);

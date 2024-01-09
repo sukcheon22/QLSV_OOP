@@ -102,6 +102,7 @@
             // 
             // txtNumEduEmployee
             // 
+            this.txtNumEduEmployee.Enabled = false;
             this.txtNumEduEmployee.Location = new System.Drawing.Point(220, 18);
             this.txtNumEduEmployee.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumEduEmployee.Name = "txtNumEduEmployee";
@@ -137,6 +138,7 @@
             // 
             // txtNumEmployee
             // 
+            this.txtNumEmployee.Enabled = false;
             this.txtNumEmployee.Location = new System.Drawing.Point(400, 96);
             this.txtNumEmployee.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumEmployee.Name = "txtNumEmployee";
@@ -158,6 +160,7 @@
             // 
             // txtNumFinancialEmployee
             // 
+            this.txtNumFinancialEmployee.Enabled = false;
             this.txtNumFinancialEmployee.Location = new System.Drawing.Point(621, 21);
             this.txtNumFinancialEmployee.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumFinancialEmployee.Name = "txtNumFinancialEmployee";

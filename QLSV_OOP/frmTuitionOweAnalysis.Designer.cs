@@ -50,7 +50,7 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(157, 93);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(665, 70);
             this.panel1.TabIndex = 18;
@@ -67,8 +67,9 @@
             // 
             // txtNumStudentOwe
             // 
+            this.txtNumStudentOwe.Enabled = false;
             this.txtNumStudentOwe.Location = new System.Drawing.Point(468, 20);
-            this.txtNumStudentOwe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNumStudentOwe.Margin = new System.Windows.Forms.Padding(4);
             this.txtNumStudentOwe.Name = "txtNumStudentOwe";
             this.txtNumStudentOwe.Size = new System.Drawing.Size(68, 22);
             this.txtNumStudentOwe.TabIndex = 10;
@@ -101,7 +102,7 @@
             this.tuitionOweDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tuitionOweDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tuitionOweDataGridView.Location = new System.Drawing.Point(64, 191);
-            this.tuitionOweDataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tuitionOweDataGridView.Margin = new System.Windows.Forms.Padding(4);
             this.tuitionOweDataGridView.Name = "tuitionOweDataGridView";
             this.tuitionOweDataGridView.RowHeadersWidth = 62;
             this.tuitionOweDataGridView.Size = new System.Drawing.Size(867, 346);
@@ -127,7 +128,6 @@
             this.backToolStripMenuItem});
             this.menuStripOweTuition.Location = new System.Drawing.Point(0, 0);
             this.menuStripOweTuition.Name = "menuStripOweTuition";
-            this.menuStripOweTuition.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
             this.menuStripOweTuition.Size = new System.Drawing.Size(1004, 28);
             this.menuStripOweTuition.TabIndex = 19;
             this.menuStripOweTuition.Text = "menuStrip1";
