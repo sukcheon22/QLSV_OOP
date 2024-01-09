@@ -30,8 +30,9 @@ namespace QLSV_OOP
             ToolStripMenuItem daotao = RoleDAO.CreateDaoTao();
             ToolStripMenuItem hocbong = RoleDAO.CreateHB();
             ToolStripMenuItem taivu = RoleDAO.CreateTaiVu();
+            ToolStripMenuItem quanly = RoleDAO.CreateQuanLy();
             ToolStripMenuItem thongke = RoleDAO.CreateThongKe();
-            menuStrip1.Items.AddRange(new ToolStripItem[] {daotao, hocbong, taivu, thongke});
+            menuStrip1.Items.AddRange(new ToolStripItem[] {daotao, hocbong, taivu, quanly, thongke});
             string roleid = acc.RoleID;
             List<string> itemsSelected = CustomizeMenuStrip.Instance.RetrieveRole(roleid);
             //List<string> itemsSelected = new List<string>{ "Đào Tạo","Đăng ký lớp", "Đào Tạo", "Cập nhật điểm"};
@@ -69,10 +70,10 @@ namespace QLSV_OOP
             RoleDAO.Instance.DKLop.Click += DkyLop_Clicked;
             RoleDAO.TCuuTKBClicked += TCuuTK_Clicked;
             RoleDAO.TCuuKQHTClicked += TCuuKQHT_Clicked;
-            RoleDAO.CapNhatTTHBClicked += CapNhatTTHB_Clicked;
+            RoleDAO.QuanLyTTHBClicked += QuanLyTTHB_Clicked;
             RoleDAO.PheDuyetYCHBClicked += PheDuyetYCHB_Clicked;
             RoleDAO.Instance.DKHB.Click += DKHocBongB_Clicked;
-            RoleDAO.CapNhatHTTTClicked += CapNhatHTTT_Clicked;
+            RoleDAO.QuanLyHTTTClicked += QuanLyHTTT_Clicked;
             RoleDAO.CapNhatCongNoClicked += CapNhatCongNo_Clicked;
             RoleDAO.Instance.TKeNoHPhi.Click += NoDongHocPhi_Clicked;
             RoleDAO.Instance.TKeDiem.Click += TkeDiem_Clicked;
@@ -132,7 +133,7 @@ namespace QLSV_OOP
             traCuuKQHT.Visible = true;
         }
 
-        private void CapNhatTTHB_Clicked(object sender, EventArgs e)
+        private void QuanLyTTHB_Clicked(object sender, EventArgs e)
         {
             // Xử lý logic khi sự kiện CapNhatTTHBClicked xảy ra
         }
@@ -148,7 +149,7 @@ namespace QLSV_OOP
             FunctionMenuStrip.Instance.ScholarshipRegistration(this, sinh_Vien);
         }
 
-        private void CapNhatHTTT_Clicked(object sender, EventArgs e)
+        private void QuanLyHTTT_Clicked(object sender, EventArgs e)
         {
             // Xử lý logic khi sự kiện CapNhatHTTTClicked xảy ra
         }

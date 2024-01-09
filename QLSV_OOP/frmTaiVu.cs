@@ -17,7 +17,7 @@ namespace QLSV_OOP
     public partial class frmTaiVu : Form
     {
         Account account;
-        CapNhatHTTT capNhatHTTT = new CapNhatHTTT();
+        QuanLyHTTT quanLyHTTT = new QuanLyHTTT();
         CapNhatCongNo capNhatCongNo = new CapNhatCongNo();
         public frmTaiVu(Account acc)
         {
@@ -26,7 +26,8 @@ namespace QLSV_OOP
             ToolStripMenuItem hocbong = RoleDAO.CreateHB();
             ToolStripMenuItem taivu = RoleDAO.CreateTaiVu();
             ToolStripMenuItem thongke = RoleDAO.CreateThongKe();
-            menuStrip1.Items.AddRange(new ToolStripItem[] { daotao, hocbong, taivu, thongke });
+            ToolStripMenuItem quanly = RoleDAO.CreateQuanLy();
+            menuStrip1.Items.AddRange(new ToolStripItem[] { daotao, hocbong, taivu, quanly, thongke });
             string roleid = acc.RoleID;
             List<string> itemsSelected = CustomizeMenuStrip.Instance.RetrieveRole(roleid);
             CustomizeMenuStrip.Instance.Customize(menuStrip1, itemsSelected);
@@ -40,16 +41,16 @@ namespace QLSV_OOP
             CustomizeMenuStrip.Instance.HoTen.ForeColor = Color.Yellow;
             CustomizeMenuStrip.Instance.HoTen.Click += HoTen_Clicked;
             CustomizeMenuStrip.Instance.HoTen.MouseLeave += HoTen_MouseLeave;
-            capNhatHTTT.Click += CapNhatHTTT_Clicked;
-            capNhatCongNo.Click += CapNhatCongNo_Clicked;
+            //capNhatHTTT.Click += CapNhatHTTT_Clicked;
+            //capNhatCongNo.Click += CapNhatCongNo_Clicked;
             RoleDAO.CapNhatDiemClicked += CapNhatDiem_Clicked;
             RoleDAO.Instance.DKLop.Click += DkyLop_Clicked;
             RoleDAO.TCuuTKBClicked += TCuuTK_Clicked;
             RoleDAO.TCuuKQHTClicked += TCuuKQHT_Clicked;
-            RoleDAO.CapNhatTTHBClicked += CapNhatTTHB_Clicked;
+            RoleDAO.QuanLyTTHBClicked += QuanLyTTHB_Clicked;
             RoleDAO.PheDuyetYCHBClicked += PheDuyetYCHB_Clicked;
             RoleDAO.Instance.DKHB.Click += DKHocBongB_Clicked;
-            RoleDAO.CapNhatHTTTClicked += CapNhatHTTT_Clicked;
+            RoleDAO.QuanLyHTTTClicked += QuanLyHTTT_Clicked;
             RoleDAO.CapNhatCongNoClicked += CapNhatCongNo_Clicked;
             RoleDAO.TTinDuNoClicked += TTinDuNo_Clicked;
             RoleDAO.Instance.TKeNoHPhi.Click += NoDongHocPhi_Clicked;
@@ -58,9 +59,9 @@ namespace QLSV_OOP
             RoleDAO.Instance.TKeHocPhi.Click += HocPhi_Clicked;
             RoleDAO.Instance.TKeHTTT.Click += HTThanhToan_Clicked;
             RoleDAO.Instance.TKeLopHoc.Click += LopHoc_Clicked;
-            panel1.Controls.Add(capNhatHTTT);
+            panel1.Controls.Add(quanLyHTTT);
             panel1.Controls.Add(capNhatCongNo);
-            capNhatHTTT.Location = new System.Drawing.Point(0, 0);
+            quanLyHTTT.Location = new System.Drawing.Point(0, 0);
             capNhatCongNo.Location = new System.Drawing.Point(0, 0);
             foreach (Control control in panel1.Controls)
             {
@@ -107,7 +108,7 @@ namespace QLSV_OOP
             // Xử lý logic khi sự kiện TCuuKQHTClicked xảy ra
         }
 
-        private void CapNhatTTHB_Clicked(object sender, EventArgs e)
+        private void QuanLyTTHB_Clicked(object sender, EventArgs e)
         {
             // Xử lý logic khi sự kiện CapNhatTTHBClicked xảy ra
         }
@@ -122,13 +123,13 @@ namespace QLSV_OOP
             // Xử lý logic khi sự kiện DKHocBongBClicked xảy ra
         }
 
-        private void CapNhatHTTT_Clicked(object sender, EventArgs e)
+        private void QuanLyHTTT_Clicked(object sender, EventArgs e)
         {
             foreach (Control control in panel1.Controls)
             {
                 control.Visible = false;
             }
-            capNhatHTTT.Visible = true;
+            quanLyHTTT.Visible = true;
         }
 
         private void CapNhatCongNo_Clicked(object sender, EventArgs e)

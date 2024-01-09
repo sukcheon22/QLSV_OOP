@@ -79,6 +79,12 @@
     <Compile Include="AccountManagement.Designer.cs">
       <DependentUpon>AccountManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminManagement.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminManagement.Designer.cs">
+      <DependentUpon>AdminManagement.cs</DependentUpon>
+    </Compile>
     <Compile Include="CapNhatCongNo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -91,18 +97,19 @@
     <Compile Include="CapNhatDiem.Designer.cs">
       <DependentUpon>CapNhatDiem.cs</DependentUpon>
     </Compile>
-    <Compile Include="CapNhatHTTT.cs">
+    <Compile Include="QuanLyHTTT.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="CapNhatHTTT.Designer.cs">
-      <DependentUpon>CapNhatHTTT.cs</DependentUpon>
+      <DependentUpon>QuanLyHTTT.cs</DependentUpon>
     </Compile>
-    <Compile Include="CNTThocbong.cs">
+    <Compile Include="QuanLyTTHocBong.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="CNTThocbong.Designer.cs">
-      <DependentUpon>CNTThocbong.cs</DependentUpon>
+      <DependentUpon>QuanLyTTHocBong.cs</DependentUpon>
     </Compile>
+    <Compile Include="DAO\AdminDAO.cs" />
     <Compile Include="DAO\Dang_kyDAO.cs" />
     <Compile Include="DAO\FunctionMenuStrip.cs" />
     <Compile Include="DAO\HBDAO.cs" />
@@ -307,6 +314,9 @@
     <EmbeddedResource Include="AccountManagement.resx">
       <DependentUpon>AccountManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminManagement.resx">
+      <DependentUpon>AdminManagement.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CapNhatCongNo.resx">
       <DependentUpon>CapNhatCongNo.cs</DependentUpon>
     </EmbeddedResource>
@@ -314,11 +324,8 @@
       <DependentUpon>CapNhatDiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CapNhatHTTT.resx">
-      <DependentUpon>CapNhatHTTT.cs</DependentUpon>
+      <DependentUpon>QuanLyHTTT.cs</DependentUpon>
       <SubType>Designer</SubType>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CNTThocbong.resx">
-      <DependentUpon>CNTThocbong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeManagement.resx">
       <DependentUpon>EmployeeManagement.cs</DependentUpon>
@@ -405,6 +412,9 @@
     <EmbeddedResource Include="QlyHPhan.resx">
       <DependentUpon>QlyHPhan.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="QuanLyTTHocBong.resx">
+      <DependentUpon>QuanLyTTHocBong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="StudentManagement.resx">
       <DependentUpon>StudentManagement.cs</DependentUpon>

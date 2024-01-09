@@ -22,6 +22,7 @@ namespace QLSV_OOP
             accountManagement1.Visible = false;
             studentManagement1.Visible = false;
             employeeManagement1.Visible = false;
+            adminManagement1.Visible = false;
         }
 
 
@@ -67,6 +68,8 @@ namespace QLSV_OOP
             studentManagement1.ResetState();
             employeeManagement1.Visible = false;
             employeeManagement1.ResetState();
+            adminManagement1.Visible = false;
+            adminManagement1.ResetText();
         }
 
         private void studentToolStripMenuItem_Click(object sender, EventArgs e)
@@ -77,6 +80,8 @@ namespace QLSV_OOP
             accountManagement1.ResetState();
             employeeManagement1.Visible=false;
             employeeManagement1.ResetState();
+            adminManagement1.Visible = false;
+            adminManagement1.ResetText();
         }
 
         private void employeeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -87,6 +92,8 @@ namespace QLSV_OOP
             accountManagement1.ResetState();
             studentManagement1.Visible=false;
             studentManagement1.ResetState();
+            adminManagement1.Visible = false;
+            adminManagement1.ResetText();
         }
         private void employeeToolStripMenuItem1_Click(object sender, EventArgs e)
         {
@@ -132,6 +139,18 @@ namespace QLSV_OOP
         private void analyzeToolStripMenuItem_MouseLeave(object sender, EventArgs e)
         {
             analyzeToolStripMenuItem.ForeColor = Color.Lavender;
+        }
+
+        private void adminToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            employeeManagement1.ResetState();
+            employeeManagement1.Visible = false;
+            accountManagement1.Visible = false;
+            accountManagement1.ResetState();
+            studentManagement1.Visible = false;
+            studentManagement1.ResetState();
+            adminManagement1.Visible = true;
+            adminManagement1.ResetText();
         }
     }
 

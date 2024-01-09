@@ -42,6 +42,8 @@
             this.employeeToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.studentToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.adminToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.adminManagement1 = new QLSV_OOP.AdminManagement();
             this.employeeManagement1 = new QLSV_OOP.EmployeeManagement();
             this.accountManagement1 = new QLSV_OOP.AccountManagement();
             this.studentManagement1 = new QLSV_OOP.StudentManagement();
@@ -98,7 +100,8 @@
             this.accountToolStripMenuItem,
             this.employeeToolStripMenuItem,
             this.studentToolStripMenuItem,
-            this.authorizeToolStripMenuItem});
+            this.authorizeToolStripMenuItem,
+            this.adminToolStripMenuItem});
             this.manageToolStripMenuItem.ForeColor = System.Drawing.Color.Lavender;
             this.manageToolStripMenuItem.Name = "manageToolStripMenuItem";
             this.manageToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
@@ -178,6 +181,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.AliceBlue;
+            this.panel1.Controls.Add(this.adminManagement1);
             this.panel1.Controls.Add(this.employeeManagement1);
             this.panel1.Controls.Add(this.accountManagement1);
             this.panel1.Controls.Add(this.studentManagement1);
@@ -186,6 +190,21 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1071, 609);
             this.panel1.TabIndex = 1;
+            // 
+            // adminToolStripMenuItem
+            // 
+            this.adminToolStripMenuItem.ForeColor = System.Drawing.Color.Navy;
+            this.adminToolStripMenuItem.Name = "adminToolStripMenuItem";
+            this.adminToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.adminToolStripMenuItem.Text = "Admin";
+            this.adminToolStripMenuItem.Click += new System.EventHandler(this.adminToolStripMenuItem_Click);
+            // 
+            // adminManagement1
+            // 
+            this.adminManagement1.Location = new System.Drawing.Point(0, 0);
+            this.adminManagement1.Name = "adminManagement1";
+            this.adminManagement1.Size = new System.Drawing.Size(670, 597);
+            this.adminManagement1.TabIndex = 3;
             // 
             // employeeManagement1
             // 
@@ -253,5 +272,7 @@
         private StudentManagement studentManagement1;
         private AccountManagement accountManagement1;
         private EmployeeManagement employeeManagement1;
+        private System.Windows.Forms.ToolStripMenuItem adminToolStripMenuItem;
+        private AdminManagement adminManagement1;
     }
 }

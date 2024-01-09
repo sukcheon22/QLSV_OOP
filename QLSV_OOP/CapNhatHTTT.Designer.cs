@@ -1,6 +1,6 @@
 ﻿namespace QLSV_OOP
 {
-    partial class CapNhatHTTT
+    partial class QuanLyHTTT
     {
         /// <summary> 
         /// Required designer variable.
@@ -180,7 +180,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(392, 25);
             this.label5.TabIndex = 28;
-            this.label5.Text = "CẬP NHẬT HÌNH THỨC THANH TOÁN";
+            this.label5.Text = "QUẢN LÝ HÌNH THỨC THANH TOÁN";
             // 
             // CapNhatHTTT
             // 
@@ -194,9 +194,9 @@
             this.Controls.Add(this.buttonThem);
             this.Controls.Add(this.TTdataGridView);
             this.Controls.Add(this.groupBox1);
-            this.Name = "CapNhatHTTT";
+            this.Name = "QuanLyHTTT";
             this.Size = new System.Drawing.Size(1065, 571);
-            this.Load += new System.EventHandler(this.CapNhatHTTT_Load);
+            this.Load += new System.EventHandler(this.QuanLyHTTT_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TTdataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

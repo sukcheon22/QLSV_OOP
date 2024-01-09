@@ -45,11 +45,13 @@ namespace QLSV_OOP
                     {"CapNhatDiem", "Cập nhật điểm"},
                     {"DangKyLop", "Đăng ký lớp"},
                     {"TraCuuTKB", "Tra cứu TKB"},
-                    {"TraKQHT", "Tra cứu KQHT"},
-                    {"CapNhatHB", "Cập nhật thông tin học bổng"},
+                    {"TraKQHT", "Tra cứu KQHT"}, 
                     {"PheDuyetHB", "Phê duyệt yêu cầu học bổng"},
                     {"DangKyHB", "Đăng ký học bổng"},
-                    {"CapNhatTTTT", "Cập nhật HTTT"},
+                    {"QlyHTTT", "Quản lý HTTT"}, //-->đổi tên Capnhathttt sang
+                    {"QlyLop", "Quản lý lớp" },
+                    {"QlyHP", "Quản lý học phần"},
+                    {"QlyTTHB", "Quản lý thông tin học bổng"}, //-->đổi tên từ capnhathb
                     {"CapNhatCongNo", "Cập nhật công nợ"},
                     {"KtraDuNo", "Kiểm tra dư nợ"},
                     {"TkeHocPhi", "Học phí"},
@@ -72,19 +74,25 @@ namespace QLSV_OOP
                                 {
                                     itemsToDisplay.Add("Đào Tạo");
                                     itemsToDisplay.Add(columnNamesMap[columnName]);
-                                }    
-                                else if (columnNamesMap[columnName] == "Cập nhật thông tin học bổng" || 
+                                }
+                                else if (
                                     columnNamesMap[columnName] == "Phê duyệt yêu cầu học bổng" || columnNamesMap[columnName] == "Đăng ký học bổng")
                                 {
                                     itemsToDisplay.Add("Học Bổng");
                                     itemsToDisplay.Add(columnNamesMap[columnName]);
-                                }    
-                                else if(columnNamesMap[columnName] == "Cập nhật HTTT" || columnNamesMap[columnName] == "Cập nhật công nợ" || 
+                                }
+                                else if (columnNamesMap[columnName] == "Cập nhật công nợ" ||
                                     columnNamesMap[columnName] == "Kiểm tra dư nợ")
                                 {
                                     itemsToDisplay.Add("Tài Vụ");
                                     itemsToDisplay.Add(columnNamesMap[columnName]);
                                 }
+                                else if(columnNamesMap[columnName] == "Quản lý lớp" || columnNamesMap[columnName] == "Quản lý học phần" ||
+                                    columnNamesMap[columnName] == "Quản lý HTTT" || columnNamesMap[columnName] == "Quản lý thông tin học bổng")
+                                {
+                                    itemsToDisplay.Add("Quản lý");
+                                    itemsToDisplay.Add(columnNamesMap[columnName]);
+                                }    
                                 else
                                 {
                                     itemsToDisplay.Add("Thống Kê");

@@ -17,12 +17,12 @@ namespace QLSV_OOP
     public partial class frmDaoTao : Form
     {
         Account account;
-        QLLop qllop = new QLLop();
-        QlyHPhan qlHP = new QlyHPhan();
+        QLLop qLyLop = new QLLop();
+        QlyHPhan qLyHP = new QlyHPhan();
         PheDuyetHB pheDuyetHB = new PheDuyetHB();
         CapNhatDiem capNhatDiem = new CapNhatDiem();
-        CNTThocbong CNTThocbong = new CNTThocbong();
-        
+        QuanLyTTHocBong quanLyTTHocBong = new QuanLyTTHocBong();
+        QuanLyHTTT quanLyHTTT = new QuanLyHTTT();
         public frmDaoTao(Account acc)
         {
             InitializeComponent();
@@ -30,16 +30,16 @@ namespace QLSV_OOP
             ToolStripMenuItem hocbong = RoleDAO.CreateHB();
             ToolStripMenuItem taivu = RoleDAO.CreateTaiVu();
             ToolStripMenuItem thongke = RoleDAO.CreateThongKe();
-            
-            menuStrip1.Items.AddRange(new ToolStripItem[] { daotao, hocbong, taivu, thongke });
+            ToolStripMenuItem quanly = RoleDAO.CreateQuanLy();
+            menuStrip1.Items.AddRange(new ToolStripItem[] { daotao, hocbong, taivu, quanly, thongke });
             string roleid = acc.RoleID;
             List<string> itemsSelected = CustomizeMenuStrip.Instance.RetrieveRole(roleid);
             CustomizeMenuStrip.Instance.Customize(menuStrip1, itemsSelected);
-            ToolStripMenuItem qly = new ToolStripMenuItem("Quản lý");
-            ToolStripMenuItem qlyLop = new ToolStripMenuItem("Quản lý lớp");
-            ToolStripMenuItem qlyHP = new ToolStripMenuItem("Quản lý học phần");
-            qly.DropDownItems.AddRange(new ToolStripItem[] { qlyLop, qlyHP });
-            menuStrip1.Items.Add(qly);
+            //ToolStripMenuItem qly = new ToolStripMenuItem("Quản lý");
+            //ToolStripMenuItem qlyLop = new ToolStripMenuItem("Quản lý lớp");
+            //ToolStripMenuItem qlyHP = new ToolStripMenuItem("Quản lý học phần");
+           // qly.DropDownItems.AddRange(new ToolStripItem[] { qlyLop, qlyHP });
+            //menuStrip1.Items.Add(qly);
             menuStrip1.ForeColor = Color.Lavender;
             string userid = acc.UserID;
             Nhan_vien nhanVien = Nhan_vienDAO.Instance.GetNhanVienbyUserID(userid);
@@ -51,8 +51,8 @@ namespace QLSV_OOP
             CustomizeMenuStrip.Instance.HoTen.ForeColor = Color.Yellow;
             CustomizeMenuStrip.Instance.HoTen.Click += HoTen_Clicked;
             CustomizeMenuStrip.Instance.HoTen.MouseLeave += HoTen_MouseLeave;
-            qlyLop.Click += QuanLyLop_Clicked;
-            qlyHP.Click += QuanLyHP_Clicked;
+            //qlyLop.Click += QuanLyLop_Clicked;
+            //qlyHP.Click += QuanLyHP_Clicked;
 
             //RoleDAO.TkeDiemClicked += TkeDiem_Clicked;
             RoleDAO.Instance.TKeNoHPhi.Click += NoDongHocPhi_Clicked;
@@ -65,22 +65,24 @@ namespace QLSV_OOP
             RoleDAO.Instance.DKHB.Click += DKHocBongB_Clicked;
             RoleDAO.TCuuTKBClicked += TCuuTK_Clicked;
             RoleDAO.TCuuKQHTClicked += TCuuKQHT_Clicked;
-            RoleDAO.CapNhatTTHBClicked += CapNhatTTHB_Clicked;
+            RoleDAO.QuanLyTTHBClicked += QuanLyTTHB_Clicked;
             RoleDAO.PheDuyetYCHBClicked += PheDuyetYCHB_Clicked;
             RoleDAO.Instance.DKLop.Click += DkyLop_Clicked;
-            RoleDAO.CapNhatHTTTClicked += CapNhatHTTT_Clicked;
+            RoleDAO.QuanLyHTTTClicked += QuanLyHTTT_Clicked;
             RoleDAO.CapNhatCongNoClicked += CapNhatCongNo_Clicked;
             RoleDAO.TTinDuNoClicked += TTinDuNo_Clicked;
-            panel1.Controls.Add(qllop);
-            panel1.Controls.Add(qlHP);
+            RoleDAO.QuanLyLopClicked += QuanLyLop_Clicked;
+            RoleDAO.QuanLyHPClicked += QuanLyHP_Clicked;
+            panel1.Controls.Add(qLyLop);
+            panel1.Controls.Add(qLyHP);
             panel1.Controls.Add(pheDuyetHB);
             panel1.Controls.Add(capNhatDiem);
-            panel1.Controls.Add(CNTThocbong);
-            qllop.Location = new System.Drawing.Point(0, 0);
-            qlHP.Location = new System.Drawing.Point(0, 0);
+            panel1.Controls.Add(quanLyTTHocBong);
+            qLyLop.Location = new System.Drawing.Point(0, 0);
+            qLyHP.Location = new System.Drawing.Point(0, 0);
             pheDuyetHB.Location = new System.Drawing.Point(0, 0);
             capNhatDiem.Location = new System.Drawing.Point(0, 0);
-            CNTThocbong.Location = new System.Drawing.Point(0, 0);
+            quanLyTTHocBong.Location = new System.Drawing.Point(0, 0);
             foreach (Control control in panel1.Controls)
             {
                 control.Visible = false;
@@ -104,8 +106,8 @@ namespace QLSV_OOP
                 control.Visible = false;
                 
             }
-            qllop.Visible = true;
-            qllop.ResetState();
+            qLyLop.Visible = true;
+            qLyLop.ResetState();
         }
         private void QuanLyHP_Clicked(object sender, EventArgs e)
         {
@@ -113,7 +115,7 @@ namespace QLSV_OOP
             {
                 control.Visible = false;
             }
-            qlHP.Visible = true;
+            qLyHP.Visible = true;
             //qlHP.ResetState();
         }
         private void TTinDuNo_Clicked(object sender, EventArgs e)
@@ -145,14 +147,14 @@ namespace QLSV_OOP
             // Xử lý logic khi sự kiện TCuuKQHTClicked xảy ra
         }
 
-        private void CapNhatTTHB_Clicked(object sender, EventArgs e)
+        private void QuanLyTTHB_Clicked(object sender, EventArgs e)
         {
             foreach (Control control in panel1.Controls)
             {
                 control.Visible = false;
             }
-            CNTThocbong.Visible = true;
-            CNTThocbong.ResetState();
+            quanLyTTHocBong.Visible = true;
+            quanLyTTHocBong.ResetState();
         }
 
         private void PheDuyetYCHB_Clicked(object sender, EventArgs e)
@@ -173,7 +175,7 @@ namespace QLSV_OOP
             // Xử lý logic khi sự kiện DKHocBongBClicked xảy ra
         }
 
-        private void CapNhatHTTT_Clicked(object sender, EventArgs e)
+        private void QuanLyHTTT_Clicked(object sender, EventArgs e)
         {
             // Xử lý logic khi sự kiện CapNhatHTTTClicked xảy ra
         }

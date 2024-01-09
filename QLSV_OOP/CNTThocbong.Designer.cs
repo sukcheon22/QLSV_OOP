@@ -1,6 +1,6 @@
 ﻿namespace QLSV_OOP
 {
-    partial class CNTThocbong
+    partial class QuanLyTTHocBong
     {
         /// <summary> 
         /// Required designer variable.
@@ -217,13 +217,13 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(337, 24);
+            this.label5.Location = new System.Drawing.Point(338, 25);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(368, 25);
+            this.label5.Size = new System.Drawing.Size(352, 25);
             this.label5.TabIndex = 7;
-            this.label5.Text = "CẬP NHẬT THÔNG TIN HỌC BỔNG";
+            this.label5.Text = "QUẢN LÝ THÔNG TIN HỌC BỔNG";
             // 
-            // CNTThocbong
+            // QuanLyTTHocBong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -236,9 +236,9 @@
             this.Controls.Add(this.infoHBDataGridView);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "CNTThocbong";
+            this.Name = "QuanLyTTHocBong";
             this.Size = new System.Drawing.Size(1061, 579);
-            this.Load += new System.EventHandler(this.CNTThocbong_Load);
+            this.Load += new System.EventHandler(this.QuanLyTTHocBong_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.infoHBDataGridView)).EndInit();

@@ -29,13 +29,16 @@ namespace QLSV_OOP
         //public static event EventHandler DkyLopClicked;
         public static event EventHandler TCuuTKBClicked;
         public static event EventHandler TCuuKQHTClicked;
-        public static event EventHandler CapNhatTTHBClicked;
+        //public static event EventHandler CapNhatTTHBClicked;
         public static event EventHandler PheDuyetYCHBClicked;
         //public static event EventHandler DKHocBongClicked;
-        public static event EventHandler CapNhatHTTTClicked;
+       // public static event EventHandler CapNhatHTTTClicked;
         public static event EventHandler CapNhatCongNoClicked;
         //public static event EventHandler KTraDuNoClicked;
-        
+        public static event EventHandler QuanLyHTTTClicked;
+        public static event EventHandler QuanLyLopClicked;
+        public static event EventHandler QuanLyHPClicked;
+        public static event EventHandler QuanLyTTHBClicked;
 
 
         //public static event EventHandler TkeHocBongClicked;
@@ -70,16 +73,12 @@ namespace QLSV_OOP
         {
             ToolStripMenuItem hb = new ToolStripMenuItem("Học Bổng");
 
-            ToolStripMenuItem CapNhatHB = new ToolStripMenuItem("Cập nhật thông tin học bổng");
-            CapNhatHB.Click += CapNhatTTHB_Clicked;
-
             ToolStripMenuItem PheDuyetHB = new ToolStripMenuItem("Phê duyệt yêu cầu học bổng");
             PheDuyetHB.Click += PheDuyetYCHB_Clicked;
 
             ToolStripMenuItem DangKyHB = new ToolStripMenuItem("Đăng ký học bổng");
             RoleDAO.Instance.DKHB = DangKyHB;
 
-            hb.DropDownItems.Add(CapNhatHB);
             hb.DropDownItems.Add(PheDuyetHB);
             hb.DropDownItems.Add(DangKyHB);
 
@@ -90,21 +89,42 @@ namespace QLSV_OOP
         {
             ToolStripMenuItem taivu = new ToolStripMenuItem("Tài Vụ");
 
-            ToolStripMenuItem CapNhatTTTT = new ToolStripMenuItem("Cập nhật HTTT");
-            CapNhatTTTT.Click += CapNhatHTTT_Clicked;
-
             ToolStripMenuItem CapNhatCongNo = new ToolStripMenuItem("Cập nhật công nợ");
             CapNhatCongNo.Click += CapNhatCongNo_Clicked;
 
             ToolStripMenuItem KtraDuNo = new ToolStripMenuItem("Kiểm tra dư nợ");
             
-
-            taivu.DropDownItems.Add(CapNhatTTTT);
             taivu.DropDownItems.Add(CapNhatCongNo);
             taivu.DropDownItems.Add(KtraDuNo);
             KtraDuNo.Click += TTinDuNo_Clicked;
             return taivu;
         }
+
+        public static ToolStripMenuItem CreateQuanLy()
+        {
+            ToolStripMenuItem quanly = new ToolStripMenuItem("Quản lý");
+
+            ToolStripMenuItem QlyHTTT = new ToolStripMenuItem("Quản lý HTTT");
+            QlyHTTT.Click += QlyHTTT_Click;
+
+            ToolStripMenuItem QlyLop = new ToolStripMenuItem("Quản lý lớp");
+            QlyLop.Click += QlyLop_Click;
+
+            ToolStripMenuItem QlyHP = new ToolStripMenuItem("Quản lý học phần");
+            QlyHP.Click += QlyHP_Click;
+
+            ToolStripMenuItem QlyTTHB = new ToolStripMenuItem("Quản lý thông tin học bổng");
+            QlyTTHB.Click += QlyTTHB_Click;
+
+            quanly.DropDownItems.Add(QlyHP);
+            quanly.DropDownItems.Add(QlyTTHB);
+            quanly.DropDownItems.Add(QlyLop);
+            quanly.DropDownItems.Add(QlyHTTT);
+
+            return quanly;
+        }
+
+        
 
         public ToolStripMenuItem TKeDiem;
         public ToolStripMenuItem TKeHocPhi;
@@ -172,22 +192,11 @@ namespace QLSV_OOP
             TCuuKQHTClicked?.Invoke(sender, e);
         }
 
-        private static void CapNhatTTHB_Clicked(object sender, EventArgs e)
-        {
-            CapNhatTTHBClicked?.Invoke(sender, e);
-        }
-
         private static void PheDuyetYCHB_Clicked(object sender, EventArgs e)
         {
             PheDuyetYCHBClicked?.Invoke(sender, e);
         }
 
-        
-
-        private static void CapNhatHTTT_Clicked(object sender, EventArgs e)
-        {
-            CapNhatHTTTClicked?.Invoke(sender, e);
-        }
 
         private static void CapNhatCongNo_Clicked(object sender, EventArgs e)
         {
@@ -200,8 +209,26 @@ namespace QLSV_OOP
            TTinDuNoClicked?.Invoke(sender, e);
         }
 
+        private static void QlyTTHB_Click(object sender, EventArgs e)
+        {
+            QuanLyTTHBClicked?.Invoke(sender, e);
+        }
 
-        
+        private static void QlyHP_Click(object sender, EventArgs e)
+        {
+            QuanLyHPClicked?.Invoke(sender, e);
+        }
+
+        private static void QlyLop_Click(object sender, EventArgs e)
+        {
+            QuanLyLopClicked?.Invoke(sender, e);
+        }
+
+        private static void QlyHTTT_Click(object sender, EventArgs e)
+        {
+            QuanLyHTTTClicked?.Invoke(sender, e);
+        }
+
 
 
     }

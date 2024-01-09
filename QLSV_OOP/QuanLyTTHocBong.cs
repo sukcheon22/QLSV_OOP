@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace QLSV_OOP
 {
-    public partial class CNTThocbong : UserControl
+    public partial class QuanLyTTHocBong : UserControl
     {
-        public CNTThocbong()
+        public QuanLyTTHocBong()
         {
             InitializeComponent();
         }
@@ -34,7 +34,7 @@ namespace QLSV_OOP
             infoHBDataGridView.DataSource = HBDAO.Instance.HBGridView();
             txtMaHB.Enabled = true;
         }
-        private void CNTThocbong_Load(object sender, EventArgs e)
+        private void QuanLyTTHocBong_Load(object sender, EventArgs e)
         {
             InitializeDataGridView();
             infoHBDataGridView.SelectionChanged += DataGridView_SelectionChanged;
