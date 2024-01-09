@@ -32,6 +32,7 @@ namespace QLSV_OOP
         private void InitializeDataGridView()
         {
             infoHBDataGridView.DataSource = HBDAO.Instance.HBGridView();
+            txtMaHB.Enabled = true;
         }
         private void CNTThocbong_Load(object sender, EventArgs e)
         {
@@ -57,6 +58,7 @@ namespace QLSV_OOP
             txtMaHB.Text = maHB;
             txtTenHB.Text = tenHB;
             cmbLoaiHB.Text = loai;
+            txtMaHB.Enabled = false;
         }
         
 
