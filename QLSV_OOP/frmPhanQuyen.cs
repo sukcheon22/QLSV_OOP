@@ -149,7 +149,7 @@ namespace QLSV_OOP
                         UpdateDatabase(selectedRow.Cells["MaQuyen"].Value.ToString(), databaseColumnName, isChecked);
                     }
                 }
-
+                
                 // Sau khi cập nhật, làm mới lại DataGridView để hiển thị dữ liệu mới
                 InitializeDataGridView();
                 // Chọn lại hàng đã chọn trước đó
