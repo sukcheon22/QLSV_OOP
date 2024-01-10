@@ -24,7 +24,7 @@ namespace QLSV_OOP
         private SqlConnection con = new SqlConnection(ConnectionString.connectionString);
         public void ResetState()
         {
-            txtID.Text = "";
+            txtID.Text = ""; 
             txtTen.Text = "";
             txtIDStu.Text = "";
             txtSDT.Text = "";
