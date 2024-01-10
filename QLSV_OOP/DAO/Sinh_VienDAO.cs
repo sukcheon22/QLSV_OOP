@@ -192,7 +192,7 @@ namespace QLSV_OOP.DAO
         {
             try
             {
-                if (Sinh_VienDAO.Instance.KiemTraTrung(maSV, maDD))
+                if (KiemTraTrung(maSV, maDD))
                 {
                     using (SqlCommand cmd = new SqlCommand("UPDATE Sinh__vien SET MaSV = @MaSV, TenSV = @TenSV, Khoa = @Khoa, Que = @Que, SDT = @SDT, NgaySinh = @NgaySinh WHERE MaDD = @MaDD", con))
                     {
@@ -219,7 +219,7 @@ namespace QLSV_OOP.DAO
                 }
                 else
                 {
-                    MessageBox.Show("Mã sinh viên đã tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Mã sinh viên hoặc Mã Định danh đã tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (SqlException ex)

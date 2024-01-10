@@ -63,7 +63,7 @@
             this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Location = new System.Drawing.Point(2, 41);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(779, 427);
             this.panel1.TabIndex = 1;
@@ -73,7 +73,7 @@
             this.infoStuDataGridView.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.infoStuDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.infoStuDataGridView.Location = new System.Drawing.Point(11, 196);
-            this.infoStuDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.infoStuDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.infoStuDataGridView.Name = "infoStuDataGridView";
             this.infoStuDataGridView.RowHeadersWidth = 51;
             this.infoStuDataGridView.RowTemplate.Height = 24;
@@ -89,9 +89,9 @@
             this.groupBox3.Controls.Add(this.btnSua);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(11, 123);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(766, 61);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
@@ -102,7 +102,7 @@
             this.quaylai.BackColor = System.Drawing.Color.MediumBlue;
             this.quaylai.ForeColor = System.Drawing.Color.Lavender;
             this.quaylai.Location = new System.Drawing.Point(597, 15);
-            this.quaylai.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.quaylai.Margin = new System.Windows.Forms.Padding(2);
             this.quaylai.Name = "quaylai";
             this.quaylai.Size = new System.Drawing.Size(74, 37);
             this.quaylai.TabIndex = 4;
@@ -115,7 +115,7 @@
             this.btnXoa.BackColor = System.Drawing.Color.MediumBlue;
             this.btnXoa.ForeColor = System.Drawing.Color.Lavender;
             this.btnXoa.Location = new System.Drawing.Point(419, 15);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(74, 37);
             this.btnXoa.TabIndex = 3;
@@ -128,7 +128,7 @@
             this.btnTimKiem.BackColor = System.Drawing.Color.MediumBlue;
             this.btnTimKiem.ForeColor = System.Drawing.Color.Lavender;
             this.btnTimKiem.Location = new System.Drawing.Point(92, 15);
-            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(74, 37);
             this.btnTimKiem.TabIndex = 2;
@@ -141,7 +141,7 @@
             this.btnSua.BackColor = System.Drawing.Color.MediumBlue;
             this.btnSua.ForeColor = System.Drawing.Color.Lavender;
             this.btnSua.Location = new System.Drawing.Point(248, 15);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(74, 37);
             this.btnSua.TabIndex = 1;
@@ -167,9 +167,9 @@
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(11, 2);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox2.Size = new System.Drawing.Size(766, 115);
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
@@ -179,7 +179,7 @@
             // 
             this.txtSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSDT.Location = new System.Drawing.Point(658, 30);
-            this.txtSDT.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSDT.Margin = new System.Windows.Forms.Padding(2);
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(104, 19);
             this.txtSDT.TabIndex = 13;
@@ -267,7 +267,7 @@
             "Vinh Phuc",
             "Yen Bai"});
             this.cmbQue.Location = new System.Drawing.Point(458, 68);
-            this.cmbQue.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbQue.Margin = new System.Windows.Forms.Padding(2);
             this.cmbQue.Name = "cmbQue";
             this.cmbQue.Size = new System.Drawing.Size(104, 21);
             this.cmbQue.TabIndex = 11;
@@ -278,7 +278,7 @@
             this.birthDateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.birthDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.birthDateTimePicker.Location = new System.Drawing.Point(458, 30);
-            this.birthDateTimePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.birthDateTimePicker.Margin = new System.Windows.Forms.Padding(2);
             this.birthDateTimePicker.Name = "birthDateTimePicker";
             this.birthDateTimePicker.Size = new System.Drawing.Size(104, 19);
             this.birthDateTimePicker.TabIndex = 10;
@@ -312,7 +312,7 @@
             // 
             this.txtIDStu.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtIDStu.Location = new System.Drawing.Point(100, 68);
-            this.txtIDStu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIDStu.Margin = new System.Windows.Forms.Padding(2);
             this.txtIDStu.Name = "txtIDStu";
             this.txtIDStu.Size = new System.Drawing.Size(104, 19);
             this.txtIDStu.TabIndex = 7;
@@ -321,7 +321,7 @@
             // 
             this.txtID.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtID.Location = new System.Drawing.Point(100, 30);
-            this.txtID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtID.Margin = new System.Windows.Forms.Padding(2);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(104, 19);
             this.txtID.TabIndex = 6;
@@ -330,7 +330,7 @@
             // 
             this.txtTen.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTen.Location = new System.Drawing.Point(277, 30);
-            this.txtTen.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTen.Margin = new System.Windows.Forms.Padding(2);
             this.txtTen.Name = "txtTen";
             this.txtTen.Size = new System.Drawing.Size(104, 19);
             this.txtTen.TabIndex = 5;
@@ -347,7 +347,7 @@
             "67",
             "68"});
             this.cmbKhoa.Location = new System.Drawing.Point(277, 68);
-            this.cmbKhoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbKhoa.Margin = new System.Windows.Forms.Padding(2);
             this.cmbKhoa.Name = "cmbKhoa";
             this.cmbKhoa.Size = new System.Drawing.Size(104, 21);
             this.cmbKhoa.TabIndex = 4;
@@ -417,7 +417,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.label5);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "StudentManagement";
             this.Size = new System.Drawing.Size(796, 470);
             this.Load += new System.EventHandler(this.StudentManagement_Load);

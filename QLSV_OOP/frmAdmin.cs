@@ -149,8 +149,9 @@ namespace QLSV_OOP
             accountManagement1.ResetState();
             studentManagement1.Visible = false;
             studentManagement1.ResetState();
+            adminManagement1.ResetState();
             adminManagement1.Visible = true;
-            adminManagement1.ResetText();
+            
         }
     }
 

@@ -186,7 +186,7 @@ namespace QLSV_OOP.DAO
                 }
                 else
                 {
-                    MessageBox.Show("Mã nhân viên đã tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Mã nhân viên hoặc Mã Định danh đã tồn tại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
 

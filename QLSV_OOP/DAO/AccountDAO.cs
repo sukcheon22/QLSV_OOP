@@ -225,6 +225,7 @@ namespace QLSV_OOP.DAO
 
 
                 }
+                
                 if (role == "QSV")
                 {
                     Sinh_VienDAO.Instance.ThemSinhVienMoi(userId);
@@ -237,6 +238,11 @@ namespace QLSV_OOP.DAO
                 {
                     Nhan_vienDAO.Instance.ThemNhanVienTaiVuMoi(userId);
                 }
+                else if (role == "QAD")
+                {
+                    AdminDAO.Instance.ThemAdminMoi(userId);
+                }
+
 
                 MessageBox.Show("Đã thêm tài khoản mới thành công!");
             }
