@@ -104,10 +104,10 @@
             "Đăng ký lớp",
             "Tra cứu TKB",
             "Tra cứu KQHT",
-            "Cập nhật thông tin học bổng",
+            "Quản lý thông tin học bổng",
             "Phê duyệt yêu cầu học bổng",
             "Đăng ký học bổng",
-            "Cập nhật HTTT",
+            "Quản lý HTTT",
             "Cập nhật công nợ",
             "Kiểm tra dư nợ",
             "Thống kê học phí",
@@ -115,7 +115,9 @@
             "Thống kê điểm",
             "Thống kê học bổng",
             "Thống kê lớp học",
-            "Thống kê hình thức thanh toán"});
+            "Thống kê hình thức thanh toán",
+            "Quản lý lớp",
+            "Quản lý học phần"});
             this.checkedListBoxQuyen.Location = new System.Drawing.Point(15, 158);
             this.checkedListBoxQuyen.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.checkedListBoxQuyen.Name = "checkedListBoxQuyen";

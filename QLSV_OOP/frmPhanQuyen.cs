@@ -57,8 +57,8 @@ namespace QLSV_OOP
 
                 // Đặt giá trị cho CheckedListBox dựa trên tên cột
                 foreach (string quyenColumnName in new[] { "Cập nhật điểm", "Đăng ký lớp", "Tra cứu TKB", "Tra cứu KQHT",
-                                    "Cập nhật thông tin học bổng", "Phê duyệt yêu cầu học bổng", "Đăng ký học bổng", "Cập nhật HTTT",
-                                    "Cập nhật công nợ", "Kiểm tra dư nợ", "Thống kê học phí", "Thống kê nợ đọng học phí", "Thống kê điểm", "Thống kê học bổng", "Thống kê lớp học", "Thống kê hình thức thanh toán" })
+                                    "Quản lý thông tin học bổng", "Phê duyệt yêu cầu học bổng", "Đăng ký học bổng", "Quản lý HTTT",
+                                    "Cập nhật công nợ", "Kiểm tra dư nợ", "Thống kê học phí", "Thống kê nợ đọng học phí", "Thống kê điểm", "Thống kê học bổng", "Thống kê lớp học", "Thống kê hình thức thanh toán", "Quản lý lớp", "Quản lý học phần" })
                 {
                     // Ánh xạ tên cột trong checkedListBoxQuyen sang tên cột trong cơ sở dữ liệu
                     string databaseColumnName = MapColumnName(quyenColumnName);
@@ -92,14 +92,14 @@ namespace QLSV_OOP
                     return "TraCuuTKB";
                 case "Tra cứu KQHT":
                     return "TraKQHT";
-                case "Cập nhật thông tin học bổng":
-                    return "CapNhatHB";
+                case "Quản lý thông tin học bổng":
+                    return "QlyTTHB";
                 case "Phê duyệt yêu cầu học bổng":
                     return "PheDuyetHB";
                 case "Đăng ký học bổng":
                     return "DangKyHB";
-                case "Cập nhật HTTT":
-                    return "CapNhatTTTT";
+                case "Quản lý HTTT":
+                    return "QlyHTTT";
                 case "Cập nhật công nợ":
                     return "CapNhatCongNo";
                 case "Kiểm tra dư nợ":
@@ -116,7 +116,10 @@ namespace QLSV_OOP
                     return "TkeLopHoc";
                 case "Thống kê hình thức thanh toán":
                     return "TkeHTTT";
-
+                case "Quản lý lớp":
+                    return "QlyLop";
+                case "Quản lý học phần":
+                    return "QlyHP";
                     
                 default:
                     return checkedListBoxColumnName;
@@ -133,8 +136,8 @@ namespace QLSV_OOP
 
                 // Lặp qua các mục trong CheckedListBox để cập nhật cơ sở dữ liệu
                 foreach (string quyenColumnName in new[] { "Cập nhật điểm", "Đăng ký lớp", "Tra cứu TKB", "Tra cứu KQHT",
-                            "Cập nhật thông tin học bổng", "Phê duyệt yêu cầu học bổng", "Đăng ký học bổng", "Cập nhật HTTT",
-                            "Cập nhật công nợ", "Kiểm tra dư nợ", "Thống kê học phí", "Thống kê nợ đọng học phí", "Thống kê điểm", "Thống kê học bổng", "Thống kê lớp học", "Thống kê hình thức thanh toán" })
+                            "Quản lý thông tin học bổng", "Phê duyệt yêu cầu học bổng", "Đăng ký học bổng", "Quản lý HTTT",
+                            "Cập nhật công nợ", "Kiểm tra dư nợ", "Thống kê học phí", "Thống kê nợ đọng học phí", "Thống kê điểm", "Thống kê học bổng", "Thống kê lớp học", "Thống kê hình thức thanh toán", "Quản lý lớp", "Quản lý học phần" })
                 {
                     // Ánh xạ tên cột trong checkedListBoxQuyen sang tên cột trong cơ sở dữ liệu
                     string databaseColumnName = MapColumnName(quyenColumnName);
